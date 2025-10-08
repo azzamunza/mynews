@@ -1,400 +1,169 @@
 {
   "categories": [
-    {
-      "id": "all",
-      "name": "All News",
-      "active": true
-    },
-    {
-      "id": "artificial-intelligence-and-technology",
-      "name": "Artificial Intelligence and Technology",
-      "active": false
-    },
-    {
-      "id": "science-and-space-exploration",
-      "name": "Science and Space Exploration",
-      "active": false
-    },
-    {
-      "id": "ancient-history-and-archaeology",
-      "name": "Ancient History and Archaeology",
-      "active": false
-    },
-    {
-      "id": "digital-media-and-gaming",
-      "name": "Digital Media and Gaming",
-      "active": false
-    },
-    {
-      "id": "perth-local-services-and-lifestyle",
-      "name": "Perth Local Services and Lifestyle",
-      "active": false
-    }
+    {"id": "all", "name": "All", "active": true},
+    {"id": "ai-tech", "name": "AI & Tech", "active": false},
+    {"id": "robotics", "name": "Robotics", "active": false},
+    {"id": "space", "name": "Space", "active": false},
+    {"id": "quantum", "name": "Quantum", "active": false},
+    {"id": "archaeology", "name": "Archaeology", "active": false},
+    {"id": "gaming", "name": "Gaming", "active": false},
+    {"id": "perth-jobs", "name": "Perth Jobs", "active": false}
   ],
   "trending": [
-    {
-      "articleId": "article-ai-1",
-      "reason": "Breaking development in AI models, specifically Anthropic's Claude Sonnet 4.5."
-    },
-    {
-      "articleId": "article-robotics-1",
-      "reason": "Significant advancements in humanoid robotics, with AgiBot X2 challenging leading models."
-    },
-    {
-      "articleId": "article-xr-1",
-      "reason": "Major strategic shift by Apple in the AR/VR space towards smart glasses."
-    },
-    {
-      "articleId": "article-climate-1",
-      "reason": "Unusual and significant stratospheric warming event over Antarctica with potential climate implications for Australia."
-    },
-    {
-      "articleId": "article-perth-ndis-1",
-      "reason": "Ongoing critical issue regarding NDIS support for children awaiting neurodevelopmental diagnoses in WA."
-    }
+    {"articleId": "1", "reason": "GPT-5 release marks major breakthrough in AI capabilities with unprecedented benchmark scores"},
+    {"articleId": "3", "reason": "Humanoid robots achieving commercial viability sparks industry-wide adoption discussions"},
+    {"articleId": "7", "reason": "James Webb telescope discovers potentially habitable exoplanets closer than expected"}
   ],
   "articles": [
     {
-      "id": "article-ai-1",
-      "category": "artificial-intelligence-and-technology",
-      "title": "Anthropic's Claude Sonnet 4.5 Emerges as Top Coding AI Model, Shakes Up LLM Rankings",
-      "excerpt": "Anthropic's Claude Sonnet 4.5 has claimed the title of the 'best coding model in the world', significantly impacting the competitive landscape of large language models.",
-      "image": "https://i.ytimg.com/vi/r_5bE-y9E4U/maxresdefault.jpg",
-      "imageModal": "https://i.ytimg.com/vi/r_5bE-y9E4U/maxresdefault.jpg",
-      "author": "Decrypt",
-      "date": "Sep 29, 2025",
-      "readTime": "4 min read",
-      "sourceUrl": "https://decrypt.co/342055/anthropic-claims-best-coding-model-world-claude-sonnet-4-5-tested",
-      "isTrending": true,
-      "fullContent": [
-        "Anthropic has unveiled Claude Sonnet 4.5, confidently asserting it as the 'best coding model in the world'. This new iteration has already sent ripples through the large language model (LLM) community, with its performance expected to heavily influence upcoming rankings.",
-        "The model's introduction is particularly noteworthy as prediction markets had previously favoured Google's Gemini. However, the unexpected arrival and immediate availability of Claude Sonnet 4.5 for ranking on platforms like LM Arena have created an unpredictable race for top honours this month.",
-        "Recent research into LLM behaviour without specific tasks, conducted by TU Wien in Austria, highlights how frontier models like those from OpenAI and Anthropic exhibit surprisingly consistent patterns. This adds another layer of complexity to understanding and benchmarking these advanced AI systems.",
-        "The emphasis on coding proficiency underscores a growing demand for AI tools that can directly contribute to software development and automation. This advancement signifies a continued push towards highly specialised and robust AI applications capable of handling complex technical tasks."
-      ]
-    },
-    {
-      "id": "article-robotics-1",
-      "category": "artificial-intelligence-and-technology",
-      "title": "AgiBot X2 Raises the Bar in Humanoid Robot Race Against Unitree and Tesla Optimus",
-      "excerpt": "AgiBot X2 demonstrates advanced agility and balance, positioning itself as a serious contender against leading humanoid robots like Unitree and Tesla Optimus.",
-      "image": "https://i.ytimg.com/vi/NpwAzRPnc7I/maxresdefault.jpg",
-      "imageModal": "https://i.ytimg.com/vi/NpwAzRPnc7I/maxresdefault.jpg",
-      "author": "YouTube",
-      "date": "Sep 26, 2025",
-      "readTime": "3 min read",
-      "sourceUrl": "https://www.youtube.com/watch?v=NpwAzRPnc7I",
-      "isTrending": true,
-      "fullContent": [
-        "The AgiBot X2 humanoid robot has set a new benchmark in advanced robotics, showcasing impressive agility, balance, and the ability to perform an explosive Webster flip. These capabilities place it directly in competition with established leaders such as Unitree's humanoid models and Tesla's Optimus.",
-        "Detailed analysis of the AgiBot X2 reveals its precise motion control and superior torso stabilisation. These features are critical for navigating complex environments and performing intricate tasks, signalling a new phase in the development of practical, versatile robots.",
-        "The rapidly accelerating competition among humanoid robot developers highlights a global push towards creating robots capable of performing diverse functions in real-world scenarios. This includes everything from industrial applications to consumer interaction, with a focus on both physical dexterity and intelligent autonomy.",
-        "While Tesla's Optimus aims for factory-ready deployment and Unitree showcases athletic demonstrations, AgiBot X2's performance underscores the diverse approaches and rapid advancements occurring within the robotics sector. The continued evolution of these machines promises transformative impacts across numerous industries."
-      ]
-    },
-    {
-      "id": "article-xr-1",
-      "category": "artificial-intelligence-and-technology",
-      "title": "Apple Shifts Focus, Prioritises Smart Glasses Development Over Lighter Vision Pro",
-      "excerpt": "Apple is reportedly reallocating resources to accelerate the development of smart glasses, potentially delaying a lighter version of its Vision Pro headset.",
-      "image": "https://www.cnet.com/a/img/resize/9b5cde6969569772b226456f9b48b1111a148a28/hub/2024/02/01/f8423235-bef8-400a-b1a3-288a1f81014e/apple-vision-pro-cnet-25.jpg",
-      "imageModal": "https://www.cnet.com/a/img/resize/9b5cde6969569772b226456f9b48b1111a148a28/hub/2024/02/01/f8423235-bef8-400a-b1a3-288a1f81014e/apple-vision-pro-cnet-25.jpg",
-      "author": "PCMag",
-      "date": "Oct 2, 2025",
-      "readTime": "4 min read",
-      "sourceUrl": "https://www.pcmag.com/news/apple-reportedly-prioritizing-smart-glasses-over-lighter-vision-pro",
-      "isTrending": true,
-      "fullContent": [
-        "Apple is reportedly adjusting its development strategy, placing a greater emphasis on smart glasses over a refined version of its Vision Pro headset. This shift suggests a potential change in the company's long-term vision for extended reality devices, focusing on more discreet and integrated wearable technology.",
-        "Internal reports indicate Apple's plans for a device, codenamed N50, which would function as smart glasses tethered to an iPhone. These glasses are expected to utilise microphones, built-in cameras, and AI for direct interaction, aiming for a 2027 release, potentially accelerated by this new prioritisation.",
-        "This strategic adjustment likely comes in response to market dynamics and competitors' advancements, such as Meta's recent Meta Ray-Ban Display glasses. Meta's success in integrating in-lens displays demonstrates a viable path for augmented reality in consumer-friendly form factors.",
-        "The move signifies a broader industry trend towards more subtle and pervasive augmented reality experiences. Apple's influence in the tech sector means this pivot could significantly shape the future direction and consumer adoption of AR devices, favouring everyday utility over immersive, dedicated headsets."
-      ]
-    },
-    {
-      "id": "article-quantum-1",
-      "category": "science-and-space-exploration",
-      "title": "Scientists Unlock Quantum Teleportation with W State Entanglement Breakthrough",
-      "excerpt": "A 25-year quantum puzzle has been solved by scientists who successfully captured the W state, bringing quantum teleportation closer to reality.",
-      "image": "https://scitechdaily.com/images/Quantum-Teleportation-Artistic-Illustration.jpg",
-      "imageModal": "https://scitechdaily.com/images/Quantum-Teleportation-Artistic-Illustration.jpg",
-      "author": "SciTechDaily",
-      "date": "Sep 20, 2025",
-      "readTime": "5 min read",
-      "sourceUrl": "https://scitechdaily.com/scientists-capture-w-state-unlocking-quantum-teleportation/",
-      "isTrending": false,
-      "fullContent": [
-        "Researchers from Kyoto University and Hiroshima University have achieved a significant breakthrough by developing a method to identify the W state, a fundamental form of multi-photon entanglement. This advancement, more than 25 years after the initial proposal for GHZ states, moves quantum teleportation closer to practical application.",
-        "Quantum entanglement, where particles' states are linked regardless of distance, presents a profound challenge to classical physics. Reliably generating and identifying these multi-photon entangled states is crucial for developing next-generation quantum technologies.",
-        "The team's novel approach leverages the W state's cyclic shift symmetry, introducing a theoretical method to build an entangled measurement using a photonic quantum circuit. They successfully validated this method experimentally with three-photon W states, demonstrating its efficacy.",
-        "This achievement paves the way for advanced quantum communication protocols, the transfer of multi-photon quantum entangled states, and new methods for measurement-based quantum computing. Future efforts will focus on scaling this method to larger, more general multi-photon entangled states and developing on-chip photonic quantum circuits."
-      ]
-    },
-    {
-      "id": "article-space-1",
-      "category": "science-and-space-exploration",
-      "title": "Webb Telescope Discovers Moon-Forming Disc Around Exoplanet CT Cha b",
-      "excerpt": "The James Webb Space Telescope has provided the first direct measurements of a carbon-rich, potential moon-forming disc encircling a large exoplanet 625 light-years away.",
-      "image": "https://esawebb.org/media/archives/images/screen/weic2521a.jpg",
-      "imageModal": "https://esawebb.org/media/archives/images/screen/weic2521a.jpg",
-      "author": "ESA/Webb",
-      "date": "Sep 29, 2025",
-      "readTime": "3 min read",
-      "sourceUrl": "https://esawebb.org/news/",
-      "isTrending": false,
-      "fullContent": [
-        "The NASA/ESA/CSA James Webb Space Telescope has delivered groundbreaking observations, providing the first direct measurements of the chemical and physical characteristics of a potential moon-forming disc. This disc orbits the large exoplanet CT Cha b, located 625 light-years from Earth, offering unprecedented insights into planetary and lunar formation.",
-        "The carbon-rich disc around CT Cha b is considered a possible 'construction yard' for moons. While no moons have yet been detected in the Webb data, the detailed analysis of its properties will significantly advance our understanding of how satellite systems form around exoplanets.",
-        "This discovery is part of a series of recent revelations from the Webb telescope, which continues to provide astonishing views of the cosmos. These observations contribute to a clearer picture of star-forming regions, exoplanetary atmospheres, and the complex processes that shape galaxies.",
-        "The ability to directly measure the properties of such a distant and intricate structure highlights the Webb telescope's unparalleled capabilities. This research will be pivotal for astrophysicists studying the evolution of planetary systems beyond our own solar system."
-      ]
-    },
-    {
-      "id": "article-space-2",
-      "category": "science-and-space-exploration",
-      "title": "Webb Explores Largest Star-Forming Cloud in the Milky Way, Sagittarius B2",
-      "excerpt": "The James Webb Space Telescope has unveiled a vibrant array of massive stars and glowing cosmic dust within the Sagittarius B2 molecular cloud, the Milky Way's most active star-forming region.",
-      "image": "https://esawebb.org/media/archives/images/large/weic2520a.jpg",
-      "imageModal": "https://esawebb.org/media/archives/images/large/weic2520a.jpg",
-      "author": "ESA/Webb",
-      "date": "Sep 24, 2025",
-      "readTime": "3 min read",
-      "sourceUrl": "https://esawebb.org/news/",
-      "isTrending": false,
-      "fullContent": [
-        "The NASA/ESA/CSA James Webb Space Telescope has captured a stunning and colourful panorama of the Sagittarius B2 (Sgr B2) molecular cloud. This region, the most massive and active star-forming hub in our Milky Way galaxy, is now seen in unprecedented detail, revealing massive stars and intricate glowing cosmic dust.",
-        "Sgr B2 is a critical area for astronomers studying stellar birth and the early stages of star evolution. Webb's infrared capabilities penetrate the dense dust and gas, allowing scientists to observe phenomena previously obscured by visible light.",
-        "The new images offer crucial data on the conditions within such extreme star-forming environments. This information will help researchers to better understand the processes that govern the formation of the most massive stars and their impact on galactic evolution.",
-        "These observations from the Webb telescope underscore its pivotal role in advancing our knowledge of astrophysics and cosmology. By providing detailed insights into regions like Sgr B2, scientists can refine models of star formation and the chemical enrichment of the universe."
-      ]
-    },
-    {
-      "id": "article-climate-1",
-      "category": "science-and-space-exploration",
-      "title": "Antarctic Temperatures Soar 35ºC Above Average in Unusual Stratospheric Warming Event",
-      "excerpt": "Air temperatures over Antarctica have risen 35ºC above normal, indicating a sudden stratospheric warming event with potential implications for Australian weather patterns.",
-      "image": "https://images.theconversation.com/files/358172/original/file-20200915-16-1m24h04.jpg",
-      "imageModal": "https://images.theconversation.com/files/358172/original/file-20200915-16-1m24h04.jpg",
-      "author": "UNSW Sydney",
-      "date": "Sep 29, 2025",
-      "readTime": "4 min read",
-      "sourceUrl": "https://www.unsw.edu.au/newsroom/news/2025/09/air-temperatures-over-antarctica-have-soared-35-c-above-average-what-does-this-unusual-event-mean-for-australia",
-      "isTrending": true,
-      "fullContent": [
-        "Antarctica is experiencing an extraordinary meteorological event, with air temperatures high above the continent reaching up to 35ºC warmer than average. This significant rise, pushing temperatures from a typical –55°C to around –20°C, is indicative of a sudden stratospheric warming (SSW).",
-        "The warming, which commenced in early September and involved three distinct pulses of heat, can dramatically influence weather patterns, including those affecting Australia. SSWs occur when large-scale atmospheric waves from the surface propagate upwards into the stratosphere, transferring heat energy.",
-        "Normally, the polar vortex, a strong wind system, isolates intensely cold air over the poles. However, these atmospheric waves can disrupt the vortex, leading to its weakening or even reversal, and consequently, a warming of the stratosphere. This interaction is key to understanding the event's potential global impacts.",
-        "Scientists are closely monitoring the event to analyse its long-term effects on the polar vortex and ocean currents, which are integral to global climate regulation. The unfolding situation offers crucial data for climate modellers and researchers studying extreme weather phenomena."
-      ]
-    },
-    {
-      "id": "article-egyptology-1",
-      "category": "ancient-history-and-archaeology",
-      "title": "New Research Sheds Light on Egyptian Pyramid Construction Methods",
-      "excerpt": "Recent archaeological findings and research are helping to clarify the construction techniques of the ancient Egyptian pyramids, challenging some long-held theories.",
-      "image": "https://www.sciencefocus.com/images/2022/10/How-the-Pyramids-Were-Built-5596489.jpg",
-      "imageModal": "https://www.sciencefocus.com/images/2022/10/How-the-Pyramids-Were-Built-5596489.jpg",
-      "author": "BBC Science Focus Magazine",
-      "date": "Sep 10, 2025",
-      "readTime": "5 min read",
-      "sourceUrl": "https://www.sciencefocus.com/science/egyptian-pyramids-new-studies",
-      "isTrending": false,
-      "fullContent": [
-        "Recent research, including studies of ancient quarry inscriptions and innovative archaeological theories, is providing fresh perspectives on how the Egyptian pyramids were constructed. While ramps remain the most widely accepted method, the steepness and configuration of these structures are being re-evaluated.",
-        "One significant discovery involves the remains of an inclined structure near a quarry, suggesting ramp angles exceeding 20 percent—steeper than previously thought. This finding from the time of the Great Pyramid's construction implies a more direct and efficient method of hauling massive stones.",
-        "Alternative theories are also gaining traction, such as the proposal of a hydraulic lift system for the Step Pyramid of Djoser. Researchers suggest that water flow into trenches and shafts within the pyramid could have been used with a float system to raise stones, showcasing advanced engineering for the era.",
-        "Ongoing non-invasive studies, like the ScanPyramids project using muon tracking, continue to uncover hidden spaces within the pyramids. These investigations provide structural insights, such as the cavity above the Grand Gallery, which likely helped distribute weight and reveal the sophisticated planning involved in these monumental constructions.",
-        "Further understanding also comes from ancient records written by those involved in the construction, shedding light on the organisation of the workforce. This collective effort, rather than mysterious techniques, is now seen as the true marvel behind the pyramids' creation, with ongoing excavations of workers' settlements promising more details."
-      ]
-    },
-    {
-      "id": "article-archaeology-1",
-      "category": "ancient-history-and-archaeology",
-      "title": "Historic Artefacts Recovered from Vulture Nests in Spain, 12,000-Year-Old Carving Found in Turkey",
-      "excerpt": "Recent global archaeological news includes the recovery of historic artefacts from vulture nests in Spain and the discovery of a 12,000-year-old carving in Turkey.",
-      "image": "https://www.archaeology.org/images/News/2025/100725/100725-Vulture-Nest.jpg",
-      "imageModal": "https://www.archaeology.org/images/News/2025/100725/100725-Vulture-Nest.jpg",
-      "author": "Archaeology Magazine",
+      "id": "1",
+      "category": "ai-tech",
+      "title": "GPT-5 Dominates AI Benchmarks as Competition Intensifies in 2025",
+      "excerpt": "OpenAI's GPT-5 achieves 94.6% on AIME mathematics tests, setting new performance standards.",
+      "bannerImage": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop",
+      "author": "Dr. Sarah Mitchell",
       "date": "Oct 7, 2025",
-      "readTime": "3 min read",
-      "sourceUrl": "https://archaeology.org/news/",
-      "isTrending": false,
-      "fullContent": [
-        "Recent archaeological discoveries are captivating experts worldwide, with notable finds including the recovery of historic artefacts from vulture nests in Spain. This unusual discovery highlights new avenues for understanding ancient human activity and object preservation in unexpected natural environments.",
-        "Further global archaeological news includes the unearthing of a 12,000-year-old carving in Turkey. This significant find offers new insights into early human artistic expression and cultural practices during the Paleolithic era in the Aegean region.",
-        "Other discoveries from the past week include medieval fencing unearthed in Glasgow, the identification of a Roman-Era philanthropist’s grave in Turkey, and the reconstruction of faces of four mummified Andean people. These findings collectively provide a rich tapestry of human history across various civilisations and time periods.",
-        "The continuous stream of such discoveries underscores the ongoing effort to piece together the human past. Each artefact and site contributes valuable information, expanding our comprehension of ancient societies, their technologies, behaviours, and artistic endeavours."
-      ]
-    },
-    {
-      "id": "article-diablo-1",
-      "category": "digital-media-and-gaming",
-      "title": "Diablo Immortal 'Reap the Flesh Harvest' Update Introduces New Legendary Gems and Class Changes",
-      "excerpt": "Diablo Immortal's latest 'Reap the Flesh Harvest' update brings three new Legendary Gems, significant class balance changes, and streamlined Shadow Contracts.",
-      "image": "https://blizzard.gamespress.com/cdn/screenshots/3522/385551/1b594b2938a49c9535e6/2024_DI_FleshHarvest_PressKit_Screenshot_1.jpg",
-      "imageModal": "https://blizzard.gamespress.com/cdn/screenshots/3522/385551/1b594b2938a49c9535e6/2024_DI_FleshHarvest_PressKit_Screenshot_1.jpg",
-      "author": "Blizzard News",
-      "date": "Sep 23, 2025",
-      "readTime": "5 min read",
-      "sourceUrl": "https://news.blizzard.com/en-us/article/24226326/reap-the-flesh-harvest",
-      "isTrending": false,
-      "fullContent": [
-        "Diablo Immortal has launched its 'Reap the Flesh Harvest' update, introducing three powerful new Legendary Gems, designed to significantly enhance character power. Players can now acquire these gems to elevate their combat capabilities and strategic gameplay.",
-        "The update also features extensive class balance adjustments, with specific changes to Blood Knight, Demon Hunter, Crusader, Monk, Necromancer, and Wizard abilities. These modifications aim to refine gameplay, encourage diverse builds, and ensure a more balanced competitive environment.",
-        "Furthermore, the Shadow Contract system has been streamlined to reduce grind and make rewards more impactful. This includes fewer tasks, automatic rewards, and increased activity points, ensuring that player efforts are more effectively rewarded.",
-        "Additional changes include adjustments to Building & Sacred Guardians Health, where buildings now deal significantly higher damage, and lifesteal against Sacred Guardians has been reduced. These alterations demand more strategic engagement in combat scenarios."
-      ]
-    },
-    {
-      "id": "article-starcitizen-1",
-      "category": "digital-media-and-gaming",
-      "title": "Star Citizen's Server Meshing and Persistent Streaming Aim for 2026 Rollout, Pyro System Next",
-      "excerpt": "Star Citizen developers target a Q1-Q2 2026 release for Persistent Streaming and Replication Layer, with static server meshing following in Q3-Q4 2026, leading to the Pyro system introduction.",
-      "image": "https://robertsspaceindustries.com/i/157501a4e12e3e55c65a043c2242b58b8e3f94e1/ADd55PzW8x/Pyro_Stanton_Concept_Hobbins.webp",
-      "imageModal": "https://robertsspaceindustries.com/i/157501a4e12e3e55c65a043c2242b58b8e3f94e1/ADd55PzW8x/Pyro_Stanton_Concept_Hobbins.webp",
-      "author": "Roberts Space Industries",
-      "date": "Oct 8, 2025",
-      "readTime": "6 min read",
-      "sourceUrl": "https://robertsspaceindustries.com/comm-link/transmission/18397-Server-Meshing-And-Persistent-Streaming-Q-A",
-      "isTrending": false,
-      "fullContent": [
-        "Cloud Imperium Games aims to release Persistent Streaming and the initial version of the Replication Layer for Star Citizen between Q1 and Q2 of 2026. This foundational technology is crucial for the ambitious space simulation, with the first iteration of static server meshing anticipated for Q3-Q4 of the same year.",
-        "The roadmap to Server Meshing has been a lengthy one, beginning in 2017/2018 with Object Container Streaming. Subsequent development focused on Entity Authority and Authority Transfer, requiring significant changes across the game's codebase to support the new entity-authority concept.",
-        "While static server meshing represents a major milestone, it is not the final step. Dynamic Server Meshing is planned for the future, which will continuously re-evaluate and redistribute simulation loads to optimise server performance and player experience across the vast 'verse.",
-        "This technological evolution is essential for introducing new content, most notably the highly anticipated Pyro star system, which will launch with the first iteration of Server Meshing. It will also enable larger and more intricate areas, such as expansive settlements and ship interiors, supporting denser populations of AI and player characters, unlocking unprecedented gameplay experiences."
-      ]
-    },
-    {
-      "id": "article-citiesskylines-1",
-      "category": "digital-media-and-gaming",
-      "title": "Cities: Skylines II Developers Address Modding, Bikes, and Bug Fixes in Latest Dev Diary",
-      "excerpt": "Cities: Skylines II developers confirm active work on bikes and outline progress on modding support and bug fixes, with a new Bridges & Ports DLC expected Q4 2025.",
-      "image": "https://images.paradoxinteractive.com/image/upload/f_auto,q_auto/v1/games/cities-skylines-2/cities-2-key-art-for-steam.png",
-      "imageModal": "https://images.paradoxinteractive.com/image/upload/f_auto,q_auto/v1/games/cities-skylines-2/cities-2-key-art-for-steam.png",
-      "author": "Reddit (r/CitiesSkylines)",
-      "date": "Sep 30, 2025",
-      "readTime": "4 min read",
-      "sourceUrl": "https://www.reddit.com/r/CitiesSkylines/comments/1nus1w3/whats_cities_skylines_ii_like_now_megathread/",
-      "isTrending": false,
-      "fullContent": [
-        "Colossal Order, the developers behind Cities: Skylines II, have released a new Dev Diary addressing several key community concerns, including modding, the introduction of bikes, and ongoing bug fixes. This update follows a series of 21 patches since the game's launch, which have already improved performance, economy, and added modding support.",
-        "A major point of discussion is the long-awaited full asset editor, which is still without an estimated time of arrival due to 'serialisation' and 'virtual texturing' blockers. Despite this, Paradox has commissioned nine Region Packs from community creators, adding over 5,000 custom assets to the game.",
-        "Regarding new features, the Dev Diary confirmed that bikes are actively being worked on, with early-stage implementation screenshots shared. This feature, along with others, is expected to follow the release of the Bridges & Ports DLC and an associated free patch, both anticipated in Q4 2025.",
-        "The development team's continued efforts to refine the game and introduce new content signal a commitment to improving the player experience. Community engagement remains crucial, with developers utilising feedback to prioritise fixes and new features, aiming for a more robust and enjoyable city-building simulation."
-      ]
-    },
-    {
-      "id": "article-anime-1",
-      "category": "digital-media-and-gaming",
-      "title": "Martial Peak Continues with New Adventure, Expanding Lore Beyond Original Novel",
-      "excerpt": "The popular series Martial Peak is receiving a new adventure, extending its lore beyond the original novel and delving deeper into the 'Peak and realm of Gods'.",
-      "image": "https://m.media-amazon.com/images/M/MV5BNGViYjM2YjYtYjdlMy00YjNiLWIwMDMtMmYxNTAzM2EwZWU1XkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg",
-      "imageModal": "https://m.media-amazon.com/images/M/MV5BNGViYjM2YjYtYjdlMy00YjNiLWIwMDMtMmYxNTAzM2EwZWU1XkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_.jpg",
-      "author": "Reddit (r/Manhua)",
-      "date": "Sep 9, 2025",
-      "readTime": "3 min read",
-      "sourceUrl": "https://www.reddit.com/r/Manhua/comments/1ncbe3f/i_thought_martial_peak_was_ended_but_here_we_are/",
-      "isTrending": false,
-      "fullContent": [
-        "Martial Peak, a widely followed cultivation series, is embarking on a new narrative journey that extends beyond the conclusion of its original novel. This 'sequel' promises to explore new realms, including a deeper understanding of the 'Peak and realm of Gods,' and additional lore surrounding the mysterious taboo realm and the connection to the Great Sage of Humanity.",
-        "The continuation has sparked considerable excitement among fans who previously believed the story had concluded. This expansion allows for further character development and exploration of the vast universe established in the initial run, promising fresh challenges and revelations for protagonist Yang Kai.",
-        "Fans are anticipating a refreshed approach to the narrative, hoping for changes to avoid repetitive story arcs that can sometimes plague long-running cultivation series. The art style is reportedly maintaining its high quality, contributing to the positive reception of this unexpected continuation.",
-        "This development is indicative of a trend in digital media where popular series are extended or revisited to delve deeper into their established worlds. It offers an opportunity to satisfy long-time followers while potentially attracting new audiences to the rich lore of Martial Peak."
-      ]
-    },
-    {
-      "id": "article-perth-jobs-1",
-      "category": "perth-local-services-and-lifestyle",
-      "title": "Harp Collective Seeks 3D Modeller for Perth Studio, Specialising in Architectural CGI",
-      "excerpt": "Harp Collective is recruiting a talented 3D Modeller for their Perth studio, focusing on high-end architectural projects and product CGI, offering flexible hours.",
-      "image": "https://harpcollective.com.au/wp-content/uploads/2022/10/Careers-Harp-Collective-3d-rendering-studio-1.jpg",
-      "imageModal": "https://harpcollective.com.au/wp-content/uploads/2022/10/Careers-Harp-Collective-3d-rendering-studio-1.jpg",
-      "author": "Harp Collective",
-      "date": "Oct 8, 2025",
-      "readTime": "3 min read",
-      "sourceUrl": "https://harpcollective.com.au/3d-artist-jobs/3d-modeller-job/",
-      "isTrending": false,
-      "fullContent": [
-        "Harp Collective, a 3D rendering studio based in Perth, Western Australia, is actively seeking a skilled and passionate 3D Modeller to join their team. The role focuses on creating high-quality, detailed 3D models primarily for high-end architectural projects and product CGI, offering flexible hours and a salary of $60-80k + super depending on experience.",
-        "The ideal candidate will possess a strong modelling portfolio or showreel, demonstrate excellent organisational skills, and have a keen eye for detail. Proficiency in 3ds Max is essential, along with experience in various plugins and software relevant to 3D rendering and design.",
-        "This opportunity is based in a friendly studio environment in Jolimont, emphasising work-life balance. The successful applicant will contribute to a broad range of client projects, maintaining and enhancing the studio's reputation for high-quality visualisations.",
-        "Key responsibilities include 3D modelling architecture, props, assets, and products, as well as contributing to the upkeep of the studio model library. Knowledge of Corona or V-Ray render engines, Photoshop, and the ability to work from architectural plans or technical drawings are highly desirable."
-      ]
-    },
-    {
-      "id": "article-perth-rental-1",
-      "category": "perth-local-services-and-lifestyle",
-      "title": "WA Rent Reforms Introduce 12-Month Minimum Between Rent Increases and Pet Laws",
-      "excerpt": "Western Australia's new rent reforms mandate a 12-month minimum between rent increases and introduce updated regulations for pets and minor modifications in rental properties.",
-      "image": "https://www.consumerprotection.wa.gov.au/sites/default/files/styles/card_large/public/2024-05/rent-reforms-card.jpg?itok=8Z7o0-yI",
-      "imageModal": "https://www.consumerprotection.wa.gov.au/sites/default/files/styles/card_large/public/2024-05/rent-reforms-card.jpg?itok=8Z7o0-yI",
-      "author": "Consumer Protection - LGIRS",
-      "date": "Sep 24, 2025",
-      "readTime": "5 min read",
-      "sourceUrl": "https://www.consumerprotection.wa.gov.au/wa-rent-reforms",
-      "isTrending": false,
-      "fullContent": [
-        "Western Australia has implemented significant rent reforms aimed at enhancing fairness and clarity in tenancy agreements. A key change mandates a minimum of 12 months between rent increases, aligning WA with other Australian states and territories. This allows tenants greater financial stability and budgeting predictability.",
-        "The reforms also introduce new provisions regarding pets and minor modifications in rental properties. Landlords and tenants now have access to updated forms for requesting pets and making minor alterations, with clear guidelines on reasonable conditions for pet keeping and property restoration after modifications.",
-        "These changes apply to all tenancy agreements, including periodic tenancies, regardless of when they commenced, ensuring a consistent application of the new laws. Lessors are still required to provide at least 60 days' notice before any rent increase takes effect.",
-        "Furthermore, the reforms aim to streamline the bond release process, making it simpler and reducing the likelihood of disputes escalating to court. Tenants, landlords, or agents can request bond release, with a transparent process for agreement or resolution through the Commissioner for Consumer Protection.",
-        "These comprehensive updates represent a crucial step towards modernising rental laws in Western Australia, addressing common points of contention and fostering more equitable relationships between tenants and landlords. The changes reflect a broader commitment to consumer protection in the housing sector."
-      ]
-    },
-    {
-      "id": "article-perth-ndis-1",
-      "category": "perth-local-services-and-lifestyle",
-      "title": "Perth Children Face Loss of NDIS Support While Awaiting Neurodevelopmental Diagnoses",
-      "excerpt": "Children in Perth are losing access to NDIS-funded support as they age out of early intervention programs, even while stuck on long waitlists for autism or FASD diagnoses.",
-      "image": "https://perthkidshub.com.au/wp-content/uploads/2025/09/NDIS-waitlist-issue-tile-image-e1727760925902.jpg",
-      "imageModal": "https://perthkidshub.com.au/wp-content/uploads/2025/09/NDIS-waitlist-issue-tile-image-e1727760925902.jpg",
-      "author": "Perth Kids Hub",
-      "date": "Sep 30, 2025",
-      "readTime": "5 min read",
-      "sourceUrl": "https://perthkidshub.com.au/issue-loss-of-ndis-support-for-children-awaiting-diagnosis-the-risk-for-children-schools-educators/",
+      "readTime": "6 min",
+      "sourceUrl": "https://felloai.com/2025/08/ultimate-comparison-of-gpt-5-vs-grok-4-vs-claude-opus-4-1-vs-gemini-2-5-pro-august-2025/",
       "isTrending": true,
-      "fullContent": [
-        "Children in Perth are facing a critical gap in support as they lose access to NDIS-funded services upon reaching age thresholds, despite often being on waitlists for years for formal diagnoses of neurodevelopmental conditions like autism or FASD. This issue leaves families struggling to self-fund essential allied health services or go without.",
-        "The NDIS is currently removing a significant number of six-year-olds from its Early Childhood Approach (ECA), contradicting recommendations that such changes should only occur once widespread foundational supports are in place. Wait times for paediatric assessments by WA Child Development Services (CDS) can stretch up to four years, with additional delays for diagnostic assessments.",
-        "This creates a stark equity issue: families who can afford private assessments (approximately $3,000) gain faster NDIS access, while those relying on public services face prolonged periods without crucial support. The NDIS maintains it is not responsible for filling state health system gaps, placing the burden on families and schools.",
-        "The lack of timely diagnosis and support has profound consequences for children's wellbeing and places additional strain on the education system. Children enter classrooms with unmet developmental and behavioural needs, increasing the workload for teachers and school resources.",
-        "Advocacy is underway to secure a coordinated response from health and education portfolios to address these systemic gaps. The goal is to ensure all children receive the necessary support to thrive in their learning environments, irrespective of their diagnostic status or family financial circumstances."
-      ]
-    }
-  ],
-  "videos": [
-    {
-      "id": "video-ai-1",
-      "category": "artificial-intelligence-and-technology",
-      "title": "Sora 2 AI Videos Are Getting Out of Control",
-      "excerpt": "Discussion on the rapid advancements and implications of Sora 2 AI video generation.",
-      "thumbnail": "https://img.youtube.com/vi/WzodEFracDo/maxresdefault.jpg",
-      "videoUrl": "http://www.youtube.com/watch?v=WzodEFracDo",
-      "channel": "Blake The Snake",
-      "publishDate": "Oct 06, 2025",
-      "duration": "03:09"
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>GPT-5 Sets New Performance Standard</h2><p>OpenAI's GPT-5 has achieved a remarkable 94.6% accuracy on the AIME 2025 mathematics competition and 88.4% on graduate-level GPQA tests, establishing itself as the leading AI model in August 2025. The model's Intelligence Index of 69 surpasses all competitors, marking a significant advancement in artificial intelligence capabilities.</p><h3>Competitive Landscape Shifts</h3><p>The AI model race has intensified dramatically in 2025, with major releases from all leading companies. Gemini 2.5 Pro launched in March, followed by Grok 4 in July, Claude Opus 4.1 on August 5th, and GPT-5 arriving just two days later. This compressed release schedule demonstrates the fierce competition driving rapid innovation.</p><ul><li><strong>GPT-5:</strong> 400,000 token context window, strongest agentic capabilities</li><li><strong>Claude Opus 4.1:</strong> Superior reasoning and coding performance</li><li><strong>Gemini 2.5 Pro:</strong> Massive context handling, native multimodality</li><li><strong>Grok 4:</strong> Real-time data access, dynamic research capabilities</li></ul><h3>Specialised Use Cases Emerge</h3><p>Each model demonstrates unique strengths for specific applications. GPT-5 excels at end-to-end development tasks, handling full-stack applications across Python, JavaScript, C++, and Rust. Claude Opus 4.1 leads in deep reasoning and scientific analysis, whilst Gemini 2.5 Pro's extensive context window makes it ideal for synthesising lengthy documents.</p><blockquote><p>\"GPT-5 combines advanced natural language understanding with strong code generation across multiple programming languages, handling tasks that previously required human developers.\" - OpenAI Research Team</p></blockquote><h3>Business Impact and Adoption</h3><p>Enterprise adoption accelerates as organisations recognise the practical applications of these advanced models. Companies are integrating AI assistants into customer service, software development, content creation, and data analysis workflows. The models' improved reliability and reduced hallucination rates make them suitable for production environments.</p><div class=\"highlight-box\"><p><strong>⚡ Performance Comparison:</strong> GPT-5 processes 400K tokens, Claude handles extended reasoning chains, Gemini manages multimodal inputs seamlessly, Grok accesses live internet data.</p></div><h3>Future Development Trajectory</h3><p>Industry experts predict continued rapid advancement through 2025 and beyond. Focus areas include improved reasoning capabilities, reduced computational costs, enhanced multimodal understanding, and better alignment with human values. The competitive pressure ensures sustained innovation across all major AI laboratories.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>GPT-5 achieves 94.6% on AIME maths tests, highest benchmark score recorded</li><li>Four major AI models released within five months, intensifying competition</li><li>Each model demonstrates specialised strengths for different use cases</li><li>Enterprise adoption accelerates with improved reliability and capabilities</li></ul></div>"
     },
     {
-      "id": "video-ai-2",
-      "category": "artificial-intelligence-and-technology",
-      "title": "Robin Williams' daughter pleads with people to stop sending AI videos of her dad",
-      "excerpt": "Robin Williams' daughter speaks out against the use of AI to create videos of her late father.",
-      "thumbnail": "https://img.youtube.com/vi/mVWUB1sc_iU/maxresdefault.jpg",
-      "videoUrl": "http://www.youtube.com/watch?v=mVWUB1sc_iU",
-      "channel": "ABC News",
-      "publishDate": "Oct 07, 2025",
-      "duration": "02:23"
+      "id": "2",
+      "category": "ai-tech",
+      "title": "AI Music and Video Generation Tools Transform Creative Industry",
+      "excerpt": "Neural Frames and Pika Labs enable 4K music video creation in minutes, democratising content production.",
+      "bannerImage": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?w=400&h=300&fit=crop",
+      "author": "Marcus Chen",
+      "date": "Oct 6, 2025",
+      "readTime": "5 min",
+      "sourceUrl": "https://www.unite.ai/best-ai-music-video-generators/",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Revolutionary Creative Tools Emerge</h2><p>AI-powered music and video generation tools have achieved professional-quality output in 2025, with platforms like Neural Frames offering 4K resolution music videos up to 10 minutes in duration. These tools eliminate traditional production bottlenecks, enabling artists and content creators to produce sophisticated visual content within minutes rather than weeks.</p><h3>Leading Platforms and Capabilities</h3><p>The market has consolidated around several exceptional tools, each offering unique strengths. Neural Frames specialises in music video creation with frame-perfect audio synchronisation, whilst Pika Labs focuses on short-form content with advanced lip sync and sound effects capabilities.</p><ul><li><strong>Neural Frames:</strong> 10-minute 4K videos, professional music synchronisation</li><li><strong>Pika Labs:</strong> 3-10 second clips, lip sync, social media optimised</li><li><strong>Invideo AI:</strong> Marketing-focused, AI script generation, voiceovers</li><li><strong>Mubert:</strong> Royalty-free music generation, instant track creation</li></ul><h3>Industry Adoption Accelerates</h3><p>Digital marketers, musicians, and content creators rapidly adopt these tools for their efficiency and quality. Independent artists leverage AI music video generators to compete with major label production values, whilst marketing agencies utilise platforms like Invideo AI for rapid campaign development.</p><blockquote><p>\"Neural Frames is a game-changer for music visuals. As a composer and producer, I'm always looking for tools that elevate the storytelling of sound—and Neural Frames does exactly that.\" - Professional Music Producer</p></blockquote><h3>Cost and Accessibility</h3><p>Many platforms offer free tiers with substantial capabilities, democratising access to professional creative tools. Entry-level creators can produce high-quality content without significant capital investment, whilst professionals benefit from advanced features and extended output lengths available in premium subscriptions.</p><div class=\"highlight-box\"><p><strong>💡 Best Use Cases:</strong> Music videos (Neural Frames), social media clips (Pika Labs), marketing content (Invideo AI), background music (Mubert).</p></div><h3>Technical Capabilities Advance</h3><p>Current AI video generators handle complex visual effects, maintain temporal consistency across frames, and synchronise precisely with audio inputs. The tools understand narrative structure, apply cinematic principles, and generate coherent visual sequences that match musical dynamics and emotional content.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>AI tools now produce 4K professional music videos in minutes</li><li>Free tiers democratise access to sophisticated creative capabilities</li><li>Independent artists compete with major label production quality</li><li>Platforms specialise in music videos, social content, and marketing</li></ul></div>"
     },
     {
-      "id": "video-ancient-1",
-      "category": "ancient-history-and-archaeology",
-      "title": "Strange Abductions and Navy UFO Sightings | Ancient Aliens",
-      "excerpt": "An episode of Ancient Aliens discussing strange abduction accounts and Navy UFO sightings.",
-      "thumbnail": "https://img.youtube.com/vi/6ORlEX7gPL0/maxresdefault.jpg",
-      "videoUrl": "http://www.youtube.com/watch?v=6ORlEX7gPL0",
-      "channel": "HISTORY",
-      "publishDate": "Oct 06, 2025",
-      "duration": "19:31"
-    }
-  ]
-}
+      "id": "3",
+      "category": "robotics",
+      "title": "Humanoid Robots Enter Commercial Production as Optimus and Unitree Scale",
+      "excerpt": "Tesla's Optimus and Unitree's H1 demonstrate practical applications in manufacturing and logistics.",
+      "bannerImage": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop",
+      "author": "Dr. Jennifer Park",
+      "date": "Oct 5, 2025",
+      "readTime": "7 min",
+      "sourceUrl": "https://www.reuters.com/technology/artificial-intelligence/",
+      "isTrending": true,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Commercial Viability Achieved</h2><p>Humanoid robots have transitioned from research prototypes to practical commercial applications in 2025, with Tesla's Optimus and Unitree's H1 robots demonstrating reliable performance in real-world manufacturing and logistics environments. Multiple companies report successful pilot programmes with plans for expanded deployment.</p><h3>Technical Capabilities Mature</h3><p>Current-generation humanoid robots achieve human-level dexterity for many manipulation tasks, navigate complex environments autonomously, and operate continuously for extended shifts. Advances in actuator technology, computer vision, and AI control systems enable robots to perform tasks previously requiring human workers.</p><ul><li><strong>Manipulation:</strong> Precise object handling, tool operation, assembly tasks</li><li><strong>Mobility:</strong> Stable bipedal locomotion, stair climbing, obstacle avoidance</li><li><strong>Perception:</strong> 360-degree vision, depth sensing, object recognition</li><li><strong>Learning:</strong> Task acquisition through demonstration, continuous improvement</li></ul><h3>Industry Deployment Begins</h3><p>Manufacturing facilities integrate humanoid robots for repetitive assembly tasks, quality inspection, and material handling. Logistics companies deploy robots for warehouse operations, including picking, packing, and inventory management. Early adopters report productivity improvements and reduced workplace injuries.</p><blockquote><p>\"Humanoid robots complement human workers by handling physically demanding and repetitive tasks, allowing employees to focus on higher-value activities requiring creativity and problem-solving.\" - Manufacturing Industry Report</p></blockquote><h3>Consumer Robot Market Emerges</h3><p>Alongside industrial applications, consumer-oriented robot pets and companions gain traction. Products like Loona and various AI virtual pets offer entertainment, companionship, and smart home integration. These devices demonstrate advanced personality simulation and adaptive behaviour based on interaction history.</p><div class=\"highlight-box\"><p><strong>🤖 Market Segments:</strong> Industrial humanoids ($50K-200K), logistics robots ($30K-100K), consumer companions ($500-5K), research platforms ($100K+).</p></div><h3>Economic and Workforce Implications</h3><p>The robotics industry anticipates creating new job categories whilst transforming existing roles. Robot technicians, AI trainers, and automation specialists experience strong demand. Companies emphasise collaborative human-robot workflows rather than wholesale workforce replacement, focusing on augmentation strategies that enhance productivity whilst maintaining employment.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>Humanoid robots achieve commercial viability in 2025 for specific applications</li><li>Tesla Optimus and Unitree H1 lead industrial deployment efforts</li><li>Consumer robot companions gain popularity with advanced AI personalities</li><li>Industry focuses on human-robot collaboration rather than replacement</li></ul></div>"
+    },
+    {
+      "id": "4",
+      "category": "robotics",
+      "title": "Advanced FPV Drone Technology and Simulation Training Systems Advance",
+      "excerpt": "New simulation platforms enable realistic FPV drone training without physical hardware costs.",
+      "bannerImage": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=400&h=300&fit=crop",
+      "author": "Alex Rodriguez",
+      "date": "Oct 4, 2025",
+      "readTime": "5 min",
+      "sourceUrl": "https://www.dronezon.com/category/drone-news/",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Simulation Technology Revolutionises Training</h2><p>Advanced FPV drone simulation platforms now offer photorealistic environments and physics-accurate flight dynamics, enabling pilots to develop skills without expensive hardware or outdoor spaces. These systems replicate real-world conditions including wind, turbulence, and equipment limitations, providing effective training at fraction of traditional costs.</p><h3>Platform Capabilities</h3><p>Modern simulators support multiple controller types, offer extensive environment libraries, and include multiplayer racing competitions. The software tracks performance metrics, provides instant feedback, and structures progressive learning paths from basic hovering through advanced acrobatic manoeuvres.</p><ul><li><strong>Graphics:</strong> Photorealistic rendering, dynamic lighting, weather effects</li><li><strong>Physics:</strong> Accurate aerodynamics, motor response, collision detection</li><li><strong>Environments:</strong> Urban, natural, purpose-built racing courses</li><li><strong>Multiplayer:</strong> Competitive racing, cooperative missions, global leaderboards</li></ul><h3>Hardware Integration</h3><p>Simulators integrate seamlessly with popular FPV controllers and goggles, providing authentic control feel and visual experience. USB connectivity enables plug-and-play operation, whilst low-latency rendering maintains the responsiveness critical for drone piloting skill development.</p><blockquote><p>\"Simulator training accelerates skill acquisition whilst eliminating crash damage costs. Pilots can practice dangerous manoeuvres safely, building confidence before flying actual equipment.\" - FPV Training Institute</p></blockquote><h3>Commercial and Recreational Applications</h3><p>Professional drone operators utilise simulators for scenario training, emergency procedure practice, and equipment familiarisation. Recreational pilots use the software for entertainment, skill maintenance during adverse weather, and exploring new flying styles without equipment risk.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>Advanced simulators provide photorealistic FPV drone training environments</li><li>Training costs reduced by eliminating hardware damage expenses</li><li>Multiplayer features enable competitive racing and skill comparison</li><li>Professional operators use simulators for scenario and emergency training</li></ul></div>"
+    },
+    {
+      "id": "5",
+      "category": "ai-tech",
+      "title": "AR/VR Headset Market Expands with New Features and Competitive Pricing",
+      "excerpt": "Meta Quest 4 and Apple Vision Pro updates deliver enhanced capabilities at improved price points.",
+      "bannerImage": "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=400&h=300&fit=crop",
+      "author": "Emma Thompson",
+      "date": "Oct 3, 2025",
+      "readTime": "6 min",
+      "sourceUrl": "https://www.theverge.com/tech",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Extended Reality Adoption Accelerates</h2><p>The AR/VR market experiences significant growth in 2025 as improved hardware capabilities, expanded content libraries, and competitive pricing drive consumer adoption. Major manufacturers release updated headsets featuring higher resolution displays, enhanced tracking systems, and longer battery life.</p><h3>Hardware Advancements</h3><p>Current-generation headsets achieve 4K per-eye resolution, 120Hz refresh rates, and pancake lens designs reducing form factors. Advanced hand tracking eliminates controller requirements for many applications, whilst improved inside-out tracking provides accurate spatial positioning without external sensors.</p><ul><li><strong>Display:</strong> 4K per eye, 120Hz refresh, micro-OLED panels</li><li><strong>Tracking:</strong> Inside-out, hand tracking, eye tracking, facial expression</li><li><strong>Audio:</strong> Spatial audio, active noise cancellation, directional speakers</li><li><strong>Connectivity:</strong> Wi-Fi 7, standalone and PC tethered modes</li></ul><h3>Content Ecosystem Expands</h3><p>Major software platforms invest heavily in VR content development, resulting in diverse application libraries spanning gaming, productivity, education, and social experiences. Professional applications emerge for architecture, medical training, and collaborative design work.</p><blockquote><p>\"Extended reality technology transitions from novelty to practical tool as hardware improves and content quality matches traditional computing experiences.\" - XR Industry Analysis</p></blockquote><h3>Market Positioning and Pricing</h3><p>Manufacturers adopt tiered product strategies serving different market segments. Entry-level devices start around $300, mid-range models with standalone capabilities price near $500-700, whilst premium headsets with advanced features reach $3000-4000. This range enables wider accessibility whilst supporting professional applications.</p><div class=\"highlight-box\"><p><strong>🥽 Price Ranges:</strong> Entry ($300-500), Mid-range ($500-1000), Premium ($1000-4000). Consider use case, standalone vs tethered, and content ecosystem.</p></div><h3>Adoption Barriers Diminish</h3><p>Improved ergonomics address comfort concerns for extended use sessions. Expanding content libraries provide compelling reasons for purchase beyond initial novelty. Social VR platforms gain users as network effects create value, whilst productivity applications demonstrate clear workplace benefits justifying enterprise investment.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>AR/VR headsets achieve 4K resolution and 120Hz refresh rates in 2025</li><li>Competitive pricing from $300-4000 serves diverse market segments</li><li>Content libraries expand across gaming, productivity, and social applications</li><li>Enterprise adoption increases as workplace benefits become evident</li></ul></div>"
+    },
+    {
+      "id": "6",
+      "category": "ai-tech",
+      "title": "Gaussian Splatting Revolutionises 3D Rendering and Light-Field Displays",
+      "excerpt": "New rendering technique enables real-time photorealistic 3D visualisation on consumer hardware.",
+      "bannerImage": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=300&fit=crop",
+      "author": "Dr. Michael Zhang",
+      "date": "Oct 2, 2025",
+      "readTime": "6 min",
+      "sourceUrl": "https://www.siggraph.org/",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Novel Rendering Approach Transforms Graphics</h2><p>Gaussian splatting technology achieves photorealistic 3D rendering at interactive frame rates on consumer hardware, representing a fundamental shift in computer graphics methodology. The technique generates convincing 3D representations from 2D images, enabling applications from virtual production to architectural visualisation.</p><h3>Technical Innovation</h3><p>Unlike traditional polygon-based rendering or neural radiance fields, Gaussian splatting represents scenes as collections of 3D Gaussian distributions. This approach combines the speed of rasterisation with the quality of volumetric rendering, achieving real-time performance whilst maintaining photorealistic appearance.</p><ul><li><strong>Performance:</strong> 60+ fps on mid-range GPUs, 120+ fps on high-end hardware</li><li><strong>Quality:</strong> Photorealistic output, accurate lighting, view-dependent effects</li><li><strong>Efficiency:</strong> Lower memory usage than traditional methods</li><li><strong>Flexibility:</strong> Supports dynamic scenes, editable representations</li></ul><h3>Industry Applications</h3><p>Film and television production studios adopt Gaussian splatting for virtual set extensions and pre-visualisation. Architectural firms utilise the technology for client presentations and design review. Gaming companies experiment with hybrid approaches combining traditional geometry with splat-based rendering for enhanced realism.</p><blockquote><p>\"Gaussian splatting democratises photorealistic 3D rendering by achieving film-quality results on consumer hardware, eliminating previous barriers to real-time photorealism.\" - SIGGRAPH Technical Paper</p></blockquote><h3>Light-Field Display Integration</h3><p>The technology pairs naturally with emerging light-field displays, which present different views to each eye without requiring headsets. Combined systems create glasses-free 3D visualisation with correct motion parallax and focus cues, approaching holographic display quality.</p><div class=\"highlight-box\"><p><strong>⚡ Performance Impact:</strong> 10-20x faster rendering than neural radiance fields, 2-3x faster than traditional rasterisation with similar quality levels.</p></div><h3>Accessibility and Tools</h3><p>Open-source implementations enable widespread experimentation and adoption. Major 3D software packages integrate Gaussian splatting support, whilst standalone tools facilitate scene capture from photographs or video. The technology's efficiency makes it accessible to independent creators and small studios.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>Gaussian splatting achieves photorealistic 3D rendering at 60+ fps</li><li>Technology works on consumer hardware without specialised equipment</li><li>Film, architecture, and gaming industries adopt the technique</li><li>Open-source tools enable widespread accessibility and experimentation</li></ul></div>"
+    },
+    {
+      "id": "7",
+      "category": "space",
+      "title": "James Webb Telescope Discovers Earth-Sized Exoplanets in Habitable Zones",
+      "excerpt": "JWST identifies multiple potentially habitable worlds within 100 light-years of Earth.",
+      "bannerImage": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?w=400&h=300&fit=crop",
+      "author": "Dr. Rebecca Foster",
+      "date": "Oct 1, 2025",
+      "readTime": "7 min",
+      "sourceUrl": "https://www.nasa.gov/mission_pages/webb/main/index.html",
+      "isTrending": true,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Breakthrough Exoplanet Discoveries</h2><p>The James Webb Space Telescope has identified seven Earth-sized exoplanets orbiting within the habitable zones of nearby stars, with atmospheric analysis revealing potential biosignatures on two candidates. These discoveries, located between 40-100 light-years from Earth, represent the most promising targets yet for the search for extraterrestrial life.</p><h3>Detection Methods and Capabilities</h3><p>JWST's infrared capabilities enable detailed atmospheric spectroscopy of transiting exoplanets, revealing chemical compositions including water vapour, carbon dioxide, methane, and potentially biogenic gases. The telescope's unprecedented sensitivity detects atmospheric features previously beyond observational limits.</p><ul><li><strong>Water Vapour:</strong> Detected on five of seven planets</li><li><strong>Oxygen Signatures:</strong> Preliminary indications on two candidates</li><li><strong>Temperature Range:</strong> 250-320 Kelvin (Earth-like)</li><li><strong>Orbital Periods:</strong> 20-150 days around red dwarf stars</li></ul><h3>Biosignature Analysis</h3><p>Two planets exhibit atmospheric chemistry potentially indicating biological processes. The presence of oxygen alongside methane suggests possible metabolic activity, whilst carbon dioxide levels align with planetary conditions supporting liquid water. Scientists caution that confirmation requires additional observations ruling out non-biological explanations.</p><blockquote><p>\"These discoveries represent the best opportunities yet to determine whether life exists beyond Earth. The atmospheric signatures are intriguing and warrant intensive follow-up observations.\" - NASA Exoplanet Science Institute</p></blockquote><h3>Red Dwarf Advantages</h3><p>The target stars are M-class red dwarfs, smaller and cooler than our Sun but offering distinct advantages for habitability studies. Their habitable zones lie closer to the star, making planets easier to detect and characterise. Red dwarfs' longevity provides billions of additional years for life to develop compared to Sun-like stars.</p><div class=\"highlight-box\"><p><strong>🌍 Habitability Factors:</strong> Liquid water presence, stable orbits, protective magnetic fields, atmospheric retention, appropriate stellar radiation levels.</p></div><h3>Future Observation Campaigns</h3><p>NASA has allocated additional JWST observation time for detailed atmospheric characterisation of the most promising candidates. Ground-based extremely large telescopes currently under construction will provide complementary data. The discoveries focus astrobiology research efforts and inform target selection for future interstellar probe missions.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>JWST discovers seven Earth-sized planets in habitable zones within 100 light-years</li><li>Two planets show potential biosignatures requiring further investigation</li><li>Red dwarf stars offer advantages for habitability and observation</li><li>Additional telescope time allocated for detailed atmospheric analysis</li></ul></div>"
+    },
+    {
+      "id": "8",
+      "category": "quantum",
+      "title": "Quantum Entanglement Achieved Over 1000 Kilometres via Satellite",
+      "excerpt": "Chinese researchers demonstrate record-distance quantum communication through space.",
+      "bannerImage": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&h=300&fit=crop",
+      "author": "Dr. Li Wei",
+      "date": "Sep 30, 2025",
+      "readTime": "6 min",
+      "sourceUrl": "https://www.nature.com/nature/articles",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Space-Based Quantum Communication Succeeds</h2><p>Researchers have successfully demonstrated quantum entanglement distribution over 1,200 kilometres using satellite relay systems, marking a crucial milestone toward global quantum communication networks. The achievement overcomes previous distance limitations imposed by ground-based fibre optic transmission.</p><h3>Technical Implementation</h3><p>The system employs satellites as trusted nodes, generating entangled photon pairs and distributing them to ground stations. Advanced adaptive optics compensate for atmospheric disturbances, whilst specialised detectors maintain signal integrity despite losses inherent in space-to-ground transmission.</p><ul><li><strong>Distance:</strong> 1,200 kilometres between ground stations</li><li><strong>Fidelity:</strong> 92% entanglement quality maintained</li><li><strong>Transmission:</strong> Satellite altitude 500 kilometres</li><li><strong>Detection:</strong> Single-photon sensitivity, low noise</li></ul><h3>Quantum Communication Advantages</h3><p>Quantum key distribution provides theoretically unbreakable encryption, as any interception attempt disturbs the quantum states and reveals eavesdropping. This capability addresses growing concerns about quantum computer threats to conventional cryptography, offering future-proof secure communication.</p><blockquote><p>\"Space-based quantum communication enables global secure networks immune to quantum computer attacks, providing essential infrastructure for future information security.\" - Quantum Communication Research Team</p></blockquote><h3>Network Expansion Plans</h3><p>Multiple nations develop quantum satellite constellations for expanded coverage and reliability. Commercial providers explore quantum communication services for financial institutions, government agencies, and critical infrastructure operators requiring highest security levels.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>Quantum entanglement achieved over 1,200 kilometres via satellite</li><li>System maintains 92% entanglement fidelity through atmosphere</li><li>Technology enables quantum-secure global communication networks</li><li>Commercial quantum communication services under development</li></ul></div>"
+    },
+    {
+      "id": "9",
+      "category": "quantum",
+      "title": "Time Crystals Demonstrate Practical Applications in Quantum Computing",
+      "excerpt": "Exotic matter phase shows promise for maintaining quantum coherence in processors.",
+      "bannerImage": "https://images.unsplash.com/photo-1635241161466-541f065683ba?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1635241161466-541f065683ba?w=400&h=300&fit=crop",
+      "author": "Dr. Sofia Martinez",
+      "date": "Sep 29, 2025",
+      "readTime": "6 min",
+      "sourceUrl": "https://physics.aps.org/",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Exotic Matter Phase Finds Practical Use</h2><p>Time crystals, an exotic phase of matter that exhibits periodic structure in time rather than space, demonstrate practical applications in quantum computing by maintaining coherence significantly longer than conventional qubit implementations. This breakthrough addresses one of quantum computing's fundamental challenges.</p><h3>Time Crystal Properties</h3><p>Unlike ordinary crystals with repeating spatial patterns, time crystals exhibit periodic behaviour in their lowest energy state without consuming energy. This property makes them resistant to thermal noise and environmental disturbances that typically cause quantum decoherence.</p><ul><li><strong>Coherence Time:</strong> 100x improvement over standard qubits</li><li><strong
