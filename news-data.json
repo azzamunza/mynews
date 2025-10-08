@@ -1,0 +1,180 @@
+{
+  "categories": [
+    {
+      "id": "all",
+      "name": "All News",
+      "active": true
+    },
+    {
+      "id": "technology",
+      "name": "Technology",
+      "active": false
+    },
+    {
+      "id": "business",
+      "name": "Business",
+      "active": false
+    },
+    {
+      "id": "science",
+      "name": "Science",
+      "active": false
+    },
+    {
+      "id": "health",
+      "name": "Health",
+      "active": false
+    },
+    {
+      "id": "sports",
+      "name": "Sports",
+      "active": false
+    }
+  ],
+  "articles": [
+    {
+      "id": "1",
+      "category": "technology",
+      "title": "AI Revolution Transforms Healthcare Industry",
+      "excerpt": "Artificial intelligence is revolutionizing patient care with breakthrough diagnostic tools and personalized treatment plans that are changing medicine forever.",
+      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400",
+      "imageModal": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900",
+      "author": "Sarah Chen",
+      "date": "Oct 7, 2025",
+      "readTime": "5 min read",
+      "fullContent": [
+        "Artificial intelligence is fundamentally transforming the healthcare industry, introducing breakthrough diagnostic tools and personalized treatment approaches that were unimaginable just a decade ago. Medical professionals worldwide are embracing AI-powered systems that can analyze patient data, predict health outcomes, and recommend treatment plans with unprecedented accuracy.",
+        "Recent studies show that AI diagnostic systems can now detect certain cancers and cardiovascular conditions earlier and more accurately than traditional methods. Machine learning algorithms trained on millions of medical images can identify subtle patterns that might escape even the most experienced physicians, potentially saving countless lives through early intervention.",
+        "The technology extends beyond diagnostics. AI-driven drug discovery platforms are accelerating the development of new medications, reducing the typical decade-long timeline to just a few years. Personalized medicine powered by AI analyzes a patient's genetic profile, lifestyle factors, and medical history to recommend tailored treatment protocols that maximize effectiveness while minimizing side effects.",
+        "Healthcare providers are also leveraging AI to improve operational efficiency. Predictive analytics help hospitals optimize staffing levels, reduce wait times, and allocate resources more effectively. Virtual health assistants powered by natural language processing provide patients with immediate responses to medical questions, triaging cases and freeing up medical professionals to focus on complex cases requiring human expertise.",
+        "Despite these advances, experts emphasize that AI is designed to augment, not replace, human medical professionals. The technology excels at processing vast amounts of data and identifying patterns, but the empathy, ethical reasoning, and holistic judgment that doctors provide remain irreplaceable components of quality healthcare."
+      ]
+    },
+    {
+      "id": "2",
+      "category": "business",
+      "title": "Global Markets Rally on Economic Recovery Signs",
+      "excerpt": "Stock markets worldwide surge as economic indicators point to stronger growth prospects and increased consumer confidence across major economies.",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400",
+      "imageModal": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900",
+      "author": "Michael Roberts",
+      "date": "Oct 7, 2025",
+      "readTime": "4 min read",
+      "fullContent": [
+        "Stock markets across the globe experienced significant gains today as a series of positive economic indicators fueled investor optimism about the strength and sustainability of the current recovery. Major indices in the United States, Europe, and Asia all posted strong performances, with technology and consumer discretionary sectors leading the advance.",
+        "The rally comes on the heels of better-than-expected employment data, showing robust job creation and declining unemployment rates across major economies. Consumer confidence surveys also revealed improving sentiment, with households expressing greater willingness to make major purchases and investments in the coming months.",
+        "Central bank officials have signaled a balanced approach to monetary policy, suggesting they will carefully monitor inflation while supporting continued economic growth. This measured stance has reassured investors who had worried about either premature tightening or excessive accommodation undermining long-term stability.",
+        "Corporate earnings reports have generally exceeded analyst expectations, with companies across various sectors demonstrating resilience and adaptability in navigating supply chain challenges and shifting consumer preferences. Many executives expressed confidence in their growth prospects, citing strong order books and expanding market opportunities.",
+        "While acknowledging the positive momentum, market analysts caution that uncertainties remain. Geopolitical tensions, potential regulatory changes, and the possibility of unexpected economic shocks could still impact market trajectories. They recommend investors maintain diversified portfolios and stay focused on long-term fundamentals rather than short-term volatility."
+      ]
+    },
+    {
+      "id": "3",
+      "category": "science",
+      "title": "NASA Discovers Potentially Habitable Exoplanet",
+      "excerpt": "Scientists identify a new Earth-sized planet in the habitable zone of a nearby star system, sparking excitement about the possibility of extraterrestrial life.",
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400",
+      "imageModal": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900",
+      "author": "Dr. Amanda Foster",
+      "date": "Oct 6, 2025",
+      "readTime": "6 min read",
+      "fullContent": [
+        "In what could be one of the most significant astronomical discoveries of the decade, NASA scientists have identified an Earth-sized exoplanet orbiting within the habitable zone of a nearby star system. The planet, designated TOI-2847b, is located approximately 120 light-years from Earth and exhibits characteristics that make it a prime candidate for supporting liquid water and potentially life as we know it.",
+        "The discovery was made using advanced spectroscopic analysis from the James Webb Space Telescope combined with data from ground-based observatories. Initial observations suggest the planet has a rocky composition similar to Earth and maintains a stable orbit at a distance from its host star that would allow temperatures conducive to liquid water on its surface.",
+        "What makes TOI-2847b particularly intriguing is the preliminary evidence of an atmosphere containing water vapor, oxygen, and methane - a combination that on Earth is strongly associated with biological processes. While scientists caution that non-biological explanations for this atmospheric composition are possible, the finding has generated considerable excitement within the astrobiology community.",
+        "The planet's host star is a red dwarf, smaller and cooler than our Sun but stable enough to potentially support life for billions of years. Red dwarf systems have become increasingly interesting to exoplanet researchers because these stars are abundant throughout the galaxy and can have habitable zones closer to the star, making planets easier to detect and study.",
+        "Future observations with next-generation telescopes will focus on obtaining more detailed atmospheric spectra and looking for biosignatures - chemical fingerprints that would provide stronger evidence of biological activity. The discovery reinforces the growing scientific consensus that potentially habitable worlds may be far more common in the universe than previously thought, fundamentally reshaping our understanding of our place in the cosmos."
+      ]
+    },
+    {
+      "id": "4",
+      "category": "health",
+      "title": "New Cancer Treatment Shows Promising Results",
+      "excerpt": "Clinical trials reveal breakthrough immunotherapy approach that significantly improves survival rates for patients with advanced stage cancers.",
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400",
+      "imageModal": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=900",
+      "author": "Dr. James Wilson",
+      "date": "Oct 6, 2025",
+      "readTime": "5 min read",
+      "fullContent": [
+        "A groundbreaking immunotherapy approach has demonstrated remarkable success in clinical trials, offering new hope for patients with advanced-stage cancers that have proven resistant to conventional treatments. The therapy, which harnesses the body's own immune system to target and destroy cancer cells, has shown significant improvements in survival rates and quality of life for participants.",
+        "The treatment involves engineering the patient's T-cells to recognize and attack specific proteins found on the surface of cancer cells. Unlike traditional chemotherapy that indiscriminately damages both healthy and cancerous tissue, this targeted approach minimizes side effects while maximizing therapeutic impact. Early results suggest response rates exceeding 70 percent in certain cancer types, a dramatic improvement over existing options.",
+        "What sets this therapy apart is its ability to create lasting immunity. Researchers have observed that treated patients develop a memory response, where their immune systems continue to recognize and eliminate any returning cancer cells. This characteristic could potentially transform certain cancers from terminal diagnoses into manageable chronic conditions.",
+        "The multi-center trial included over 500 patients with various cancer types, including melanoma, lung cancer, and certain blood cancers. Participants who had exhausted other treatment options reported not only tumor shrinkage but also improved energy levels, reduced pain, and better overall functioning - outcomes that significantly enhance daily life beyond mere survival statistics.",
+        "While the results are encouraging, researchers emphasize that the therapy requires further study to determine optimal dosing, identify which patients are most likely to benefit, and understand potential long-term effects. The team is working to expand access through additional trials and has begun the regulatory approval process, with hopes that this treatment could become widely available within the next few years, offering a powerful new weapon in the fight against cancer."
+      ]
+    },
+    {
+      "id": "5",
+      "category": "technology",
+      "title": "Quantum Computing Breakthrough Achieved",
+      "excerpt": "Researchers demonstrate quantum supremacy in practical applications, solving complex problems in minutes that would take classical computers millennia.",
+      "image": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=400",
+      "imageModal": "https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=900",
+      "author": "Emily Zhang",
+      "date": "Oct 5, 2025",
+      "readTime": "5 min read",
+      "fullContent": [
+        "In a watershed moment for computing technology, researchers have successfully demonstrated quantum supremacy in practical, real-world applications. The team's quantum computer solved a complex optimization problem in just 12 minutes that would require the world's most powerful classical supercomputers an estimated 10,000 years to complete.",
+        "The breakthrough addresses one of the field's most significant challenges: moving quantum computing from theoretical promise to practical utility. Previous demonstrations of quantum advantage were limited to highly specialized, abstract problems with little real-world relevance. This achievement involved solving a drug discovery optimization problem, identifying molecular structures that could lead to new pharmaceutical treatments.",
+        "The system utilizes a novel error-correction technique that dramatically increases the stability and reliability of quantum calculations. Quantum computers are notoriously sensitive to environmental disturbances, with even the slightest vibration or temperature fluctuation capable of disrupting calculations. The new approach employs redundant qubits and real-time error monitoring to maintain computational integrity over extended periods.",
+        "Industry analysts predict this development could accelerate the timeline for quantum computing applications in fields ranging from materials science and artificial intelligence to cryptography and financial modeling. Companies are already exploring how to integrate quantum capabilities into their existing computational infrastructure, potentially revolutionizing industries that rely on processing vast amounts of complex data.",
+        "The achievement also raises important questions about data security, as quantum computers could theoretically break many current encryption methods. Governments and organizations worldwide are already investing heavily in quantum-resistant cryptography to protect sensitive information from future quantum attacks, recognizing that the technology's implications extend far beyond scientific curiosity into national security and economic competitiveness."
+      ]
+    },
+    {
+      "id": "6",
+      "category": "sports",
+      "title": "Olympic Champion Breaks World Record",
+      "excerpt": "Track and field star shatters long-standing world record in dramatic fashion, cementing their legacy as one of the greatest athletes of all time.",
+      "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400",
+      "imageModal": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=900",
+      "author": "Carlos Martinez",
+      "date": "Oct 5, 2025",
+      "readTime": "4 min read",
+      "fullContent": [
+        "In an electrifying display of human athletic excellence, Olympic champion Marcus Thompson shattered the world record in the men's 400-meter sprint, completing the distance in an astonishing 42.89 seconds. The performance, which took place at the World Athletics Championships, surpassed the previous record that had stood for nearly a decade.",
+        "Thompson's historic run captivated the 80,000 spectators packed into the stadium and millions watching worldwide. From the starting blocks, he demonstrated explosive acceleration, maintaining perfect form throughout the race and crossing the finish line well ahead of his competitors. His time represents a remarkable 0.34-second improvement over the previous record, a margin considered enormous in elite sprinting.",
+        "The 27-year-old athlete attributed his success to a comprehensive approach combining cutting-edge sports science, rigorous training, and mental preparation. His team employs advanced biomechanical analysis, personalized nutrition plans, and innovative recovery techniques that have redefined what's possible in track and field.",
+        "Thompson's achievement comes after years of dedicated work following a disappointing fourth-place finish at the previous Olympic Games. He has been open about the mental challenges of competing at the highest level and credits sports psychology as a crucial element of his preparation. His ability to perform under pressure and maintain composure in championship moments has become a defining characteristic of his athletic identity.",
+        "The record-breaking performance cements Thompson's legacy as one of the greatest sprinters in history and has already sparked discussions about the limits of human athletic potential. Sports scientists are analyzing every aspect of his technique, stride pattern, and race strategy to understand what made this achievement possible and whether it signals a new era in sprinting performance."
+      ]
+    },
+    {
+      "id": "7",
+      "category": "business",
+      "title": "Renewable Energy Investment Hits Record High",
+      "excerpt": "Global investment in clean energy technologies surpasses all previous records as corporations commit to ambitious carbon neutrality goals.",
+      "image": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400",
+      "imageModal": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=900",
+      "author": "Lisa Thompson",
+      "date": "Oct 4, 2025",
+      "readTime": "5 min read",
+      "fullContent": [
+        "Global investment in renewable energy technologies has reached an unprecedented $650 billion in 2025, surpassing all previous records and signaling a fundamental shift in how the world powers its economies. The surge reflects growing corporate commitments to carbon neutrality, supportive government policies, and dramatic improvements in the cost-effectiveness of clean energy solutions.",
+        "Solar and wind power continue to dominate new energy installations, but emerging technologies are attracting significant attention and capital. Green hydrogen production, advanced battery storage systems, and next-generation nuclear reactors are drawing billions in investment as companies and governments seek diverse pathways to decarbonization.",
+        "Major corporations across industries are making ambitious commitments to transition to 100 percent renewable energy. Tech giants, manufacturing companies, and financial institutions are not only purchasing renewable energy for their own operations but also investing in new projects that add clean capacity to power grids worldwide. This corporate demand is creating a virtuous cycle that drives further innovation and cost reductions.",
+        "The investment boom is creating millions of jobs in manufacturing, installation, maintenance, and research. Communities that historically depended on fossil fuel industries are increasingly benefiting from renewable energy projects, which provide long-term employment opportunities and economic revitalization while addressing climate concerns.",
+        "Despite the positive momentum, energy experts note that meeting global climate targets will require sustained investment at even higher levels. The International Energy Agency estimates that renewable energy investment must more than double by 2030 to limit global warming to 1.5 degrees Celsius. However, the current trajectory suggests that the clean energy transition is accelerating, with technological advances and policy support creating unprecedented opportunities for sustainable growth."
+      ]
+    },
+    {
+      "id": "8",
+      "category": "science",
+      "title": "Scientists Discover New Ocean Species",
+      "excerpt": "Deep-sea exploration reveals hundreds of previously unknown marine species, highlighting the vast biodiversity still waiting to be discovered.",
+      "image": "https://images.unsplash.com/photo-1530319067432-f2a729c03db5?w=400",
+      "imageModal": "https://images.unsplash.com/photo-1530319067432-f2a729c03db5?w=900",
+      "author": "Dr. Rachel Park",
+      "date": "Oct 4, 2025",
+      "readTime": "6 min read",
+      "fullContent": [
+        "A groundbreaking deep-sea expedition has revealed more than 300 previously unknown marine species, dramatically expanding our understanding of ocean biodiversity and highlighting how much of our planet's life remains unexplored. The discoveries include bizarre fish adapted to extreme pressure, bioluminescent creatures that create their own light, and unique invertebrates that challenge existing biological classifications.",
+        "The research team utilized advanced submersible technology capable of reaching depths exceeding 6,000 meters, where pressure is more than 600 times greater than at the surface. These extreme environments, once thought to be nearly lifeless, are proving to harbor complex ecosystems with remarkable adaptations that allow organisms to thrive in conditions that would be instantly fatal to most surface-dwelling life.",
+        "Among the most striking discoveries is a transparent fish species with visible internal organs and a unique ability to detect prey in complete darkness through electroreception. Researchers also documented a new type of deep-sea coral that hosts diverse communities of smaller organisms, functioning as an underwater oasis in the otherwise barren abyssal plains.",
+        "The expedition's findings have significant implications for understanding evolution, ecology, and the resilience of life on Earth. Many of the newly discovered species possess unique biochemical compounds that could have applications in medicine, biotechnology, and materials science. Preliminary analysis has identified several organisms producing substances with potential antibiotic, anti-cancer, and anti-inflammatory properties.",
+        "The discoveries also underscore the urgent need for ocean conservation. Scientists estimate that we have explored less than 20 percent of the ocean floor, meaning countless species remain undiscovered. However, deep-sea ecosystems face increasing threats from climate change, ocean acidification, and expanding industrial activities such as deep-sea mining. Researchers emphasize that protecting these environments is crucial not only for preserving biodiversity but also for maintaining the ocean's role in regulating Earth's climate and supporting human life."
+      ]
+    }
+  ]
+}
