@@ -947,42 +947,6 @@
         </div>
     </div>
 
-    <!-- Data Section -->
-    <script id="newsData" type="application/json">
-    {
-      "categories": [
-        {"id": "all", "name": "All", "active": true},
-        {"id": "tech", "name": "Tech", "active": false},
-        {"id": "business", "name": "Business", "active": false}
-      ],
-      "trending": [
-        {"articleId": "1", "reason": "Breaking news"}
-      ],
-      "articles": [
-        {
-          "id": "1",
-          "category": "tech",
-          "title": "Sample Article",
-          "excerpt": "This is a sample article.",
-          "bannerImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900",
-          "thumbnailImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400",
-          "author": "John Doe",
-          "date": "Oct 8, 2025",
-          "readTime": "5 min",
-          "sourceUrl": "https://example.com",
-          "isTrending": true,
-          "isJob": false,
-          "isVideo": false,
-          "videoUrl": "",
-          "fullContent": "<h2>Main Heading</h2><p>Article content here...</p>"
-        }
-      ],
-      "videos": [],
-      "makeWebhook": "YOUR_MAKE_WEBHOOK_URL_HERE",
-      "authToken": "YOUR_SECRET_AUTH_TOKEN_HERE"
-    }
-    </script>
-
     <script>
         let articlesData = [];
         let categoriesData = [];
@@ -1014,10 +978,16 @@
             });
         }
 
-        function loadNewsData() {
+        async function loadNewsData() {
             try {
-                const dataElement = document.getElementById('newsData');
-                const data = JSON.parse(dataElement.textContent);
+                // Fetch the external JSON file
+                const response = await fetch('news-data.json');
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
                 
                 categoriesData = data.categories || [];
                 articlesData = data.articles || [];
@@ -1033,15 +1003,18 @@
                 
             } catch (error) {
                 console.error('Error loading news data:', error);
-                showError();
+                showError(error.message);
             }
         }
 
-        function showError() {
+        function showError(message) {
             document.getElementById('categoryMenu').innerHTML = 
-                '<li style="color: var(--accent-color);">Error loading data</li>';
+                `<li style="color: var(--accent-color);">Error loading data: ${message}</li>`;
             document.getElementById('articleGrid').innerHTML = 
-                '<div class="loading" style="color: var(--accent-color);">Error loading articles</div>';
+                `<div class="loading" style="color: var(--accent-color);">
+                    <p>Error loading articles: ${message}</p>
+                    <p style="font-size: 0.9rem; margin-top: 1rem;">Make sure news-data.json is in the same directory as this HTML file.</p>
+                </div>`;
         }
 
         function renderCategories() {
