@@ -1,225 +1,400 @@
 {
-"categories": [
-{
-"id": "all",
-"name": "All News",
-"active": true
-},
-{
-"id": "artificial-intelligence-and-technology",
-"name": "Artificial Intelligence & Technology",
-"active": false
-},
-{
-"id": "science-and-space-exploration",
-"name": "Science & Space Exploration",
-"active": false
-},
-{
-"id": "digital-media-and-gaming",
-"name": "Digital Media & Gaming",
-"active": false
-},
-{
-"id": "ancient-history-and-archaeology",
-"name": "Ancient History & Archaeology",
-"active": false
-},
-{
-"id": "perth-local-services-and-lifestyle",
-"name": "Perth Local Services & Lifestyle",
-"active": false
-}
-],
-"trending": [
-{
-"articleId": "a2",
-"reason": "Anthropic announces first India office — major expansion in an increasingly competitive global AI market."
-},
-{
-"articleId": "a1",
-"reason": "Google previews Gemini 2.5 'computer use' model that can operate inside web browsers — potential step change for agentic web automation."
-},
-{
-"articleId": "a3",
-"reason": "James Webb finds a moon-forming disc around a giant exoplanet — new direct measurements with broad scientific interest."
-}
-],
-"articles": [
-{
-"id": "a1",
-"category": "artificial-intelligence-and-technology",
-"title": "Google previews Gemini 2.5 model that can ‘use’ a web browser to perform tasks",
-"excerpt": "Gemini 2.5 Computer Use can interact with websites via a browser, enabling agent-style automation for web-only interfaces.",
-"image": "",
-"imageModal": "",
-"author": "Emma Roth / The Verge",
-"date": "Oct 8, 2025",
-"readTime": "3 min read",
-"sourceUrl": "[https://www.theverge.com/news/795463/google-computer-use-gemini-ai-model-agents](https://www.theverge.com/news/795463/google-computer-use-gemini-ai-model-agents)",
-"isTrending": true,
-"fullContent": [
-"Google has previewed Gemini 2.5 Computer Use, a version of its Gemini model designed to interact with websites through a browser and perform tasks on web interfaces.",
-"The model uses visual understanding and reasoning to carry out actions such as typing, dragging and filling forms, enabling automation where services lack direct APIs or developer access.",
-"Google positions the capability as a specialised browser-level agent rather than a full OS-level controller; it currently supports a defined set of actions and is available to developers via Google AI Studio and Vertex AI.",
-"Demo examples show the model completing multi-step tasks and UI testing faster than previous approaches, while Google highlights benchmark gains on web and mobile tests.",
-"The preview follows similar agentic moves from other labs and signals further competition in practical automation — developers and product teams will assess security, privacy and reliability as adoption grows."
-]
-},
-{
-"id": "a2",
-"category": "artificial-intelligence-and-technology",
-"title": "Anthropic to open first India office in Bengaluru in early 2026",
-"excerpt": "Anthropic will open its first India office, citing strong demand for Claude and plans to grow international operations.",
-"image": "",
-"imageModal": "",
-"author": "Mrinmay Dey / Reuters",
-"date": "Oct 7, 2025",
-"readTime": "2 min read",
-"sourceUrl": "[https://www.reuters.com/business/retail-consumer/anthropic-open-india-office-2026-2025-10-08/](https://www.reuters.com/business/retail-consumer/anthropic-open-india-office-2026-2025-10-08/)",
-"isTrending": true,
-"fullContent": [
-"Anthropic announced it will open its first office in India, selecting Bengaluru for an early-2026 launch to support growing demand for its Claude models.",
-"The company said India is now its second-largest market and plans to expand international staffing to meet rising enterprise and developer interest.",
-"Anthropic’s move follows increased competition in India from other major AI providers and reflects a broader strategy to localise operations and partner with regional customers.",
-"The company noted the office will enable closer collaboration with local enterprises and help tailor Claude’s offerings to Indian workflows and pricing requirements.",
-"Analysts say the expansion underscores India’s strategic importance in global AI deployment and intensifies competition for talent and market share in the region."
-]
-},
-{
-"id": "a3",
-"category": "science-and-space-exploration",
-"title": "James Webb finds a carbon-rich moon-forming disc around a giant exoplanet",
-"excerpt": "JWST has directly measured the properties of a circumplanetary disc around CT Cha b, a candidate moon-forming region.",
-"image": "",
-"imageModal": "",
-"author": "ESA / NASA science teams",
-"date": "Sep 29, 2025",
-"readTime": "4 min read",
-"sourceUrl": "[https://esawebb.org/news/archive/year/2025/](https://esawebb.org/news/archive/year/2025/)",
-"isTrending": true,
-"fullContent": [
-"The James Webb Space Telescope has measured a carbon-rich circumplanetary disc around the exoplanet CT Cha b, indicating a possible site for moon formation.",
-"Spectroscopic data captured by Webb’s instruments reveal specific molecules and physical conditions consistent with a dusty, gas-rich ring surrounding the massive planet.",
-"Scientists emphasise that while the disc matches theoretical expectations for moon-forming environments, no moons have been directly detected in the data so far.",
-"The observation provides direct constraints on the chemistry and dynamics of circumplanetary material and offers a new laboratory to test models of satellite formation.",
-"Researchers expect follow-up observations and modelling to clarify how commonly such discs occur and what they imply for the diversity of moon systems in the galaxy."
-]
-},
-{
-"id": "a4",
-"category": "science-and-space-exploration",
-"title": "JWST data may contain signatures of exotic early Universe objects, researchers report",
-"excerpt": "Analyses of JWST observations suggest unexpected spectral signatures that could indicate unusual early-Universe objects.",
-"image": "",
-"imageModal": "",
-"author": "EurekAlert / Research Teams",
-"date": "Oct 3, 2025",
-"readTime": "4 min read",
-"sourceUrl": "[https://www.eurekalert.org/news-releases/1100359](https://www.eurekalert.org/news-releases/1100359)",
-"isTrending": false,
-"fullContent": [
-"New analyses of James Webb Telescope data have flagged unusual spectral features that some researchers interpret as possible signatures of exotic early-Universe objects.",
-"The findings highlight objects whose light does not match standard stellar population models, prompting proposals that some early luminous sources may differ markedly from ordinary stars.",
-"Authors caution that alternative explanations, including dust effects or data processing artefacts, remain plausible and require additional observations to confirm.",
-"If verified, the signatures could change understanding of the first luminous sources and their role in reionisation, but the community emphasises rigorous follow-up to avoid premature conclusions.",
-"Ongoing JWST programmes and independent analyses will test these claims and aim to resolve whether the signals represent new physics or observational complexities."
-]
-},
-{
-"id": "a5",
-"category": "artificial-intelligence-and-technology",
-"title": "Analysis: China’s rapid rollout of on-site learning robots pressures Western cautious approaches",
-"excerpt": "Reports show China scaling learn-on-the-job robots while Western deployments remain more cautious and regulated.",
-"image": "",
-"imageModal": "",
-"author": "Viviantoh / Forbes",
-"date": "Sep 26, 2025",
-"readTime": "5 min read",
-"sourceUrl": "[https://www.forbes.com/sites/viviantoh/2025/09/26/chinas-android-for-robots-and-the-race-for-embodied-ai-supremacy/](https://www.forbes.com/sites/viviantoh/2025/09/26/chinas-android-for-robots-and-the-race-for-embodied-ai-supremacy/)",
-"isTrending": false,
-"fullContent": [
-"Forbes reports that Chinese manufacturers and integrators are rapidly deploying learning-capable robots for commercial tasks, outpacing more cautious Western rollouts.",
-"The article compares philosophies: China’s aggressive field-testing and scale versus Western emphasis on safety, regulation and measured deployment.",
-"Proponents say large-scale deployments accelerate practical improvements through real-world training, while critics warn of safety and labour impacts without robust oversight.",
-"The piece surveys several firms and projects and highlights how competition in embodied AI is driving innovation in both hardware and agent software.",
-"Observers recommend clearer regulation and international collaboration to ensure safety, while recognising that competition may yield faster technical progress."
-]
-},
-{
-"id": "a6",
-"category": "perth-local-services-and-lifestyle",
-"title": "Perth job listings remain active as SEEK shows hundreds of local vacancies",
-"excerpt": "SEEK lists thousands of roles across Perth, signalling continued hiring across sectors including IT and design.",
-"image": "",
-"imageModal": "",
-"author": "SEEK listings",
-"date": "Oct 8, 2025",
-"readTime": "2 min read",
-"sourceUrl": "[https://www.seek.com.au/perth-seek-jobs/in-All-Perth-WA](https://www.seek.com.au/perth-seek-jobs/in-All-Perth-WA)",
-"isTrending": false,
-"fullContent": [
-"SEEK’s Perth pages show hundreds of active job listings across Western Australia, with roles spanning IT, design, trades and services.",
-"Local demand reflects ongoing infrastructure and resources projects, and employers continue to advertise for skilled and entry-level roles.",
-"Job-seekers are advised to use tailored alerts and to update profiles to match employer preferences for immediate visibility.",
-"Training providers and TAFE courses remain an option for candidates seeking upskilling in areas such as digital design, 3D visualisation and IT.",
-"Recruitment trends suggest employers are prioritising candidates with practical experience or demonstrable project portfolios."
-]
-},
-{
-"id": "a7",
-"category": "perth-local-services-and-lifestyle",
-"title": "Perth market snapshot: listings tighten while sales remain steady",
-"excerpt": "Weekly market data shows fewer listings and relatively steady sales in Perth as local demand persists.",
-"image": "",
-"imageModal": "",
-"author": "Mirage News / REIWA data",
-"date": "Oct 5, 2025",
-"readTime": "2 min read",
-"sourceUrl": "[https://www.miragenews.com/perth-weekly-market-snapshot-for-week-ending-5-1546630/](https://www.miragenews.com/perth-weekly-market-snapshot-for-week-ending-5-1546630/)",
-"isTrending": false,
-"fullContent": [
-"Local market data for the week ending 5 October 2025 shows listings tightening while sales volumes remain broadly steady.",
-"REIWA members reported a decline in active listings compared with the previous week, which analysts say supports price stability in many suburbs.",
-"Experts note that reduced new listings and continued demand are influencing competition for quality properties across metropolitan Perth.",
-"For renters and buyers, the report recommends closely monitoring suburb-specific vacancy trends and engaging agents early in search processes.",
-"Policy or economic changes could shift dynamics; market participants are watching affordability and supply indicators for signs of change."
-]
-}
-],
-"videos": [
-{
-"id": "v1",
-"category": "artificial-intelligence-and-technology",
-"title": "Gemini 2.5: Make your own interactive demo",
-"excerpt": "Google DeepMind demonstrates Gemini 2.5 Pro creating an interactive demo using reasoning capabilities.",
-"thumbnail": "[https://img.youtube.com/vi/_CU0PkLNtwc/maxresdefault.jpg](https://img.youtube.com/vi/_CU0PkLNtwc/maxresdefault.jpg)",
-"videoUrl": "[https://www.youtube.com/watch?v=_CU0PkLNtwc](https://www.youtube.com/watch?v=_CU0PkLNtwc)",
-"channel": "Google DeepMind",
-"publishDate": "Aug 01, 2025",
-"duration": "03:47"
-},
-{
-"id": "v2",
-"category": "science-and-space-exploration",
-"title": "Webb Telescope Observes Moon-Forming Disk Around Exoplanet",
-"excerpt": "Short explainer and visuals showing JWST observations of a circumplanetary disc around CT Cha b.",
-"thumbnail": "[https://img.youtube.com/vi/zQUuI6nTcM4/maxresdefault.jpg](https://img.youtube.com/vi/zQUuI6nTcM4/maxresdefault.jpg)",
-"videoUrl": "[https://www.youtube.com/watch?v=zQUuI6nTcM4](https://www.youtube.com/watch?v=zQUuI6nTcM4)",
-"channel": "Beyond Headlines",
-"publishDate": "Sep 30, 2025",
-"duration": "01:12"
-},
-{
-"id": "v3",
-"category": "artificial-intelligence-and-technology",
-"title": "Anthropic's First India Developer Event in Bengaluru",
-"excerpt": "Clip outlining Anthropic’s planned developer event and India expansion plans.",
-"thumbnail": "[https://img.youtube.com/vi/EWjoIeOgKkM/maxresdefault.jpg](https://img.youtube.com/vi/EWjoIeOgKkM/maxresdefault.jpg)",
-"videoUrl": "[https://www.youtube.com/watch?v=EWjoIeOgKkM](https://www.youtube.com/watch?v=EWjoIeOgKkM)",
-"channel": "AI News Clips",
-"publishDate": "Oct 06, 2025",
-"duration": "02:05"
-}
-]
+  "categories": [
+    {
+      "id": "all",
+      "name": "All News",
+      "active": true
+    },
+    {
+      "id": "artificial-intelligence-and-technology",
+      "name": "Artificial Intelligence and Technology",
+      "active": false
+    },
+    {
+      "id": "science-and-space-exploration",
+      "name": "Science and Space Exploration",
+      "active": false
+    },
+    {
+      "id": "ancient-history-and-archaeology",
+      "name": "Ancient History and Archaeology",
+      "active": false
+    },
+    {
+      "id": "digital-media-and-gaming",
+      "name": "Digital Media and Gaming",
+      "active": false
+    },
+    {
+      "id": "perth-local-services-and-lifestyle",
+      "name": "Perth Local Services and Lifestyle",
+      "active": false
+    }
+  ],
+  "trending": [
+    {
+      "articleId": "article-ai-1",
+      "reason": "Breaking development in AI models, specifically Anthropic's Claude Sonnet 4.5."
+    },
+    {
+      "articleId": "article-robotics-1",
+      "reason": "Significant advancements in humanoid robotics, with AgiBot X2 challenging leading models."
+    },
+    {
+      "articleId": "article-xr-1",
+      "reason": "Major strategic shift by Apple in the AR/VR space towards smart glasses."
+    },
+    {
+      "articleId": "article-climate-1",
+      "reason": "Unusual and significant stratospheric warming event over Antarctica with potential climate implications for Australia."
+    },
+    {
+      "articleId": "article-perth-ndis-1",
+      "reason": "Ongoing critical issue regarding NDIS support for children awaiting neurodevelopmental diagnoses in WA."
+    }
+  ],
+  "articles": [
+    {
+      "id": "article-ai-1",
+      "category": "artificial-intelligence-and-technology",
+      "title": "Anthropic's Claude Sonnet 4.5 Emerges as Top Coding AI Model, Shakes Up LLM Rankings",
+      "excerpt": "Anthropic's Claude Sonnet 4.5 has claimed the title of the 'best coding model in the world', significantly impacting the competitive landscape of large language models.",
+      "image": "https://example.com/ai-software.jpg",
+      "imageModal": "https://example.com/ai-software-large.jpg",
+      "author": "Decrypt",
+      "date": "Sep 29, 2025",
+      "readTime": "4 min read",
+      "sourceUrl": "https://decrypt.co/342055/anthropic-claims-best-coding-model-world-claude-sonnet-4-5-tested",
+      "isTrending": true,
+      "fullContent": [
+        "Anthropic has unveiled Claude Sonnet 4.5, confidently asserting it as the 'best coding model in the world'. This new iteration has already sent ripples through the large language model (LLM) community, with its performance expected to heavily influence upcoming rankings.",
+        "The model's introduction is particularly noteworthy as prediction markets had previously favoured Google's Gemini. However, the unexpected arrival and immediate availability of Claude Sonnet 4.5 for ranking on platforms like LM Arena have created an unpredictable race for top honours this month.",
+        "Recent research into LLM behaviour without specific tasks, conducted by TU Wien in Austria, highlights how frontier models like those from OpenAI and Anthropic exhibit surprisingly consistent patterns. This adds another layer of complexity to understanding and benchmarking these advanced AI systems.",
+        "The emphasis on coding proficiency underscores a growing demand for AI tools that can directly contribute to software development and automation. This advancement signifies a continued push towards highly specialised and robust AI applications capable of handling complex technical tasks."
+      ]
+    },
+    {
+      "id": "article-robotics-1",
+      "category": "artificial-intelligence-and-technology",
+      "title": "AgiBot X2 Raises the Bar in Humanoid Robot Race Against Unitree and Tesla Optimus",
+      "excerpt": "AgiBot X2 demonstrates advanced agility and balance, positioning itself as a serious contender against leading humanoid robots like Unitree and Tesla Optimus.",
+      "image": "https://example.com/humanoid-robot.jpg",
+      "imageModal": "https://example.com/humanoid-robot-large.jpg",
+      "author": "YouTube",
+      "date": "Sep 26, 2025",
+      "readTime": "3 min read",
+      "sourceUrl": "https://www.youtube.com/watch?v=NpwAzRPnc7I",
+      "isTrending": true,
+      "fullContent": [
+        "The AgiBot X2 humanoid robot has set a new benchmark in advanced robotics, showcasing impressive agility, balance, and the ability to perform an explosive Webster flip. These capabilities place it directly in competition with established leaders such as Unitree's humanoid models and Tesla's Optimus.",
+        "Detailed analysis of the AgiBot X2 reveals its precise motion control and superior torso stabilisation. These features are critical for navigating complex environments and performing intricate tasks, signalling a new phase in the development of practical, versatile robots.",
+        "The rapidly accelerating competition among humanoid robot developers highlights a global push towards creating robots capable of performing diverse functions in real-world scenarios. This includes everything from industrial applications to consumer interaction, with a focus on both physical dexterity and intelligent autonomy.",
+        "While Tesla's Optimus aims for factory-ready deployment and Unitree showcases athletic demonstrations, AgiBot X2's performance underscores the diverse approaches and rapid advancements occurring within the robotics sector. The continued evolution of these machines promises transformative impacts across numerous industries."
+      ]
+    },
+    {
+      "id": "article-xr-1",
+      "category": "artificial-intelligence-and-technology",
+      "title": "Apple Shifts Focus, Prioritises Smart Glasses Development Over Lighter Vision Pro",
+      "excerpt": "Apple is reportedly reallocating resources to accelerate the development of smart glasses, potentially delaying a lighter version of its Vision Pro headset.",
+      "image": "https://example.com/ar-vr-glasses.jpg",
+      "imageModal": "https://example.com/ar-vr-glasses-large.jpg",
+      "author": "PCMag",
+      "date": "Oct 2, 2025",
+      "readTime": "4 min read",
+      "sourceUrl": "https://www.pcmag.com/news/apple-reportedly-prioritizing-smart-glasses-over-lighter-vision-pro",
+      "isTrending": true,
+      "fullContent": [
+        "Apple is reportedly adjusting its development strategy, placing a greater emphasis on smart glasses over a refined version of its Vision Pro headset. This shift suggests a potential change in the company's long-term vision for extended reality devices, focusing on more discreet and integrated wearable technology.",
+        "Internal reports indicate Apple's plans for a device, codenamed N50, which would function as smart glasses tethered to an iPhone. These glasses are expected to utilise microphones, built-in cameras, and AI for direct interaction, aiming for a 2027 release, potentially accelerated by this new prioritisation.",
+        "This strategic adjustment likely comes in response to market dynamics and competitors' advancements, such as Meta's recent Meta Ray-Ban Display glasses. Meta's success in integrating in-lens displays demonstrates a viable path for augmented reality in consumer-friendly form factors.",
+        "The move signifies a broader industry trend towards more subtle and pervasive augmented reality experiences. Apple's influence in the tech sector means this pivot could significantly shape the future direction and consumer adoption of AR devices, favouring everyday utility over immersive, dedicated headsets."
+      ]
+    },
+    {
+      "id": "article-quantum-1",
+      "category": "science-and-space-exploration",
+      "title": "Scientists Unlock Quantum Teleportation with W State Entanglement Breakthrough",
+      "excerpt": "A 25-year quantum puzzle has been solved by scientists who successfully captured the W state, bringing quantum teleportation closer to reality.",
+      "image": "https://example.com/quantum-physics.jpg",
+      "imageModal": "https://example.com/quantum-physics-large.jpg",
+      "author": "SciTechDaily",
+      "date": "Sep 20, 2025",
+      "readTime": "5 min read",
+      "sourceUrl": "https://scitechdaily.com/scientists-capture-w-state-unlocking-quantum-teleportation/",
+      "isTrending": false,
+      "fullContent": [
+        "Researchers from Kyoto University and Hiroshima University have achieved a significant breakthrough by developing a method to identify the W state, a fundamental form of multi-photon entanglement. This advancement, more than 25 years after the initial proposal for GHZ states, moves quantum teleportation closer to practical application.",
+        "Quantum entanglement, where particles' states are linked regardless of distance, presents a profound challenge to classical physics. Reliably generating and identifying these multi-photon entangled states is crucial for developing next-generation quantum technologies.",
+        "The team's novel approach leverages the W state's cyclic shift symmetry, introducing a theoretical method to build an entangled measurement using a photonic quantum circuit. They successfully validated this method experimentally with three-photon W states, demonstrating its efficacy.",
+        "This achievement paves the way for advanced quantum communication protocols, the transfer of multi-photon quantum entangled states, and new methods for measurement-based quantum computing. Future efforts will focus on scaling this method to larger, more general multi-photon entangled states and developing on-chip photonic quantum circuits."
+      ]
+    },
+    {
+      "id": "article-space-1",
+      "category": "science-and-space-exploration",
+      "title": "Webb Telescope Discovers Moon-Forming Disc Around Exoplanet CT Cha b",
+      "excerpt": "The James Webb Space Telescope has provided the first direct measurements of a carbon-rich, potential moon-forming disc encircling a large exoplanet 625 light-years away.",
+      "image": "https://example.com/jwst-discovery.jpg",
+      "imageModal": "https://example.com/jwst-discovery-large.jpg",
+      "author": "ESA/Webb",
+      "date": "Sep 29, 2025",
+      "readTime": "3 min read",
+      "sourceUrl": "https://esawebb.org/news/",
+      "isTrending": false,
+      "fullContent": [
+        "The NASA/ESA/CSA James Webb Space Telescope has delivered groundbreaking observations, providing the first direct measurements of the chemical and physical characteristics of a potential moon-forming disc. This disc orbits the large exoplanet CT Cha b, located 625 light-years from Earth, offering unprecedented insights into planetary and lunar formation.",
+        "The carbon-rich disc around CT Cha b is considered a possible 'construction yard' for moons. While no moons have yet been detected in the Webb data, the detailed analysis of its properties will significantly advance our understanding of how satellite systems form around exoplanets.",
+        "This discovery is part of a series of recent revelations from the Webb telescope, which continues to provide astonishing views of the cosmos. These observations contribute to a clearer picture of star-forming regions, exoplanetary atmospheres, and the complex processes that shape galaxies.",
+        "The ability to directly measure the properties of such a distant and intricate structure highlights the Webb telescope's unparalleled capabilities. This research will be pivotal for astrophysicists studying the evolution of planetary systems beyond our own solar system."
+      ]
+    },
+    {
+      "id": "article-space-2",
+      "category": "science-and-space-exploration",
+      "title": "Webb Explores Largest Star-Forming Cloud in the Milky Way, Sagittarius B2",
+      "excerpt": "The James Webb Space Telescope has unveiled a vibrant array of massive stars and glowing cosmic dust within the Sagittarius B2 molecular cloud, the Milky Way's most active star-forming region.",
+      "image": "https://example.com/sgrb2-cloud.jpg",
+      "imageModal": "https://example.com/sgrb2-cloud-large.jpg",
+      "author": "ESA/Webb",
+      "date": "Sep 24, 2025",
+      "readTime": "3 min read",
+      "sourceUrl": "https://esawebb.org/news/",
+      "isTrending": false,
+      "fullContent": [
+        "The NASA/ESA/CSA James Webb Space Telescope has captured a stunning and colourful panorama of the Sagittarius B2 (Sgr B2) molecular cloud. This region, the most massive and active star-forming hub in our Milky Way galaxy, is now seen in unprecedented detail, revealing massive stars and intricate glowing cosmic dust.",
+        "Sgr B2 is a critical area for astronomers studying stellar birth and the early stages of star evolution. Webb's infrared capabilities penetrate the dense dust and gas, allowing scientists to observe phenomena previously obscured by visible light.",
+        "The new images offer crucial data on the conditions within such extreme star-forming environments. This information will help researchers to better understand the processes that govern the formation of the most massive stars and their impact on galactic evolution.",
+        "These observations from the Webb telescope underscore its pivotal role in advancing our knowledge of astrophysics and cosmology. By providing detailed insights into regions like Sgr B2, scientists can refine models of star formation and the chemical enrichment of the universe."
+      ]
+    },
+    {
+      "id": "article-climate-1",
+      "category": "science-and-space-exploration",
+      "title": "Antarctic Temperatures Soar 35ºC Above Average in Unusual Stratospheric Warming Event",
+      "excerpt": "Air temperatures over Antarctica have risen 35ºC above normal, indicating a sudden stratospheric warming event with potential implications for Australian weather patterns.",
+      "image": "https://example.com/antarctic-warming.jpg",
+      "imageModal": "https://example.com/antarctic-warming-large.jpg",
+      "author": "UNSW Sydney",
+      "date": "Sep 29, 2025",
+      "readTime": "4 min read",
+      "sourceUrl": "https://www.unsw.edu.au/newsroom/news/2025/09/air-temperatures-over-antarctica-have-soared-35-c-above-average-what-does-this-unusual-event-mean-for-australia",
+      "isTrending": true,
+      "fullContent": [
+        "Antarctica is experiencing an extraordinary meteorological event, with air temperatures high above the continent reaching up to 35ºC warmer than average. This significant rise, pushing temperatures from a typical –55°C to around –20°C, is indicative of a sudden stratospheric warming (SSW).",
+        "The warming, which commenced in early September and involved three distinct pulses of heat, can dramatically influence weather patterns, including those affecting Australia. SSWs occur when large-scale atmospheric waves from the surface propagate upwards into the stratosphere, transferring heat energy.",
+        "Normally, the polar vortex, a strong wind system, isolates intensely cold air over the poles. However, these atmospheric waves can disrupt the vortex, leading to its weakening or even reversal, and consequently, a warming of the stratosphere. This interaction is key to understanding the event's potential global impacts.",
+        "Scientists are closely monitoring the event to analyse its long-term effects on the polar vortex and ocean currents, which are integral to global climate regulation. The unfolding situation offers crucial data for climate modellers and researchers studying extreme weather phenomena."
+      ]
+    },
+    {
+      "id": "article-egyptology-1",
+      "category": "ancient-history-and-archaeology",
+      "title": "New Research Sheds Light on Egyptian Pyramid Construction Methods",
+      "excerpt": "Recent archaeological findings and research are helping to clarify the construction techniques of the ancient Egyptian pyramids, challenging some long-held theories.",
+      "image": "https://example.com/pyramid-construction.jpg",
+      "imageModal": "https://example.com/pyramid-construction-large.jpg",
+      "author": "BBC Science Focus Magazine",
+      "date": "Sep 10, 2025",
+      "readTime": "5 min read",
+      "sourceUrl": "https://www.sciencefocus.com/science/egyptian-pyramids-new-studies",
+      "isTrending": false,
+      "fullContent": [
+        "Recent research, including studies of ancient quarry inscriptions and innovative archaeological theories, is providing fresh perspectives on how the Egyptian pyramids were constructed. While ramps remain the most widely accepted method, the steepness and configuration of these structures are being re-evaluated.",
+        "One significant discovery involves the remains of an inclined structure near a quarry, suggesting ramp angles exceeding 20 percent—steeper than previously thought. This finding from the time of the Great Pyramid's construction implies a more direct and efficient method of hauling massive stones.",
+        "Alternative theories are also gaining traction, such as the proposal of a hydraulic lift system for the Step Pyramid of Djoser. Researchers suggest that water flow into trenches and shafts within the pyramid could have been used with a float system to raise stones, showcasing advanced engineering for the era.",
+        "Ongoing non-invasive studies, like the ScanPyramids project using muon tracking, continue to uncover hidden spaces within the pyramids. These investigations provide structural insights, such as the cavity above the Grand Gallery, which likely helped distribute weight and reveal the sophisticated planning involved in these monumental constructions.",
+        "Further understanding also comes from ancient records written by those involved in the construction, shedding light on the organisation of the workforce. This collective effort, rather than mysterious techniques, is now seen as the true marvel behind the pyramids' creation, with ongoing excavations of workers' settlements promising more details."
+      ]
+    },
+    {
+      "id": "article-archaeology-1",
+      "category": "ancient-history-and-archaeology",
+      "title": "Historic Artefacts Recovered from Vulture Nests in Spain, 12,000-Year-Old Carving Found in Turkey",
+      "excerpt": "Recent global archaeological news includes the recovery of historic artefacts from vulture nests in Spain and the discovery of a 12,000-year-old carving in Turkey.",
+      "image": "https://example.com/archaeological-find.jpg",
+      "imageModal": "https://example.com/archaeological-find-large.jpg",
+      "author": "Archaeology Magazine",
+      "date": "Oct 7, 2025",
+      "readTime": "3 min read",
+      "sourceUrl": "https://archaeology.org/news/",
+      "isTrending": false,
+      "fullContent": [
+        "Recent archaeological discoveries are captivating experts worldwide, with notable finds including the recovery of historic artefacts from vulture nests in Spain. This unusual discovery highlights new avenues for understanding ancient human activity and object preservation in unexpected natural environments.",
+        "Further global archaeological news includes the unearthing of a 12,000-year-old carving in Turkey. This significant find offers new insights into early human artistic expression and cultural practices during the Paleolithic era in the Aegean region.",
+        "Other discoveries from the past week include medieval fencing unearthed in Glasgow, the identification of a Roman-Era philanthropist’s grave in Turkey, and the reconstruction of faces of four mummified Andean people. These findings collectively provide a rich tapestry of human history across various civilisations and time periods.",
+        "The continuous stream of such discoveries underscores the ongoing effort to piece together the human past. Each artefact and site contributes valuable information, expanding our comprehension of ancient societies, their technologies, behaviours, and artistic endeavours."
+      ]
+    },
+    {
+      "id": "article-diablo-1",
+      "category": "digital-media-and-gaming",
+      "title": "Diablo Immortal 'Reap the Flesh Harvest' Update Introduces New Legendary Gems and Class Changes",
+      "excerpt": "Diablo Immortal's latest 'Reap the Flesh Harvest' update brings three new Legendary Gems, significant class balance changes, and streamlined Shadow Contracts.",
+      "image": "https://example.com/diablo-immortal.jpg",
+      "imageModal": "https://example.com/diablo-immortal-large.jpg",
+      "author": "Blizzard News",
+      "date": "Sep 23, 2025",
+      "readTime": "5 min read",
+      "sourceUrl": "https://news.blizzard.com/en-us/article/24226326/reap-the-flesh-harvest",
+      "isTrending": false,
+      "fullContent": [
+        "Diablo Immortal has launched its 'Reap the Flesh Harvest' update, introducing three powerful new Legendary Gems, designed to significantly enhance character power. Players can now acquire these gems to elevate their combat capabilities and strategic gameplay.",
+        "The update also features extensive class balance adjustments, with specific changes to Blood Knight, Demon Hunter, Crusader, Monk, Necromancer, and Wizard abilities. These modifications aim to refine gameplay, encourage diverse builds, and ensure a more balanced competitive environment.",
+        "Furthermore, the Shadow Contract system has been streamlined to reduce grind and make rewards more impactful. This includes fewer tasks, automatic rewards, and increased activity points, ensuring that player efforts are more effectively rewarded.",
+        "Additional changes include adjustments to Building & Sacred Guardians Health, where buildings now deal significantly higher damage, and lifesteal against Sacred Guardians has been reduced. These alterations demand more strategic engagement in combat scenarios."
+      ]
+    },
+    {
+      "id": "article-starcitizen-1",
+      "category": "digital-media-and-gaming",
+      "title": "Star Citizen's Server Meshing and Persistent Streaming Aim for 2026 Rollout, Pyro System Next",
+      "excerpt": "Star Citizen developers target a Q1-Q2 2026 release for Persistent Streaming and Replication Layer, with static server meshing following in Q3-Q4 2026, leading to the Pyro system introduction.",
+      "image": "https://example.com/star-citizen.jpg",
+      "imageModal": "https://example.com/star-citizen-large.jpg",
+      "author": "Roberts Space Industries",
+      "date": "Oct 8, 2025",
+      "readTime": "6 min read",
+      "sourceUrl": "https://robertsspaceindustries.com/comm-link/transmission/18397-Server-Meshing-And-Persistent-Streaming-Q-A",
+      "isTrending": false,
+      "fullContent": [
+        "Cloud Imperium Games aims to release Persistent Streaming and the initial version of the Replication Layer for Star Citizen between Q1 and Q2 of 2026. This foundational technology is crucial for the ambitious space simulation, with the first iteration of static server meshing anticipated for Q3-Q4 of the same year.",
+        "The roadmap to Server Meshing has been a lengthy one, beginning in 2017/2018 with Object Container Streaming. Subsequent development focused on Entity Authority and Authority Transfer, requiring significant changes across the game's codebase to support the new entity-authority concept.",
+        "While static server meshing represents a major milestone, it is not the final step. Dynamic Server Meshing is planned for the future, which will continuously re-evaluate and redistribute simulation loads to optimise server performance and player experience across the vast 'verse.",
+        "This technological evolution is essential for introducing new content, most notably the highly anticipated Pyro star system, which will launch with the first iteration of Server Meshing. It will also enable larger and more intricate areas, such as expansive settlements and ship interiors, supporting denser populations of AI and player characters, unlocking unprecedented gameplay experiences."
+      ]
+    },
+    {
+      "id": "article-citiesskylines-1",
+      "category": "digital-media-and-gaming",
+      "title": "Cities: Skylines II Developers Address Modding, Bikes, and Bug Fixes in Latest Dev Diary",
+      "excerpt": "Cities: Skylines II developers confirm active work on bikes and outline progress on modding support and bug fixes, with a new Bridges & Ports DLC expected Q4 2025.",
+      "image": "https://example.com/cities-skylines2.jpg",
+      "imageModal": "https://example.com/cities-skylines2-large.jpg",
+      "author": "Reddit (r/CitiesSkylines)",
+      "date": "Sep 30, 2025",
+      "readTime": "4 min read",
+      "sourceUrl": "https://www.reddit.com/r/CitiesSkylines/comments/1nus1w3/whats_cities_skylines_ii_like_now_megathread/",
+      "isTrending": false,
+      "fullContent": [
+        "Colossal Order, the developers behind Cities: Skylines II, have released a new Dev Diary addressing several key community concerns, including modding, the introduction of bikes, and ongoing bug fixes. This update follows a series of 21 patches since the game's launch, which have already improved performance, economy, and added modding support.",
+        "A major point of discussion is the long-awaited full asset editor, which is still without an estimated time of arrival due to 'serialisation' and 'virtual texturing' blockers. Despite this, Paradox has commissioned nine Region Packs from community creators, adding over 5,000 custom assets to the game.",
+        "Regarding new features, the Dev Diary confirmed that bikes are actively being worked on, with early-stage implementation screenshots shared. This feature, along with others, is expected to follow the release of the Bridges & Ports DLC and an associated free patch, both anticipated in Q4 2025.",
+        "The development team's continued efforts to refine the game and introduce new content signal a commitment to improving the player experience. Community engagement remains crucial, with developers utilising feedback to prioritise fixes and new features, aiming for a more robust and enjoyable city-building simulation."
+      ]
+    },
+    {
+      "id": "article-anime-1",
+      "category": "digital-media-and-gaming",
+      "title": "Martial Peak Continues with New Adventure, Expanding Lore Beyond Original Novel",
+      "excerpt": "The popular series Martial Peak is receiving a new adventure, extending its lore beyond the original novel and delving deeper into the 'Peak and realm of Gods'.",
+      "image": "https://example.com/martial-peak-anime.jpg",
+      "imageModal": "https://example.com/martial-peak-anime-large.jpg",
+      "author": "Reddit (r/Manhua)",
+      "date": "Sep 9, 2025",
+      "readTime": "3 min read",
+      "sourceUrl": "https://www.reddit.com/r/Manhua/comments/1ncbe3f/i_thought_martial_peak_was_ended_but_here_we_are/",
+      "isTrending": false,
+      "fullContent": [
+        "Martial Peak, a widely followed cultivation series, is embarking on a new narrative journey that extends beyond the conclusion of its original novel. This 'sequel' promises to explore new realms, including a deeper understanding of the 'Peak and realm of Gods,' and additional lore surrounding the mysterious taboo realm and the connection to the Great Sage of Humanity.",
+        "The continuation has sparked considerable excitement among fans who previously believed the story had concluded. This expansion allows for further character development and exploration of the vast universe established in the initial run, promising fresh challenges and revelations for protagonist Yang Kai.",
+        "Fans are anticipating a refreshed approach to the narrative, hoping for changes to avoid repetitive story arcs that can sometimes plague long-running cultivation series. The art style is reportedly maintaining its high quality, contributing to the positive reception of this unexpected continuation.",
+        "This development is indicative of a trend in digital media where popular series are extended or revisited to delve deeper into their established worlds. It offers an opportunity to satisfy long-time followers while potentially attracting new audiences to the rich lore of Martial Peak."
+      ]
+    },
+    {
+      "id": "article-perth-jobs-1",
+      "category": "perth-local-services-and-lifestyle",
+      "title": "Harp Collective Seeks 3D Modeller for Perth Studio, Specialising in Architectural CGI",
+      "excerpt": "Harp Collective is recruiting a talented 3D Modeller for their Perth studio, focusing on high-end architectural projects and product CGI, offering flexible hours.",
+      "image": "https://example.com/perth-jobs.jpg",
+      "imageModal": "https://example.com/perth-jobs-large.jpg",
+      "author": "Harp Collective",
+      "date": "Oct 8, 2025",
+      "readTime": "3 min read",
+      "sourceUrl": "https://harpcollective.com.au/3d-artist-jobs/3d-modeller-job/",
+      "isTrending": false,
+      "fullContent": [
+        "Harp Collective, a 3D rendering studio based in Perth, Western Australia, is actively seeking a skilled and passionate 3D Modeller to join their team. The role focuses on creating high-quality, detailed 3D models primarily for high-end architectural projects and product CGI, offering flexible hours and a salary of $60-80k + super depending on experience.",
+        "The ideal candidate will possess a strong modelling portfolio or showreel, demonstrate excellent organisational skills, and have a keen eye for detail. Proficiency in 3ds Max is essential, along with experience in various plugins and software relevant to 3D rendering and design.",
+        "This opportunity is based in a friendly studio environment in Jolimont, emphasising work-life balance. The successful applicant will contribute to a broad range of client projects, maintaining and enhancing the studio's reputation for high-quality visualisations.",
+        "Key responsibilities include 3D modelling architecture, props, assets, and products, as well as contributing to the upkeep of the studio model library. Knowledge of Corona or V-Ray render engines, Photoshop, and the ability to work from architectural plans or technical drawings are highly desirable."
+      ]
+    },
+    {
+      "id": "article-perth-rental-1",
+      "category": "perth-local-services-and-lifestyle",
+      "title": "WA Rent Reforms Introduce 12-Month Minimum Between Rent Increases and Pet Laws",
+      "excerpt": "Western Australia's new rent reforms mandate a 12-month minimum between rent increases and introduce updated regulations for pets and minor modifications in rental properties.",
+      "image": "https://example.com/perth-rent.jpg",
+      "imageModal": "https://example.com/perth-rent-large.jpg",
+      "author": "Consumer Protection - LGIRS",
+      "date": "Sep 24, 2025",
+      "readTime": "5 min read",
+      "sourceUrl": "https://www.consumerprotection.wa.gov.au/wa-rent-reforms",
+      "isTrending": false,
+      "fullContent": [
+        "Western Australia has implemented significant rent reforms aimed at enhancing fairness and clarity in tenancy agreements. A key change mandates a minimum of 12 months between rent increases, aligning WA with other Australian states and territories. This allows tenants greater financial stability and budgeting predictability.",
+        "The reforms also introduce new provisions regarding pets and minor modifications in rental properties. Landlords and tenants now have access to updated forms for requesting pets and making minor alterations, with clear guidelines on reasonable conditions for pet keeping and property restoration after modifications.",
+        "These changes apply to all tenancy agreements, including periodic tenancies, regardless of when they commenced, ensuring a consistent application of the new laws. Lessors are still required to provide at least 60 days' notice before any rent increase takes effect.",
+        "Furthermore, the reforms aim to streamline the bond release process, making it simpler and reducing the likelihood of disputes escalating to court. Tenants, landlords, or agents can request bond release, with a transparent process for agreement or resolution through the Commissioner for Consumer Protection.",
+        "These comprehensive updates represent a crucial step towards modernising rental laws in Western Australia, addressing common points of contention and fostering more equitable relationships between tenants and landlords. The changes reflect a broader commitment to consumer protection in the housing sector."
+      ]
+    },
+    {
+      "id": "article-perth-ndis-1",
+      "category": "perth-local-services-and-lifestyle",
+      "title": "Perth Children Face Loss of NDIS Support While Awaiting Neurodevelopmental Diagnoses",
+      "excerpt": "Children in Perth are losing access to NDIS-funded support as they age out of early intervention programs, even while stuck on long waitlists for autism or FASD diagnoses.",
+      "image": "https://example.com/ndis-support.jpg",
+      "imageModal": "https://example.com/ndis-support-large.jpg",
+      "author": "Perth Kids Hub",
+      "date": "Sep 30, 2025",
+      "readTime": "5 min read",
+      "sourceUrl": "https://perthkidshub.com.au/issue-loss-of-ndis-support-for-children-awaiting-diagnosis-the-risk-for-children-schools-educators/",
+      "isTrending": true,
+      "fullContent": [
+        "Children in Perth are facing a critical gap in support as they lose access to NDIS-funded services upon reaching age thresholds, despite often being on waitlists for years for formal diagnoses of neurodevelopmental conditions like autism or FASD. This issue leaves families struggling to self-fund essential allied health services or go without.",
+        "The NDIS is currently removing a significant number of six-year-olds from its Early Childhood Approach (ECA), contradicting recommendations that such changes should only occur once widespread foundational supports are in place. Wait times for paediatric assessments by WA Child Development Services (CDS) can stretch up to four years, with additional delays for diagnostic assessments.",
+        "This creates a stark equity issue: families who can afford private assessments (approximately $3,000) gain faster NDIS access, while those relying on public services face prolonged periods without crucial support. The NDIS maintains it is not responsible for filling state health system gaps, placing the burden on families and schools.",
+        "The lack of timely diagnosis and support has profound consequences for children's wellbeing and places additional strain on the education system. Children enter classrooms with unmet developmental and behavioural needs, increasing the workload for teachers and school resources.",
+        "Advocacy is underway to secure a coordinated response from health and education portfolios to address these systemic gaps. The goal is to ensure all children receive the necessary support to thrive in their learning environments, irrespective of their diagnostic status or family financial circumstances."
+      ]
+    }
+  ],
+  "videos": [
+    {
+      "id": "video-ai-1",
+      "category": "artificial-intelligence-and-technology",
+      "title": "Sora 2 AI Videos Are Getting Out of Control",
+      "excerpt": "Discussion on the rapid advancements and implications of Sora 2 AI video generation.",
+      "thumbnail": "https://img.youtube.com/vi/WzodEFracDo/maxresdefault.jpg",
+      "videoUrl": "http://www.youtube.com/watch?v=WzodEFracDo",
+      "channel": "Blake The Snake",
+      "publishDate": "Oct 06, 2025",
+      "duration": "03:09"
+    },
+    {
+      "id": "video-ai-2",
+      "category": "artificial-intelligence-and-technology",
+      "title": "Robin Williams' daughter pleads with people to stop sending AI videos of her dad",
+      "excerpt": "Robin Williams' daughter speaks out against the use of AI to create videos of her late father.",
+      "thumbnail": "https://img.youtube.com/vi/mVWUB1sc_iU/maxresdefault.jpg",
+      "videoUrl": "http://www.youtube.com/watch?v=mVWUB1sc_iU",
+      "channel": "ABC News",
+      "publishDate": "Oct 07, 2025",
+      "duration": "02:23"
+    },
+    {
+      "id": "video-ancient-1",
+      "category": "ancient-history-and-archaeology",
+      "title": "Strange Abductions and Navy UFO Sightings | Ancient Aliens",
+      "excerpt": "An episode of Ancient Aliens discussing strange abduction accounts and Navy UFO sightings.",
+      "thumbnail": "https://img.youtube.com/vi/6ORlEX7gPL0/maxresdefault.jpg",
+      "videoUrl": "http://www.youtube.com/watch?v=6ORlEX7gPL0",
+      "channel": "HISTORY",
+      "publishDate": "Oct 06, 2025",
+      "duration": "19:31"
+    }
+  ]
 }
