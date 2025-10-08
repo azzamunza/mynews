@@ -150,7 +150,7 @@
       "isVideo": false,
       "videoUrl": "",
       "fullContent": "<h2>Space-Based Quantum Communication Succeeds</h2><p>Researchers have successfully demonstrated quantum entanglement distribution over 1,200 kilometres using satellite relay systems, marking a crucial milestone toward global quantum communication networks. The achievement overcomes previous distance limitations imposed by ground-based fibre optic transmission.</p><h3>Technical Implementation</h3><p>The system employs satellites as trusted nodes, generating entangled photon pairs and distributing them to ground stations. Advanced adaptive optics compensate for atmospheric disturbances, whilst specialised detectors maintain signal integrity despite losses inherent in space-to-ground transmission.</p><ul><li><strong>Distance:</strong> 1,200 kilometres between ground stations</li><li><strong>Fidelity:</strong> 92% entanglement quality maintained</li><li><strong>Transmission:</strong> Satellite altitude 500 kilometres</li><li><strong>Detection:</strong> Single-photon sensitivity, low noise</li></ul><h3>Quantum Communication Advantages</h3><p>Quantum key distribution provides theoretically unbreakable encryption, as any interception attempt disturbs the quantum states and reveals eavesdropping. This capability addresses growing concerns about quantum computer threats to conventional cryptography, offering future-proof secure communication.</p><blockquote><p>\"Space-based quantum communication enables global secure networks immune to quantum computer attacks, providing essential infrastructure for future information security.\" - Quantum Communication Research Team</p></blockquote><h3>Network Expansion Plans</h3><p>Multiple nations develop quantum satellite constellations for expanded coverage and reliability. Commercial providers explore quantum communication services for financial institutions, government agencies, and critical infrastructure operators requiring highest security levels.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>Quantum entanglement achieved over 1,200 kilometres via satellite</li><li>System maintains 92% entanglement fidelity through atmosphere</li><li>Technology enables quantum-secure global communication networks</li><li>Commercial quantum communication services under development</li></ul></div>"
-    }
+    },
     {
       "id": "9",
       "category": "quantum",
@@ -170,6 +170,7 @@
     }
   ]
 }
+
 
 
 
