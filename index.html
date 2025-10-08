@@ -12,55 +12,80 @@
         }
 
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --text-color: #333;
-            --light-bg: #f8f9fa;
-            --white: #ffffff;
-            --border-color: #dee2e6;
-            --hover-color: #2980b9;
-            --shadow: 0 2px 8px rgba(0,0,0,0.1);
-            --shadow-lg: 0 4px 16px rgba(0,0,0,0.15);
+            --primary-bg: #0a0a0a;
+            --secondary-bg: #1a1a1a;
+            --card-bg: #222;
+            --accent-color: #00d4ff;
+            --accent-hover: #00b8e6;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --text-muted: #808080;
+            --border-color: #333;
+            --shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+            --job-color: #ff6b35;
+            --trending-color: #ffd700;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--light-bg);
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            min-height: 100vh;
         }
 
+        /* Header */
         header {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 1rem 0;
-            box-shadow: var(--shadow);
+            background: var(--secondary-bg);
+            border-bottom: 2px solid var(--accent-color);
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: var(--shadow);
         }
 
         .header-container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--accent-color);
+            transition: all 0.3s;
         }
 
         .site-title {
             font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: -0.5px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-color), #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
+        /* Navigation */
         nav {
-            background-color: var(--white);
-            border-bottom: 2px solid var(--border-color);
+            background: var(--secondary-bg);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .nav-container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             padding: 0 2rem;
         }
@@ -68,11 +93,11 @@
         .category-menu {
             display: flex;
             list-style: none;
-            overflow-x: auto;
-            flex-wrap: wrap;
             gap: 0.5rem;
             padding: 1rem 0;
-            -webkit-overflow-scrolling: touch;
+            overflow-x: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--accent-color) var(--secondary-bg);
         }
 
         .category-menu::-webkit-scrollbar {
@@ -80,11 +105,11 @@
         }
 
         .category-menu::-webkit-scrollbar-track {
-            background: var(--light-bg);
+            background: var(--secondary-bg);
         }
 
         .category-menu::-webkit-scrollbar-thumb {
-            background: var(--secondary-color);
+            background: var(--accent-color);
             border-radius: 3px;
         }
 
@@ -95,99 +120,354 @@
         .category-link {
             display: block;
             padding: 0.75rem 1.5rem;
-            color: var(--text-color);
+            color: var(--text-secondary);
             text-decoration: none;
-            font-weight: 500;
-            border-radius: 6px;
+            font-weight: 600;
+            border-radius: 8px;
             transition: all 0.3s ease;
-            background-color: var(--light-bg);
-            cursor: pointer;
+            background: var(--card-bg);
+            border: 2px solid transparent;
+            text-align: center;
+            min-width: 80px;
         }
 
-        .category-link:hover,
-        .category-link.active {
-            background-color: var(--secondary-color);
-            color: var(--white);
+        .category-link:hover {
+            color: var(--text-primary);
+            border-color: var(--accent-color);
             transform: translateY(-2px);
-            box-shadow: var(--shadow);
         }
 
-        main {
-            max-width: 1400px;
+        .category-link.active {
+            background: var(--accent-color);
+            color: var(--primary-bg);
+            font-weight: 700;
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 280px;
+            height: 100vh;
+            background: var(--secondary-bg);
+            z-index: 2000;
+            transition: left 0.3s ease;
+            box-shadow: var(--shadow-lg);
+            overflow-y: auto;
+        }
+
+        .mobile-menu-overlay.active {
+            left: 0;
+        }
+
+        .mobile-menu-header {
+            padding: 1.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mobile-menu-close {
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-items {
+            list-style: none;
+            padding: 1rem 0;
+        }
+
+        .mobile-menu-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .mobile-menu-link {
+            display: block;
+            padding: 1rem 1.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu-link:hover,
+        .mobile-menu-link.active {
+            background: var(--card-bg);
+            color: var(--accent-color);
+        }
+
+        /* Main Layout */
+        .main-layout {
+            max-width: 1600px;
             margin: 2rem auto;
             padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 2rem;
         }
 
-        .loading {
-            text-align: center;
-            padding: 3rem;
-            font-size: 1.2rem;
-            color: #666;
+        .content-area {
+            min-width: 0;
         }
 
+        /* Hero Carousel */
+        .hero-section {
+            margin-bottom: 3rem;
+        }
+
+        .carousel-container {
+            position: relative;
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .carousel-slides {
+            position: relative;
+            height: 500px;
+        }
+
+        .carousel-slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-slide.active {
+            display: block;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
+        }
+
+        .trending-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--trending-color);
+            color: var(--primary-bg);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .carousel-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .carousel-excerpt {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .carousel-meta {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            pointer-events: none;
+        }
+
+        .carousel-btn {
+            pointer-events: all;
+            background: rgba(0, 212, 255, 0.8);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-btn:hover {
+            background: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .carousel-dot.active {
+            background: var(--accent-color);
+            width: 32px;
+            border-radius: 6px;
+        }
+
+        /* Article Grid */
         .article-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
-            margin-top: 2rem;
         }
 
         .article-card {
-            background-color: var(--white);
-            border-radius: 8px;
+            background: var(--card-bg);
+            border-radius: 12px;
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: all 0.3s ease;
             cursor: pointer;
-            display: flex;
-            flex-direction: column;
+            border: 2px solid transparent;
         }
 
         .article-card:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-lg);
+            border-color: var(--accent-color);
+        }
+
+        .article-image-container {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
         }
 
         .article-image {
             width: 100%;
-            height: 200px;
+            height: 100%;
             object-fit: cover;
-            background-color: var(--border-color);
+            transition: transform 0.3s;
+        }
+
+        .article-card:hover .article-image {
+            transform: scale(1.05);
+        }
+
+        .video-thumbnail {
+            position: relative;
+        }
+
+        .video-play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 212, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .article-badges {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 6px;
+        }
+
+        .badge-trending {
+            background: var(--trending-color);
+            color: var(--primary-bg);
+        }
+
+        .badge-job {
+            background: var(--job-color);
+            color: white;
+        }
+
+        .badge-video {
+            background: #ff0000;
+            color: white;
         }
 
         .article-content {
             padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
         }
 
         .article-category {
             display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background-color: var(--secondary-color);
-            color: var(--white);
+            padding: 0.3rem 0.8rem;
+            background: var(--accent-color);
+            color: var(--primary-bg);
             font-size: 0.75rem;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
-            border-radius: 4px;
+            border-radius: 6px;
             margin-bottom: 0.75rem;
-            align-self: flex-start;
         }
 
         .article-title {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 700;
             margin-bottom: 0.75rem;
-            color: var(--primary-color);
+            color: var(--text-primary);
             line-height: 1.4;
         }
 
         .article-excerpt {
-            color: #666;
+            color: var(--text-secondary);
             font-size: 0.95rem;
             margin-bottom: 1rem;
-            flex-grow: 1;
+            line-height: 1.6;
         }
 
         .article-meta {
@@ -197,9 +477,66 @@
             padding-top: 1rem;
             border-top: 1px solid var(--border-color);
             font-size: 0.85rem;
-            color: #999;
+            color: var(--text-muted);
         }
 
+        /* Headlines Sidebar */
+        .headlines-sidebar {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+            box-shadow: var(--shadow);
+        }
+
+        .headlines-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .headline-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .headline-item:last-child {
+            border-bottom: none;
+        }
+
+        .headline-item:hover {
+            padding-left: 0.5rem;
+        }
+
+        .headline-category {
+            font-size: 0.7rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .headline-title {
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            line-height: 1.4;
+            font-weight: 600;
+        }
+
+        .headline-time {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+        }
+
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -207,8 +544,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.7);
-            z-index: 2000;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 3000;
             overflow-y: auto;
             padding: 2rem 1rem;
         }
@@ -220,13 +557,14 @@
         }
 
         .modal-content {
-            background-color: var(--white);
+            background: var(--secondary-bg);
             max-width: 900px;
             width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
             position: relative;
             margin: auto;
+            border: 2px solid var(--accent-color);
         }
 
         .modal-close {
@@ -234,52 +572,52 @@
             top: 1rem;
             right: 1rem;
             font-size: 2rem;
-            color: #999;
+            color: var(--text-muted);
             cursor: pointer;
-            background: none;
+            background: var(--card-bg);
             border: none;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            transition: all 0.3s;
             z-index: 10;
         }
 
         .modal-close:hover {
-            background-color: var(--light-bg);
-            color: var(--text-color);
+            background: var(--accent-color);
+            color: var(--primary-bg);
+            transform: rotate(90deg);
         }
 
-        .modal-header-image {
+        .modal-banner {
             width: 100%;
             max-height: 400px;
             object-fit: cover;
-            border-radius: 8px 8px 0 0;
+            border-radius: 12px 12px 0 0;
         }
 
         .modal-body {
             padding: 2rem;
         }
 
-        .modal-category {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background-color: var(--secondary-color);
-            color: var(--white);
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            border-radius: 4px;
+        .modal-header-section {
+            margin-bottom: 2rem;
+        }
+
+        .modal-badges {
+            display: flex;
+            gap: 0.5rem;
             margin-bottom: 1rem;
+            flex-wrap: wrap;
         }
 
         .modal-title {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-color);
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-primary);
             margin-bottom: 1rem;
             line-height: 1.3;
         }
@@ -287,80 +625,251 @@
         .modal-meta {
             display: flex;
             gap: 2rem;
-            padding-bottom: 1.5rem;
+            padding: 1rem 0;
             margin-bottom: 1.5rem;
             border-bottom: 2px solid var(--border-color);
-            font-size: 0.9rem;
-            color: #666;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
         }
 
-        .modal-text {
-            font-size: 1.1rem;
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: var(--primary-bg);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-job {
+            background: var(--job-color);
+            color: white;
+        }
+
+        .btn-job:hover {
+            background: #ff5722;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--card-bg);
+            color: var(--text-primary);
+            border: 2px solid var(--accent-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent-color);
+            color: var(--primary-bg);
+        }
+
+        .modal-article-content {
+            color: var(--text-secondary);
             line-height: 1.8;
-            color: var(--text-color);
         }
 
-        .modal-text p {
+        .modal-article-content h2 {
+            color: var(--text-primary);
+            font-size: 1.6rem;
+            margin: 2rem 0 1rem;
+            font-weight: 700;
+        }
+
+        .modal-article-content h3 {
+            color: var(--accent-color);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem;
+            font-weight: 600;
+        }
+
+        .modal-article-content p {
             margin-bottom: 1.5rem;
+        }
+
+        .modal-article-content ul,
+        .modal-article-content ol {
+            margin: 1rem 0 1.5rem 2rem;
+        }
+
+        .modal-article-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-article-content strong {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .modal-article-content em {
+            color: var(--accent-color);
+            font-style: italic;
+        }
+
+        .modal-article-content blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            background: var(--card-bg);
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+
+        .modal-article-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+
+        .modal-article-content th,
+        .modal-article-content td {
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        .modal-article-content th {
+            background: var(--card-bg);
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        .highlight-box {
+            background: var(--card-bg);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-takeaways {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border: 2px solid var(--accent-color);
+        }
+
+        .key-takeaways h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Video Player */
+        .video-player-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+        }
+
+        .video-player-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Loading States */
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .spinner {
+            border: 3px solid var(--border-color);
+            border-top: 3px solid var(--accent-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .headlines-sidebar {
+                display: none;
+            }
         }
 
         @media (max-width: 768px) {
-            .header-container,
-            .nav-container {
-                padding: 0 1rem;
+            .hamburger {
+                display: flex;
+            }
+
+            nav {
+                display: none;
             }
 
             .site-title {
                 font-size: 1.5rem;
             }
 
-            main {
-                padding: 0 1rem;
+            .carousel-slides {
+                height: 350px;
+            }
+
+            .carousel-title {
+                font-size: 1.5rem;
+            }
+
+            .carousel-content {
+                padding: 1.5rem;
             }
 
             .article-grid {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
             }
 
-            .category-menu {
-                flex-wrap: nowrap;
-            }
-
-            .modal-content {
-                margin: 0;
+            .modal-title {
+                font-size: 1.6rem;
             }
 
             .modal-body {
                 padding: 1.5rem;
             }
 
-            .modal-title {
-                font-size: 1.5rem;
+            .main-layout {
+                padding: 0 1rem;
             }
 
-            .modal-text {
-                font-size: 1rem;
-            }
-
-            .modal {
-                padding: 1rem 0.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .category-link {
-                padding: 0.6rem 1rem;
-                font-size: 0.9rem;
-            }
-
-            .article-title {
-                font-size: 1.1rem;
-            }
-
-            .modal-meta {
-                flex-direction: column;
-                gap: 0.5rem;
+            .header-container {
+                padding: 1rem;
             }
         }
     </style>
@@ -368,11 +877,29 @@
 <body>
     <header>
         <div class="header-container">
-            <h1 class="site-title">News Portal</h1>
+            <div class="hamburger" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h1 class="site-title">NewsHub</h1>
+            <div style="width: 33px;"></div>
         </div>
     </header>
 
-    <nav>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h2 style="color: var(--accent-color);">Menu</h2>
+            <span class="mobile-menu-close" id="closeMobileMenu">&times;</span>
+        </div>
+        <ul class="mobile-menu-items" id="mobileMenuItems">
+            <li class="loading">Loading...</li>
+        </ul>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav id="desktopNav">
         <div class="nav-container">
             <ul class="category-menu" id="categoryMenu">
                 <li class="loading">Loading categories...</li>
@@ -380,12 +907,39 @@
         </div>
     </nav>
 
-    <main>
-        <div class="article-grid" id="articleGrid">
-            <div class="loading">Loading articles...</div>
-        </div>
-    </main>
+    <div class="main-layout">
+        <div class="content-area">
+            <!-- Hero Carousel -->
+            <section class="hero-section" id="heroSection" style="display: none;">
+                <div class="carousel-container">
+                    <div class="carousel-slides" id="carouselSlides"></div>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn" id="carouselPrev">‹</button>
+                        <button class="carousel-btn" id="carouselNext">›</button>
+                    </div>
+                    <div class="carousel-dots" id="carouselDots"></div>
+                </div>
+            </section>
 
+            <!-- Article Grid -->
+            <div class="article-grid" id="articleGrid">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    Loading articles...
+                </div>
+            </div>
+        </div>
+
+        <!-- Headlines Sidebar -->
+        <aside class="headlines-sidebar">
+            <h2 class="headlines-title">Headlines</h2>
+            <div id="headlinesList">
+                <div class="loading">Loading...</div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Article Modal -->
     <div class="modal" id="articleModal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">&times;</button>
@@ -393,56 +947,114 @@
         </div>
     </div>
 
+    <!-- Data Section -->
+    <script id="newsData" type="application/json">
+    {
+      "categories": [
+        {"id": "all", "name": "All", "active": true},
+        {"id": "tech", "name": "Tech", "active": false},
+        {"id": "business", "name": "Business", "active": false}
+      ],
+      "trending": [
+        {"articleId": "1", "reason": "Breaking news"}
+      ],
+      "articles": [
+        {
+          "id": "1",
+          "category": "tech",
+          "title": "Sample Article",
+          "excerpt": "This is a sample article.",
+          "bannerImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=900",
+          "thumbnailImage": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400",
+          "author": "John Doe",
+          "date": "Oct 8, 2025",
+          "readTime": "5 min",
+          "sourceUrl": "https://example.com",
+          "isTrending": true,
+          "isJob": false,
+          "isVideo": false,
+          "videoUrl": "",
+          "fullContent": "<h2>Main Heading</h2><p>Article content here...</p>"
+        }
+      ],
+      "videos": [],
+      "makeWebhook": "YOUR_MAKE_WEBHOOK_URL_HERE",
+      "authToken": "YOUR_SECRET_AUTH_TOKEN_HERE"
+    }
+    </script>
+
     <script>
-        // Global variables
         let articlesData = [];
         let categoriesData = [];
+        let trendingData = [];
+        let videosData = [];
         let currentFilter = 'all';
+        let currentCarouselIndex = 0;
+        let carouselInterval;
+        let makeWebhook = '';
+        let authToken = '';
 
-        // Load data when page loads
-        document.addEventListener('DOMContentLoaded', async function() {
-            await loadNewsData();
+        document.addEventListener('DOMContentLoaded', function() {
+            loadNewsData();
+            setupEventListeners();
         });
 
-        // Load JSON data
-        async function loadNewsData() {
+        function setupEventListeners() {
+            document.getElementById('hamburgerMenu').addEventListener('click', toggleMobileMenu);
+            document.getElementById('closeMobileMenu').addEventListener('click', toggleMobileMenu);
+            document.getElementById('carouselPrev').addEventListener('click', () => changeSlide(-1));
+            document.getElementById('carouselNext').addEventListener('click', () => changeSlide(1));
+            
+            document.getElementById('articleModal').addEventListener('click', function(e) {
+                if (e.target === this) closeModal();
+            });
+            
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeModal();
+            });
+        }
+
+        function loadNewsData() {
             try {
-                // In a real implementation, this would fetch from your JSON file
-                // For this example, you need to place the JSON data in a file called 'news-data.json'
-                // in the same directory as this HTML file
+                const dataElement = document.getElementById('newsData');
+                const data = JSON.parse(dataElement.textContent);
                 
-                const response = await fetch('news-data.json');
+                categoriesData = data.categories || [];
+                articlesData = data.articles || [];
+                trendingData = data.trending || [];
+                videosData = data.videos || [];
+                makeWebhook = data.makeWebhook || '';
+                authToken = data.authToken || '';
                 
-                if (!response.ok) {
-                    throw new Error('Failed to load news data');
-                }
-                
-                const data = await response.json();
-                categoriesData = data.categories;
-                articlesData = data.articles;
-                
-                // Render the page
                 renderCategories();
+                renderCarousel();
                 renderArticles();
+                renderHeadlines();
                 
             } catch (error) {
                 console.error('Error loading news data:', error);
-                document.getElementById('categoryMenu').innerHTML = 
-                    '<li style="color: red;">Error loading data. Please ensure news-data.json exists.</li>';
-                document.getElementById('articleGrid').innerHTML = 
-                    '<div style="color: red;">Error loading articles. Please check the console for details.</div>';
+                showError();
             }
         }
 
-        // Render category navigation
+        function showError() {
+            document.getElementById('categoryMenu').innerHTML = 
+                '<li style="color: var(--accent-color);">Error loading data</li>';
+            document.getElementById('articleGrid').innerHTML = 
+                '<div class="loading" style="color: var(--accent-color);">Error loading articles</div>';
+        }
+
         function renderCategories() {
-            const menuContainer = document.getElementById('categoryMenu');
-            menuContainer.innerHTML = '';
+            const desktopMenu = document.getElementById('categoryMenu');
+            const mobileMenu = document.getElementById('mobileMenuItems');
+            
+            desktopMenu.innerHTML = '';
+            mobileMenu.innerHTML = '';
             
             categoriesData.forEach(category => {
+                // Desktop menu
                 const li = document.createElement('li');
                 li.className = 'category-item';
-                
                 const link = document.createElement('a');
                 link.className = 'category-link' + (category.active ? ' active' : '');
                 link.textContent = category.name;
@@ -450,13 +1062,113 @@
                     e.preventDefault();
                     filterByCategory(category.id);
                 };
-                
                 li.appendChild(link);
-                menuContainer.appendChild(li);
+                desktopMenu.appendChild(li);
+                
+                // Mobile menu
+                const mli = document.createElement('li');
+                mli.className = 'mobile-menu-item';
+                const mlink = document.createElement('a');
+                mlink.className = 'mobile-menu-link' + (category.active ? ' active' : '');
+                mlink.textContent = category.name;
+                mlink.onclick = (e) => {
+                    e.preventDefault();
+                    filterByCategory(category.id);
+                    toggleMobileMenu();
+                };
+                mli.appendChild(mlink);
+                mobileMenu.appendChild(mli);
             });
         }
 
-        // Render article cards
+        function renderCarousel() {
+            const trendingArticles = articlesData.filter(a => a.isTrending);
+            
+            if (trendingArticles.length === 0 || currentFilter !== 'all') {
+                document.getElementById('heroSection').style.display = 'none';
+                return;
+            }
+            
+            document.getElementById('heroSection').style.display = 'block';
+            const slidesContainer = document.getElementById('carouselSlides');
+            const dotsContainer = document.getElementById('carouselDots');
+            
+            slidesContainer.innerHTML = '';
+            dotsContainer.innerHTML = '';
+            
+            trendingArticles.forEach((article, index) => {
+                // Create slide
+                const slide = document.createElement('div');
+                slide.className = 'carousel-slide' + (index === 0 ? ' active' : '');
+                slide.innerHTML = `
+                    <img src="${article.bannerImage}" alt="${article.title}" loading="lazy">
+                    <div class="carousel-content">
+                        <span class="trending-badge">🔥 Trending</span>
+                        <h2 class="carousel-title">${article.title}</h2>
+                        <p class="carousel-excerpt">${article.excerpt}</p>
+                        <div class="carousel-meta">
+                            <span>By ${article.author}</span>
+                            <span>${article.date}</span>
+                            <span>${article.readTime}</span>
+                        </div>
+                    </div>
+                `;
+                slide.onclick = () => openModal(article.id);
+                slidesContainer.appendChild(slide);
+                
+                // Create dot
+                const dot = document.createElement('div');
+                dot.className = 'carousel-dot' + (index === 0 ? ' active' : '');
+                dot.onclick = () => goToSlide(index);
+                dotsContainer.appendChild(dot);
+            });
+            
+            if (trendingArticles.length > 1) {
+                startCarousel();
+            }
+        }
+
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            
+            slides[currentCarouselIndex].classList.remove('active');
+            dots[currentCarouselIndex].classList.remove('active');
+            
+            currentCarouselIndex = (currentCarouselIndex + direction + slides.length) % slides.length;
+            
+            slides[currentCarouselIndex].classList.add('active');
+            dots[currentCarouselIndex].classList.add('active');
+            
+            resetCarousel();
+        }
+
+        function goToSlide(index) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            
+            slides[currentCarouselIndex].classList.remove('active');
+            dots[currentCarouselIndex].classList.remove('active');
+            
+            currentCarouselIndex = index;
+            
+            slides[currentCarouselIndex].classList.add('active');
+            dots[currentCarouselIndex].classList.add('active');
+            
+            resetCarousel();
+        }
+
+        function startCarousel() {
+            carouselInterval = setInterval(() => {
+                changeSlide(1);
+            }, 5000);
+        }
+
+        function resetCarousel() {
+            clearInterval(carouselInterval);
+            startCarousel();
+        }
+
         function renderArticles(filterCategory = 'all') {
             const gridContainer = document.getElementById('articleGrid');
             gridContainer.innerHTML = '';
@@ -474,10 +1186,24 @@
                 const card = document.createElement('div');
                 card.className = 'article-card';
                 card.setAttribute('data-category', article.category);
-                card.onclick = () => openModal(article.id);
+                
+                let badges = '';
+                if (article.isTrending) badges += '<span class="badge badge-trending">🔥 Trending</span>';
+                if (article.isJob) badges += '<span class="badge badge-job">💼 Job</span>';
+                if (article.isVideo) badges += '<span class="badge badge-video">▶ Video</span>';
+                
+                const imageHtml = article.isVideo 
+                    ? `<div class="video-thumbnail">
+                         <img src="${article.thumbnailImage}" alt="${article.title}" class="article-image" loading="lazy">
+                         <div class="video-play-icon">▶</div>
+                       </div>`
+                    : `<img src="${article.thumbnailImage}" alt="${article.title}" class="article-image" loading="lazy">`;
                 
                 card.innerHTML = `
-                    <img src="${article.image}" alt="${article.title}" class="article-image">
+                    <div class="article-image-container">
+                        ${imageHtml}
+                        <div class="article-badges">${badges}</div>
+                    </div>
                     <div class="article-content">
                         <span class="article-category">${article.category}</span>
                         <h2 class="article-title">${article.title}</h2>
@@ -489,25 +1215,47 @@
                     </div>
                 `;
                 
+                card.onclick = () => openModal(article.id);
                 gridContainer.appendChild(card);
             });
         }
 
-        // Filter articles by category
+        function renderHeadlines() {
+            const headlinesList = document.getElementById('headlinesList');
+            headlinesList.innerHTML = '';
+            
+            const recentArticles = articlesData.slice(0, 10);
+            
+            recentArticles.forEach(article => {
+                const headline = document.createElement('div');
+                headline.className = 'headline-item';
+                headline.innerHTML = `
+                    <div class="headline-category">${article.category}</div>
+                    <div class="headline-title">${article.title}</div>
+                    <div class="headline-time">${article.date}</div>
+                `;
+                headline.onclick = () => openModal(article.id);
+                headlinesList.appendChild(headline);
+            });
+        }
+
         function filterByCategory(category) {
             currentFilter = category;
             
-            // Update active state on nav links
-            document.querySelectorAll('.category-link').forEach(link => {
+            document.querySelectorAll('.category-link, .mobile-menu-link').forEach(link => {
                 link.classList.remove('active');
             });
-            event.target.classList.add('active');
             
-            // Re-render articles with filter
+            document.querySelectorAll('.category-link, .mobile-menu-link').forEach(link => {
+                if (link.textContent.toLowerCase() === categoriesData.find(c => c.id === category)?.name.toLowerCase()) {
+                    link.classList.add('active');
+                }
+            });
+            
+            renderCarousel();
             renderArticles(category);
         }
 
-        // Open modal with article content
         function openModal(articleId) {
             const article = articlesData.find(a => a.id === articleId);
             if (!article) return;
@@ -515,21 +1263,69 @@
             const modal = document.getElementById('articleModal');
             const modalContent = document.getElementById('modalContentArea');
             
-            // Build full article content paragraphs
-            const paragraphs = article.fullContent.map(p => `<p>${p}</p>`).join('');
+            let badges = '';
+            if (article.isTrending) badges += '<span class="badge badge-trending">🔥 Trending</span>';
+            if (article.isJob) badges += '<span class="badge badge-job">💼 Job Listing</span>';
+            if (article.isVideo) badges += '<span class="badge badge-video">▶ Video Content</span>';
+            
+            let videoEmbed = '';
+            if (article.isVideo && article.videoUrl) {
+                const videoId = extractYouTubeId(article.videoUrl);
+                if (videoId) {
+                    videoEmbed = `
+                        <div class="video-player-container">
+                            <iframe src="https://www.youtube.com/embed/${videoId}?rel=0" 
+                                    allowfullscreen 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                            </iframe>
+                        </div>
+                    `;
+                }
+            }
+            
+            let jobButton = '';
+            if (article.isJob && makeWebhook && authToken) {
+                jobButton = `
+                    <button class="btn btn-job" onclick="submitJobApplication('${article.id}', '${escapeHtml(article.sourceUrl)}', '${escapeHtml(article.title)}')">
+                        💼 Create Job Application
+                    </button>
+                `;
+            }
+            
+            const shareButtons = `
+                <button class="btn btn-secondary" onclick="shareArticle('twitter', '${escapeHtml(article.title)}', '${escapeHtml(article.sourceUrl)}')">
+                    Share on Twitter
+                </button>
+                <button class="btn btn-secondary" onclick="shareArticle('linkedin', '${escapeHtml(article.title)}', '${escapeHtml(article.sourceUrl)}')">
+                    Share on LinkedIn
+                </button>
+                <button class="btn btn-secondary" onclick="copyToClipboard('${escapeHtml(article.sourceUrl)}')">
+                    📋 Copy Link
+                </button>
+            `;
             
             modalContent.innerHTML = `
-                <img src="${article.imageModal}" alt="${article.title}" class="modal-header-image">
+                <img src="${article.bannerImage}" alt="${article.title}" class="modal-banner" loading="lazy">
                 <div class="modal-body">
-                    <span class="modal-category">${article.category}</span>
-                    <h1 class="modal-title">${article.title}</h1>
-                    <div class="modal-meta">
-                        <span>By ${article.author}</span>
-                        <span>${article.date}</span>
-                        <span>${article.readTime}</span>
+                    <div class="modal-header-section">
+                        <div class="modal-badges">${badges}</div>
+                        <h1 class="modal-title">${article.title}</h1>
+                        <div class="modal-meta">
+                            <span>By ${article.author}</span>
+                            <span>${article.date}</span>
+                            <span>${article.readTime}</span>
+                        </div>
+                        <div class="modal-actions">
+                            <a href="${article.sourceUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                📰 Read Original Source
+                            </a>
+                            ${jobButton}
+                            ${shareButtons}
+                        </div>
                     </div>
-                    <div class="modal-text">
-                        ${paragraphs}
+                    ${videoEmbed}
+                    <div class="modal-article-content">
+                        ${article.fullContent}
                     </div>
                 </div>
             `;
@@ -538,26 +1334,88 @@
             document.body.style.overflow = 'hidden';
         }
 
-        // Close modal
         function closeModal() {
             const modal = document.getElementById('articleModal');
             modal.classList.remove('active');
             document.body.style.overflow = 'auto';
         }
 
-        // Close modal when clicking outside
-        document.getElementById('articleModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal();
-            }
-        });
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
 
-        // Close modal with ESC key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeModal();
+        function extractYouTubeId(url) {
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        async function submitJobApplication(articleId, jobUrl, jobTitle) {
+            if (!makeWebhook || !authToken) {
+                alert('Job application system not configured.');
+                return;
             }
-        });
+            
+            const confirmed = confirm(`Submit job application for: ${jobTitle}?`);
+            if (!confirmed) return;
+            
+            try {
+                const response = await fetch(makeWebhook, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${authToken}`
+                    },
+                    body: JSON.stringify({
+                        articleId: articleId,
+                        jobUrl: jobUrl,
+                        jobTitle: jobTitle,
+                        timestamp: new Date().toISOString()
+                    })
+                });
+                
+                if (response.ok) {
+                    alert('✅ Job application submitted successfully!');
+                } else {
+                    throw new Error('Failed to submit');
+                }
+            } catch (error) {
+                console.error('Error submitting job application:', error);
+                alert('❌ Failed to submit job application. Please try again.');
+            }
+        }
+
+        function shareArticle(platform, title, url) {
+            const encodedTitle = encodeURIComponent(title);
+            const encodedUrl = encodeURIComponent(url);
+            
+            let shareUrl = '';
+            
+            if (platform === 'twitter') {
+                shareUrl = `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`;
+            } else if (platform === 'linkedin') {
+                shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+            }
+            
+            if (shareUrl) {
+                window.open(shareUrl, '_blank', 'width=600,height=400');
+            }
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('✅ Link copied to clipboard!');
+            }).catch(() => {
+                alert('❌ Failed to copy link');
+            });
+        }
     </script>
 </body>
 </html>
