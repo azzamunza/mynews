@@ -1,1 +1,31 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OAuth2 Callback</title>
+</head>
+<body>
+  <h2>OAuth Callback Page</h2>
+  <p>If you see this page, the OAuth redirect worked. You can now handle the response in JavaScript.</p>
+
+  <script>
+    // Extract query parameters from URL
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code'); // OAuth authorization code
+    const error = params.get('error'); // Any errors
+
+    if (code) {
+      console.log('Authorization code received:', code);
+      document.body.innerHTML += `<p>Authorization code: ${code}</p>`;
+      // You would normally send this code to your backend server to exchange for an access token
+    } else if (error) {
+      console.error('OAuth error:', error);
+      document.body.innerHTML += `<p>OAuth error: ${error}</p>`;
+    } else {
+      console.log('No code or error received.');
+      document.body.innerHTML += `<p>No OAuth code or error received.</p>`;
+    }
+  </script>
+</body>
+</html>
