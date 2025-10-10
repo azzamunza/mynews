@@ -1348,11 +1348,19 @@
             let jobButton = '';
             if (article.isJob && makeWebhook && authToken) {
                 jobButton = `
-                    <button class="btn btn-job" onclick="submitJobApplication('${article.id}', '${escapeHtml(article.sourceUrl)}', '${escapeHtml(article.title)}')">
+                    <button class="btn btn-job" onclick="submitJobApplication(
+                        '${article.id}',
+                        '${escapeHtml(article.sourceUrl)}',
+                        '${escapeHtml(article.title)}'
+                    )">
                         💼 Create Job Application
                     </button>
                 `;
+            } else {
+                // Ensure button is hidden if not logged in
+                jobButton = '';
             }
+
             
             const shareButtons = `
                 <button class="btn btn-secondary" onclick="shareArticle('twitter', '${escapeHtml(article.title)}', '${escapeHtml(article.sourceUrl)}')">
@@ -1481,4 +1489,5 @@
     </script>
 </body>
 </html>
+
 
