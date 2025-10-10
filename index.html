@@ -926,17 +926,11 @@
 <body>
 <header>
     <div class="header-container">
-        <div class="hamburger" id="hamburgerMenu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <div class="hamburger" id="hamburgerMenu"><span></span><span></span><span></span></div>
         <h1 class="site-title">NewsHub</h1>
 
-        <!-- Google Sign-In button container -->
         <div class="header-login">
-        <!-- User info appears here -->
-        <div id="user-info" class="header-user-info"></div>
+            <div id="user-info" class="header-user-info"></div>
             <div id="g_id_onload"
                  data-client_id="752307788655-djf0dae2j8h10q040g1ombshla687l0j.apps.googleusercontent.com"
                  data-login_uri="https://azzamunza.github.io/mynews/oauth2callback.html"
@@ -1009,15 +1003,11 @@
     </div>
 
     <script>
-        let articlesData = [];
-        let categoriesData = [];
-        let trendingData = [];
-        let videosData = [];
-        let currentFilter = 'all';
-        let currentCarouselIndex = 0;
-        let carouselInterval;
-        let makeWebhook = '';
-        let authToken = '';
+    let isLoggedIn = false;
+    let loggedInUserEmail = '';
+    let articlesData = [], categoriesData = [], trendingData = [], videosData = [];
+    let currentFilter = 'all', currentCarouselIndex = 0;
+    let carouselInterval, makeWebhook = '', authToken = '';
 
         document.addEventListener('DOMContentLoaded', function() {
             loadNewsData();
@@ -1026,31 +1016,81 @@
 
         // Expose handleCredentialResponse globally so Google can call it
         function handleCredentialResponse(response) {
-            const user = jwt_decode(response.credential);
-            const userInfoDiv = document.querySelector('.header-user-info');
-            userInfoDiv.textContent = user.name;
-        
-            // Show job buttons only for your email
-            if (user.email === 'azzamunza@gmail.com') {
-                const jobButtons = document.querySelectorAll('.btn-job');
-                jobButtons.forEach(btn => btn.style.display = 'inline-block');
+        const user = jwt_decode(response.credential);
+        const userInfoDiv = document.getElementById('user-info');
+        userInfoDiv.textContent = user.name;
+
+        isLoggedIn = true;
+        loggedInUserEmail = user.email;
+
+        if (user.email === 'azzamunza@gmail.com') {
+            const jobButtons = document.querySelectorAll('.btn-job');
+            jobButtons.forEach(btn => btn.style.display = 'inline-block');
+        }
+    }
+
+    function openModal(articleId) {
+        const article = articlesData.find(a => a.id === articleId);
+        if (!article) return;
+
+        const modal = document.getElementById('articleModal');
+        const modalContent = document.getElementById('modalContentArea');
+
+        let badges = '';
+        if (article.isTrending) badges += '<span class="badge badge-trending">🔥 Trending</span>';
+        if (article.isJob) badges += '<span class="badge badge-job">💼 Job Listing</span>';
+        if (article.isVideo) badges += '<span class="badge badge-video">▶ Video Content</span>';
+
+        let videoEmbed = '';
+        if (article.isVideo && article.videoUrl) {
+            const videoId = extractYouTubeId(article.videoUrl);
+            if (videoId) {
+                videoEmbed = `<div class="video-player-container">
+                    <iframe src="https://www.youtube.com/embed/${videoId}?rel=0" allowfullscreen
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                    </iframe>
+                </div>`;
             }
         }
-        
-            // Initialize Google Identity
-            google.accounts.id.initialize({
-                client_id: 'YOUR_CLIENT_ID_HERE',
-                callback: handleCredentialResponse
-            });
-        
-            google.accounts.id.renderButton(
-                document.getElementById('loginButton'),
-                { theme: 'outline', size: 'medium' }
-            );
-        
-            google.accounts.id.prompt(); // Show auto-login prompt
-        };
 
+        let jobButton = '';
+        if (article.isJob && makeWebhook && authToken && isLoggedIn && loggedInUserEmail === 'azzamunza@gmail.com') {
+            jobButton = `<button class="btn btn-job" onclick="submitJobApplication(
+                '${article.id}',
+                '${escapeHtml(article.sourceUrl)}',
+                '${escapeHtml(article.title)}'
+            )">💼 Create Job Application</button>`;
+        }
+
+        const shareButtons = `
+            <button class="btn btn-secondary" onclick="shareArticle('twitter','${escapeHtml(article.title)}','${escapeHtml(article.sourceUrl)}')">Share on Twitter</button>
+            <button class="btn btn-secondary" onclick="shareArticle('linkedin','${escapeHtml(article.title)}','${escapeHtml(article.sourceUrl)}')">Share on LinkedIn</button>
+            <button class="btn btn-secondary" onclick="copyToClipboard('${escapeHtml(article.sourceUrl)}')">📋 Copy Link</button>
+        `;
+
+        modalContent.innerHTML = `
+            <img src="${article.bannerImage}" alt="${article.title}" class="modal-banner" loading="lazy">
+            <div class="modal-body">
+                <div class="modal-header-section">
+                    <div class="modal-badges">${badges}</div>
+                    <h1 class="modal-title">${article.title}</h1>
+                    <div class="modal-meta">
+                        <span>By ${article.author}</span>
+                        <span>${article.date}</span>
+                        <span>${article.readTime}</span>
+                    </div>
+                    <div class="modal-actions">
+                        <a href="${article.sourceUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">📰 Read Original Source</a>
+                        ${jobButton}
+                        ${shareButtons}
+                    </div>
+                </div>
+                ${videoEmbed}
+            </div>
+        `;
+
+        modal.classList.add('active');
+    }
 
         function setupEventListeners() {
             document.getElementById('hamburgerMenu').addEventListener('click', toggleMobileMenu);
@@ -1489,6 +1529,7 @@
     </script>
 </body>
 </html>
+
 
 
 
