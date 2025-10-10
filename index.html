@@ -1024,19 +1024,18 @@
             setupEventListeners();
         });
 
-        window.onload = function() {
-            function handleCredentialResponse(response) {
-                const user = jwt_decode(response.credential);
-                const userInfoDiv = document.querySelector('.header-user-info');
-                userInfoDiv.textContent = user.name;
-            
-                // Show job buttons only for your email
-                if (user.email === 'azzamunza@gmail.com') { // replace with your email
-                    const jobButtons = document.querySelectorAll('.btn-job');
-                    jobButtons.forEach(btn => btn.style.display = 'inline-block');
-                }
-}
+        // Expose handleCredentialResponse globally so Google can call it
+        function handleCredentialResponse(response) {
+            const user = jwt_decode(response.credential);
+            const userInfoDiv = document.querySelector('.header-user-info');
+            userInfoDiv.textContent = user.name;
+        
+            // Show job buttons only for your email
+            if (user.email === 'azzamunza@gmail.com') {
+                const jobButtons = document.querySelectorAll('.btn-job');
+                jobButtons.forEach(btn => btn.style.display = 'inline-block');
             }
+        }
         
             // Initialize Google Identity
             google.accounts.id.initialize({
@@ -1490,6 +1489,7 @@
     </script>
 </body>
 </html>
+
 
 
 
