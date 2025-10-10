@@ -1028,13 +1028,16 @@
                 const user = jwt_decode(response.credential);
                 const userInfoDiv = document.querySelector('.header-user-info');
                 userInfoDiv.textContent = user.name;
-        
-                const jobButton = document.getElementById('createJobButton');
-                if (user.email === 'your.personal.email@example.com') {
-                    jobButton.style.display = 'inline-block';
-                } else {
-                    jobButton.style.display = 'none';
-                }
+            
+                // Select all job buttons by class
+                const jobButtons = document.querySelectorAll('.btn-job');
+                jobButtons.forEach(btn => {
+                    if (user.email === 'azzamunza@gmail.com') {  // replace with your email
+                        btn.style.display = 'inline-block';
+                    } else {
+                        btn.style.display = 'none';
+                    }
+                });
             }
         
             // Initialize Google Identity
@@ -1489,5 +1492,6 @@
     </script>
 </body>
 </html>
+
 
 
