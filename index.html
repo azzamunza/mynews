@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Portal</title>
@@ -54,20 +55,67 @@
             align-items: center;
         }
 
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 4px;
-            cursor: pointer;
-            padding: 8px;
+        .header-login {
+            display: flex;
+            align-items: center;
+            gap: 8px; /* optional, space between username and button */
         }
 
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background: var(--accent-color);
-            transition: all 0.3s;
-        }
+/* User info next to login button */
+.header-user-info {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: #fff; /* adjust to match your header */
+}
+
+/* Header login container */
+.header-login {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* space between username and login button */
+}
+
+/* Hamburger menu button */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--accent-color);
+    transition: all 0.3s;
+}
+
+/* Hamburger menu: make login visible inside menu on small screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* show hamburger on small screens */
+    }
+
+    /* Hide header login by default on small screens */
+    .header-login {
+        display: none;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    /* Show login when hamburger is active */
+    #hamburgerMenu.active ~ .header-login {
+        display: flex;
+    }
+
+    /* Optional: full width for login items in mobile menu */
+    .header-login button {
+        width: 100%;
+    }
+}
+
 
         .site-title {
             font-size: 2rem;
@@ -875,17 +923,29 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="hamburger" id="hamburgerMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <h1 class="site-title">NewsHub</h1>
-            <div style="width: 33px;"></div>
+<header>
+    <div class="header-container">
+        <div class="hamburger" id="hamburgerMenu">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </header>
+        <h1 class="site-title">NewsHub</h1>
+
+        <!-- Google Sign-In button container -->
+        <div class="header-login">
+        <!-- User info appears here -->
+        <div id="user-info" class="header-user-info"></div>
+            <div id="g_id_onload"
+                 data-client_id="752307788655-djf0dae2j8h10q040g1ombshla687l0j.apps.googleusercontent.com"
+                 data-login_uri="https://azzamunza.github.io/mynews/oauth2callback.html"
+                 data-auto_prompt="false"
+                 data-callback="handleCredentialResponse">
+            </div>
+            <div class="g_id_signin" data-type="standard"></div>
+        </div>
+    </div>
+</header>
 
     <!-- Mobile Menu -->
     <div class="mobile-menu-overlay" id="mobileMenu">
@@ -962,6 +1022,35 @@
             loadNewsData();
             setupEventListeners();
         });
+
+        window.onload = function() {
+            function handleCredentialResponse(response) {
+                const user = jwt_decode(response.credential);
+                const userInfoDiv = document.querySelector('.header-user-info');
+                userInfoDiv.textContent = user.name;
+        
+                const jobButton = document.getElementById('createJobButton');
+                if (user.email === 'your.personal.email@example.com') {
+                    jobButton.style.display = 'inline-block';
+                } else {
+                    jobButton.style.display = 'none';
+                }
+            }
+        
+            // Initialize Google Identity
+            google.accounts.id.initialize({
+                client_id: 'YOUR_CLIENT_ID_HERE',
+                callback: handleCredentialResponse
+            });
+        
+            google.accounts.id.renderButton(
+                document.getElementById('loginButton'),
+                { theme: 'outline', size: 'medium' }
+            );
+        
+            google.accounts.id.prompt(); // Show auto-login prompt
+        };
+
 
         function setupEventListeners() {
             document.getElementById('hamburgerMenu').addEventListener('click', toggleMobileMenu);
@@ -1392,3 +1481,4 @@
     </script>
 </body>
 </html>
+
