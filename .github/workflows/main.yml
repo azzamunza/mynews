@@ -1,0 +1,16 @@
+name: Webhook Trigger
+
+on:
+  workflow_dispatch:  # allows manual trigger from GitHub web interface
+  push:               # also runs automatically on push
+
+jobs:
+  send_webhook:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send webhook notification
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+          -d '{"event":"build_complete"}' \
+          ${{ secrets.WEBHOOK_URL }}
