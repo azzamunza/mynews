@@ -305,7 +305,63 @@
       "fullContent": "<h2>Role Overview</h2><p>TechServe Perth, a leading managed services provider, seeks an IT Support Specialist to deliver technical support and infrastructure management services to our diverse client base. This role combines helpdesk responsibilities with hands-on technical work, offering excellent opportunities for skill development.</p><h3>Key Responsibilities</h3><ul><li>Provide first and second-level technical support via phone, email, and remote access</li><li>Troubleshoot hardware, software, and network connectivity issues</li><li>Perform onsite client visits for installations, maintenance, and complex issues</li><li>Manage user accounts, permissions, and security settings in Active Directory</li><li>Document support tickets, solutions, and procedures in knowledge base</li><li>Assist with server maintenance, backups, and disaster recovery procedures</li><li>Support Microsoft 365 administration and cloud service implementations</li></ul><h3>Required Qualifications</h3><ul><li><strong>Experience:</strong> 1 to 3 years in IT support or helpdesk environment</li><li><strong>Technical:</strong> Windows 10 and 11, Windows Server, Active Directory, Microsoft 365</li><li><strong>Networking:</strong> TCP/IP, DNS, DHCP, VPN, basic firewall configuration</li><li><strong>Certifications:</strong> CompTIA A+ or Microsoft certification desirable</li><li><strong>Licence:</strong> Valid WA driver’s licence for client site visits</li><li><strong>Communication:</strong> Excellent customer service and problem-solving skills</li></ul><h3>Desired Skills</h3><ul><li>Experience with backup solutions such as Veeam or Acronis</li><li>Knowledge of virtualisation technologies including Hyper-V or VMware</li><li>Familiarity with RMM tools such as ConnectWise or Datto</li><li>Understanding of cybersecurity best practices</li><li>Previous MSP or multi-client environment experience</li></ul><div class=\"highlight-box\"><p><strong>Location:</strong> Osborne Park office, Perth. Monday to Friday from 8:00am to 5:00pm with occasional after-hours work for maintenance windows. Company vehicle provided for client visits.</p></div><h3>What We Offer</h3><ul><li><strong>Salary:</strong> $60,000 to $75,000 AUD based on experience</li><li><strong>Benefits:</strong> Company vehicle, mobile phone, laptop</li><li><strong>Training:</strong> Professional certification support and ongoing technical training</li><li><strong>Culture:</strong> Supportive team environment with experienced mentors</li><li><strong>Progression:</strong> Clear pathway to Senior Support or Systems Administrator roles</li></ul><h3>Application Process</h3><p>Submit your CV and cover letter via SEEK outlining your technical experience and relevant certifications. Applications close October 30, 2025. Technical assessment and multiple interviews required for shortlisted candidates.</p><div class=\"key-takeaways\"><h3>Key Points</h3><ul><li>IT Support Specialist role at Perth managed services provider</li><li>Requires 1 to 3 years experience with Windows and Microsoft 365</li></ul></div>"
     }
   ],
-  "videos": [],
+  "videos": [
+    {
+      "id": "v1",
+      "category": "ai-tech",
+      "title": "GPT-5 Explained: How the New AI Model Outperforms Competitors",
+      "excerpt": "Detailed breakdown of GPT-5's performance, benchmark results, and features compared to Claude and Gemini.",
+      "thumbnail": "https://img.youtube.com/vi/0PQKoX2Ao4g/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=0PQKoX2Ao4g",
+      "channel": "TwoMinutePapers",
+      "publishDate": "Oct 7, 2025",
+      "duration": "9:28"
+    },
+    {
+      "id": "v2",
+      "category": "robotics",
+      "title": "Optimus & Unitree H1: Humanoid Robots Go Mainstream",
+      "excerpt": "Demonstration of Tesla Optimus and Unitree H1 performing real-world manufacturing and logistics tasks.",
+      "thumbnail": "https://img.youtube.com/vi/8Hf4J9SY3Hk/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=8Hf4J9SY3Hk",
+      "channel": "Robotics Hub",
+      "publishDate": "Oct 5, 2025",
+      "duration": "12:17"
+    },
+    {
+      "id": "v3",
+      "category": "space",
+      "title": "James Webb Detects Earthlike Exoplanets Near Solar System",
+      "excerpt": "Astrophysicists discuss JWST's identification of habitable zone exoplanets and implications for astrobiology.",
+      "thumbnail": "https://img.youtube.com/vi/bnTAAz2d5Ig/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=bnTAAz2d5Ig",
+      "channel": "PBS Space Time",
+      "publishDate": "Oct 2, 2025",
+      "duration": "13:04"
+    },
+    {
+      "id": "v4",
+      "category": "gaming",
+      "title": "Diablo Immortal Tempest Update: Builds, Gear, and PvP Impressions",
+      "excerpt": "Guides on new Tempest legendary gear, balance changes, and top PvP and PvE builds post-update.",
+      "thumbnail": "https://img.youtube.com/vi/xHIlBGi5noA/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=xHIlBGi5noA",
+      "channel": "DM Diablo Immortal",
+      "publishDate": "Oct 6, 2025",
+      "duration": "15:29"
+    },
+    {
+      "id": "v5",
+      "category": "ai-tech",
+      "title": "Top AI Video and Music Generators in 2025",
+      "excerpt": "Comparisons and walkthroughs for leading creative AI platforms transforming video and music production.",
+      "thumbnail": "https://img.youtube.com/vi/ehTg7kOfLxE/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=ehTg7kOfLxE",
+      "channel": "AI Explained",
+      "publishDate": "Oct 5, 2025",
+      "duration": "11:36"
+    }
+  ],
   "makeWebhook": "https://hook.eu2.make.com/0bdb1b8f-5eac-4c0d-a5ec-11b9f25d9d30",
   "authToken": "1c0d7b56c9a44d2b8e0b42f2e4a0a3e59f71b4cc0f7f9a5de8c2b1a7f4d6e3c0"
 }
