@@ -6,41 +6,71 @@
       "active": true
     },
     {
-      "id": "ai-tech",
-      "name": "AI & Tech",
+      "id": "digital-media-and-gaming",
+      "name": "Gaming",
       "active": false
     },
     {
-      "id": "history-archaeology",
-      "name": "History",
+      "id": "perth-local-services-and-lifestyle",
+      "name": "Perth Local",
       "active": false
     },
     {
-      "id": "science-space",
-      "name": "Science",
+      "id": "ancient-history-and-archaeology",
+      "name": "Archaeology",
       "active": false
     }
   ],
-  "trending": [
-    {
-      "articleId": "roman-sailor-grave-marker-new-orleans",
-      "reason": "A 1,900-year-old Roman artifact, missing since WWII, was unexpectedly discovered in a New Orleans backyard."
-    }
-  ],
+  "trending": [],
   "articles": [
     {
-      "id": "roman-sailor-grave-marker-new-orleans",
-      "category": "history-archaeology",
-      "title": "Roman Sailor's 1,900-Year-Old Grave Marker Found in New Orleans",
-      "excerpt": "A 2nd-century Roman grave marker, missing from an Italian museum since it was bombed in WWII, has been discovered during a routine yard cleanup in New Orleans.",
-      "bannerImage": "https://i.natgeofe.com/n/759b6c7a-4251-4d0f-9602-525a74e2d3b5/roman-tombstone-found-new-orleans-yard-national-geographic-picture_3x2.jpg",
-      "thumbnailImage": "https://www.thehistoryblog.com/wp-content/uploads/2025/10/Grave-marker-of-Sextus-Congenius-Verus-inscription.jpg",
-      "author": "The History Blog",
-      "date": "Oct 11, 2025",
-      "readTime": "4 min",
-      "sourceUrl": "https://www.thehistoryblog.com/archives/category/modernish",
-      "isTrending": true,
+      "id": "xbox-game-pass-october-2025-wave-2",
+      "category": "digital-media-and-gaming",
+      "title": "Xbox Game Pass Adds Ninja Gaiden 4 in October 2025 Wave 2",
+      "excerpt": "Xbox has announced the second wave of games for its Game Pass subscription service, featuring the day-one release of the highly anticipated action title Ninja Gaiden 4.",
+      "bannerImage": "https://i.ytimg.com/vi/z68vSvb-55Y/maxresdefault.jpg",
+      "thumbnailImage": "https://cdn.mos.cms.futurecdn.net/y2b54JmzvV4fB8P2f2dYvU-1200-80.jpg",
+      "author": "Xbox Wire Staff",
+      "date": "Oct 09, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://news.xbox.com/en-us/2025/10/08/game-pass-october-2025-wave-2/",
+      "isTrending": false,
       "isJob": false,
       "isVideo": false,
       "videoUrl": "",
-      "fullContent": "<h2>Roman Artifact Missing Since WWII Surfaces in US Backyard</h2><p>A 2nd-century grave marker for a Roman sailor has been discovered in a New Orleans backyard, solving a decades-old mystery of the artifact's whereabouts. The tombstone, belonging to a sailor named Sextus Congenius Verus, was housed in the National Archaeological Museum of Civitavecchia, Italy, which was destroyed by Allied bombing during World War II. The recovery began when a couple clearing undergrowth in their yard found the inscribed marble slab and contacted local academics for assistance.</p><h3>An Unlikely Journey Across the Atlantic</h3><p>The mystery of how the ancient Roman artifact travelled from Italy to New Orleans has now been solved. The previous homeowner, Erin Scott O'Brien, revealed that the stone belonged to her grandfather, Master Sergeant Charles E. Paddock, who was stationed in Italy during the war. He brought the tablet back to the United States and kept it in a display case. His family, unaware of its historical significance, later placed it in the garden as a decorative stone, where it remained forgotten until the recent discovery.</p><h3>Historical Significance and Repatriation</h3><p>Experts quickly identified the inscription, which details the life and military service of Sextus Congenius Verus, a sailor in the praetorian fleet from the Bessi tribe who lived for 42 years. Such inscriptions provide valuable information about
+      "fullContent": "<h2>Ninja Gaiden 4 Headlines Second Wave of Xbox Game Pass Titles for October</h2><p>Microsoft has officially revealed the next slate of games arriving on its Xbox Game Pass service for console, PC, and cloud gaming. The announcement confirms that the highly anticipated sequel, <strong>Ninja Gaiden 4</strong>, will be available on day one of its release, October 21, 2025. This addition is part of a varied lineup designed to cater to a wide range of players, from action enthusiasts to fans of classic role-playing games.</p><h3>What's Coming to Game Pass</h3><p>The October update continues to build on the Game Pass value proposition, which recently saw a structural revision to its subscription tiers. Alongside Ninja Gaiden 4, subscribers will gain access to several other notable titles. PC players can look forward to the arrival of <em>Baldur's Gate & Baldur's Gate II: Enhanced Editions</em> on October 9, bringing two classic RPGs to the platform. Other additions include the day-one release of <em>Keeper</em> and the action game <em>Evil West</em>.</p><blockquote><p>\"The definitive ninja action-adventure franchise returns with NINJA GAIDEN 4! Embark on a cutting-edge adventure where legacy meets innovation in a high-octane blend of style and no-holds-barred combat.\" - Xbox Official Statement</p></blockquote><h3>Broader Impact for Subscribers</h3><p>This announcement comes after Microsoft adjusted its Game Pass subscription model, introducing Essential and Premium tiers to replace the former Core and Standard plans. The inclusion of a major third-party title like Ninja Gaiden 4 on its release day underscores Microsoft's strategy to make the service indispensable for gamers. The game, co-developed by Team Ninja and PlatinumGames, is set to be a significant release for the action-adventure genre.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>Ninja Gaiden 4:</strong> Arriving on Game Pass for console, PC, and cloud on its release date, October 21, 2025.</li><li><strong>Classic RPGs for PC:</strong> <em>Baldur's Gate</em> and its sequel, in their enhanced editions, will be available for PC subscribers from October 9.</li><li><strong>Titles Leaving:</strong> Subscribers should note that <em>Cocoon</em>, <em>Core Keeper</em>, and <em>Teenage Mutant Ninja Turtles: Mutants Unleashed</em> will leave the service on October 15.</li><li><strong>Subscription Tiers:</strong> The new games will be available across the recently updated Game Pass tiers, including Premium and Ultimate.</li></ul></div>"
+    },
+    {
+      "id": "job-casual-computer-support",
+      "category": "perth-local-services-and-lifestyle",
+      "title": "Casual Computer Support Role with Full Training",
+      "excerpt": "Delta Computers in Applecross is seeking a casual technician to support its technology fleet, offering comprehensive on-the-job training.",
+      "bannerImage": "https://images.unsplash.com/photo-1575089976121-8f67e501a511?q=80&w=2070&auto=format&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1599339943644-3d9b8981f1d1?q=80&w=1287&auto=format&fit=crop",
+      "author": "Delta Computers",
+      "date": "Oct 09, 2025",
+      "readTime": "2 min",
+      "sourceUrl": "https://www.joblum.com/job/casual-computer-support-full-training-provided/1118331",
+      "isTrending": false,
+      "isJob": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Role Overview</h2><p>Delta Computers, a technology services provider in Applecross, has an opening for a Casual Computer Support technician. This entry-level position is ideal for individuals looking to start a career in IT, as the company provides full on-the-job training to manage and maintain a diverse fleet of approximately 4,000 technology items. The role focuses on providing hands-on technical support and ensuring operational stability across the company's managed assets.</p><h3>Key Responsibilities</h3><ul><li>Performing diagnostics, troubleshooting, and repairs on desktops and notebooks.</li><li>Conducting parts replacement, system upgrades, and new deployments.</li><li>Responding to user support tickets in a timely manner to meet service level agreements.</li><li>Identifying and escalating potential issues that could impact end-user experience.</li></ul><h3>Required Qualifications</h3><ul><li><strong>Education:</strong> High School Diploma or equivalent is required.</li><li><strong>Experience:</strong> No formal experience is necessary as full training is provided. Previous customer service or technical support experience is a plus.</li><li><strong>Technical Skills:</strong> A basic understanding of Windows operating systems is beneficial. An A+ certification or equivalent skill set would be highly regarded.</li><li><strong>Soft Skills:</strong> Strong client service and communication skills, with a proactive approach to problem-solving.</li></ul><h3>What We Offer</h3><ul><li>A comprehensive, hands-on training programme.</li><li>A supportive team environment.</li><li>Flexible casual work arrangement.</li><li>Opportunity to build a career in the IT support industry.</li></ul><div class=\"highlight-box\"><p><strong>📍 Location:</strong> Applecross, Perth (On-site)</p></div><h3>Application Instructions</h3><p>To apply for this position, please visit the source URL and follow the application instructions provided. Be prepared to submit a current resume outlining your interest and any relevant skills. Applications will be reviewed as they are received.</p><div class=\"key-takeaways\"><h3>Key Points</h3><ul><li>Role: Casual Computer Support Technician.</li><li>Key Requirement: Eagerness to learn; no prior IT experience needed.</li><li>Work Arrangement: On-site in Applecross, Perth.</li><li>Benefit: Full on-the-job training provided.</li></ul></div>"
+    }
+  ],
+  "videos": [
+    {
+      "id": "video-roman-empire-dynastic-history",
+      "category": "ancient-history-and-archaeology",
+      "title": "A Dynastic History of The Roman Empire",
+      "excerpt": "A deep dive into the foundational dynasties of the Roman Empire, from the Julio-Claudians to the Nerva-Antonine dynasty.",
+      "thumbnail": "https://img.youtube.com/vi/s3w9z0-2w8k/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=s3w9z0-2w8k",
+      "channel": "People Profiles",
+      "publishDate": "Oct 09, 2025",
+      "duration": "59:21"
+    }
+  ],
+  "makeWebhook": "",
+  "authToken": ""
+}
