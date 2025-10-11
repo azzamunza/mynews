@@ -6,69 +6,151 @@
       "active": true
     },
     {
-      "id": "digital-media-and-gaming",
-      "name": "Gaming",
+      "id": "artificial-intelligence",
+      "name": "AI & Tech",
       "active": false
     },
     {
-      "id": "perth-local-services-and-lifestyle",
-      "name": "Perth Local",
+      "id": "ancient-history",
+      "name": "Ancient History",
       "active": false
     },
     {
-      "id": "ancient-history-and-archaeology",
-      "name": "Archaeology",
+      "id": "science-space",
+      "name": "Science & Space",
+      "active": false
+    },
+    {
+      "id": "digital-media",
+      "name": "Digital Media",
       "active": false
     }
   ],
-  "trending": [],
+  "trending": [
+    {
+      "articleId": "figure-ai-robot-chores-2025",
+      "reason": "Figure AI's latest humanoid robot demonstrates significant advancements in performing domestic tasks."
+    },
+    {
+      "articleId": "colosseum-imperial-passage-opens-2025",
+      "reason": "A 2,000-year-old secret passage used by emperors has been opened to the public for the first time."
+    }
+  ],
   "articles": [
     {
-      "id": "xbox-game-pass-october-2025-wave-2",
-      "category": "digital-media-and-gaming",
-      "title": "Xbox Game Pass Adds Ninja Gaiden 4 in October 2025 Wave 2",
-      "excerpt": "Xbox has announced the second wave of games for its Game Pass subscription service, featuring the day-one release of the highly anticipated action title Ninja Gaiden 4.",
-      "bannerImage": "https://i.ytimg.com/vi/z68vSvb-55Y/maxresdefault.jpg",
-      "thumbnailImage": "https://cdn.mos.cms.futurecdn.net/y2b54JmzvV4fB8P2f2dYvU-1200-80.jpg",
-      "author": "Xbox Wire Staff",
+      "id": "figure-ai-robot-chores-2025",
+      "category": "artificial-intelligence",
+      "title": "Figure AI's Humanoid Robot Can Now Handle Household Chores",
+      "excerpt": "Figure AI has unveiled its latest humanoid robot, Figure 03, demonstrating its capability to perform a variety of domestic tasks like folding laundry and washing dishes.",
+      "bannerImage": "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/7391003/pexels-photo-7391003.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+      "author": "Michael Kan",
       "date": "Oct 09, 2025",
       "readTime": "3 min",
-      "sourceUrl": "https://news.xbox.com/en-us/2025/10/08/game-pass-october-2025-wave-2/",
+      "sourceUrl": "https://www.pcmag.com/news/figure-ais-new-humanoid-robot-can-fold-your-clothes-do-the-dishes",
+      "isTrending": true,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Figure 03 Robot Unveiled for Domestic and Commercial Use</h2><p>Technology startup Figure AI has introduced its next-generation humanoid robot, Figure 03, capable of performing a wide range of household chores. A promotional video showcased the robot watering plants, serving food, folding clothes, and loading a dishwasher, signalling a significant step towards general-purpose robots in everyday life. The company states the robot is designed for both home and commercial applications, with a goal of eventually having the machines assist in their own mass production.</p><h3>Advanced AI and Hardware Integration</h3><p>The robot's capabilities are driven by Helix, Figure's proprietary AI system that controls the machine in real-time without predetermined scripts. This represents a shift from the company's previous use of OpenAI models. Figure 03 features a complete hardware and software redesign, including a new sensor suite with a wider field of view, lower latency, and palm-mounted cameras for better visual awareness in confined spaces. Its fingertips are sensitive enough to detect the weight of a paper clip, allowing for delicate manipulation of objects.</p><h3>Safety and Manufacturing at Scale</h3><p>Recognising the need for safety in human environments, Figure 03 is covered in soft, washable textiles and foam to protect against pinch points. The 5-foot-6-inch, 132-pound robot runs for up to five hours on a single charge and recharges wirelessly by standing on a platform. Figure AI has established a factory capable of producing up to 12,000 robots per year, with an ambitious target of 100,000 units within four years, indicating a strong focus on mass production.</p><blockquote><p>\"Nothing in this film is teleoperated.\" - Brett Adcock, Founder and CEO of Figure AI</p></blockquote><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>Figure AI has launched Figure 03, a humanoid robot designed to perform general-purpose tasks in homes and workplaces.</li><li>The robot operates on a proprietary AI system called Helix, enabling it to perform complex actions autonomously.</li><li>Significant hardware upgrades include advanced sensors, palm cameras, and a focus on safety with soft external materials.</li><li>The company is preparing for mass production, aiming to make humanoid robots a common feature in daily life.</li></ul></div>"
+    },
+    {
+      "id": "colosseum-imperial-passage-opens-2025",
+      "category": "ancient-history",
+      "title": "Colosseum's Secret Imperial Passage Opens After 2,000 Years",
+      "excerpt": "A passageway in the Colosseum, once exclusively used by Roman emperors, has been opened to the public for the first time, offering a new perspective on the ancient amphitheatre.",
+      "bannerImage": "https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/208816/pexels-photo-208816.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+      "author": "Ancient Origins",
+      "date": "Oct 09, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://www.ancient-origins.net/news-history-archaeology/colosseum-imperial-passage-0021647",
+      "isTrending": true,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Commodus Passage Unveiled to the Public</h2><p>A hidden underground passage used by Roman emperors to enter the Colosseum unseen is now open to the public for the first time in nearly two thousand years. Known as the Commodus Passage, the corridor allowed emperors to travel directly from outside the amphitheatre to the imperial box, protected from the crowds. The opening on October 8, 2025, follows a year-long, complex restoration project.</p><h3>A Glimpse into Imperial Life</h3><p>The passage is named after Emperor Commodus (180-192 AD), who was known for his passion for gladiatorial games and is believed to have survived an assassination attempt within the tunnel. At its entrance, archaeologists discovered remnants of decorative stuccoes and frescoes depicting scenes of boar hunts and bear fights, which served as a prelude to the spectacles in the arena. The restoration allows visitors to experience what it was like for an emperor to enter the grand amphitheatre.</p><h3>The Restoration Project</h3><p>The restoration, completed between October 2024 and September 2025, addressed significant damage from centuries of dampness in the underground environment. A new lighting system has been installed to replicate the natural light that once filtered through small skylights, and a virtual reconstruction helps visitors visualise the passage's original opulent appearance. The project was a significant undertaking funded by the Colosseum Archaeological Park and Italy's National Recovery and Resilience Plan.</p><blockquote><p>\"Visitors will appreciate what it was like to be an emperor.\" - Barbara Nazzaro, Archaeologist</p></blockquote><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>A 2,000-year-old secret passage for emperors in the Colosseum is now open to the public.</li><li>The tunnel, named after Emperor Commodus, provided direct and protected access to the imperial box.</li><li>The opening follows an extensive restoration project to conserve its structure and decorative elements.</li><li>A second restoration phase is planned to begin in 2026 to explore the tunnel's extension beyond the Colosseum.</li></ul></div>"
+    },
+    {
+      "id": "jwst-trans-neptunian-discoveries-2025",
+      "category": "science-space",
+      "title": "Webb Telescope Uncovers Secrets of Trans-Neptunian Objects",
+      "excerpt": "Data from the James Webb Space Telescope has revealed key chemical compounds on the surfaces of distant trans-Neptunian objects, offering new insights into the early solar system.",
+      "bannerImage": "https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/2156/sky-earth-space-working.jpg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+      "author": "Karlobag.eu",
+      "date": "Oct 08, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://www.karlobag.eu/the-james-webb-telescope-reveals-the-secrets-of-trans-neptunian-objects-and-their-chemical-composition/",
       "isTrending": false,
       "isJob": false,
       "isVideo": false,
       "videoUrl": "",
-      "fullContent": "<h2>Ninja Gaiden 4 Headlines Second Wave of Xbox Game Pass Titles for October</h2><p>Microsoft has officially revealed the next slate of games arriving on its Xbox Game Pass service for console, PC, and cloud gaming. The announcement confirms that the highly anticipated sequel, <strong>Ninja Gaiden 4</strong>, will be available on day one of its release, October 21, 2025. This addition is part of a varied lineup designed to cater to a wide range of players, from action enthusiasts to fans of classic role-playing games.</p><h3>What's Coming to Game Pass</h3><p>The October update continues to build on the Game Pass value proposition, which recently saw a structural revision to its subscription tiers. Alongside Ninja Gaiden 4, subscribers will gain access to several other notable titles. PC players can look forward to the arrival of <em>Baldur's Gate & Baldur's Gate II: Enhanced Editions</em> on October 9, bringing two classic RPGs to the platform. Other additions include the day-one release of <em>Keeper</em> and the action game <em>Evil West</em>.</p><blockquote><p>\"The definitive ninja action-adventure franchise returns with NINJA GAIDEN 4! Embark on a cutting-edge adventure where legacy meets innovation in a high-octane blend of style and no-holds-barred combat.\" - Xbox Official Statement</p></blockquote><h3>Broader Impact for Subscribers</h3><p>This announcement comes after Microsoft adjusted its Game Pass subscription model, introducing Essential and Premium tiers to replace the former Core and Standard plans. The inclusion of a major third-party title like Ninja Gaiden 4 on its release day underscores Microsofts strategy to make the service indispensable for gamers. The game, co-developed by Team Ninja and PlatinumGames, is set to be a significant release for the action-adventure genre.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>Ninja Gaiden 4:</strong> Arriving on Game Pass for console, PC, and cloud on its release date, October 21, 2025.</li><li><strong>Classic RPGs for PC:</strong> <em>Baldur's Gate</em> and its sequel, in their enhanced editions, will be available for PC subscribers from October 9.</li><li><strong>Titles Leaving:</strong> Subscribers should note that <em>Cocoon</em>, <em>Core Keeper</em>, and <em>Teenage Mutant Ninja Turtles: Mutants Unleashed</em> will leave the service on October 15.</li><li><strong>Subscription Tiers:</strong> The new games will be available across the recently updated Game Pass tiers, including Premium and Ultimate.</li></ul></div>"
+      "fullContent": "<h2>JWST Reveals Chemical Makeup of Distant Icy Worlds</h2><p>Recent data from the James Webb Space Telescope (JWST) has provided an unprecedented look at the chemical composition of Trans-Neptunian Objects (TNOs). These small, icy bodies in the outer solar system are considered time capsules, preserving molecular traces from the formation of our solar system. The detailed spectra captured by Webb's Near Infrared Spectrograph (NIRSpec) have identified compounds like water ice, carbon dioxide, methanol, and other complex organic molecules on their surfaces.</p><h3>Classifying Icy Objects</h3><p>Scientists have categorised the observed TNOs into three distinct groups based on their surface compositions, which they have named \"Bowl,\" \"Double Depression,\" and \"Cliff\". This classification provides crucial insights into the temperature boundaries within the early solar system's protoplanetary disk, where different compounds could condense. The data suggests that for many TNOs, carbon dioxide may be a more dominant compound than previously assumed.</p><h3>A Window to the Past</h3><p>Trans-Neptunian Objects are remnants from the dawn of the solar system, composed of mixtures of rock, carbon, and volatile ices like water and methane. Their study is essential for understanding the formation and evolution of planets. The detailed findings from the JWST challenge previous assumptions and open new avenues for research into the molecular processes that shape these distant worlds.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>The James Webb Space Telescope has captured the most detailed data yet on the chemical composition of Trans-Neptunian Objects.</li><li>Key compounds like water ice, carbon dioxide, and complex organics have been identified.</li><li>Researchers have classified these objects into three groups based on their surface chemistry, revealing clues about the early solar system.</li><li>The findings suggest carbon dioxide may be more prevalent than water ice on many of these distant bodies.</li></ul></div>"
     },
     {
-      "id": "job-casual-computer-support",
-      "category": "perth-local-services-and-lifestyle",
-      "title": "Casual Computer Support Role with Full Training",
-      "excerpt": "Delta Computers in Applecross is seeking a casual technician to support its technology fleet, offering comprehensive on-the-job training.",
-      "bannerImage": "https://images.unsplash.com/photo-1575089976121-8f67e501a511?q=80&w=2070&auto=format&fit=crop",
-      "thumbnailImage": "https://images.unsplash.com/photo-1599339943644-3d9b8981f1d1?q=80&w=1287&auto=format&fit=crop",
-      "author": "Delta Computers",
-      "date": "Oct 09, 2025",
-      "readTime": "2 min",
-      "sourceUrl": "https://www.joblum.com/job/casual-computer-support-full-training-provided/1118331",
+      "id": "teotihuacan-writing-system-cracked-2025",
+      "category": "ancient-history",
+      "title": "Ancient Teotihuacan Writing System Finally Deciphered",
+      "excerpt": "Researchers have achieved a significant breakthrough by deciphering the ancient writing system of Teotihuacan, unlocking new knowledge about the pre-Columbian civilisation.",
+      "bannerImage": "https://images.pexels.com/photos/159496/pyramid-of-the-sun-teotihuacan-mexico-landmark-159496.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/163003/pyramids-of-teotihuacan-mexico-pre-aztec-pyramids-of-the-sun-163003.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+      "author": "Gary Manners",
+      "date": "Oct 08, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://www.ancient-origins.net/news-history-archaeology/teotihuacan-writing-0021643",
       "isTrending": false,
-      "isJob": true,
+      "isJob": false,
       "isVideo": false,
       "videoUrl": "",
-      "fullContent": "<h2>Role Overview</h2><p>Delta Computers, a technology services provider in Applecross, has an opening for a Casual Computer Support technician. This entry-level position is ideal for individuals looking to start a career in IT, as the company provides full on-the-job training to manage and maintain a diverse fleet of approximately 4,000 technology items. The role focuses on providing hands-on technical support and ensuring operational stability across the company's managed assets.</p><h3>Key Responsibilities</h3><ul><li>Performing diagnostics, troubleshooting, and repairs on desktops and notebooks.</li><li>Conducting parts replacement, system upgrades, and new deployments.</li><li>Responding to user support tickets in a timely manner to meet service level agreements.</li><li>Identifying and escalating potential issues that could impact end-user experience.</li></ul><h3>Required Qualifications</h3><ul><li><strong>Education:</strong> High School Diploma or equivalent is required.</li><li><strong>Experience:</strong> No formal experience is necessary as full training is provided. Previous customer service or technical support experience is a plus.</li><li><strong>Technical Skills:</strong> A basic understanding of Windows operating systems is beneficial. An A+ certification or equivalent skill set would be highly regarded.</li><li><strong>Soft Skills:</strong> Strong client service and communication skills, with a proactive approach to problem-solving.</li></ul><h3>What We Offer</h3><ul><li>A comprehensive, hands-on training programme.</li><li>A supportive team environment.</li><li>Flexible casual work arrangement.</li><li>Opportunity to build a career in the IT support industry.</li></ul><div class=\"highlight-box\"><p><strong>📍 Location:</strong> Applecross, Perth (On-site)</p></div><h3>Application Instructions</h3><p>To apply for this position, please visit the source URL and follow the application instructions provided. Be prepared to submit a current resume outlining your interest and any relevant skills. Applications will be reviewed as they are received.</p><div class=\"key-takeaways\"><h3>Key Points</h3><ul><li>Role: Casual Computer Support Technician.</li><li>Key Requirement: Eagerness to learn; no prior IT experience needed.</li><li>Work Arrangement: On-site in Applecross, Perth.</li><li>Benefit: Full on-the-job training provided.</li></ul></div>"
+      "fullContent": "<h2>Lost Language of Teotihuacan Decoded by Researchers</h2><p>Danish linguists have announced a major breakthrough in deciphering the writing system of the ancient city of Teotihuacan. Their research, published in the journal *Current Anthropology*, provides compelling evidence that the symbols found on the city's murals and artefacts record an early form of the Uto-Aztecan language. This discovery could fundamentally change our understanding of the civilisation that built one of ancient Mexico's most magnificent cities over two millennia ago.</p><h3>A Sophisticated Rebus System</h3><p>Researchers Magnus Pharao Hansen and Christopher Helmke from the University of Copenhagen cracked the code by analysing the writing's complex structure. They found that the system uses a sophisticated combination of logograms (symbols representing whole words) and rebus principles, where symbols are used for their phonetic sound to form different words. This dual system, termed \"double spelling,\" required an intimate knowledge of both the script and the spoken language.</p><h3>Rewriting Mesoamerican History</h3><p>The decoded language is an ancestor to Nahuatl, the language of the Aztecs, as well as the modern Cora and Huichol languages. This linguistic link suggests that Nahuatl-speaking people may have arrived in central Mexico far earlier than previously thought, and could be direct descendants of Teotihuacan's inhabitants. If confirmed, this finding reshapes long-held beliefs about migration and cultural continuity in ancient Mesoamerica.</p><blockquote><p>\"If we are right, it is not only remarkable that we have deciphered a writing system. It could have implications for our entire understanding of Mesoamerican cultures.\" - Christopher Helmke, University of Copenhagen</p></blockquote><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>Researchers have deciphered the writing system of the ancient city of Teotihuacan.</li><li>The script records an early form of the Uto-Aztecan language, an ancestor of the Aztec language, Nahuatl.</li><li>The system uses a complex mix of logograms and phonetic rebus principles.</li><li>The discovery suggests a direct cultural and linguistic link between Teotihuacan and the later Aztec civilisation.</li></ul></div>"
+    },
+    {
+      "id": "amenhotep-iii-tomb-reopens-2025",
+      "category": "ancient-history",
+      "title": "Amenhotep III Tomb Reopens After Extensive Restoration",
+      "excerpt": "The tomb of Pharaoh Amenhotep III has reopened to the public following an extensive, two-decade-long restoration project in the Valley of the Kings.",
+      "bannerImage": "https://images.pexels.com/photos/712067/pexels-photo-712067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/8996/light-sunset-egypt-luxor.jpg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+      "author": "Ancient Origins",
+      "date": "Oct 07, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://www.ancient-origins.net/news-history-archaeology/amenhotep-iii-tomb-0021634",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Pharaoh's Tomb Welcomes Visitors After 20-Year Project</h2><p>The tomb of Pharaoh Amenhotep III in Luxor's Valley of the Kings has officially reopened to the public after a meticulous 20-year restoration project. The 3,400-year-old tomb of the celebrated 18th Dynasty ruler, also known as Amenhotep the Great, welcomed visitors again on October 4, 2025. The extensive project was an international collaboration between Egypt's Supreme Council of Antiquities, Japanese universities, and UNESCO.</p><h3>Restoring a Royal Masterpiece</h3><p>The restoration was crucial due to severe deterioration caused by centuries of neglect, weathering, and salt deposits. The project unfolded in three phases, focusing on cleaning and conserving the vibrant wall paintings, stabilising structural pillars, and reassembling over 200 fragments of the pharaoh's red granite sarcophagus lid. The tomb also received modern upgrades, including improved lighting and enhanced safety features for visitors.</p><h3>Significance for Egyptian Tourism</h3><p>Amenhotep III reigned during a golden age of ancient Egypt, from approximately 1390 to 1350 BC, an era of great peace and artistic grandeur. The reopening of his tomb is a significant event for Egypt's tourism sector, a vital source of foreign currency. The event comes just weeks before the highly anticipated inauguration of the Grand Egyptian Museum near the Giza Pyramids, scheduled for November 1, 2025.</p><blockquote><p>\"The opening of King Amenhotep III's tomb will be a global event that reflects Egypt's effort to preserve and promote its heritage.\" - Ahmed Issa, Tourism and Antiquities Minister</p></blockquote><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>The tomb of Pharaoh Amenhotep III has reopened in Luxor after a 20-year restoration.</li><li>The international project restored intricate wall paintings and reconstructed the pharaoh's sarcophagus lid.</li><li>Amenhotep III was a prominent ruler during ancient Egypt's 18th Dynasty, a period of great prosperity.</li><li>The reopening is a key part of Egypt's strategy to revitalise its tourism industry.</li></ul></div>"
+    },
+    {
+      "id": "anime-hulu-disney-plus-october-2025",
+      "category": "digital-media",
+      "title": "Every Anime Coming to Hulu & Disney+ in October 2025",
+      "excerpt": "A comprehensive list of all the new anime titles arriving on Hulu and Disney+ in October 2025, including the highly anticipated final season of My Hero Academia.",
+      "bannerImage": "https://images.pexels.com/photos/7794427/pexels-photo-7794427.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/7234388/pexels-photo-7234388.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=2",
+      "author": "CBR",
+      "date": "Oct 04, 2025",
+      "readTime": "2 min",
+      "sourceUrl": "https://www.cbr.com/every-anime-coming-to-hulu-disney-plus-in-october-2025/",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Hulu and Disney+ Announce Major Anime Lineup for October</h2><p>Streaming services Hulu and Disney+ have revealed an exciting lineup of anime series for October 2025, featuring the return of several highly popular franchises. Headlining the schedule is the premiere of *My Hero Academia's* final season and the third season of *Spy x Family*, both debuting on October 4. The month will also see the premiere of the new series *Digimon Beatbreak* on October 5.</p><h3>Key Release Dates</h3><p>The schedule is packed with new and returning series, catering to a wide range of anime fans. Several fan-favourite shows are making their return, promising a busy month for viewers.</p><ul><li><strong>Oct 4:</strong> *My Hero Academia: Final Season* (Subbed, Hulu)</li><li><strong>Oct 4:</strong> *Spy x Family Season 3* (Subbed, Hulu)</li><li><strong>Oct 4:</strong> *Fire Force Season 3*, Episodes 1-12 (Dubbed, Hulu)</li><li><strong>Oct 5:</strong> *Digimon Beatbreak Season 1* (Subbed, Hulu)</li><li><strong>Oct 12:</strong> *One-Punch Man Season 3* (Subbed, Hulu)</li><li><strong>Oct 29:</strong> *Star Wars: Visions Season 3* (Disney+)</li></ul><h3>Platform Exclusives and Availability</h3><p>While many of the major titles will stream on Hulu in the U.S., availability may vary by region, with some shows also appearing on Disney+ in Canada and Netflix in other territories. Fans should note that not all content available on Hulu is automatically included in the Disney+ Hulu Bundle due to licensing agreements.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>Hulu and Disney+ have a strong anime lineup for October 2025.</li><li>Major premieres include the final season of *My Hero Academia* and *Spy x Family* Season 3 on October 4.</li><li>*One-Punch Man* Season 3 is set for an October 12 premiere on Hulu in the U.S.</li><li>The new *Digimon Beatbreak* series and *Star Wars: Visions* Season 3 are also part of the month's releases.</li></ul></div>"
     }
   ],
   "videos": [
     {
-      "id": "video-roman-empire-dynastic-history",
-      "category": "ancient-history-and-archaeology",
-      "title": "A Dynastic History of The Roman Empire",
-      "excerpt": "A deep dive into the foundational dynasties of the Roman Empire, from the Julio-Claudians to the Nerva-Antonine dynasty.",
-      "thumbnail": "https://img.youtube.com/vi/s3w9z0-2w8k/maxresdefault.jpg",
-      "videoUrl": "https://www.youtube.com/watch?v=s3w9z0-2w8k",
-      "channel": "People Profiles",
+      "id": "video-jwst-cosmos-discoveries-oct-2025",
+      "category": "science-space",
+      "title": "Webb Telescope's Latest Discoveries: A New Look at the Cosmos",
+      "excerpt": "This video explores the most recent and groundbreaking discoveries made by the James Webb Space Telescope in early October 2025.",
+      "thumbnail": "https://img.youtube.com/vi/y-hYJv1-2cw/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=y-hYJv1-2cw",
+      "channel": "James Webb Space Telescope",
       "publishDate": "Oct 09, 2025",
-      "duration": "59:21"
+      "duration": "04:28"
     }
   ],
   "makeWebhook": "",
