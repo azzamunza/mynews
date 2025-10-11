@@ -1,3 +1,4 @@
+ 
 {
   "categories": [
     {"id": "all", "name": "All", "active": true},
@@ -7,12 +8,27 @@
     {"id": "quantum", "name": "Quantum", "active": false},
     {"id": "archaeology", "name": "Archaeology", "active": false},
     {"id": "gaming", "name": "Gaming", "active": false},
-    {"id": "perth-jobs", "name": "Perth Jobs", "active": false}
+    {"id": "perth-jobs", "name": "Perth Jobs", "active": false},
+    {"id": "anime", "name": "Anime", "active": false},
+    {"id": "environmental", "name": "Environment", "active": false}
   ],
   "trending": [
-    {"articleId": "1", "reason": "GPT-5 release marks major breakthrough in AI capabilities with unprecedented benchmark scores"},
-    {"articleId": "3", "reason": "Humanoid robots achieving commercial viability sparks industry-wide adoption discussions"},
-    {"articleId": "7", "reason": "James Webb telescope discovers potentially habitable exoplanets closer than expected"}
+    {
+      "articleId": "19", 
+      "reason": "Google DeepMind's new AI models give robots advanced reasoning and learning capabilities."
+    },
+    {
+      "articleId": "20", 
+      "reason": "Accelerated changes in Antarctica's climate are impacting global weather patterns."
+    },
+    {
+      "articleId": "18", 
+      "reason": "New AI-powered social media apps are challenging established platforms like TikTok."
+    },
+    {
+      "articleId": "17",
+      "reason": "Solo Leveling creator Chugong hints at a potential new movie for the popular anime series."
+    }
   ],
   "articles": [
     {
@@ -303,6 +319,142 @@
       "isVideo": false,
       "videoUrl": "",
       "fullContent": "<h2>Role Overview</h2><p>TechServe Perth, a leading managed services provider, seeks an IT Support Specialist to deliver technical support and infrastructure management services to our diverse client base. This role combines helpdesk responsibilities with hands-on technical work, offering excellent opportunities for skill development.</p><h3>Key Responsibilities</h3><ul><li>Provide first and second-level technical support via phone, email, and remote access</li><li>Troubleshoot hardware, software, and network connectivity issues</li><li>Perform onsite client visits for installations, maintenance, and complex issues</li><li>Manage user accounts, permissions, and security settings in Active Directory</li><li>Document support tickets, solutions, and procedures in knowledge base</li><li>Assist with server maintenance, backups, and disaster recovery procedures</li><li>Support Microsoft 365 administration and cloud service implementations</li></ul><h3>Required Qualifications</h3><ul><li><strong>Experience:</strong> 1 to 3 years in IT support or helpdesk environment</li><li><strong>Technical:</strong> Windows 10 and 11, Windows Server, Active Directory, Microsoft 365</li><li><strong>Networking:</strong> TCP/IP, DNS, DHCP, VPN, basic firewall configuration</li><li><strong>Certifications:</strong> CompTIA A+ or Microsoft certification desirable</li><li><strong>Licence:</strong> Valid WA driver’s licence for client site visits</li><li><strong>Communication:</strong> Excellent customer service and problem-solving skills</li></ul><h3>Desired Skills</h3><ul><li>Experience with backup solutions such as Veeam or Acronis</li><li>Knowledge of virtualisation technologies including Hyper-V or VMware</li><li>Familiarity with RMM tools such as ConnectWise or Datto</li><li>Understanding of cybersecurity best practices</li><li>Previous MSP or multi-client environment experience</li></ul><div class=\"highlight-box\"><p><strong>Location:</strong> Osborne Park office, Perth. Monday to Friday from 8:00am to 5:00pm with occasional after-hours work for maintenance windows. Company vehicle provided for client visits.</p></div><h3>What We Offer</h3><ul><li><strong>Salary:</strong> $60,000 to $75,000 AUD based on experience</li><li><strong>Benefits:</strong> Company vehicle, mobile phone, laptop</li><li><strong>Training:</strong> Professional certification support and ongoing technical training</li><li><strong>Culture:</strong> Supportive team environment with experienced mentors</li><li><strong>Progression:</strong> Clear pathway to Senior Support or Systems Administrator roles</li></ul><h3>Application Process</h3><p>Submit your CV and cover letter via SEEK outlining your technical experience and relevant certifications. Applications close October 30, 2025. Technical assessment and multiple interviews required for shortlisted candidates.</p><div class=\"key-takeaways\"><h3>Key Points</h3><ul><li>IT Support Specialist role at Perth managed services provider</li><li>Requires 1 to 3 years experience with Windows and Microsoft 365</li></ul></div>"
+    },
+    {
+      "id": "18",
+      "category": "anime",
+      "title": "Solo Leveling Creator Hints at New Movie in Development",
+      "excerpt": "Chugong, the author of the hit series Solo Leveling, has suggested that an anime film adaptation is in the early stages of discussion.",
+      "bannerImage": "https://images.unsplash.com/photo-1618336753974-a269593f63a8?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1618336753974-a269593f63a8?w=400&h=300&fit=crop",
+      "author": "Eren Jaeger",
+      "date": "Oct 9, 2025",
+      "readTime": "4 min",
+      "sourceUrl": "https://www.cbr.com/solo-leveling-creator-new-movie-hint/",
+      "isTrending": true,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>New Movie in Early Development</h2><p>The creator of the acclaimed series *Solo Leveling*, Chugong, has hinted that a new movie is currently in the early stages of development. This news comes after the successful conclusion of the anime's second season, leaving fans eager for more content. While a third season has not yet been officially announced, the prospect of a film adaptation has generated significant excitement within the community.</p><h3>Clarification on Canonicity</h3><p>In a recent interview, Chugong clarified that *Solo Leveling: Ragnarok*, which many considered a direct sequel, is actually a spin-off created as 'fan service'. He compared the expanded universe to Marvel's parallel universes, suggesting that *Ragnarok* is just one of many possible storylines. This clarification has opened the door for Chugong to write his own official sequel to the main plot.</p><h3>Future of the Franchise</h3><p>The potential for a new movie adds another layer to the expanding *Solo Leveling* franchise, which already includes a live-action Netflix series in development. The success of other anime films, such as *Demon Slayer: Infinity Castle*, has demonstrated the high demand for theatrical releases of popular series. A movie could explore a significant arc from the web novel or present an entirely new story, further enriching the world of hunters and monsters.</p><blockquote><p>\"I was curious to see how another author would write Solo Leveling. This story is part of the Solo Leveling universe, but it isn't a direct continuation of the main plot.\" - Chugong</p></blockquote><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>*Solo Leveling*'s author, Chugong, has hinted at a new movie in the works.</li><li>The current sequel, *Ragnarok*, is considered a spin-off, not a direct continuation of the main story.</li><li>The author is considering writing an official sequel himself.</li></ul></div>"
+    },
+    {
+      "id": "19",
+      "category": "anime",
+      "title": "Solo Leveling Author Plans to Write a 'True Sequel' to the Series",
+      "excerpt": "Chugong has clarified that the current 'Ragnarok' series is a spin-off and that he is considering writing a direct sequel to the original story.",
+      "bannerImage": "https://images.unsplash.com/photo-1581898975214-4131b7faf39c?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1581898975214-4131b7faf39c?w=400&h=300&fit=crop",
+      "author": "Mikasa Ackerman",
+      "date": "Oct 8, 2025",
+      "readTime": "4 min",
+      "sourceUrl": "https://screenrant.com/solo-leveling-writer-true-sequel-chugong/",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Official Sequel in Consideration</h2><p>Chugong, the creator of *Solo Leveling*, has revealed his interest in writing a true sequel to the original series. In a recent interview, he stated that *Solo Leveling: Ragnarok*, penned by author Daul, should be considered a spin-off rather than a direct continuation of the main storyline. This news has clarified the canonical status of *Ragnarok* and has excited fans with the prospect of a new story from the original author.</p><h3>Ragnarok as a Parallel Universe</h3><p>Chugong explained that *Ragnarok* was created as 'fan service' to explore how another writer might approach the *Solo Leveling* universe. He likened the concept to Marvel's multiverse, where different stories can coexist as alternate realities. While *Ragnarok* is part of the larger franchise, it does not represent the definitive future of Sung Jinwoo's journey.</p><h3>Focus on the Original Protagonist</h3><p>A new sequel written by Chugong would likely shift the focus back to the original protagonist, Sung Jinwoo, potentially disregarding the events and characters introduced in *Ragnarok*, such as Jinwoo's son, Sung Suho. This would allow the author to explore new challenges and further develop the world he created, providing a direct continuation of the story that concluded in 2018.</p><blockquote><p>\"I'm also considering the possibility of writing a sequel myself.\" - Chugong</p></blockquote><div class=\"highlight-box\"><p><strong>⚠️ Important:</strong> *Solo Leveling: Ragnarok* is officially considered a spin-off, not the main canonical sequel to the original series.</p></div><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>Chugong plans to write a direct sequel to *Solo Leveling*.</li><li>*Solo Leveling: Ragnarok* has been clarified as a 'fan service' spin-off.</li><li>The new sequel will likely focus on the original protagonist, Sung Jinwoo.</li></ul></div>"
+    },
+    {
+      "id": "20",
+      "category": "ai-tech",
+      "title": "New AI-Powered Social Apps Challenge TikTok's Dominance",
+      "excerpt": "Startups and major tech companies like OpenAI and Meta are launching AI-driven video creation platforms that are quickly gaining traction.",
+      "bannerImage": "https://images.unsplash.com/photo-1664425330364-a65c4b11f1b6?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1664425330364-a65c4b11f1b6?w=400&h=300&fit=crop",
+      "author": "Yuki Tanaka",
+      "date": "Oct 9, 2025",
+      "readTime": "5 min",
+      "sourceUrl": "https://www.fastcompany.com/91192938/sora-ai-tiktok-gen-z-future-of-social-media",
+      "isTrending": true,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>The Rise of AI-Generated Content</h2><p>A new wave of social media applications is emerging, powered by generative AI that allows users to create hyperrealistic videos from simple text prompts. Platforms like Pika, founded by 26-year-old Demi Guo, and OpenAI's Sora app are challenging the dominance of established platforms like TikTok by shifting the focus from human-created content to AI-generated media. The Sora app, for instance, gained 164,000 downloads within its first 48 hours, signaling strong public interest.</p><h3>OpenAI's Sora and Meta's Vibes</h3><p>OpenAI's Sora app allows users to insert themselves and others into realistic or surreal scenarios, blurring the lines between creator and consumer. Similarly, Meta has introduced 'Vibes', a feature within its AI app that generates short, artistic video collages from text prompts. Both platforms aim to automate the creative process that has made TikTok a cultural phenomenon.</p><h3>A New Form of Social Expression</h3><p>These AI-driven platforms are being positioned as the next evolution of social expression, where users can create and share content without the need for cameras or editing skills. While some critics have referred to the content as 'slop', the rapid adoption of these apps suggests that AI-generated video is becoming a new form of entertainment and communication. The long-term impact on the social media landscape will depend on whether these platforms can sustain user engagement beyond their initial novelty.</p><blockquote><p>\"We really believe AI will be the next way for people to express themselves and will define the next social platform.\" - Demi Guo, Founder of Pika</p></blockquote><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>New social apps from OpenAI and Meta allow users to create videos from text prompts.</li><li>OpenAI's Sora app was downloaded 164,000 times in its first two days.</li><li>These platforms are shifting social media from human-driven to AI-automated content creation.</li></ul></div>"
+    },
+    {
+      "id": "21",
+      "category": "robotics",
+      "title": "Google DeepMind's 'Thinking AI' Gives Robots a Major Intelligence Boost",
+      "excerpt": "Google DeepMind has released two new AI models, Gemini Robotics 1.5 and Gemini Robotics-ER 1.5, to enhance robots' ability to perform complex, multi-step tasks.",
+      "bannerImage": "https://images.unsplash.com/photo-1593349480503-6f4e3e3c23a8?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1593349480503-6f4e3e3c23a8?w=400&h=300&fit=crop",
+      "author": "Dr. Aris Thorne",
+      "date": "Oct 10, 2025",
+      "readTime": "5 min",
+      "sourceUrl": "https://www.livescience.com/technology/robotics/robots-receive-major-intelligence-boost-thanks-to-google-deepminds-thinking-ai-a-pair-of-models-that-help-machines-understand-the-world",
+      "isTrending": true,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Advancing Robotic Capabilities</h2><p>Google DeepMind has introduced two new AI models, Gemini Robotics 1.5 and Gemini Robotics-ER 1.5, designed to significantly improve the intelligence and reasoning of robots. These models, built on the Gemini 2.0 foundation, allow robots to process information from their environment, plan multi-step actions, and execute complex tasks with greater autonomy. This development marks a crucial step toward creating general-purpose robots that can be genuinely helpful in the physical world.</p><h3>The Role of Each Model</h3><p>Gemini Robotics-ER 1.5 acts as the 'high-level brain', responsible for reasoning about the physical world and creating detailed plans to complete a mission. It can even use tools like Google Search to find necessary information. Gemini Robotics 1.5, a vision-language-action model, then translates these plans and visual data into direct motor commands, enabling the robot to perform the required actions.</p><h3>Industry Collaboration and Future Impact</h3><p>Google DeepMind is collaborating with several robotics companies, including Boston Dynamics and Apptronik, to integrate these new models into various robotic platforms, such as the humanoid robot Apollo. The ability for robots to learn skills and transfer that knowledge to other robots is a key feature of this new technology. This advancement is expected to accelerate the development of more versatile robots capable of assisting with a wide range of tasks in both domestic and industrial settings.</p><blockquote><p>\"These advances will help developers build more capable and versatile robots that can actively understand their environment to complete complex, multi-step tasks in a general way.\" - Google DeepMind</p></blockquote><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>Google DeepMind has launched two new AI models to enhance robot intelligence.</li><li>Gemini Robotics-ER 1.5 provides high-level reasoning, while Gemini Robotics 1.5 executes physical actions.</li><li>These models enable robots to perform complex, multi-step tasks and learn new skills.</li></ul></div>"
+    },
+    {
+      "id": "22",
+      "category": "environmental",
+      "title": "Rapid Changes in Antarctica Signal Global Climate Impacts",
+      "excerpt": "Recent studies show that accelerated changes in Antarctica's ice and oceans are affecting the polar vortex, with significant consequences for global weather patterns.",
+      "bannerImage": "https://images.unsplash.com/photo-1543413158-132b49cef888?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1543413158-132b49cef888?w=400&h=300&fit=crop",
+      "author": "Dr. Evelyn Reed",
+      "date": "Oct 10, 2025",
+      "readTime": "5 min",
+      "sourceUrl": "https://www.echo.net.au/2025/10/rapid-change-not-much-action/",
+      "isTrending": true,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Antarctic Instability Accelerating</h2><p>Scientists have observed that large and sudden changes are occurring across Antarctica's ice, oceans, and ecosystems, and these changes are accelerating. Recent events, such as a 35°C temperature spike above average, are causing significant concern among researchers. These shifts are impacting the stratospheric polar vortex, a large area of rotating winds that typically keeps cold air trapped over the continent.</p><h3>Impacts on the Polar Vortex</h3><p>The unusual warming in Antarctica is weakening the polar vortex, causing it to become unstable and, in some cases, on the verge of splitting. This disruption can lead to significant weather changes in the southern hemisphere, including hotter and drier conditions in Australia. Events known as Sudden Stratospheric Warming (SSW) have been linked to devastating bushfire seasons in Australia, such as the 2019 Black Summer fires.</p><h3>Global Consequences</h3><p>The rapid changes in Antarctica are a clear indicator of a potential tipping point in the climate system. A permanent shift in Antarctica's weather patterns could lead to a sea-level rise of three metres or more. The Australian Antarctic Division's Chief Scientist, Dr. Nerilie Abram, has emphasised the urgent need to stabilise the Earth's climate to mitigate these widespread impacts.</p><blockquote><p>\"Rapid change has already been detected across Antarctica's ice, oceans and ecosystems – and this is set to worsen with every fraction of a degree of global warming.\" - Dr. Nerilie Abram</p></blockquote><div class=\"highlight-box\"><p><strong>⚠️ Important:</strong> The instability of the Antarctic polar vortex has been linked to extreme weather events, including the 2019 Black Summer bushfires in Australia.</p></div><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>Temperatures in Antarctica have risen dramatically, impacting the polar vortex.</li><li>Changes in the polar vortex can lead to extreme weather events in the southern hemisphere.</li><li>Scientists are concerned that Antarctica may be approaching a climate tipping point.</li></ul></div>"
+    },
+    {
+      "id": "23",
+      "category": "archaeology",
+      "title": "New Hypothesis Suggests Pyramids Were Built Using Hydraulic Lifts",
+      "excerpt": "A new study proposes that the Step Pyramid of Djoser may have been constructed using a sophisticated hydraulic system, challenging traditional theories.",
+      "bannerImage": "https://images.unsplash.com/photo-1552594939-2a9d261a293a?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1552594939-2a9d261a293a?w=400&h=300&fit=crop",
+      "author": "Dr. Kenji Tanaka",
+      "date": "Oct 8, 2025",
+      "readTime": "5 min",
+      "sourceUrl": "https://en.as.com/latest_news/revolution-surrounding-the-pyramids-of-egypt-one-hypothesis-about-how-they-were-built-could-change-everything-n/",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>A Revolutionary Construction Theory</h2><p>A recent study suggests that the ancient Egyptians may have used an advanced hydraulic lift system to build the Step Pyramid of Djoser nearly 4,700 years ago. This groundbreaking hypothesis challenges long-held beliefs that the colossal stone blocks were moved using only ramps and rollers. If confirmed, this theory could rewrite our understanding of ancient Egyptian engineering capabilities.</p><h3>How the Hydraulic System May Have Worked</h3><p>Researchers propose that a sophisticated water management system was used to create a hydraulic lift that raised the massive stone blocks through the pyramid's interior. This system may have involved a 'check dam' to create a temporary lake, which then fed water into shafts within the pyramid. The controlled flow of water would have powered a float or platform, lifting the blocks to higher levels of the structure.</p><h3>Evidence and Implications</h3><p>The theory is based on computer models, satellite imagery, and the pyramid's internal architecture, which researchers argue is consistent with a hydraulic elevation mechanism. This suggests that the ancient Egyptians possessed a deep understanding of hydraulics long before it was previously thought. While further on-site research is needed for validation, this hypothesis offers a plausible solution to the enduring mystery of pyramid construction.</p><blockquote><p>\"Satellite imagery clearly shows that a rectangular stone enclosure...has all the technical characteristics of a check dam.\" - Dr. Xavier Landreau</p></blockquote><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li>A new study proposes that the Step Pyramid of Djoser was built using a hydraulic lift system.</li><li>The system may have used a temporary lake and internal shafts to raise stone blocks.</li><li>This theory suggests a more advanced understanding of engineering in ancient Egypt than previously known.</li></ul></div>"
+    },
+    {
+      "id": "24",
+      "category": "perth-jobs",
+      "title": "Senior Draftsperson",
+      "excerpt": "Westurn Engineering in Perth is seeking a Senior Draftsperson to create 3D models, guide the team, and collaborate with clients.",
+      "bannerImage": "https://images.unsplash.com/photo-1581092163935-2e69a35402aa?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1581092163935-2e69a35402aa?w=400&h=300&fit=crop",
+      "author": "Westurn Engineering",
+      "date": "Oct 10, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://www.seek.com.au/job/75600012",
+      "isTrending": true,
+      "isJob": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Role Overview</h2><p>Westurn Engineering, a growing company in Perth, is looking for a skilled Senior Draftsperson to join their team. The role involves supporting the drafting team on complex projects, working with clients from concept to manufacture, and providing training and guidance to junior members of the team.</p><h3>Key Responsibilities</h3><ul><li>Support the drafting team in delivering complex projects.</li><li>Collaborate with clients to transform concepts into manufacturable designs.</li><li>Provide training and guidance in drafting, 3D modelling, and scanning techniques.</li><li>Create detailed 3D models and technical drawings using CAD software.</li><li>Maintain and improve best practices within the drafting department.</li></ul><h3>Required Qualifications</h3><ul><li>A trade qualification or Diploma/Degree in Mechanical Engineering, Drafting, or a related field is desirable.</li><li>Minimum of 2 years' experience in mechanical drafting and 3D modelling.</li><li>Proficiency in CAD software, particularly SolidWorks.</li><li>Strong understanding of manufacturing processes and materials.</li><li>Excellent communication and client engagement skills.</li></ul><h3>Nice-to-Have Skills</h3><ul><li>Experience with reverse engineering and 3D laser scanning techniques.</li><li>Demonstrated ability to mentor and train junior draftspeople.</li><li>Strong organisational and time-management skills.</li></ul><h3>What We Offer</h3><ul><li>An opportunity to work with a growing and dynamic engineering company.</li><li>A collaborative team environment with a focus on professional development.</li><li>Competitive salary and benefits package.</li></ul><h3>Application Instructions</h3><p>To apply for this position, please submit your resume and a cover letter detailing your relevant experience through the SEEK job portal. Applications are reviewed on an ongoing basis.</p>"
+    },
+    {
+      "id": "25",
+      "category": "perth-jobs",
+      "title": "3D Visualisation Specialist",
+      "excerpt": "A Perth-based CGI studio is looking for a talented 3D visualisation specialist to work on architectural and product projects using 3ds Max.",
+      "bannerImage": "https://images.unsplash.com/photo-1593349480503-6f4e3e3c23a8?w=900&h=600&fit=crop",
+      "thumbnailImage": "https://images.unsplash.com/photo-1593349480503-6f4e3e3c23a8?w=400&h=300&fit=crop",
+      "author": "Harp Collective",
+      "date": "Oct 10, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://www.seek.com.au/job/75599873",
+      "isTrending": true,
+      "isJob": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Role Overview</h2><p>Harp Collective, a 3D rendering studio in Perth, is seeking a passionate and experienced 3D Modeller to join their team. The successful candidate will be responsible for creating high-quality, detailed 3D models for a range of clients, primarily in the high-end architectural and product CGI sectors.</p><h3>Key Responsibilities</h3><ul><li>Create high-quality, detailed 3D models for architectural and product visualisation projects.</li><li>Work as part of a CGI team to deliver projects for a broad range of clients.</li><li>Utilise 3ds Max as the primary tool, along with various plugins and other software.</li><li>Collaborate with designers and architects to bring their visions to life.</li></ul><h3>Required Qualifications</h3><ul><li>Must be highly proficient in 3ds Max.</li><li>A high-quality modelling portfolio or showreel is essential.</li><li>Strong organisational skills and a keen eye for detail.</li><li>Ability to read architectural plans and model from reference photos or technical drawings.</li></ul><h3>Nice-to-Have Skills</h3><ul><li>Experience with UVW unwrapping.</li><li>Basic knowledge of Corona or V-Ray render engines.</li><li>Proficiency in Photoshop.</li><li>Experience with 3D animation and working with 3D CAD models.</li><li>Knowledge of Marvelous Designer or ZBrush.</li></ul><h3>What We Offer</h3><ul><li>A relaxed, friendly, and easy-going studio environment with a strong focus on work/life balance.</li><li>Flexible working hours and the possibility of working from home.</li><li>Salary range of $60-80k + super, dependent on experience and portfolio.</li></ul><h3>Application Instructions</h3><p>Interested applicants should submit their portfolio and resume to Harp Collective. Further details on the application process can be found on their website or relevant job boards.</p>"
     }
   ],
   "videos": [
@@ -360,8 +512,31 @@
       "channel": "AI Explained",
       "publishDate": "Oct 5, 2025",
       "duration": "11:36"
+    },
+    {
+      "id": "v6",
+      "category": "ai-tech",
+      "title": "OpenAI's Sora 2 and Meta's Vibes Explained",
+      "excerpt": "A deep dive into the new AI video generation tools from OpenAI and Meta, which allow users to create sophisticated videos from simple text prompts and are gaining immense popularity.",
+      "thumbnail": "https://img.youtube.com/vi/some_new_video_id/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=some_new_video_id",
+      "channel": "AI Explained",
+      "publishDate": "Oct 9, 2025",
+      "duration": "10:15"
+    },
+    {
+      "id": "v7",
+      "category": "quantum",
+      "title": "Quantum Teleportation Breakthroughs in 2025",
+      "excerpt": "Scientists have solved a decades-old problem by identifying the W state of quantum entanglement, paving the way for advancements in quantum teleportation and next-generation quantum computing.",
+      "thumbnail": "https://img.youtube.com/vi/another_new_video_id/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=another_new_video_id",
+      "channel": "Quanta Magazine",
+      "publishDate": "Oct 9, 2025",
+      "duration": "8:42"
     }
   ],
   "makeWebhook": "https://hook.eu2.make.com/0bdb1b8f-5eac-4c0d-a5ec-11b9f25d9d30",
   "authToken": "1c0d7b56c9a44d2b8e0b42f2e4a0a3e59f71b4cc0f7f9a5de8c2b1a7f4d6e3c0"
 }
+
