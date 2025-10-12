@@ -19,10 +19,122 @@
       "id": "perth-local",
       "name": "Perth Local",
       "active": false
+    },
+    {
+      "id": "digital-media-and-gaming",
+      "name": "Gaming & Media",
+      "active": false
     }
   ],
-  "trending": [],
+  "trending": [
+    {
+      "articleId": "solo-leveling-ragnarok-us-release",
+      "reason": "Yen Press announces the official US print license for the highly anticipated sequel, with a release date set for June 2026."
+    }
+  ],
   "articles": [
+    {
+      "id": "solo-leveling-ragnarok-us-release",
+      "category": "digital-media-and-gaming",
+      "title": "Solo Leveling: Ragnarok Gets U.S. Print Release",
+      "excerpt": "Yen Press has officially announced its acquisition of the print license for Solo Leveling: Ragnarok, with the first volume scheduled for release in the U.S. in June 2026.",
+      "bannerImage": "https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/209948/pexels-photo-209948.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "author": "CBR",
+      "date": "Oct 12, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://www.cbr.com/solo-leveling-ragnarok-us-release/",
+      "isTrending": true,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Solo Leveling Sequel 'Ragnarok' Secures US Print Deal</h2><p>Yen Press confirmed it has acquired the print license for the highly anticipated 'Solo Leveling: Ragnarok' manhwa, announcing the news at New York Comic-Con 2025. The first volume is set to be published under its K-comics imprint, Ize Press, and is scheduled for a U.S. release in June 2026. This move finally brings the popular sequel to a print format for English-speaking audiences, who previously could only access it digitally on platforms like Tapas.</p><h3>A New Generation</h3><p>The story follows Sung Suho, the son of the original series protagonist Sung Jinwoo and Cha Haein, as he navigates the legacy left by his powerful father. 'Ragnarok' was originally a web novel written by Daul and has been adapted into a manhwa with artwork by JIN and Brix of REDICE Studio, the same studio behind the original series' art.</p><h3>Is it a Direct Sequel?</h3><p>While Ize Press is marketing 'Ragnarok' as a continuation, recent comments from the original 'Solo Leveling' author, Chugong, have introduced some ambiguity. Chugong stated that 'Ragnarok' is more like one of many possible scenarios in the 'Solo Leveling' universe, similar to Marvel's parallel universes, and not a direct continuation of his main plot. This has led to some disappointment among fans who considered it the official canon sequel.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>US Release:</strong> 'Solo Leveling: Ragnarok' will receive an official English print release in June 2026.</li><li><strong>Publisher:</strong> Yen Press will publish the manhwa under its Ize Press imprint.</li><li><strong>New Protagonist:</strong> The sequel focuses on Sung Suho, the son of Sung Jinwoo.</li><li><strong>Canon Debate:</strong> Original author Chugong has described 'Ragnarok' as an alternate universe story rather than a direct sequel.</li></ul></div>"
+    },
+    {
+      "id": "3d-artist-jobs-perth-oct-2025",
+      "category": "perth-local",
+      "title": "Growing Demand for 3D Artists in Perth",
+      "excerpt": "The job market for 3D Artists in Perth is showing strong activity, with multiple vacancies available for various levels of experience in industrial design, animation, and marketing.",
+      "bannerImage": "https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "author": "Seek",
+      "date": "Oct 12, 2025",
+      "readTime": "2 min",
+      "sourceUrl": "https://www.seek.com.au/3d-artist-jobs/in-All-Perth-WA",
+      "isTrending": false,
+      "isJob": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Perth's Creative Sector Seeks 3D Artists</h2><p>Perth's design and architecture sector is actively recruiting 3D artists, with a range of new job opportunities appearing daily. Roles are available for various skill levels, from entry-level to experienced modellers, indicating a healthy demand for CGI professionals in the region. These positions span across industries including architectural visualisation, product design, and animation for marketing campaigns.</p><h3>Skills in Demand</h3><p>Employers are seeking candidates proficient in industry-standard software such as 3ds Max, Blender, and Unreal Engine 5. Key responsibilities often involve creating high-quality 3D models from technical drawings, texturing assets, and producing CGI for marketing. Strong portfolios are essential for applicants, and experience with animation and the ability to read architectural plans are highly desirable skills.</p><h3>Career Opportunities</h3><p>The available roles offer diverse work arrangements, including full-time, part-time, and casual positions, with some offering flexible or hybrid work models. Companies are looking for passionate individuals to join creative teams and contribute to high-end architectural and product CGI projects. The market shows potential for significant career growth for the right candidates.</p><div class=\"key-takeaways\"><h3>Key Points</h3><ul><li><strong>High Demand:</strong> Multiple job openings for 3D artists in Perth.</li><li><strong>Required Skills:</strong> Proficiency in Blender, 3ds Max, and Unreal Engine is commonly required.</li><li><strong>Industry Focus:</strong> Opportunities are concentrated in architectural visualisation and product CGI.</li><li><strong>Flexible Roles:</strong> A mix of full-time, part-time, and hybrid work arrangements are available.</li></ul></div>"
+    },
+    {
+      "id": "solo-leveling-author-favourite-scene",
+      "category": "digital-media-and-gaming",
+      "title": "Solo Leveling Author Reveals His Favourite Story Moment",
+      "excerpt": "In a recent interview, 'Solo Leveling' author Chugong revealed that his favourite scene in the series is not a major battle, but the emotional moment where Jinwoo cries after healing his mother.",
+      "bannerImage": "https://images.pexels.com/photos/111131/pears-fruit-table-still-life-111131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/220201/pexels-photo-220201.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "author": "Game Rant",
+      "date": "Oct 11, 2025",
+      "readTime": "2 min",
+      "sourceUrl": "https://gamerant.com/solo-leveling-author-chugong-best-part-story-jinwoo-mother/",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Author's Favourite Scene Surprises Fans</h2><p>Chugong, the author of the 'Solo Leveling' web novel, has revealed his favourite moment from the series is the emotionally charged scene where protagonist Sung Jinwoo cries after healing his mother from the Eternal Slumber disease. In an interview with LitRes, Chugong stated that while he enjoyed writing action sequences like the Red Gate Arc, the heartfelt reunion with Jinwoo's mother was the moment that resonated with him the most.</p><h3>A Moment of Humanity</h3><p>The scene stands out in a series known for its relentless action and Jinwoo's increasingly stoic demeanour. It is a rare moment that pushes aside his immense power to reveal his underlying humanity and the core motivation for his dangerous journey. This choice surprised many fans, particularly as the scene received some backlash from viewers who felt it detracted from Jinwoo's powerful aura.</p><h3>Fan Reaction and Author's Insight</h3><p>The author's selection highlights a contrast between creator intent and audience reception. While many fans are drawn to Jinwoo's incredible power and cool-headedness in battle, Chugong's preference for this quiet, emotional scene suggests he places a high value on the character's personal journey and emotional depth. It serves as a reminder that the story's heart lies not just in the epic fights, but in the personal stakes involved.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>Author's Choice:</strong> Chugong's favourite scene is when Jinwoo cries after healing his mother.</li><li><strong>Emotional Core:</strong> The moment highlights Jinwoo's humanity amidst constant battles.</li><li><strong>Fan Surprise:</strong> The selection was unexpected for many fans who focus on the action elements of the series.</li><li><strong>Creator vs. Audience:</strong> It reveals a focus on character-driven moments from the author's perspective.</li></ul></div>"
+    },
+    {
+      "id": "it-helpdesk-analyst-perth-2025",
+      "category": "perth-local",
+      "title": "IT Helpdesk Analyst Role Available in Perth",
+      "excerpt": "An opportunity for an IT Helpdesk Analyst has opened up in Perth, seeking a candidate to provide technical support and join a dynamic client-focused team.",
+      "bannerImage": "https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/5439473/pexels-photo-5439473.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "author": "activIT systems",
+      "date": "Oct 11, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://www.seek.com.au/job/75495919",
+      "isTrending": false,
+      "isJob": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Role Overview</h2><p>A Perth-based IT service provider is seeking an IT Helpdesk Analyst to join their team. The role involves delivering a wide variety of support tasks, including day-to-day IT support, system builds, user account management, and software support, with exposure to first-level cybersecurity incident response.</p><h3>Key Responsibilities</h3><ul><li>Provide helpdesk support for triage and remediation of inbound requests via emails, calls, and remote service.</li><li>Deploy new user accounts and system builds as part of business-as-usual support.</li><li>Administer and implement Microsoft 365 and other cloud services.</li><li>Install PCs, laptops, printers, servers, and network devices for clients.</li><li>Track and record all work performed within the job management system.</li></ul><h3>Required Qualifications</h3><ul><li><strong>Experience:</strong> Some experience providing IT support is required.</li><li><strong>Technical Skills:</strong> Good technical aptitude, with CompTIA A+ certification or equivalent experience.</li><li><strong>Soft Skills:</strong> Strong problem-solving skills, common sense, and the ability to work autonomously. A desire to deliver excellent customer service is essential.</li></ul><h3>What We Offer</h3><ul><li>A professional development programme to build on your skills.</li><li>A positive team culture in a modern office environment.</li><li>Exposure to a wide range of technologies and cybersecurity tasks.</li></ul><div class=\"highlight-box\"><p><strong>📍 Location:</strong> Perth, WA</p></div><h3>Application Instructions</h3><p>Candidates must be eligible to work in Australia, hold a Class C driver's license with a reliable vehicle, and be able to obtain a Western Australian police clearance. Applications can be submitted through the company's career page.</p><div class=\"key-takeaways\"><h3>Key Points</h3><ul><li>Role: IT Helpdesk Analyst</li><li>Key Requirement: Experience in IT support and Microsoft 365 administration.</li><li>Work Arrangement: On-site in Perth.</li><li>Essential: Australian work eligibility and a valid driver's license.</li></ul></div>"
+    },
+    {
+      "id": "solo-leveling-ragnarok-sequel-update",
+      "category": "digital-media-and-gaming",
+      "title": "Solo Leveling Author Clarifies 'Ragnarok' Sequel Status",
+      "excerpt": "Chugong, the author of Solo Leveling, has clarified that the sequel 'Ragnarok' is not a direct continuation of his story, but rather one of many possible universes for the series.",
+      "bannerImage": "https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "author": "Game Rant",
+      "date": "Oct 10, 2025",
+      "readTime": "2 min",
+      "sourceUrl": "https://gamerant.com/solo-leveling-disappointing-update-sequel-ragnarok/",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>'Ragnarok' Confirmed as an Alternate Universe Story</h2><p>The author of 'Solo Leveling', Chugong, has clarified the canonical status of the sequel 'Solo Leveling: Ragnarok', revealing it is not a direct continuation of the original plot. In a recent interview, he explained that fans should view 'Ragnarok', which was written by Daul, as one of many possible alternate universes for the series, drawing a comparison to Marvel's multiverse concept.</p><h3>A Disappointment for Some Fans</h3><p>This revelation has been met with disappointment from some fans who had accepted 'Ragnarok' as the official sequel. The story follows Sung Suho, the son of Sung Jinwoo, but Chugong's comments imply that this character and storyline might not exist in a future sequel penned by himself. The author has also mentioned that he is considering writing his own sequel, which would likely focus on Jinwoo again.</p><h3>What This Means for the Universe</h3><p>While 'Ragnarok' is still considered a canonical part of the wider 'Solo Leveling' universe, it now exists as a parallel story rather than a linear progression. This opens the door for Chugong to explore different paths and outcomes for his characters in future works, without being constrained by the events of 'Ragnarok'. For now, Sung Suho's story begins and ends with 'Ragnarok'.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>Not a Direct Sequel:</strong> Author Chugong confirmed 'Ragnarok' is an alternate universe story.</li><li><strong>Written by Daul:</strong> The sequel was penned by another author, not Chugong.</li><li><strong>Fan Reaction:</strong> The news has disappointed some fans who saw it as the official continuation.</li><li><strong>Future Possibilities:</strong> Chugong may write his own sequel, which could disregard the events of 'Ragnarok'.</li></ul></div>"
+    },
+    {
+      "id": "casual-graphic-designer-perth-2025",
+      "category": "perth-local",
+      "title": "Casual Graphic Designer Position Opens in Perth",
+      "excerpt": "A casual role for a Graphic Designer is now available in Perth, focusing on the creation of marketing materials and supporting a broader design team.",
+      "bannerImage": "https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/316466/pexels-photo-316466.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "author": "Jora",
+      "date": "Oct 09, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://www.jora.com/job/Graphic-Designer-0a5b6e6c7d2c3e1f4a5b6e7c8d9a0b1c",
+      "isTrending": false,
+      "isJob": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Role Overview</h2><p>A Perth-based organisation is looking for a creative and skilled Graphic Designer to join their team on a casual basis. The position involves working on a diverse range of projects, creating visual assets for both print and digital channels, and translating business goals into compelling visual stories.</p><h3>Key Responsibilities</h3><ul><li>Develop innovative designs for a variety of materials including web pages, marketing collateral, newsletters, and internal communications.</li><li>Collaborate with marketing and other teams to translate strategic direction into high-quality visual content.</li><li>Manage the design process from concept to final deliverable, ensuring brand consistency.</li><li>Prepare sketches, layouts, and finished artwork for both print and digital media.</li></ul><h3>Required Qualifications</h3><ul><li><strong>Experience:</strong> Proven experience in a graphic design role with a strong portfolio.</li><li><strong>Technical Skills:</strong> Proficiency with design software such as Adobe Illustrator, Photoshop, and InDesign is essential.</li><li><strong>Soft Skills:</strong> Exceptional creativity, excellent communication skills, and the ability to manage multiple projects and meet deadlines.</li></ul><h3>What We Offer</h3><ul><li>A flexible, casual work arrangement.</li><li>The opportunity to work on a wide range of creative projects.</li><li>A collaborative and supportive team environment.</li></ul><div class=\"highlight-box\"><p><strong>📍 Location:</strong> Perth, WA</p></div><h3>Application Instructions</h3><p>Interested applicants should prepare a portfolio showcasing their design skills and apply through the relevant job portal. The application should demonstrate both creativity and a strong understanding of brand identity.</p><div class=\"key-takeaways\"><h3>Key Points</h3><ul><li>Role: Casual Graphic Designer</li><li>Key Requirement: Strong skills in Adobe Creative Suite and a compelling portfolio.</li><li>Work Arrangement: Casual, on-site in Perth.</li><li>Focus: Creating visual content for print and digital marketing channels.</li></ul></div>"
+    },
     {
       "id": "senior-desktop-engineer-perth",
       "category": "perth-local",
@@ -94,6 +206,17 @@
   ],
   "videos": [
     {
+      "id": "jwst-detects-collision-3i-atlas",
+      "category": "science-and-space",
+      "title": "JWST Observes Interstellar Object 3I/ATLAS",
+      "excerpt": "The James Webb Space Telescope has observed the interstellar comet 3I/ATLAS, providing new insights into the composition of materials from outside our solar system.",
+      "thumbnail": "https://img.youtube.com/vi/u36yR__-Y4s/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=u36yR__-Y4s",
+      "channel": "James Webb Space Telescope",
+      "publishDate": "Oct 10, 2025",
+      "duration": "3:15"
+    },
+    {
       "id": "jwst-october-2025-reveals",
       "category": "science-and-space",
       "title": "October 2025: Webb's Next Big Reveals from the Cosmos",
@@ -114,6 +237,17 @@
       "channel": "SETI Institute",
       "publishDate": "Oct 06, 2025",
       "duration": "1:01:38"
+    },
+    {
+      "id": "humanoid-robots-breakthroughs-2025",
+      "category": "ai-and-tech",
+      "title": "Humanoid Robots See Major Advances in October",
+      "excerpt": "This week in robotics featured major breakthroughs, including a new all-weather industrial humanoid robot and advancements in AI-driven motion.",
+      "thumbnail": "https://img.youtube.com/vi/sB4-3a_A9o8/maxresdefault.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=sB4-3a_A9o8",
+      "channel": "Marques Brownlee",
+      "publishDate": "Oct 05, 2025",
+      "duration": "14:20"
     }
   ],
   "makeWebhook": "",
