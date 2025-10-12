@@ -1,203 +1,100 @@
 {
-  "Topics_of_Interest": [
-    {
-      "Topic": "Artificial Intelligence and Technology",
-      "Subtopics": [
-        {
-          "Subtopic": "AI Software and Applications",
-          "Sub-subtopics": [
-            "Latest AI Models and LLMs for General Use (Gemini, Claude, GPT-5)",
-            "AI Tools for Creative Media Generation (Image, Video, Music)",
-            "Automation Platforms and Workflow Integration (Make.com, n8n, Python)",
-            "AI for Job Seeking and Career Assistance"
-          ]
-        },
-        {
-          "Subtopic": "Robotics and Advanced Hardware",
-          "Sub-subtopics": [
-            "Current Research and Development in Humanoid Robots (Optimus, AgiBot, Unitree)",
-            "Consumer Robot Pets and Smart Devices (Loona, Robot Frog, AI Virtual Pets)",
-            "Advanced Drone Technology and FPV Simulation"
-          ]
-        },
-        {
-          "Subtopic": "Extended Reality (XR) and Display Technology",
-          "Sub-subtopics": [
-            "New Releases and Features of AR/VR Glasses and Headsets",
-            "Developments in Advanced 3D and Holographic Displays",
-            "Gaussian Splatting and Light-Field Rendering Techniques"
-          ]
-        }
-      ]
-    },
-    {
-      "Topic": "Science and Space Exploration",
-      "Subtopics": [
-        {
-          "Subtopic": "Quantum Physics and Mechanics",
-          "Sub-subtopics": [
-            "Breakthroughs in Quantum Entanglement and Teleportation",
-            "Experimental Physics and New States of Matter (Time Crystals, Supersolids)",
-            "The Role of Quantum Theory in Consciousness and Neural Activity"
-          ]
-        },
-        {
-          "Subtopic": "Astrophysics and Cosmology",
-          "Sub-subtopics": [
-            "Latest Discoveries from James Webb and Euclid Space Telescopes",
-            "Anomalies and Exploration of Celestial Bodies (Mars, Black Holes, Asteroids)",
-            "Interstellar Objects and Deep Space Probes (Voyager 1, Oumuamua)"
-          ]
-        },
-        {
-          "Subtopic": "Earth and Environmental Science",
-          "Sub-subtopics": [
-            "Climate Change Impact on Polar Vortex and Ocean Currents",
-            "Advanced Geological and Geophysical Research (Gravity Hole, Magnetic Field)",
-            "New Forms of Clean Energy and Physics Breakthroughs"
-          ]
-        }
-      ]
-    },
-    {
-      "Topic": "Ancient History and Archaeology",
-      "Subtopics": [
-        {
-          "Subtopic": "Egyptology and Pyramid Construction",
-          "Sub-subtopics": [
-            "Alternative Theories on Egyptian Construction Methods and Materials",
-            "Acoustic Resonance Testing in Pyramids and Ancient Structures",
-            "Recent Discoveries of Ancient Tombs and Cities (Luxor, Pompeii)"
-          ]
-        },
-        {
-          "Subtopic": "Global Archaeological Discoveries",
-          "Sub-subtopics": [
-            "Discoveries of Ancient Monuments and Lost Civilisations (Uzbekistan, Amazon)",
-            "Analysis of Artefacts and Technology from Past Eras"
-          ]
-        }
-      ]
-    },
-    {
-      "Topic": "Digital Media and Gaming",
-      "Subtopics": [
-        {
-          "Subtopic": "Massively Multiplayer and RPG Games",
-          "Sub-subtopics": [
-            "Updates and Builds for Diablo Immortal (Tempest Class, Legendary Gear)",
-            "Star Citizen Development and Ship Status (Pyro, Server Meshing, RSI Galaxy)",
-            "Anime-Style MMORPGs and RPGs (Ananta, Zenless Zone Zero, Crystal of Atlan)"
-          ]
-        },
-        {
-          "Subtopic": "Game Modding and Simulation",
-          "Sub-subtopics": [
-            "Modding and Development for Cities: Skylines 2 (Road Builder, Asset Creation)",
-            "Retro and Modern Game Remakes and Emulation",
-            "Real-time Game Physics and Simulation (BeamNG.drive, LiquiGen)"
-          ]
-        },
-        {
-          "Subtopic": "Streaming and Entertainment Content",
-          "Sub-subtopics": [
-            "New Anime Series and Seasons (Solo Levelling, Martial Peak, Shrouding the Heavens)",
-            "TV Series Release Dates and Streaming Services (The Last of Us, Wicked)",
-            "Video Quality and Encoding (HDR, Dolby Vision, Animated WebP)"
-          ]
-        }
-      ]
-    },
-    {
-      "Topic": "Perth Local Services and Lifestyle",
-      "Subtopics": [
-        {
-          "Subtopic": "Employment and Career Development",
-          "Sub-subtopics": [
-            "Current Job Listings in Perth (Graphic Design, IT, 3D Artist)",
-            "Training and Education Courses (TAFE, AI Skills)",
-            "Job Seeker and Disability Employment Services (Workforce Australia, NDIS)"
-          ]
-        },
-        {
-          "Subtopic": "Housing, Property, and Utilities",
-          "Sub-subtopics": [
-            "Rental Accommodation Search and Related Legal Information (Perth, WA)",
-            "Storage Solutions and National Storage Facilities (Belmont, Midland, Cannington)",
-            "Energy Providers and Financial Hardship Assistance (Synergy, Alinta, HUGS)"
-          ]
-        },
-        {
-          "Subtopic": "Health, Wellness, and Disability Support",
-          "Sub-subtopics": [
-            "ADHD and Autism Diagnosis and Support Services (NDIS, Clinics)",
-            "Medical Imaging Access and DICOM Viewing Software",
-            "Mental Health and Experimental Therapy (Psilocybin, Somatic)"
-          ]
-        },
-        {
-          "Subtopic": "Retail and Consumer Products",
-          "Sub-subtopics": [
-            "Specialised Food and Consumables (Hot Sauce, Cigars, Coffee, Rennet)",
-            "DIY and Household Items (Heaters, Car Accessories, Towels, Furniture)",
-            "Vehicle Maintenance and Services (Tyres, Jump Starters)"
-          ]
-        }
-      ]
-    },
-    {
-      "Topic": "Artificial Intelligence and Technology",
-      "Subtopics": [
-        {
-          "Subtopic": "AI Software and Applications",
-          "Sub-subtopics": [
-            "Latest AI Models and LLMs for General Use (Gemini, Claude, GPT-5)",
-            "AI Tools for Creative Media Generation (Image, Video, Music)",
-            "Automation Platforms and Workflow Integration (Make.com, n8n, Python)",
-            "AI for Job Seeking and Career Assistance"
-          ]
-        },
-        {
-          "Subtopic": "Robotics and Advanced Hardware",
-          "Sub-subtopics": [
-            "Current Research and Development in Humanoid Robots (Optimus, AgiBot, Unitree)",
-            "Consumer Robot Pets and Smart Devices (Loona, Robot Frog, AI Virtual Pets)",
-            "Advanced Drone Technology and FPV Simulation"
-          ]
-        },
-        {
-          "Subtopic": "Extended Reality (XR) and Display Technology",
-          "Sub-subtopics": [
-            "New Releases and Features of AR/VR Glasses and Headsets",
-            "Developments in Advanced 3D and Holographic Displays",
-            "Gaussian Splatting and Light-Field Rendering Techniques"
-          ]
-        }
-      ]
-    },
-    {
-      "Topic": "Custom Searches",
-      "Subtopics": [
-        {
-          "Subtopic": "Anime",
-          "Sub-subtopics": [
-            "Martial Peak TV series news",
-            "Solo Leveling series news",
-            "The Daily Life of the Immortal King News",
-            "Redo of Healer News"
-          ]
-        },
-        {
-          "Subtopic": "Jobs",
-          "Sub-subtopics": [
-            "Available Jobs in Perth which require using 3DS Max.",
-            "Available Jobs in Perth which require using Unity, or unreal engine.",
-            "Available Jobs in Perth which involve creating 3D visualisation."
-          ]
-        }
-      ]
-    }
-  ]
+  "Artificial Intelligence and Technology": {
+    "AI Software and Applications": [
+      "Latest AI Models and LLMs for General Use (Gemini, Claude, GPT-5)",
+      "AI Tools for Creative Media Generation (Image, Video, Music)",
+      "Automation Platforms and Workflow Integration (Make.com, n8n, Python)",
+      "AI for Job Seeking and Career Assistance"
+    ],
+    "Robotics and Advanced Hardware": [
+      "Current Research and Development in Humanoid Robots (Optimus, AgiBot, Unitree)",
+      "Consumer Robot Pets and Smart Devices (Loona, Robot Frog, AI Virtual Pets)",
+      "Advanced Drone Technology and FPV Simulation"
+    ],
+    "Extended Reality (XR) and Display Technology": [
+      "New Releases and Features of AR/VR Glasses and Headsets",
+      "Developments in Advanced 3D and Holographic Displays",
+      "Gaussian Splatting and Light-Field Rendering Techniques"
+    ]
+  },
+  "Science and Space Exploration": {
+    "Quantum Physics and Mechanics": [
+      "Breakthroughs in Quantum Entanglement and Teleportation",
+      "Experimental Physics and New States of Matter (Time Crystals, Supersolids)",
+      "The Role of Quantum Theory in Consciousness and Neural Activity"
+    ],
+    "Astrophysics and Cosmology": [
+      "Latest Discoveries from James Webb and Euclid Space Telescopes",
+      "Anomalies and Exploration of Celestial Bodies (Mars, Black Holes, Asteroids)",
+      "Interstellar Objects and Deep Space Probes (Voyager 1, Oumuamua)"
+    ],
+    "Earth and Environmental Science": [
+      "Climate Change Impact on Polar Vortex and Ocean Currents",
+      "Advanced Geological and Geophysical Research (Gravity Hole, Magnetic Field)",
+      "New Forms of Clean Energy and Physics Breakthroughs"
+    ]
+  },
+  "Ancient History and Archaeology": {
+    "Egyptology and Pyramid Construction": [
+      "Alternative Theories on Egyptian Construction Methods and Materials",
+      "Acoustic Resonance Testing in Pyramids and Ancient Structures",
+      "Recent Discoveries of Ancient Tombs and Cities (Luxor, Pompeii)"
+    ],
+    "Global Archaeological Discoveries": [
+      "Discoveries of Ancient Monuments and Lost Civilisations (Uzbekistan, Amazon)",
+      "Analysis of Artefacts and Technology from Past Eras"
+    ]
+  },
+  "Digital Media and Gaming": {
+    "Massively Multiplayer and RPG Games": [
+      "Updates and Builds for Diablo Immortal (Tempest Class, Legendary Gear)",
+      "Star Citizen Development and Ship Status (Pyro, Server Meshing, RSI Galaxy)",
+      "Anime-Style MMORPGs and RPGs (Ananta, Zenless Zone Zero, Crystal of Atlan)"
+    ],
+    "Game Modding and Simulation": [
+      "Modding and Development for Cities: Skylines 2 (Road Builder, Asset Creation)",
+      "Retro and Modern Game Remakes and Emulation",
+      "Real-time Game Physics and Simulation (BeamNG.drive, LiquiGen)"
+    ],
+    "Streaming and Entertainment Content": [
+      "New Anime Series and Seasons (Solo Levelling, Martial Peak, Shrouding the Heavens)",
+      "TV Series Release Dates and Streaming Services (The Last of Us, Wicked)",
+      "Video Quality and Encoding (HDR, Dolby Vision, Animated WebP)"
+    ]
+  },
+  "Perth Local Services and Lifestyle": {
+    "Employment and Career Development": [
+      "Current Job Listings in Perth (Graphic Design, IT, 3D Artist)",
+      "Training and Education Courses (TAFE, AI Skills)",
+      "Job Seeker and Disability Employment Services (Workforce Australia, NDIS)"
+    ],
+    "Housing, Property, and Utilities": [
+      "Rental Accommodation Search and Related Legal Information (Perth, WA)",
+      "Storage Solutions and National Storage Facilities (Belmont, Midland, Cannington)",
+      "Energy Providers and Financial Hardship Assistance (Synergy, Alinta, HUGS)"
+    ],
+    "Health, Wellness, and Disability Support": [
+      "ADHD and Autism Diagnosis and Support Services (NDIS, Clinics)",
+      "Medical Imaging Access and DICOM Viewing Software",
+      "Mental Health and Experimental Therapy (Psilocybin, Somatic)"
+    ],
+    "Retail and Consumer Products": [
+      "Specialised Food and Consumables (Hot Sauce, Cigars, Coffee, Rennet)",
+      "DIY and Household Items (Heaters, Car Accessories, Towels, Furniture)",
+      "Vehicle Maintenance and Services (Tyres, Jump Starters)"
+    ]
+  },
+  "Custom Searches": {
+    "Anime": [
+      "Martial Peak TV series news",
+      "Solo Leveling series news",
+      "The Daily Life of the Immortal King News",
+      "Redo of Healer News"
+    ],
+    "Jobs": [
+      "Available Jobs in Perth which require using 3DS Max",
+      "Available Jobs in Perth which require using Unity, or unreal engine",
+      "Available Jobs in Perth which involve creating 3D visualisation"
+    ]
+  }
 }
-
-
