@@ -1,4 +1,4 @@
- 
+\ 
 {
   "categories": [
     {
@@ -30,23 +30,130 @@
       "id": "ancient-history",
       "name": "Ancient History",
       "active": false
+    },
+    {
+      "id": "anime-and-manga",
+      "name": "Anime & Manga",
+      "active": false
     }
   ],
   "trending": [
     {
-      "articleId": "it-systems-engineer-perth-oct-2025",
-      "reason": "New and in-demand technology role for the Perth local area."
+      "articleId": "openai-data-center-argentina-2025",
+      "reason": "Major $25B investment in global AI infrastructure by OpenAI, placing Argentina at the forefront."
     },
     {
-      "articleId": "graphic-designer-signage-malaga-2025",
-      "reason": "New specialised creative role available in Perth's northern suburbs."
+      "articleId": "quantum-data-teleportation-2025",
+      "reason": "Foundational breakthrough in distributed quantum computing, enabling processors to link."
     },
     {
-      "articleId": "star-citizen-nyx-system-2025",
-      "reason": "Major content update announced at CitizenCon 2025, adding the game's third star system."
+      "articleId": "pyramid-construction-hydraulics-theory-2025",
+      "reason": "A compelling new theory that potentially solves a 4,500-year-old mystery."
     }
   ],
   "articles": [
+    {
+      "id": "robotics-weekly-review-oct-12-2025",
+      "category": "ai-and-tech",
+      "title": "This Week in Robotics: Rise of Humanoid Robots",
+      "excerpt": "A review of the latest developments in robotics, including Figure AI's introduction of its third-generation humanoid robot, Figure 03.",
+      "bannerImage": "IMAGE_NEEDED",
+      "thumbnailImage": "IMAGE_NEEDED",
+      "author": "Alper Konuralp",
+      "date": "Oct 12, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://medium.com/@alperkonuralp/this-week-in-robotics-chinas-dominance-mits-ai-revolution-and-the-rise-of-humanoid-robots-217830f30c92",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Humanoid Robots and Chinese Dominance Lead Robotics News</h2><p>The robotics industry saw significant developments this week, highlighted by the introduction of next-generation humanoid robots from Figure AI and Deep Robotics. These advancements coincide with a new analysis revealing China's overwhelming dominance in the sector, where it installed more factory robots in 2024 than the rest of the world combined. The week underscores a global acceleration in both the sophistication and deployment of robotic systems.</p><h3>The New Wave of Humanoid Robots</h3><p>Figure AI officially introduced Figure 03, its latest humanoid robot designed for practical, real-world applications. The company showcased the robot's ability to perform complex household and logistical tasks, signalling a shift from laboratory prototypes to commercially viable machines. This development is part of a broader trend of increasingly capable humanoid robots entering the market.</p><h3>China's Manufacturing Powerhouse</h3><p>An analysis from the Washington Post detailed China's massive scale-up in robotics. In 2024, China installed approximately 300,000 robots in its factories, and now operates over 2 million robots in total—five times the number in the United States. This surge is attributed to the \"Made in China 2025\" campaign, which has successfully boosted domestic manufacturers to a 57% market share through substantial state support.</p><h3>Broader Industry Movements</h3><p>Beyond hardware, MIT announced a new artificial intelligence training system aimed at accelerating AI development. In the logistics space, Serve Robotics deployed its thousandth delivery robot and secured a major partnership with DoorDash, further cementing the role of autonomous systems in everyday commerce. These events collectively point to a rapidly maturing industry with major implications for labour, manufacturing, and daily life.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>Humanoid Advancements:</strong> Figure AI unveiled its next-generation Figure 03 robot, built for real-world tasks.</li><li><strong>China's Dominance:</strong> China now installs and operates more industrial robots than the rest of the world combined.</li><li><strong>AI and Logistics Growth:</strong> MIT is developing new AI training systems while autonomous delivery deployments are expanding rapidly.</li></ul></div>"
+    },
+    {
+      "id": "solo-leveling-ragnarok-print-release-2025",
+      "category": "anime-and-manga",
+      "title": "Solo Leveling: Ragnarok Print Release Confirmed",
+      "excerpt": "IZE Press has confirmed that the sequel manhwa, Solo Leveling: Ragnarok, will receive a physical print release, with the first volume scheduled for June 2026.",
+      "bannerImage": "IMAGE_NEEDED",
+      "thumbnailImage": "IMAGE_NEEDED",
+      "author": "CBR",
+      "date": "Oct 12, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://www.cbr.com/solo-leveling-ragnarok-us-release/",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>'Solo Leveling: Ragnarok' Secures US Print Release</h2><p>The sequel to the popular manhwa 'Solo Leveling' is officially getting an English-language print edition. Yen Press announced at New York Comic-Con 2025 that it has acquired the print license for 'Solo Leveling: Ragnarok' and will publish it under its K-comics imprint, Ize Press. The first volume is scheduled for release in the United States in June 2026.</p><h3>A New Generation's Story</h3><p>The sequel follows the story of Sung Suho, the son of the original series protagonist Sung Jinwoo and Cha Haein. As Suho discovers his inherited powers, he must contend with the significant legacy his father left behind. The story was originally released as a web novel by author Daul and was later adapted into a manhwa with art by REDICE Studio, the same studio behind the original series.</p><h3>From Digital to Physical</h3><p>Prior to this announcement, English-speaking fans could only access 'Solo Leveling: Ragnarok' digitally through platforms like Tapas. The move to a physical format marks a significant step for the series, making it accessible to a broader audience and collectors. The decision follows the immense success of the original 'Solo Leveling' manhwa, which recently topped the New York Times' bestsellers list for graphic books.</p><h3>Debate Over Canon</h3><p>While Ize Press is marketing 'Ragnarok' as the official sequel, the original author of 'Solo Leveling,' Chugong, has recently clarified that he views it more as a spin-off or an alternate universe story. He has also stated that he is considering writing his own direct sequel to the main plot, which has created some debate among fans about the canonical status of Sung Suho's story.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>US Release Confirmed:</strong> 'Solo Leveling: Ragnarok' will get an official English print release in June 2026 from publisher Ize Press.</li><li><strong>New Protagonist:</strong> The sequel focuses on Sung Suho, the son of original protagonist Sung Jinwoo.</li><li><strong>Digital First:</strong> The manhwa was previously only available in English on digital platforms like Tapas.</li><li><strong>Canon Controversy:</strong> Original author Chugong considers 'Ragnarok' a spin-off and may write his own official sequel.</li></ul></div>"
+    },
+    {
+      "id": "openai-data-center-argentina-2025",
+      "category": "ai-and-tech",
+      "title": "OpenAI & Sur Energy to Build $25B AI Data Center",
+      "excerpt": "OpenAI and Sur Energy are collaborating to build a $25 billion AI data center in Argentina, aiming to enhance global AI infrastructure.",
+      "bannerImage": "IMAGE_NEEDED",
+      "thumbnailImage": "IMAGE_NEEDED",
+      "author": "Times Of AI",
+      "date": "Oct 11, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://www.timesofai.com/openai-and-sur-energy-to-build-25b-ai-data-center-in-argentina/",
+      "isTrending": true,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>OpenAI Announces $25 Billion Data Centre Project in Argentina</h2><p>OpenAI and Argentinian company Sur Energy have signed a letter of intent to construct a massive artificial intelligence data centre in Argentina, with a potential investment of up to $25 billion. The project, named 'Stargate Argentina', was confirmed by the Argentine government and OpenAI CEO Sam Altman, and represents one of the largest technology infrastructure initiatives in the country's history.</p><h3>A Hub for AI Computing</h3><p>The proposed facility is designed to be a large-scale operation with a capacity of up to 500 megawatts, aimed at providing the significant computing power required for developing and training advanced AI models. The project is structured under Argentina's RIGI tax incentive program, which is designed to attract large foreign investments. The development will position Argentina as a key player in the global AI ecosystem.</p><blockquote><p>\"We are proud to announce plans to launch Stargate Argentina, an exciting new infrastructure project... We are excited to work with Argentina as it builds to become an AI hub for all of Latin America.\" - Sam Altman, CEO, OpenAI</p></blockquote><h3>Strategic Importance for Latin America</h3><p>Sam Altman highlighted the strategic significance of the project, noting it will be the company's first 'Stargate' initiative in Latin America. He emphasised the region's talent and creativity as key factors in the decision. The investment underscores the growing global demand for AI infrastructure and OpenAI's efforts to expand its operational footprint to support its rapidly growing services, such as ChatGPT, which now has over 800 million weekly users.</p><h3>Future Outlook</h3><p>If completed, the data centre will not only boost Argentina's technological capabilities but also create a critical hub for AI development across Latin America. The partnership between a leading AI research lab and a major energy company highlights the immense energy requirements of modern AI and the need for integrated solutions to power the future of the technology.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>Massive Investment:</strong> OpenAI and Sur Energy plan to build a $25 billion AI data centre in Argentina.</li><li><strong>High Capacity:</strong> The facility will have a capacity of up to 500 megawatts to power advanced AI computing.</li><li><strong>First in Latin America:</strong> This is OpenAI's first major 'Stargate' infrastructure project in the region.</li><li><strong>Economic Impact:</strong> The project is one of the largest technology and energy initiatives in Argentina's history.</li></ul></div>"
+    },
+    {
+      "id": "quantum-data-teleportation-2025",
+      "category": "science-and-space",
+      "title": "Scientists Teleport Data Using Quantum Supercomputers",
+      "excerpt": "Scientists have successfully shared data instantaneously between two quantum computers using quantum entanglement, a major step for distributed quantum computing.",
+      "bannerImage": "IMAGE_NEEDED",
+      "thumbnailImage": "IMAGE_NEEDED",
+      "author": "BGR",
+      "date": "Oct 11, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://www.bgr.com/science/scientists-achieved-teleportation-using-quantum-supercomputers-heres-how/",
+      "isTrending": true,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Scientists Achieve Quantum Teleportation Between Computers</h2><p>Researchers have successfully teleported data between two separate quantum computers, a breakthrough that paves the way for powerful distributed quantum computing. The experiment, detailed in the journal *Nature*, did not move physical matter but instead transferred quantum information instantaneously using the principle of quantum entanglement. This allowed the two processors to function as a single, more powerful, interconnected supercomputer.</p><h3>Harnessing Quantum Entanglement</h3><p>The process relies on quantum entanglement, a phenomenon where two particles become linked in such a way that their states remain connected no matter the distance separating them. The team from the University of Oxford wirelessly sent a quantum algorithm from one processor to the other, enabling the machines to share information and pool their resources without any physical particles travelling between them. This marks the first time logical gates, the fundamental components of an algorithm, have been teleported across a network link.</p><h3>The Dawn of a Quantum Internet</h3><p>This achievement is a crucial step toward creating a 'quantum internet,' an ultra-secure network that can link multiple remote quantum processors. Overcoming the challenge of scaling up individual quantum computers is a major hurdle in the field, as adding more quantum bits (qubits) increases instability. A distributed network of smaller, linked machines offers a more flexible and scalable solution.</p><blockquote><p>\"This breakthrough enables us to effectively 'wire together' distinct quantum processors into a single, fully-connected quantum computer.\" - Dougal Main, University of Oxford</p></blockquote><h3>Future Implications</h3><p>While this is not the teleportation seen in science fiction, it represents a fundamental advance in information technology. A functional quantum internet could revolutionise fields such as cryptography, materials science, and complex simulations by solving problems that are currently impossible for conventional supercomputers to tackle.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>Information, Not Matter:</strong> The experiment successfully teleported data in the form of quantum states, not physical objects.</li><li><strong>Entanglement is Key:</strong> The process uses quantum entanglement to link two processors, allowing them to function as a single computer.</li><li><strong>Distributed Computing:</strong> This breakthrough enables a new, more scalable model of quantum computing.</li><li><strong>Path to Quantum Internet:</strong> It is a foundational step towards building a secure and powerful quantum internet.</li></ul></div>"
+    },
+    {
+      "id": "pyramid-construction-hydraulics-theory-2025",
+      "category": "ancient-history",
+      "title": "Hydraulics May Have Solved Pyramid Mystery",
+      "excerpt": "Experts suggest that a hydraulic-powered mechanism may have been used to move the massive stone blocks during the construction of the ancient Egyptian pyramids.",
+      "bannerImage": "IMAGE_NEEDED",
+      "thumbnailImage": "IMAGE_NEEDED",
+      "author": "indy100",
+      "date": "Oct 11, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://www.indy100.com/science-tech/pyramids-mystery-solved-hydraulics-ancient",
+      "isTrending": true,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>New Theory Suggests Hydraulics Built Egypt's First Pyramid</h2><p>A groundbreaking new study proposes that the ancient Egyptians used a sophisticated hydraulic lift system to construct the Step Pyramid of Djoser 4,500 years ago. This theory challenges long-held beliefs that brute force and ramps were the primary methods for moving the massive stone blocks, suggesting Egyptian engineers possessed a far more advanced understanding of hydraulic technology than previously thought.</p><h3>How It May Have Worked</h3><p>The research, published in *PLOS ONE*, suggests that the pyramid's internal architecture is consistent with a hydraulic elevation mechanism. By funnelling water into a large shaft inside the pyramid, builders could have used water pressure to raise a platform carrying the heavy stones from the base upwards, in what the authors describe as a \"volcano fashion\". This would have allowed for a more efficient construction process.</p><h3>Landscape and Infrastructure</h3><p>The theory is supported by the landscape surrounding the pyramid in Saqqara. Computer models using satellite imagery suggest that a massive nearby enclosure, the Gisr el-Mudir, could have functioned as a check dam to create a temporary lake. This lake would have been connected to a \"Dry Moat\" around the pyramid, supplying sediment-free water to power the internal lift system.</p><blockquote><p>\"Ancient Egyptians are famous for their pioneering and mastery of hydraulics through canals for irrigation purposes and barges to transport huge stones. This work opens a new line of research: the use of hydraulic force to erect the massive structures built by Pharaohs.\" - Research Authors, via Popular Mechanics</p></blockquote><h3>Reshaping Ancient History</h3><p>If correct, this discovery would significantly push back the timeline for the use of advanced hydraulic technology. It re-frames the construction of the pyramids as not just a marvel of labour, but also of sophisticated engineering and water management. Further research aims to uncover more evidence of these innovative techniques that may have been used to build Egypt's most iconic monuments.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>New Theory:</strong> Scientists propose the 4,500-year-old Step Pyramid of Djoser was built using a hydraulic lift.</li><li><strong>Water-Powered Lift:</strong> The system would have used water pressure to raise stone blocks through the pyramid's centre.</li><li><strong>Supporting Evidence:</strong> The surrounding landscape contains structures that could have formed a sophisticated water management system.</li><li><strong>Historical Significance:</strong> The theory suggests ancient Egyptians' understanding of hydraulic engineering was far more advanced than previously known.</li></ul></div>"
+    },
+    {
+      "id": "star-citizen-third-system-alpha-4-4-2025",
+      "category": "digital-media-and-gaming",
+      "title": "Star Citizen to Get Third Star System Next Month",
+      "excerpt": "Developer Cloud Imperium Games has revealed plans for Star Citizen's next major update, Alpha 4.4, which will introduce the game's third star system, Nyx.",
+      "bannerImage": "IMAGE_NEEDED",
+      "thumbnailImage": "IMAGE_NEEDED",
+      "author": "Simulation Daily",
+      "date": "Oct 11, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://www.simulationdaily.com/star-citizen-will-get-its-third-star-system-next-month-2026-plans-and-growing-player-stats-revealed/",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Star Citizen's Universe Expands with Nyx System</h2><p>Developer Cloud Imperium Games has announced that Star Citizen's third star system, Nyx, will be introduced in the upcoming Alpha 4.4 patch, expected to arrive next month. The reveal was made during the CitizenCon Direct 2025 event, where the studio also outlined future content plans for 2026 and highlighted the game's growing player statistics.</p><h3>Welcome to the Frontier</h3><p>The Nyx system is being designed as a frontier region, home to the iconic landing zone of Levski, which is located on the asteroid Delamar. This area is intended to be a hotbed for radicals and anti-UEE sentiment, offering a different style of gameplay compared to the more controlled Stanton system. It is also expected to border hostile Vanduul space, introducing new threats and challenges for players exploring the region.</p><h3>Phased Rollout and Future Content</h3><p>The introduction of the Nyx system marks a significant expansion of the playable universe, which has been a long-standing goal for the ambitious space simulation game. Following this release, the development team has plans to continue adding new content and features throughout 2026. This ongoing development is part of the game's open alpha process, where new modules and systems are released incrementally to backers for testing and feedback.</p><h3>Long-Term Vision</h3><p>While the addition of a third star system is a major milestone, it is still a step toward the game's ultimate goal of a full 1.0 release. The development of Star Citizen has been a massive undertaking since its record-breaking crowdfunding campaign began. The team continues to work on foundational technologies like server meshing to support a vast, persistent universe for a large number of players.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>New System Announced:</strong> Star Citizen will add its third star system, Nyx, in the Alpha 4.4 update next month.</li><li><strong>Frontier Gameplay:</strong> Nyx will feature the returning Levski landing zone and introduce new threats like the Vanduul.</li><li><strong>Continued Development:</strong> Cloud Imperium Games has outlined further content plans for 2026.</li><li><strong>Alpha Process:</strong> The game remains in an early access alpha state, with features being released incrementally.</li></ul></div>"
+    },
     {
       "id": "it-systems-engineer-perth-oct-2025",
       "category": "perth-local",
@@ -55,10 +162,10 @@
       "bannerImage": "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "thumbnailImage": "https://images.pexels.com/photos/5439473/pexels-photo-5439473.jpeg?auto=compress&cs=tinysrgb&w=400",
       "author": "SEEK",
-      "date": "Oct 13, 2025",
+      "date": "Oct 11, 2025",
       "readTime": "2 min",
       "sourceUrl": "https://www.seek.com.au/job/75579998",
-      "isTrending": true,
+      "isTrending": false,
       "isJob": true,
       "isVideo": false,
       "videoUrl": "",
@@ -72,65 +179,14 @@
       "bannerImage": "https://images.pexels.com/photos/158826/book-stack-stack-of-books-study-158826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "thumbnailImage": "https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg?auto=compress&cs=tinysrgb&w=400",
       "author": "SEEK",
-      "date": "Oct 13, 2025",
+      "date": "Oct 11, 2025",
       "readTime": "2 min",
       "sourceUrl": "https://www.seek.com.au/job/75573615",
-      "isTrending": true,
+      "isTrending": false,
       "isJob": true,
       "isVideo": false,
       "videoUrl": "",
       "fullContent": "<h2>Role Overview</h2><p>A specialised signage company located in Malaga, Perth, is seeking a creative Graphic Designer to produce exceptional signage solutions. The ideal candidate will have a strong background in graphic design specifically for the sign writing industry and will contribute to a busy, full-service production environment.</p><h3>Key Responsibilities</h3><ul><li>Design and prepare artwork for a variety of signage, including vehicle wraps, building signs, and promotional displays.</li><li>Collaborate with clients to understand their branding and design requirements.</li><li>Operate design software to create print-ready files.</li><li>Ensure all designs meet production specifications and quality standards.</li></ul><h3>Required Qualifications</h3><ul><li><strong>Education:</strong> A qualification in Graphic Design or a related field is preferred.</li><li><strong>Experience:</strong> Demonstrable experience in the signage or print industry is essential.</li><li><strong>Technical Skills:</strong> High proficiency in Adobe Illustrator and FlexiSign is required.</li><li><strong>Soft Skills:</strong> Strong creativity, attention to detail, and the ability to work to deadlines.</li></ul><h3>Nice-to-Have Skills</h3><ul><li>Experience with large format printers and vinyl cutters.</li><li>Knowledge of different signage materials and production techniques.</li></ul><h3>What We Offer</h3><ul><li>A full-time position within a supportive and creative team.</li><li>The opportunity to work on a diverse range of interesting projects.</li><li>A competitive salary based on experience.</li><li>A modern workshop environment in Malaga.</li></ul><div class=\"highlight-box\"><p><strong>📍 Location:</strong> Malaga, Perth WA (On-site)</p></div><h3>Application Instructions</h3><p>To be considered for this role, please apply via the SEEK portal with a current resume and a portfolio showcasing your design work, particularly any signage projects.</p><div class=\"key-takeaways\"><h3>Key Points</h3><ul><li>Role: Graphic Designer (Signage)</li><li>Key Requirement: Proficiency in Adobe Illustrator, FlexiSign, and industry experience.</li><li>Work Arrangement: Full-time, on-site in Malaga.</li><li>Application: Requires a portfolio.</li></ul></div>"
-    },
-    {
-      "id": "solo-leveling-ragnarok-us-release",
-      "category": "digital-media-and-gaming",
-      "title": "Solo Leveling: Ragnarok Gets U.S. Print Release",
-      "excerpt": "Yen Press has officially announced its acquisition of the print license for Solo Leveling: Ragnarok, with the first volume scheduled for release in the U.S. in June 2026.",
-      "bannerImage": "https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "thumbnailImage": "https://images.pexels.com/photos/209948/pexels-photo-209948.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "author": "CBR",
-      "date": "Oct 12, 2025",
-      "readTime": "3 min",
-      "sourceUrl": "https://www.cbr.com/solo-leveling-ragnarok-us-release/",
-      "isTrending": false,
-      "isJob": false,
-      "isVideo": false,
-      "videoUrl": "",
-      "fullContent": "<h2>Solo Leveling Sequel 'Ragnarok' Secures US Print Deal</h2><p>Yen Press confirmed it has acquired the print license for the highly anticipated 'Solo Leveling: Ragnarok' manhwa, announcing the news at New York Comic-Con 2025. The first volume is set to be published under its K-comics imprint, Ize Press, and is scheduled for a U.S. release in June 2026. This move finally brings the popular sequel to a print format for English-speaking audiences, who previously could only access it digitally on platforms like Tapas.</p><h3>A New Generation</h3><p>The story follows Sung Suho, the son of the original series protagonist Sung Jinwoo and Cha Haein, as he navigates the legacy left by his powerful father. 'Ragnarok' was originally a web novel written by Daul and has been adapted into a manhwa with artwork by JIN and Brix of REDICE Studio, the same studio behind the original series' art.</p><h3>Is it a Direct Sequel?</h3><p>While Ize Press is marketing 'Ragnarok' as a continuation, recent comments from the original 'Solo Leveling' author, Chugong, have introduced some ambiguity. Chugong stated that 'Ragnarok' is more like one of many possible scenarios in the 'Solo Leveling' universe, similar to Marvel's parallel universes, and not a direct continuation of his main plot. This has led to some disappointment among fans who considered it the official canon sequel.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>US Release:</strong> 'Solo Leveling: Ragnarok' will receive an official English print release in June 2026.</li><li><strong>Publisher:</strong> Yen Press will publish the manhwa under its Ize Press imprint.</li><li><strong>New Protagonist:</strong> The sequel focuses on Sung Suho, the son of Sung Jinwoo.</li><li><strong>Canon Debate:</strong> Original author Chugong has described 'Ragnarok' as an alternate universe story rather than a direct sequel.</li></ul></div>"
-    },
-    {
-      "id": "3d-artist-jobs-perth-oct-2025",
-      "category": "perth-local",
-      "title": "Growing Demand for 3D Artists in Perth",
-      "excerpt": "The job market for 3D Artists in Perth is showing strong activity, with multiple vacancies available for various levels of experience in industrial design, animation, and marketing.",
-      "bannerImage": "https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "thumbnailImage": "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "author": "Seek",
-      "date": "Oct 12, 2025",
-      "readTime": "2 min",
-      "sourceUrl": "https://www.seek.com.au/3d-artist-jobs/in-All-Perth-WA",
-      "isTrending": false,
-      "isJob": true,
-      "isVideo": false,
-      "videoUrl": "",
-      "fullContent": "<h2>Perth's Creative Sector Seeks 3D Artists</h2><p>Perth's design and architecture sector is actively recruiting 3D artists, with a range of new job opportunities appearing daily. Roles are available for various skill levels, from entry-level to experienced modellers, indicating a healthy demand for CGI professionals in the region. These positions span across industries including architectural visualisation, product design, and animation for marketing campaigns.</p><h3>Skills in Demand</h3><p>Employers are seeking candidates proficient in industry-standard software such as 3ds Max, Blender, and Unreal Engine 5. Key responsibilities often involve creating high-quality 3D models from technical drawings, texturing assets, and producing CGI for marketing. Strong portfolios are essential for applicants, and experience with animation and the ability to read architectural plans are highly desirable skills.</p><h3>Career Opportunities</h3><p>The available roles offer diverse work arrangements, including full-time, part-time, and casual positions, with some offering flexible or hybrid work models. Companies are looking for passionate individuals to join creative teams and contribute to high-end architectural and product CGI projects. The market shows potential for significant career growth for the right candidates.</p><div class=\"key-takeaways\"><h3>Key Points</h3><ul><li><strong>High Demand:</strong> Multiple job openings for 3D artists in Perth.</li><li><strong>Required Skills:</strong> Proficiency in Blender, 3ds Max, and Unreal Engine is commonly required.</li><li><strong>Industry Focus:</strong> Opportunities are concentrated in architectural visualisation and product CGI.</li><li><strong>Flexible Roles:</strong> A mix of full-time, part-time, and hybrid work arrangements are available.</li></ul></div>"
-    },
-    {
-      "id": "star-citizen-nyx-system-2025",
-      "category": "digital-media-and-gaming",
-      "title": "Star Citizen to Get Third Star System Next Month",
-      "excerpt": "During CitizenCon 2025, Cloud Imperium Games announced the Nyx system will be added in Alpha 4.4, with further content and features planned for 2026.",
-      "bannerImage": "https://media.robertsspaceindustries.com/97lryd6bsg6o5/source.jpg",
-      "thumbnailImage": "https://media.robertsspaceindustries.com/mg3vxn6q692h5/heap_infobox.jpg",
-      "author": "Cloud Imperium Games",
-      "date": "Oct 11, 2025",
-      "readTime": "3 min",
-      "sourceUrl": "https://techcrunch.com/2025/10/11/star-citizen-will-get-its-third-star-system-next-month-2026-plans-and-growing-player-stats-revealed/",
-      "isTrending": true,
-      "isJob": false,
-      "isVideo": false,
-      "videoUrl": "",
-      "fullContent": "<h2>Star Citizen's Universe Expands with Nyx System in November</h2><p>Cloud Imperium Games has announced that Star Citizen's third star system, Nyx, will be introduced next month with the release of Alpha 4.4. The reveal came during CitizenCon 2025, where the developers also outlined growing player engagement and plans for new content rolling out through 2026. The introduction of Nyx marks a significant expansion of the game's playable universe.</p><h3>Welcome to the Frontier</h3><p>The Nyx system is characterised as a remote, frontier-style region that is not heavily patrolled. It will initially feature three planets and a massive, resource-rich asteroid belt, offering high-risk, high-reward gameplay for miners, smugglers, and pirates. A key location, the returning station of Levski on the Delamar asteroid, will be a central hub for players. The system will border hostile Vanduul space, introducing new PvE threats for players to face.</p><h3>Phased Rollout and Future Content</h3><p>Unlike previous releases, Nyx will be launched with a limited amount of content, which will be expanded throughout 2026 based on community feedback. The initial release will include a new mission, \"Welcome to Nyx,\" which continues an existing storyline and will have players investigating illegal tech sales. This phased approach allows the developers to build out the system over time while gathering player input.</p><h3>Technical and Gameplay Enhancements</h3><p>Alongside the new system, the developers detailed major upgrades to planetary technology, promising more realistic and diverse biomes. Performance is also set for a boost, with grass rendering being moved to the GPU. Looking ahead to 2026, Cloud Imperium Games is planning an instancing system to support larger, tailored missions and new large-scale fleet combat scenarios.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>New System Coming:</strong> The Nyx star system will be added to Star Citizen in Alpha 4.4 in November.</li><li><strong>Frontier Gameplay:</strong> Nyx will feature dangerous, high-reward content, including a massive asteroid belt and the threat of Vanduul raids.</li><li><strong>Phased Content Release:</strong> The system will launch with initial content and be expanded with new missions and locations throughout 2026.</li><li><strong>Major Tech Upgrades:</strong> The update includes planetary tech enhancements and performance improvements, with more gameplay systems planned for the future.</li></ul></div>"
     },
     {
       "id": "it-support-officer-perth-oct-2025",
@@ -167,23 +223,6 @@
       "fullContent": "<h2>Role Overview</h2><p>A dynamic game development studio in Perth is looking for a talented Technical Artist to join their team. The ideal candidate will have a strong passion for creating high-quality visuals and a deep understanding of the Unreal Engine pipeline, contributing to an exciting new title for PC and consoles.</p><h3>Key Responsibilities</h3><ul><li>Bridge the gap between artists and programmers to create efficient and visually stunning game assets.</li><li>Develop and maintain art production pipelines and tools within Unreal Engine.</li><li>Create and optimise shaders, materials, and visual effects (VFX).</li><li>Troubleshoot and solve technical challenges related to art asset implementation.</li><li>Collaborate with the art and engineering teams to ensure assets meet performance and quality standards.</li></ul><h3>Required Qualifications</h3><ul><li><strong>Education:</strong> A degree in game development, computer graphics, or a related field is preferred.</li><li><strong>Experience:</strong> Demonstrable experience as a Technical Artist in the games industry, with at least one shipped title.</li><li><strong>Technical Skills:</strong> Expertise in Unreal Engine (Blueprints, materials, Niagara). Proficiency in 3D software like Maya or Blender.</li><li><strong>Soft Skills:</strong> Strong problem-solving skills and the ability to communicate technical concepts clearly.</li></ul><h3>Nice-to-Have Skills</h3><ul><li>Experience with scripting languages such as Python or C++.</li><li>Knowledge of character rigging and animation pipelines.</li></ul><h3>What We Offer</h3><ul><li>The opportunity to work on an ambitious new PC and console game.</li><li>A creative and collaborative studio culture.</li><li>Competitive salary and benefits.</li><li>Professional development opportunities to enhance your skills.</li></ul><div class=\"highlight-box\"><p><strong>📍 Location:</strong> Perth, WA (Hybrid work arrangement available)</p></div><h3>Application Instructions</h3><p>Applicants are required to submit a comprehensive portfolio showcasing their technical art skills, along with a resume and cover letter, through the application link on the SEEK website.</p><div class=\"key-takeaways\"><h3>Key Points</h3><ul><li>Role: Unreal Engine Technical Artist</li><li>Key Requirement: Expertise in Unreal Engine and game development pipelines.</li><li>Work Arrangement: Hybrid (Perth-based studio).</li><li>Application: Requires a strong portfolio.</li></ul></div>"
     },
     {
-      "id": "quantum-teleportation-breakthrough-2025",
-      "category": "science-and-space",
-      "title": "Scientists Achieve Teleportation Between Quantum Computers",
-      "excerpt": "In a major advance for quantum computing, scientists have successfully shared data instantaneously between two quantum computers using quantum entanglement.",
-      "bannerImage": "https://images.pexels.com/photos/5212320/pexels-photo-5212320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "thumbnailImage": "https://images.pexels.com/photos/2156/sky-earth-space-working.jpeg?auto=compress&cs=tinysrgb&w=400",
-      "author": "Nature",
-      "date": "Oct 11, 2025",
-      "readTime": "3 min",
-      "sourceUrl": "https://bgr.com/science/scientists-achieved-teleportation-using-quantum-supercomputers-heres-how/",
-      "isTrending": false,
-      "isJob": false,
-      "isVideo": false,
-      "videoUrl": "",
-      "fullContent": "<h2>Quantum Teleportation Achieved Between Two Computers</h2><p>Scientists have successfully teleported data between two quantum computers, marking a significant milestone in the development of distributed quantum computing. The experiment, detailed in the journal *Nature*, did not involve moving matter but rather transferred information instantaneously across a distance using the principle of quantum entanglement. This allows two separate quantum processors to function as a single, more powerful supercomputer.</p><h3>The Power of Entanglement</h3><p>The breakthrough hinges on quantum entanglement, a phenomenon where two particles become linked and remain connected regardless of the distance separating them. A team from the University of Oxford wirelessly sent a quantum algorithm from one processor to another, enabling the two machines to pool their resources. While the particles themselves did not move, the information they contained was shared instantly, creating a networked supercomputer.</p><blockquote><p>\"This breakthrough enables us to effectively 'wire together' distinct quantum processors into a single, fully-connected quantum computer.\" - Dougal Main, University of Oxford</p></blockquote><h3>Implications for a Quantum Internet</h3><p>This achievement is a crucial step toward creating a 'quantum internet', an ultra-secure network for communication and computation. By linking multiple remote quantum processors, researchers can overcome the challenge of scaling up individual quantum computers, which becomes increasingly difficult as more quantum bits (qubits) are added. This distributed approach allows for greater flexibility and power.</p><h3>What This Means for the Future</h3><p>While this is not the 'Star Trek' style of teleportation that moves physical objects, it represents a fundamental advance in information technology. By networking quantum computers, scientists can tackle complex problems that are currently unsolvable with conventional supercomputers. The technique could revolutionise fields ranging from materials science to cryptography and artificial intelligence.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>Information, Not Matter:</strong> Scientists successfully teleported data, not physical objects, between two quantum computers.</li><li><strong>Quantum Entanglement:</strong> The process uses entanglement to link two processors, allowing them to work as one.</li><li><strong>Distributed Computing:</strong> This breakthrough enables a new model of distributed quantum computing, making it easier to scale processing power.</li><li><strong>Path to Quantum Internet:</strong> The achievement is a foundational step towards building a secure and powerful quantum internet.</li></ul></div>"
-    },
-    {
       "id": "solo-leveling-author-favourite-scene",
       "category": "digital-media-and-gaming",
       "title": "Solo Leveling Author Reveals His Favourite Story Moment",
@@ -218,6 +257,74 @@
       "fullContent": "<h2>Role Overview</h2><p>A Perth-based IT service provider is seeking an IT Helpdesk Analyst to join their team. The role involves delivering a wide variety of support tasks, including day-to-day IT support, system builds, user account management, and software support, with exposure to first-level cybersecurity incident response.</p><h3>Key Responsibilities</h3><ul><li>Provide helpdesk support for triage and remediation of inbound requests via emails, calls, and remote service.</li><li>Deploy new user accounts and system builds as part of business-as-usual support.</li><li>Administer and implement Microsoft 365 and other cloud services.</li><li>Install PCs, laptops, printers, servers, and network devices for clients.</li><li>Track and record all work performed within the job management system.</li></ul><h3>Required Qualifications</h3><ul><li><strong>Experience:</strong> Some experience providing IT support is required.</li><li><strong>Technical Skills:</strong> Good technical aptitude, with CompTIA A+ certification or equivalent experience.</li><li><strong>Soft Skills:</strong> Strong problem-solving skills, common sense, and the ability to work autonomously. A desire to deliver excellent customer service is essential.</li></ul><h3>What We Offer</h3><ul><li>A professional development programme to build on your skills.</li><li>A positive team culture in a modern office environment.</li><li>Exposure to a wide range of technologies and cybersecurity tasks.</li></ul><div class=\"highlight-box\"><p><strong>📍 Location:</strong> Perth, WA</p></div><h3>Application Instructions</h3><p>Candidates must be eligible to work in Australia, hold a Class C driver's license with a reliable vehicle, and be able to obtain a Western Australian police clearance. Applications can be submitted through the company's career page.</p><div class=\"key-takeaways\"><h3>Key Points</h3><ul><li>Role: IT Helpdesk Analyst</li><li>Key Requirement: Experience in IT support and Microsoft 365 administration.</li><li>Work Arrangement: On-site in Perth.</li><li>Essential: Australian work eligibility and a valid driver's license.</li></ul></div>"
     },
     {
+      "id": "figure-humanoid-robot-chores-2025",
+      "category": "ai-and-tech",
+      "title": "Figure Unveils Humanoid Robot Good at Chores",
+      "excerpt": "Figure has revealed its new humanoid model, 03, which is designed to help in the home or office and operates on the company's proprietary AI model, Helix.",
+      "bannerImage": "IMAGE_NEEDED",
+      "thumbnailImage": "IMAGE_NEEDED",
+      "author": "Inc. Magazine",
+      "date": "Oct 10, 2025",
+      "readTime": "4 min",
+      "sourceUrl": "https://www.inc.com/kit-eaton/this-startups-new-humanoid-robot-is-scarily-good-at-doing-chores.html",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Figure 03 Humanoid Robot Unveiled for Everyday Use</h2><p>Startup Figure AI has introduced its third-generation humanoid robot, Figure 03, a general-purpose machine capable of performing a wide range of household and workplace chores. In demonstration videos, which the company claims were not remotely operated, the robot is shown tidying rooms, washing dishes, and folding laundry, showcasing a significant leap in autonomous capability.</p><h3>AI-Powered Operation</h3><p>The robot's advanced functions are driven by Helix, Figure's proprietary AI system that enables it to understand and execute complex actions in real-time without being pre-scripted. This in-house model links vision, language, and action, allowing users to assign tasks via voice commands. The development of Helix follows the end of a partnership with OpenAI, marking a key step in Figure's technological independence.</p><h3>Hardware and Sensory Upgrades</h3><p>Figure 03 features a completely redesigned sensory system. New cameras have doubled the frame rate and expanded the field of view, which is critical for navigating complex environments like a home. Its hands have been upgraded with softer, more adaptive fingertips and integrated palm cameras, allowing for delicate object manipulation and providing visual awareness even when reaching into confined spaces.</p><blockquote><p>\"We want the robot to be able to do most things in your home, autonomously, all day… We think we can get there in 2026, but it's a big push.\" - Brett Adcock, Founder and CEO of Figure</p></blockquote><h3>Designed for Mass Production</h3><p>Unlike previous prototypes, Figure 03 was engineered for high-volume manufacturing from the ground up. Figure has established a new supply chain and manufacturing process at its facility, aiming for an initial production capacity of 12,000 units per year. This focus on scalability signals a strategic move from experimental robotics to deployable products for both commercial and domestic markets.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>Autonomous Chores:</strong> Figure 03 can perform household tasks like washing dishes and folding clothes without remote control.</li><li><strong>Helix AI System:</strong> The robot is powered by Figure's in-house AI, allowing it to learn and execute tasks from voice commands.</li><li><strong>Advanced Hardware:</strong> It features an upgraded vision system and tactile hands with palm cameras for improved manipulation.</li><li><strong>Ready for Scale:</strong> Figure 03 is designed for mass manufacturing, with a goal of making humanoid robots a scalable product.</li></ul></div>"
+    },
+    {
+      "id": "graduate-3d-visualisation-artist-perth-2025",
+      "category": "perth-local",
+      "title": "Graduate 3D Visualisation Artist Job in Perth",
+      "excerpt": "A Perth-based company is seeking a Graduate 3D Visualisation Artist to join their team and work on a variety of creative projects.",
+      "bannerImage": "IMAGE_NEEDED",
+      "thumbnailImage": "IMAGE_NEEDED",
+      "author": "SEEK",
+      "date": "Oct 10, 2025",
+      "readTime": "2 min",
+      "sourceUrl": "https://www.seek.com.au/job/75571215",
+      "isTrending": false,
+      "isJob": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Role Overview</h2><p>A design company in Perth is seeking a passionate Graduate 3D Visualisation Artist to join their creative team. This role offers an opportunity to contribute to a variety of projects, transforming concepts and technical drawings into compelling 3D visuals.</p><h3>Key Responsibilities</h3><ul><li>Create high-quality 3D models, textures, and renderings for architectural and product visualisation.</li><li>Collaborate with designers and clients to understand project requirements and creative vision.</li><li>Assist in the development of digital storytelling and user experience elements.</li><li>Prepare and optimise 3D assets for various platforms and media.</li></ul><h3>Required Qualifications</h3><ul><li><strong>Education:</strong> A degree or relevant qualification in 3D Design, Visualisation, Animation, or a related field.</li><li><strong>Experience:</strong> A strong portfolio showcasing 3D visualisation skills is essential; graduate-level experience is expected.</li><li><strong>Technical Skills:</strong> Proficiency in 3D modelling software (e.g., 3ds Max, Blender, SketchUp) and rendering engines (e.g., V-Ray, Corona, Unreal Engine).</li><li><strong>Soft Skills:</strong> A keen eye for detail, strong creative flair, and effective communication skills.</li></ul><h3>What We Offer</h3><ul><li>A 12-month fixed-term contract with potential for extension.</li><li>A supportive team environment with mentorship opportunities.</li><li>Free on-site parking at a Perth Airport-based location.</li><li>The chance to work on diverse and exciting visualisation projects.</li></ul><div class=\"highlight-box\"><p><strong>📍 Location:</strong> Perth Airport, WA (On-site)</p></div><h3>Application Instructions</h3><p>To apply for this role, please submit your resume and a comprehensive portfolio demonstrating your 3D visualisation capabilities through the SEEK job portal.</p><div class=\"key-takeaways\"><h3>Key Points</h3><ul><li>Role: Graduate 3D Visualisation Artist</li><li>Key Requirement: Strong portfolio in 3D modelling and rendering.</li><li>Work Arrangement: 12-month contract, Perth-based.</li><li>Application: Via SEEK, portfolio mandatory.</li></ul></div>"
+    },
+    {
+      "id": "solo-leveling-ragnarok-us-release",
+      "category": "digital-media-and-gaming",
+      "title": "Solo Leveling: Ragnarok Gets U.S. Print Release",
+      "excerpt": "Yen Press has officially announced its acquisition of the print license for Solo Leveling: Ragnarok, with the first volume scheduled for release in the U.S. in June 2026.",
+      "bannerImage": "https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/209948/pexels-photo-209948.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "author": "CBR",
+      "date": "Oct 10, 2025",
+      "readTime": "3 min",
+      "sourceUrl": "https://www.cbr.com/solo-leveling-ragnarok-us-release/",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Solo Leveling Sequel 'Ragnarok' Secures US Print Deal</h2><p>Yen Press confirmed it has acquired the print license for the highly anticipated 'Solo Leveling: Ragnarok' manhwa, announcing the news at New York Comic-Con 2025. The first volume is set to be published under its K-comics imprint, Ize Press, and is scheduled for a U.S. release in June 2026. This move finally brings the popular sequel to a print format for English-speaking audiences, who previously could only access it digitally on platforms like Tapas.</p><h3>A New Generation</h3><p>The story follows Sung Suho, the son of the original series protagonist Sung Jinwoo and Cha Haein, as he navigates the legacy left by his powerful father. 'Ragnarok' was originally a web novel written by Daul and has been adapted into a manhwa with artwork by JIN and Brix of REDICE Studio, the same studio behind the original series' art.</p><h3>Is it a Direct Sequel?</h3><p>While Ize Press is marketing 'Ragnarok' as a continuation, recent comments from the original 'Solo Leveling' author, Chugong, have introduced some ambiguity. Chugong stated that 'Ragnarok' is more like one of many possible scenarios in the 'Solo Leveling' universe, similar to Marvel's parallel universes, and not a direct continuation of his main plot. This has led to some disappointment among fans who considered it the official canon sequel.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>US Release:</strong> 'Solo Leveling: Ragnarok' will receive an official English print release in June 2026.</li><li><strong>Publisher:</strong> Yen Press will publish the manhwa under its Ize Press imprint.</li><li><strong>New Protagonist:</strong> The sequel focuses on Sung Suho, the son of Sung Jinwoo.</li><li><strong>Canon Debate:</strong> Original author Chugong has described 'Ragnarok' as an alternate universe story rather than a direct sequel.</li></ul></div>"
+    },
+    {
+      "id": "3d-artist-jobs-perth-oct-2025",
+      "category": "perth-local",
+      "title": "Growing Demand for 3D Artists in Perth",
+      "excerpt": "The job market for 3D Artists in Perth is showing strong activity, with multiple vacancies available for various levels of experience in industrial design, animation, and marketing.",
+      "bannerImage": "https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "author": "Seek",
+      "date": "Oct 10, 2025",
+      "readTime": "2 min",
+      "sourceUrl": "https://www.seek.com.au/3d-artist-jobs/in-All-Perth-WA",
+      "isTrending": false,
+      "isJob": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>Perth's Creative Sector Seeks 3D Artists</h2><p>Perth's design and architecture sector is actively recruiting 3D artists, with a range of new job opportunities appearing daily. Roles are available for various skill levels, from entry-level to experienced modellers, indicating a healthy demand for CGI professionals in the region. These positions span across industries including architectural visualisation, product design, and animation for marketing campaigns.</p><h3>Skills in Demand</h3><p>Employers are seeking candidates proficient in industry-standard software such as 3ds Max, Blender, and Unreal Engine 5. Key responsibilities often involve creating high-quality 3D models from technical drawings, texturing assets, and producing CGI for marketing. Strong portfolios are essential for applicants, and experience with animation and the ability to read architectural plans are highly desirable skills.</p><h3>Career Opportunities</h3><p>The available roles offer diverse work arrangements, including full-time, part-time, and casual positions, with some offering flexible or hybrid work models. Companies are looking for passionate individuals to join creative teams and contribute to high-end architectural and product CGI projects. The market shows potential for significant career growth for the right candidates.</p><div class=\"key-takeaways\"><h3>Key Points</h3><ul><li><strong>High Demand:</strong> Multiple job openings for 3D artists in Perth.</li><li><strong>Required Skills:</strong> Proficiency in Blender, 3ds Max, and Unreal Engine is commonly required.</li><li><strong>Industry Focus:</strong> Opportunities are concentrated in architectural visualisation and product CGI.</li><li><strong>Flexible Roles:</strong> A mix of full-time, part-time, and hybrid work arrangements are available.</li></ul></div>"
+    },
+    {
       "id": "solo-leveling-ragnarok-sequel-update",
       "category": "digital-media-and-gaming",
       "title": "Solo Leveling Author Clarifies 'Ragnarok' Sequel Status",
@@ -233,6 +340,23 @@
       "isVideo": false,
       "videoUrl": "",
       "fullContent": "<h2>'Ragnarok' Confirmed as an Alternate Universe Story</h2><p>The author of 'Solo Leveling', Chugong, has clarified the canonical status of the sequel 'Solo Leveling: Ragnarok', revealing it is not a direct continuation of the original plot. In a recent interview, he explained that fans should view 'Ragnarok', which was written by Daul, as one of many possible alternate universes for the series, drawing a comparison to Marvel's multiverse concept.</p><h3>A Disappointment for Some Fans</h3><p>This revelation has been met with disappointment from some fans who had accepted 'Ragnarok' as the official sequel. The story follows Sung Suho, the son of Sung Jinwoo, but Chugong's comments imply that this character and storyline might not exist in a future sequel penned by himself. The author has also mentioned that he is considering writing his own sequel, which would likely focus on Jinwoo again.</p><h3>What This Means for the Universe</h3><p>While 'Ragnarok' is still considered a canonical part of the wider 'Solo Leveling' universe, it now exists as a parallel story rather than a linear progression. This opens the door for Chugong to explore different paths and outcomes for his characters in future works, without being constrained by the events of 'Ragnarok'. For now, Sung Suho's story begins and ends with 'Ragnarok'.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>Not a Direct Sequel:</strong> Author Chugong confirmed 'Ragnarok' is an alternate universe story.</li><li><strong>Written by Daul:</strong> The sequel was penned by another author, not Chugong.</li><li><strong>Fan Reaction:</strong> The news has disappointed some fans who saw it as the official continuation.</li><li><strong>Future Possibilities:</strong> Chugong may write his own sequel, which could disregard the events of 'Ragnarok'.</li></ul></div>"
+    },
+    {
+      "id": "solo-leveling-movie-hint-2025",
+      "category": "anime-and-manga",
+      "title": "Solo Leveling Series Creator Hints at New Movie",
+      "excerpt": "In a new interview, the author of the Solo Leveling light novel, Chugong, has hinted that a new movie based on the series is in the early stages of creation.",
+      "bannerImage": "IMAGE_NEEDED",
+      "thumbnailImage": "IMAGE_NEEDED",
+      "author": "CBR",
+      "date": "Oct 09, 2025",
+      "readTime": "2 min",
+      "sourceUrl": "https://www.cbr.com/solo-leveling-creator-new-movie-in-the-works/",
+      "isTrending": false,
+      "isJob": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "fullContent": "<h2>'Solo Leveling' Movie in Discussion, Creator Hints</h2><p>The creator of the hit series 'Solo Leveling', Chugong, has indicated that a film adaptation may be in the works. In a recent interview with the Russian digital book service LitRes, when asked about offers for film adaptations, Chugong responded, \"As far as I know, there are many discussions taking place.\" This suggests that a movie project is in the early stages of consideration.</p><h3>Anime Film a Strong Possibility</h3><p>While the author did not specify the format, an anime film is considered the most probable outcome. With a live-action series already in development for Netflix, a separate live-action movie would likely conflict with that project. An anime movie could also explain the current lack of an official release date for the highly anticipated third season of the anime, as the production studio's resources might be focused on a feature film.</p><h3>Author's Perspective</h3><p>The discussion around a potential movie comes as the franchise continues to expand through games, a sequel manhwa, and the upcoming live-action adaptation. In the same interview, Chugong also shared insights into his creative process, revealing that his favourite arc to write was the Red Gate arc, which was previously adapted into a film titled 'Solo Leveling: ReAwakening'.</p><h3>Future of the Franchise</h3><p>Fans have eagerly awaited news on the continuation of the anime, which has achieved massive success and became Crunchyroll's most reviewed anime of all time. Chugong's confirmation that multiple projects are being discussed indicates a strong and active future for the franchise, with a movie now being a significant possibility on the horizon for Sung Jinwoo's story.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>Movie Discussions:</strong> 'Solo Leveling' author Chugong has confirmed that \"many discussions\" about a film adaptation are taking place.</li><li><strong>Anime Format Likely:</strong> An anime film is the most probable format, given the existing development of a live-action Netflix series.</li><li><strong>Potential Season 3 Factor:</strong> The development of a movie could be a reason for the delay in announcing the third anime season.</li><li><strong>Franchise is Growing:</strong> The potential film is one of many projects being considered for the expanding 'Solo Leveling' universe.</li></ul></div>"
     },
     {
       "id": "figure-ai-robot-chores-2025",
@@ -303,12 +427,12 @@
       "fullContent": "<h2>Role Overview</h2><p>A Perth-based organisation is looking for a creative and skilled Graphic Designer to join their team on a casual basis. The position involves working on a diverse range of projects, creating visual assets for both print and digital channels, and translating business goals into compelling visual stories.</p><h3>Key Responsibilities</h3><ul><li>Develop innovative designs for a variety of materials including web pages, marketing collateral, newsletters, and internal communications.</li><li>Collaborate with marketing and other teams to translate strategic direction into high-quality visual content.</li><li>Manage the design process from concept to final deliverable, ensuring brand consistency.</li><li>Prepare sketches, layouts, and finished artwork for both print and digital media.</li></ul><h3>Required Qualifications</h3><ul><li><strong>Experience:</strong> Proven experience in a graphic design role with a strong portfolio.</li><li><strong>Technical Skills:</strong> Proficiency with design software such as Adobe Illustrator, Photoshop, and InDesign is essential.</li><li><strong>Soft Skills:</strong> Exceptional creativity, excellent communication skills, and the ability to manage multiple projects and meet deadlines.</li></ul><h3>What We Offer</h3><ul><li>A flexible, casual work arrangement.</li><li>The opportunity to work on a wide range of creative projects.</li><li>A collaborative and supportive team environment.</li></ul><div class=\"highlight-box\"><p><strong>📍 Location:</strong> Perth, WA</p></div><h3>Application Instructions</h3><p>Interested applicants should prepare a portfolio showcasing their design skills and apply through the relevant job portal. The application should demonstrate both creativity and a strong understanding of brand identity.</p><div class=\"key-takeaways\"><h3>Key Points</h3><ul><li>Role: Casual Graphic Designer</li><li>Key Requirement: Strong skills in Adobe Creative Suite and a compelling portfolio.</li><li>Work Arrangement: Casual, on-site in Perth.</li><li>Focus: Creating visual content for print and digital marketing channels.</li></ul></div>"
     },
     {
-      "id": "jwst-black-hole-galaxy-scar-2025",
+      "id": "jwst-black-hole-scar-update-2025",
       "category": "science-and-space",
-      "title": "JWST Finds Evidence of a Black Hole Ploughing Through a Galaxy",
-      "excerpt": "Astronomers using the James Webb Space Telescope have observed a gigantic cosmic 'contrail' that may have been created by a passing massive black hole.",
-      "bannerImage": "https://images.pexels.com/photos/1136575/pexels-photo-1136575.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      "thumbnailImage": "https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg?auto=compress&cs=tinysrgb&w=400",
+      "title": "JWST Finds Black Hole 'Scar' in Galaxy",
+      "excerpt": "The James Webb Space Telescope has found evidence of a massive black hole that ploughed through a galaxy, leaving behind an enormous cosmic scar.",
+      "bannerImage": "IMAGE_NEEDED",
+      "thumbnailImage": "IMAGE_NEEDED",
       "author": "Live Science",
       "date": "Oct 08, 2025",
       "readTime": "3 min",
@@ -317,7 +441,7 @@
       "isJob": false,
       "isVideo": false,
       "videoUrl": "",
-      "fullContent": "<h2>Cosmic Scar Left by Rampaging Black Hole, Webb Telescope Finds</h2><p>Astronomers have discovered remarkable evidence of a massive black hole ploughing through a distant galaxy, leaving a colossal 20,000-light-year-long \"scar\" of gas and dust in its wake. Using data from the James Webb Space Telescope (JWST) and the Atacama Large Millimeter/submillimeter Array (ALMA), researchers traced the enormous linear contrail in the spiral galaxy NGC 3627, located about 31 million light-years away.</p><h3>A Clearly Defined Contrail</h3><p>The observed feature is the most clearly defined scar of its kind ever seen, stretching about one-fifth the diameter of our own Milky Way galaxy but remaining extremely narrow at only 650 light-years wide. Data from Webb confirmed the trail contains dust, while ALMA data showed it was also rich in carbon monoxide gas. The object responsible is estimated to be as heavy as 10 million suns.</p><blockquote><p>\"The trail of gas and dust may have been churned out by a passing massive black hole, although there are other possible causes.\" - Live Science Report</p></blockquote><h3>How the Scar Was Formed</h3><p>Researchers believe the object created the scar as it shot through the galaxy at incredible speed. Its immense gravitational pull is thought to have squeezed gas and dust out of the galactic disk, leaving the long, narrow trail as evidence of its passage. While the primary candidate for this cosmic cannonball is a massive black hole, the dense core of a dwarf galaxy is also a possibility.</p><h3>A Recent Cosmic Event</h3><p>The event is estimated to have occurred around 20 million years ago, which is relatively recent in astronomical terms. This observation provides a dramatic, real-world example of how massive objects can interact with and disrupt the structure of entire galaxies, offering new insights into the dynamic and often violent processes that shape the cosmos.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>Massive Scar Discovered:</strong> A 20,000-light-year-long contrail of gas and dust has been observed in the galaxy NGC 3627.</li><li><strong>Likely Cause:</strong> The scar was most likely created by a massive black hole, weighing up to 10 million suns, speeding through the galaxy.</li><li><strong>Powerful Telescopes:</strong> The discovery was made by combining data from the James Webb Space Telescope and the ALMA observatory.</li><li><strong>Galactic Dynamics:</strong> The finding provides direct evidence of how massive objects can violently interact with and alter galactic structures.</li></ul></div>"
+      "fullContent": "<h2>Webb Telescope Finds Evidence of Rampaging Black Hole</h2><p>Astronomers have discovered a colossal 20,000-light-year-long \"scar\" of gas and dust that was likely carved by a massive black hole ploughing through a distant galaxy. The enormous linear trail was identified in the spiral galaxy NGC 3627, located about 31 million light-years from Earth, using combined data from the James Webb Space Telescope (JWST) and the Atacama Large Millimeter/submillimeter Array (ALMA).</p><h3>A Clearly Defined Contrail</h3><p>The feature is the most clearly defined scar of its kind ever observed, stretching for thousands of light-years while remaining remarkably narrow at only 650 light-years wide. Data from JWST confirmed the trail is rich in dust, while ALMA observations showed it also contains a high concentration of carbon monoxide gas. The object responsible is estimated to be as massive as 10 million suns.</p><h3>The Cosmic Cannonball</h3><p>The leading theory suggests that as the massive object—most likely a black hole—shot through the galactic disk at incredible speed, its immense gravity squeezed gas and dust out from the galaxy, leaving the long trail as evidence of its passage. While a massive black hole is the primary candidate, researchers have not ruled out other possibilities, such as the dense core of a dwarf galaxy.</p><h3>Insights into Galactic Dynamics</h3><p>This observation provides a dramatic, real-world example of how massive objects can interact with and disrupt the structure of entire galaxies. The event, estimated to have occurred around 20 million years ago, is relatively recent in astronomical terms. It offers new insights into the dynamic and often violent processes that shape the cosmos.</p><div class=\"key-takeaways\"><h3>Key Takeaways</h3><ul><li><strong>Massive Scar Discovered:</strong> A 20,000-light-year-long trail of gas and dust has been found in the galaxy NGC 3627.</li><li><strong>Likely Cause:</strong> A massive black hole, weighing up to 10 million suns, is the primary suspect for creating the scar.</li><li><strong>Powerful Telescopes:</strong> The discovery was made by combining infrared data from JWST and radio data from ALMA.</li><li><strong>Galactic Evolution:</strong> The finding provides direct evidence of how massive objects can violently alter galactic structures.</li></ul></div>"
     },
     {
       "id": "star-citizen-alpha-4-3-2-patch",
