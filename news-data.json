@@ -1,0 +1,14 @@
+{
+  "categories": [
+    {
+      "id": "all",
+      "name": "All",
+      "active": true
+    }
+  ],
+  "trending": [],
+  "articles": [],
+  "videos": [],
+  "makeWebhook": "",
+  "authToken": ""
+}
