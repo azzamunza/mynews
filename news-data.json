@@ -7,156 +7,125 @@
       "active": true
     },
     {
-      "id": "science-and-space-exploration",
+      "id": "artificial-intelligence",
+      "name": "Artificial Intelligence",
+      "active": false
+    },
+    {
+      "id": "robotics-hardware",
+      "name": "Robotics and Advanced Hardware",
+      "active": false
+    },
+    {
+      "id": "space-exploration",
       "name": "Science and Space Exploration",
       "active": false
     },
     {
-      "id": "ancient-history-and-archaeology",
+      "id": "archaeology-history",
       "name": "Ancient History and Archaeology",
-      "active": false
-    },
-    {
-      "id": "artificial-intelligence-and-technology",
-      "name": "Artificial Intelligence and Technology",
-      "active": false
-    },
-    {
-      "id": "digital-media-and-gaming",
-      "name": "Digital Media and Gaming",
-      "active": false
-    },
-    {
-      "id": "custom-searches",
-      "name": "Custom Searches",
       "active": false
     }
   ],
   "trending": [
     {
-      "articleId": "oxford-physicists-achieve-teleportation-20251013",
-      "reason": "This article details a significant breakthrough in quantum computing from a leading university, published within the last 48 hours."
+      "articleId": "archaeology-paraiba-brazil-dinosaur-footprints-20251014",
+      "reason": "Significant archaeological finding on human-dinosaur trace interaction."
+    },
+    {
+      "articleId": "nasa-enceladus-starship-test-20251012",
+      "reason": "Major updates on the search for extraterrestrial life and spacecraft development."
+    },
+    {
+      "articleId": "ai-transforming-space-exploration-20251012",
+      "reason": "Insight into the growing role of AI in pioneering space missions."
     }
   ],
   "articles": [
     {
-      "id": "oxford-physicists-achieve-teleportation-20251013",
-      "category": "Science and Space Exploration",
-      "title": "Oxford physicists achieve teleportation between two quantum supercomputers",
-      "excerpt": "Researchers at the University of Oxford have successfully teleported a quantum algorithm between two quantum processors.",
-      "bannerImage": "https://i.natgeofe.com/n/76501985-d67b-48dd-8197-a23e571e16e1/quantum-computing-future-of-ai_16x9.jpg",
-      "thumbnailImage": "https://www.ouqe.org/wp-content/uploads/2023/11/DALL·E-2023-11-09-15.17.43-A-minimalist-digital-artwork-representing-quantum-entanglement.-Two-stylized-abstract-particles-one-blue-and-one-red-are-connected-by-a-subtle-glowing-li.png",
-      "author": "Shy Cohen",
-      "date": "Oct 13, 2025",
-      "readTime": "3 min",
-      "sourceUrl": "https://www.thebrighterside.news/post/oxford-physicists-achieve-teleportation-between-two-quantum-supercomputers",
+      "id": "ai-daily-brief-20251017",
+      "category": "Artificial Intelligence",
+      "title": "The AI Daily Brief: Artificial Intelligence News",
+      "excerpt": "A daily video series designed to keep you informed about the most critical news and discussions happening in the world of Artificial Intelligence.",
+      "bannerImage": "https://img.youtube.com/vi/sI-z6l7N5sA/maxresdefault.jpg",
+      "thumbnailImage": "https://img.youtube.com/vi/sI-z6l7N5sA/maxresdefault.jpg",
+      "author": "The AI Daily Brief",
+      "date": "Oct 17, 2025",
+      "readTime": "2 min",
+      "sourceUrl": "https://www.youtube.com/watch?v=sI-z6l7N5sA",
+      "isTrending": true,
+      "isJob": false,
+      "isVideo": true,
+      "videoUrl": "https://www.youtube.com/watch?v=sI-z6l7N5sA",
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://img.youtube.com/vi/sI-z6l7N5sA/maxresdefault.jpg\" alt=\"The AI Daily Brief Thumbnail\" style=\"width:100%;\"></div><div class=\"article-content\"><p class=\"lead-paragraph\">This video provides a concise and informative daily update on the most significant developments in the field of Artificial Intelligence. It is tailored for professionals, researchers, and enthusiasts who need to stay current with the rapidly evolving AI landscape.</p><h2>Key Topics Covered</h2><p>The briefing delves into recent breakthroughs in machine learning, new AI software applications, and discussions on the ethical implications of advanced AI. It serves as an essential resource for understanding the key trends and conversations shaping the future of technology.</p><div class=\"highlight-box info-box\"><h3>Stay Informed Daily</h3><p>With new advancements emerging constantly, this series ensures you receive timely and relevant information, helping you to keep pace with the industry without extensive research.</p></div><h3>Expert Commentary</h3><p>The content often features insights from leading experts in the field, offering deeper context and analysis of the news. This expert commentary helps to clarify complex topics and provides a forward-looking perspective on where the technology is headed.</p><div class=\"key-takeaways magazine-style\"><h3>Key Takeaways</h3><ul><li>Provides daily updates on important AI news.</li><li>Covers breakthroughs in machine learning and new applications.</li><li>Includes discussions on the ethical considerations of AI.</li><li>Features insights from industry experts.</li><li>Ideal for anyone looking to stay informed on AI developments.</li></ul></div></div>"
+    },
+    {
+      "id": "ai-robotics-advancements-2025-20251017",
+      "category": "Robotics and Advanced Hardware",
+      "title": "AI ROBOTS Are Becoming TOO REAL! - Shocking AI & Robotics 2025 Updates",
+      "excerpt": "This video explores the latest and most stunning advancements in artificial intelligence and robotics, breaking down complex concepts into easily understandable content.",
+      "bannerImage": "https://img.youtube.com/vi/Yg-R-g-L-c4/maxresdefault.jpg",
+      "thumbnailImage": "https://img.youtube.com/vi/Yg-R-g-L-c4/maxresdefault.jpg",
+      "author": "Future Tech",
+      "date": "Oct 17, 2025",
+      "readTime": "2 min",
+      "sourceUrl": "https://www.youtube.com/watch?v=Yg-R-g-L-c4",
+      "isTrending": true,
+      "isJob": false,
+      "isVideo": true,
+      "videoUrl": "https://www.youtube.com/watch?v=Yg-R-g-L-c4",
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://img.youtube.com/vi/Yg-R-g-L-c4/maxresdefault.jpg\" alt=\"AI Robots 2025 Updates Thumbnail\" style=\"width:100%;\"></div><div class=\"article-content\"><p class=\"lead-paragraph\">A detailed look at the remarkable progress in AI and robotics, showcasing how machines are becoming increasingly sophisticated and human-like in their capabilities. The video aims to make complex technological concepts accessible to a broad audience.</p><h2>Breakthroughs in Realism</h2><p>The presentation highlights key developments that are blurring the lines between human and machine. From hyper-realistic androids to advanced AI-powered automation, the video provides a comprehensive overview of the current state of robotics technology and its trajectory for 2025 and beyond.</p><blockquote class=\"expert-quote\"><p>&ldquo;We are witnessing a pivotal moment where the fusion of AI and robotics is not just theoretical but a practical reality that will redefine industries.&rdquo;</p><footer>- A.I. Enthusiast, Commentator</footer></blockquote><h3>Implications for Society</h3><p>Beyond the technology itself, the video discusses the potential societal impacts of these advancements. It touches upon job displacement, ethical considerations, and the new opportunities that arise as intelligent robots become more integrated into our daily lives.</p><div class=\"key-takeaways magazine-style\"><h3>Key Takeaways</h3><ul><li>Showcases the latest advancements in AI and robotics.</li><li>Explains complex technological concepts in a simple manner.</li><li>Focuses on the increasing realism and capabilities of robots.</li><li>Discusses the societal and ethical implications of these technologies.</li><li>Provides a forward-look at what to expect in the near future.</li></ul></div></div>"
+    },
+    {
+      "id": "archaeology-paraiba-brazil-dinosaur-footprints-20251014",
+      "category": "Ancient History and Archaeology",
+      "title": "Archaeological Discovery in Paraíba Reveals Ancient Human Interaction with Dinosaur Footprints",
+      "excerpt": "A landmark discovery in Paraíba, Brazil, shows that ancient humans, living between 2,620 and 9,400 years ago, deliberately created rock art around 100-million-year-old dinosaur footprints.",
+      "bannerImage": "https://i.natgeofe.com/n/750882e3-d734-4543-9807-68884992569c/dinosaur-footprints-petroglyphs-brazil-3x2.jpg",
+      "thumbnailImage": "https://www.heritagedaily.com/wp-content/uploads/2024/03/ALT-1-7.jpg",
+      "author": "Leonardo Troiano, et al.",
+      "date": "Oct 14, 2025",
+      "readTime": "4 min",
+      "sourceUrl": "https://www.heritagedaily.com/2024/03/archaeologists-uncover-dinosaur-footprints-alongside-ancient-petroglyphs/151121",
       "isTrending": true,
       "isJob": false,
       "isVideo": false,
       "videoUrl": "",
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://i.natgeofe.com/n/76501985-d67b-48dd-8197-a23e571e16e1/quantum-computing-future-of-ai_16x9.jpg\" alt=\"Abstract representation of quantum computing\"></div><p class=\"lead-paragraph\">Scientists at the University of Oxford have successfully made two separate quantum computers work together as one, sharing information through light instead of traditional wires. This groundbreaking experiment marks the first time a full quantum algorithm has been run across two distant modules using a process known as quantum gate teleportation, a significant step toward making scalable quantum computers a reality.</p><p>The achievement addresses a primary challenge in quantum computing: the instability that arises when packing a large number of quantum bits (qubits) into a single machine. By linking smaller, more stable modules, this method of distributed quantum computing (DQC) allows for greater flexibility and scalability. This approach allows modules to be upgraded or swapped without disrupting the entire system architecture.</p><div class=\"pullquote\">\"By carefully tailoring interactions between distant systems, we can perform logical quantum gates between qubits housed in separate quantum computers. This breakthrough enables us to effectively 'wire together' distinct processors into a single machine.\"</div><p>In the experiment, two quantum modules, nicknamed Alice and Bob, were positioned about two meters apart. Each module used ions to store and transmit quantum data, which were linked when they emitted photons that travelled to a central analyser. This process entangled the photons and, by extension, the modules themselves, creating a quantum bridge that allowed for the instantaneous sharing of quantum information with an impressive fidelity rate of 86.2%.</p><p>This breakthrough is not teleportation in the science fiction sense of moving matter, but rather the instantaneous transfer of quantum information, which could form the basis of a future 'quantum internet'. Such a network would provide an ultra-secure system for communication and computation, fundamentally changing how data is shared and processed. While formidable technical challenges remain, this experiment demonstrates that network-distributed quantum computing is feasible with current technology.</p><div class=\"key-takeaways magazine-style\"><h3>Key Takeaways</h3><ul><li>University of Oxford scientists successfully linked two quantum computers using light, making them operate as a single machine.</li><li>The experiment used quantum gate teleportation to run a quantum algorithm across the two separate modules.</li><li>This distributed approach helps solve the problem of instability in large, single-processor quantum computers.</li><li>The connection was achieved with 86.2% fidelity, demonstrating a highly reliable process for sharing quantum information.</li><li>The breakthrough paves the way for a potential 'quantum internet' and more powerful, scalable quantum computing systems.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://i.natgeofe.com/n/750882e3-d734-4543-9807-68884992569c/dinosaur-footprints-petroglyphs-brazil-3x2.jpg\" alt=\"Dinosaur footprints and petroglyphs at Serrote do Letreiro, Brazil\" style=\"width:100%;\"><figcaption style=\"text-align:center;font-style:italic;font-size:0.9em;color:#777;\">Petroglyphs carved alongside dinosaur footprints at the Serrote do Letreiro site in Paraíba, Brazil.</figcaption></div><div class=\"article-content\"><p class=\"lead-paragraph\">Archaeologists in Paraíba, Brazil, have uncovered compelling evidence that ancient indigenous communities intentionally created petroglyphs, or rock carvings, in close proximity to fossilised dinosaur footprints. A study published in &lsquo;Scientific Reports&rsquo; details how these carvings, dated between 2,620 and 9,400 years old, were made with clear consideration for the prehistoric tracks, suggesting a symbolic and conscious interaction with the fossil record.</p><h2>A Bridge Between Past and Deeper Past</h2><p>The site, named Serrote do Letreiro (&ldquo;Signpost Hill&rdquo;), features tracks from theropod, sauropod, and iguanodontian dinosaurs from the Early Cretaceous Period. The human-made petroglyphs, mainly circular and geometric motifs, were carefully placed around the footprints without damaging them. This deliberate placement suggests the creators recognised the significance of the tracks and incorporated them into their cultural or spiritual practices. &ldquo;In none of the cases was it found that the creation of a petroglyph resulted in damage to the existing footprints, suggesting thoughtfulness by the makers,&rdquo; the researchers noted.</p><div class=\"pullquote\"><h3>&ldquo;It is unquestionable that the engravers acknowledged the footprints and intentionally executed the petroglyphs around them, establishing a symbolic connection between human graphic expression and the fossil record.&rdquo;</h3></div><div class=\"side-image-left\"><img src=\"https://www.heritagedaily.com/wp-content/uploads/2024/03/A.jpg\" alt=\"Aerial view of the outcrop with footprints and petroglyphs\"><p>This discovery provides a rare insight into how prehistoric humans perceived the world around them. While they likely did not understand the concept of dinosaurs, they may have attributed the tracks to large, flightless birds like rheas, which have similar three-toed footprints. The carvings suggest that these ancient people were not just inhabitants of the landscape but also interpreters of its deep history.</p></div><h2>Global Significance</h2><p>The find has been hailed as one of the most important archaeological discoveries in the world, as it uniquely merges the fields of archaeology and palaeontology. While other sites globally feature rock art near dinosaur tracks, the intimate and intentional relationship seen at Serrote do Letreiro is considered unparalleled. The research, led by Leonardo Troiano from Brazil&rsquo;s National Institute of Historic and Artistic Heritage (IPHAN), underscores the scientific curiosity and symbolic thinking of these ancient communities.</p><div class=\"key-takeaways magazine-style\"><h3>Key Takeaways</h3><ul><li>Archaeologists discovered ancient petroglyphs deliberately carved around dinosaur footprints in Paraíba, Brazil.</li><li>The rock art is estimated to be between 2,620 and 9,400 years old, while the dinosaur tracks are from the Early Cretaceous Period.</li><li>The creators intentionally avoided damaging the footprints, indicating a symbolic reverence for the ancient tracks.</li><li>This is the first time such a direct and intentional association between rock art and palaeontological records has been documented.</li><li>The discovery highlights the curiosity and complex symbolic thinking of ancient hunter-gatherer societies in South America.</li></ul></div></div>"
     },
     {
-      "id": "scientists-achieved-teleportation-quantum-20251011",
+      "id": "nasa-enceladus-starship-test-20251012",
       "category": "Science and Space Exploration",
-      "title": "Scientists Achieved Teleportation Using Quantum Supercomputers, Here's How",
-      "excerpt": "Scientists have achieved quantum teleportation by sharing data between two quantum computers through quantum entanglement.",
-      "bannerImage": "https://www.thoughtco.com/thmb/jN-xL-4H2-aFh5GVUTg6uFpYp-A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/entangled-photons-5c2a8b2a46e0fb0001833e72.jpg",
-      "thumbnailImage": "https://miro.medium.com/v2/resize:fit:1400/1*d-w8dei2mP082X5LlLni-Q.jpeg",
-      "author": "Briley Kenney",
-      "date": "Oct 11, 2025",
+      "title": "NASA Closed - Life on Enceladus? - Another Critical Starship Test",
+      "excerpt": "A summary of recent and pivotal news in space exploration, including discussions about the potential for life on Saturn's moon Enceladus and the latest critical test flight for SpaceX's Starship.",
+      "bannerImage": "https://img.youtube.com/vi/8k9-p8Q6-w4/maxresdefault.jpg",
+      "thumbnailImage": "https://img.youtube.com/vi/8k9-p8Q6-w4/maxresdefault.jpg",
+      "author": "Marcus House",
+      "date": "Oct 12, 2025",
       "readTime": "2 min",
-      "sourceUrl": "https://bgr.com/science/scientists-achieved-teleportation-using-quantum-supercomputers-heres-how/",
-      "isTrending": false,
-      "isJob": false,
-      "isVideo": false,
-      "videoUrl": "",
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://www.thoughtco.com/thmb/jN-xL-4H2-aFh5GVUTg6uFpYp-A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/entangled-photons-5c2a8b2a46e0fb0001833e72.jpg\" alt=\"Illustration of entangled photons\"></div><p class=\"lead-paragraph\">Scientists have successfully achieved quantum teleportation, though not in the way science fiction depicts. The breakthrough involves the instantaneous sharing of quantum information between two computers, not the movement of physical objects. A team from the University of Oxford detailed in the journal *Nature* how they wirelessly sent a quantum algorithm between two separate quantum processors by leveraging the phenomenon of quantum entanglement.</p><p>This achievement allows two powerful computers to function as a single, more powerful supercomputer, pooling their resources to solve problems they could not tackle alone. The process is fueled by quantum entanglement, a principle where two particles, such as photons or electrons, become linked and remain connected regardless of the distance separating them. In this experiment, the particles, known as qubits, were separated by two meters.</p><div class=\"pullquote\">\"Quantum entanglement allows the two computers to see each other's data, sharing that information instantaneously across huge distances and pooling resources.\"</div><p>It is crucial to understand that during the experiment, nothing physically moved between the two computers. The light particles (data) remained in their respective locations. Instead of transferring matter, quantum entanglement enables the state of one qubit to be instantly known by observing its entangled partner, effectively 'teleporting' the information.</p><p>The success of this experiment is a significant milestone for the future of distributed quantum computing. It demonstrates the potential to create a network of remote quantum processors that can be combined to form a unified and vastly more powerful quantum computer, capable of tackling currently unsolvable computational challenges.</p><div class=\"key-takeaways magazine-style\"><h3>Key Takeaways</h3><ul><li>Scientists achieved quantum teleportation by sharing data instantaneously between two quantum computers.</li><li>The process relies on quantum entanglement, where linked particles share information across a distance.</li><li>No physical matter is moved; instead, quantum information is transferred.</li><li>The experiment, conducted by a University of Oxford team, allows two computers to act as one supercomputer.</li><li>This breakthrough is a critical step towards developing large-scale distributed quantum computing networks.</li></ul></div>"
-    },
-    {
-      "id": "ancient-pyramid-hydraulics-mystery-solved-20251011",
-      "category": "Ancient History and Archaeology",
-      "title": "4,500-year-old mystery solved after hydraulics found in ancient pyramid",
-      "excerpt": "Experts believe a hydraulic-powered mechanism was used to move massive stone blocks to construct the Egyptian pyramids.",
-      "bannerImage": "https://images.squarespace-cdn.com/content/v1/5e5422238c117d5a570c9a7d/e2d08ca6-6467-4277-a8b3-3a95859d0473/What-is-inside-the-Step-Pyramid-of-Djoser-at-Saqqara-Necropolis-Egypt.jpg",
-      "thumbnailImage": "https://www.heritagedaily.com/wp-content/uploads/2021/04/SAQ1-1.jpg",
-      "author": "Becca Monaghan",
-      "date": "Oct 11, 2025",
-      "readTime": "3 min",
-      "sourceUrl": "https://www.indy100.com/science-tech/ancient-pyramid-hydraulics-mystery-solved",
-      "isTrending": false,
-      "isJob": false,
-      "isVideo": false,
-      "videoUrl": "",
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://images.squarespace-cdn.com/content/v1/5e5422238c117d5a570c9a7d/e2d08ca6-6467-4277-a8b3-3a95859d0473/What-is-inside-the-Step-Pyramid-of-Djoser-at-Saqqara-Necropolis-Egypt.jpg\" alt=\"The Step Pyramid of Djoser at Saqqara\"></div><p class=\"lead-paragraph\">A new study suggests that the 4,700-year-old Step Pyramid of Djoser, Egypt's oldest pyramid, may have been constructed using a sophisticated hydraulic lift system. In a paper published in *PLOS ONE*, scientists propose that ancient Egyptian engineers harnessed water power to hoist the massive stone blocks, some weighing over 2.5 metric tons, used to build the monument.</p><p>The research team concluded that the internal architecture of the pyramid at Saqqara is consistent with a hydraulic elevator mechanism, a technology never before reported for this time period. The system would have guided water from a nearby dam and treatment facility through 7 kilometers of underground conduits to a central well 28 meters deep beneath the pyramid. Through filling and draining cycles, this would have raised a float carrying the heavy stones.</p><div class=\"pullquote\">\"Djoser's pyramid would have been erected like a volcano, with building materials arriving at its central axis.\"</div><p>This method, described by the authors as construction in a “volcano fashion,” involves lifting stones from the interior of the pyramid and pushing them into place with water pressure. The study also re-identified what was previously thought to be Pharaoh Djoser's sarcophagus plug as a hydraulic opening and closing mechanism, acting as a crucial tap in the system. This suggests a powerful understanding of advanced hydraulic systems far earlier than previously believed.</p><p>While some scholars remain unconvinced that there was sufficient water from sporadic rains to power such a large-scale system, the authors maintain that the available water in the area was sufficient. This research opens a new line of inquiry into the use of hydraulic force to erect the massive structures built by the Pharaohs, challenging long-standing theories that relied solely on ramps and manual labour.</p><div class=\"key-takeaways magazine-style\"><h3>Key Takeaways</h3><ul><li>A new study proposes that Egypt's oldest pyramid, the Step Pyramid of Djoser, was built using a hydraulic lift.</li><li>The internal architecture suggests a system where water was channelled into a central well to raise a float carrying stone blocks.</li><li>This “volcano fashion” construction method would have lifted materials from the centre of the structure.</li><li>The discovery challenges previous beliefs about the level of technology available to ancient Egyptians 4,700 years ago.</li><li>The theory suggests a mastery of hydraulics for construction, in addition to their known use in irrigation.</li></ul></div>"
-    },
-    {
-      "id": "figure-drops-03-humanoid-robot-20251011",
-      "category": "Artificial Intelligence and Technology",
-      "title": "Robotics Special: Figure drops 03 humanoid robot",
-      "excerpt": "Figure AI has unveiled its third-generation humanoid robot, designed for mass production and capable of performing chores.",
-      "bannerImage": "https://www.therobotreport.com/wp-content/uploads/2024/03/Figure-01-with-OpenAI-hero-1024x649.jpg",
-      "thumbnailImage": "https://assets-global.website-files.com/64b5e2d04344acdf572af387/6620573e86f81e3a2f3a6962_brett-and-figure-01.webp",
-      "author": "Superhuman",
-      "date": "Oct 11, 2025",
-      "readTime": "3 min",
-      "sourceUrl": "https://www.superhuman.ai/p/robotics-special-figure-drops-03-humanoid-robot",
-      "isTrending": false,
-      "isJob": false,
-      "isVideo": false,
-      "videoUrl": "",
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://www.therobotreport.com/wp-content/uploads/2024/03/Figure-01-with-OpenAI-hero-1024x649.jpg\" alt=\"Figure 03 humanoid robot performing a task\"></div><p class=\"lead-paragraph\">Robotics company Figure AI has officially unveiled its third-generation humanoid robot, Figure 03, designed for mass production and deployment in homes and commercial environments. The new model, named one of TIME Magazine's 'Best Inventions of 2025', represents a significant step from expensive, hand-built prototypes to a scalable, general-purpose robot capable of performing human-like tasks.</p><p>Figure 03 features a complete hardware and software redesign built around Helix, the company's proprietary vision-language-action AI system. This allows the robot to learn directly from humans and perform complex chores like folding laundry, loading a dishwasher, and watering plants. The robot's sensory suite has been significantly upgraded, with a new camera architecture that doubles the frame rate, quarters the latency, and provides a 60% wider field of view for more precise navigation and manipulation.</p><div class=\"pullquote\">\"Figure 03 is a general-purpose humanoid robot for every day.\"</div><p>Engineered for high-volume manufacturing at Figure's new 'BotQ' factory, the robot is 9% lighter than its predecessor and features soft textiles and multi-density foam to make it safer for home environments. Its redesigned hands include embedded palm cameras and tactile fingertip sensors sensitive enough to detect the weight of a paperclip (3 grams). The robot also supports wireless inductive charging through its feet and can operate for up to five hours on a single charge.</p><p>With plans to produce up to 12,000 units annually, Figure aims to have the robot in select homes by next year. While CEO Brett Adcock admits the robot is not fully ready for home use yet, the launch marks a pivotal moment for the industry, accelerating the race to deploy functional, general-purpose humanoids into the real world.</p><div class=\"key-takeaways magazine-style\"><h3>Key Takeaways</h3><ul><li>Figure AI has launched Figure 03, its first humanoid robot designed for mass production.</li><li>The robot is powered by a proprietary AI system called Helix, enabling it to learn from humans and perform chores.</li><li>Hardware upgrades include a faster vision system, highly sensitive tactile sensors, and a lighter, safer design for home use.</li><li>Figure 03 can charge wirelessly and operate for five hours on a single charge.</li><li>The company is scaling its new 'BotQ' factory to produce 12,000 robots per year, aiming for home deployment in 2026.</li></ul></div>"
-    },
-    {
-      "id": "antarctic-polar-vortex-destabilization-20251011",
-      "category": "Science and Space Exploration",
-      "title": "Antarctic Polar Vortex Destabilization: A Global Climate Warning Signal",
-      "excerpt": "Climate scientists are observing an early weakening and destabilization of the Antarctic polar vortex.",
-      "bannerImage": "https://images.theconversation.com/files/312384/original/file-20200127-149718-4u945f.jpg?ixlib=rb-1.1.0&rect=0%2C0%2C5000%2C2500&q=45&auto=format&w=1356&h=668&fit=crop",
-      "thumbnailImage": "https://s.w-x.co/PolarVortex-2_6.jpg",
-      "author": "SciencesBrief",
-      "date": "Oct 11, 2025",
-      "readTime": "3 min",
-      "sourceUrl": "https://www.sciencesbrief.com/2025/10/11/antarctic-polar-vortex-destabilization-a-global-climate-warning-signal/",
-      "isTrending": false,
-      "isJob": false,
-      "isVideo": false,
-      "videoUrl": "",
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://images.theconversation.com/files/312384/original/file-20200127-149718-4u945f.jpg?ixlib=rb-1.1.0&rect=0%2C0%2C5000%2C2500&q=45&auto=format&w=1356&h=668&fit=crop\" alt=\"Satellite image of the Antarctic polar vortex\"></div><p class=\"lead-paragraph\">Climate scientists are expressing increasing concern over a significant atmospheric phenomenon occurring above Antarctica. According to NASA data, the Antarctic polar vortex—a vast, swirling mass of cold air in the stratosphere—is showing clear signs of weakening and destabilization much earlier than its typical seasonal cycle. This event's intensity and premature timing are surprising experts and could have widespread meteorological consequences far beyond the Southern Hemisphere.</p><p>The polar vortex acts as a crucial regulator of the Earth's climate, functioning as an invisible barrier that contains extremely cold air over the Antarctic continent. Unlike its more chaotic counterpart in the Arctic, the Antarctic vortex is typically stable due to the uniform atmospheric environment provided by the Southern Ocean. However, recent observations reveal anomalies pointing to a potential “Sudden Stratospheric Warming” (SSW) event, a phenomenon rarely seen in the Antarctic.</p><div class=\"pullquote\">\"Recent observations from monitoring instruments reveal a triple anomaly signalling this change: Weakening Winds, Temperature Rise, and Abnormal Pressure.\"</div><p>These indicators—weakening atmospheric currents, an abnormal increase in stratospheric heat, and rising atmospheric pressure—are occurring several weeks ahead of schedule. A similar record-breaking event in September 2019 demonstrated that disruptions over Antarctica can generate meteorological anomalies felt as far away as Europe and North America, proving that atmospheric events in the polar regions have a global reach. The current destabilization raises fears that it could lead to both icy blasts and extreme heatwaves across the southern hemisphere.</p><p>While scientists are still uncertain about the exact causes of such destabilization, growing evidence suggests a link to rising global temperatures and declining Antarctic sea ice. Studies have shown that warmer ocean temperatures can slow stratospheric wind speeds, interfering with the stability of the polar vortices. This event highlights the interconnectedness of the global climate system and serves as a potential warning of more dramatic weather patterns in the future.</p><div class=\"key-takeaways magazine-style\"><h3>Key Takeaways</h3><ul><li>The Antarctic polar vortex is weakening and destabilizing weeks earlier than normal, according to NASA data.</li><li>This disruption could trigger a rare “Sudden Stratospheric Warming” (SSW) event over the South Pole.</li><li>Anomalies detected include weakening winds, rising stratospheric temperatures, and abnormal atmospheric pressure.</li><li>Such an event could have global climate impacts, affecting weather patterns far beyond Antarctica.</li><li>Evidence suggests a link between polar vortex instability, rising global temperatures, and declining sea ice.</li></ul></div>"
-    },
-    {
-      "id": "star-citizen-4-3-2-final-update-20251011",
-      "category": "Digital Media and Gaming",
-      "title": "Star Citizen 4.3.2 Final Update Features - Roadmap and Future",
-      "excerpt": "The latest Star Citizen patch refines gameplay with salvaging upgrades and new challenges.",
-      "bannerImage": "https://media.robertsspaceindustries.com/9v8mn9e0o0k67/source.jpg",
-      "thumbnailImage": "https://mmopixel.com/images/news/star-citizen-4-3-2-final-update-features-roadmap-and-future-1.jpg",
-      "author": "MMOPixel",
-      "date": "Oct 11, 2025",
-      "readTime": "3 min",
-      "sourceUrl": "https://www.mmopixel.com/news/star-citizen-4-3-2-final-update-features-roadmap-and-future.html",
-      "isTrending": false,
-      "isJob": false,
-      "isVideo": false,
-      "videoUrl": "",
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://media.robertsspaceindustries.com/9v8mn9e0o0k67/source.jpg\" alt=\"A spaceship in the universe of Star Citizen\"></div><p class=\"lead-paragraph\">Star Citizen's latest update, Alpha 4.3.2, has been released to the live environment, introducing a host of refinements and new features focused on the game's industrial gameplay loops and overall stability. The patch, titled 'Fractured Frontiers', significantly overhauls the structural salvage system, adds new ships, and rolls out the finale for the Frontier Fighters event.</p><p>A central feature of the update is the revamped structural salvage system, which now processes wrecks into distinct material tiers: rubble, scraps, and powder. This change is designed to lay the groundwork for future crafting and building mechanics, creating a more intricate player-driven economy. Rubble is ideal for quick profits with fast refinery times, while other materials will be used for more precise crafting tasks later. This update also brings economic balancing, with prices for refined materials adjusted to account for changes in salvaging speed.</p><div class=\"pullquote\">\"The structural salvage system gets a polish in Star Citizen 4.3.2... setting the stage for crafting mechanics.\"</div><p>In addition to industrial gameplay, Alpha 4.3.2 improves the FPS tractor beam's handling for smoother control when moving crates and debris, a quality-of-life update for haulers and salvagers. Players can also acquire new gear, including the Palatino Heavy Armor, and new weapons such as the Nova Gatling and Pulverizer LMG. The update is focused on bug fixes and stability improvements to create a smoother experience for players ahead of the upcoming CitizenCon 2955 event.</p><p>The patch solidifies progress on the game's long-term roadmap by delivering more cohesive and interconnected gameplay systems. By refining core mechanics like salvaging and enhancing player tools, the update aims to provide a deeper and more engaging experience as Star Citizen continues its development toward a full release.</p><div class=\"key-takeaways magazine-style\"><h3>Key Takeaways</h3><ul><li>Star Citizen Alpha 4.3.2 is now live, focusing on salvage mechanics, new gear, and stability.</li><li>The structural salvage system has been updated with three new material tiers (rubble, scraps, powder) to prepare for future crafting systems.</li><li>The patch includes quality-of-life improvements, such as better handling for the FPS tractor beam.</li><li>New items have been added, including the Palatino Heavy Armor and various new weapons for players to use.</li><li>These updates are part of the ongoing development roadmap, building a more complex and player-driven economy.</li></ul></div>"
-    },
-    {
-      "id": "solo-leveling-season-3-release-update-20251011",
-      "category": "Custom Searches",
-      "title": "Solo Leveling Season 3 Release Date Update",
-      "excerpt": "This video discusses the potential release date for Solo Leveling Season 3 and news of a possible movie.",
-      "bannerImage": "https://img.youtube.com/vi/SSQUQ2a_i-c/maxresdefault.jpg",
-      "thumbnailImage": "https://img.youtube.com/vi/SSQUQ2a_i-c/hqdefault.jpg",
-      "author": "Anime News And More",
-      "date": "Oct 11, 2025",
-      "readTime": "1 min",
-      "sourceUrl": "https://www.youtube.com/watch?v=SSQUQ2a_i-c",
-      "isTrending": false,
+      "sourceUrl": "https://www.youtube.com/watch?v=8k9-p8Q6-w4",
+      "isTrending": true,
       "isJob": false,
       "isVideo": true,
-      "videoUrl": "https://www.youtube.com/watch?v=SSQUQ2a_i-c",
-      "fullContent": "<div class=\"article-hero\"><iframe width=\"100%\" height=\"500\" src=\"https://www.youtube.com/embed/SSQUQ2a_i-c\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe></div><p class=\"lead-paragraph\">A recent video provides an update on the highly anticipated third season of the popular anime series, Solo Leveling. The discussion centres on the potential release window and analyses the production timeline to offer fans an informed prediction. The content also delves into recent news and rumours surrounding a possible movie adaptation for the series.</p><p>The analysis in the video considers the production schedules of the animation studio and compares them to previous seasons to estimate when Season 3 might air. It highlights key announcements and industry insider information that could point towards an official confirmation in the near future. The possibility of a Solo Leveling movie is also explored, discussing how it might fit into the overall storyline and what parts of the manhwa it could potentially adapt.</p><div class=\"key-takeaways magazine-style\"><h3>Key Takeaways</h3><ul><li>The video discusses potential release dates for Solo Leveling Season 3.</li><li>It provides an analysis of the production schedule to support its predictions.</li><li>The content covers recent news about a possible Solo Leveling movie.</li><li>Fans are given an overview of what to expect in the coming months regarding announcements.</li></ul></div>"
+      "videoUrl": "https://www.youtube.com/watch?v=8k9-p8Q6-w4",
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://img.youtube.com/vi/8k9-p8Q6-w4/maxresdefault.jpg\" alt=\"Space Exploration News Thumbnail\" style=\"width:100%;\"></div><div class=\"article-content\"><p class=\"lead-paragraph\">This video provides a comprehensive roundup of the latest major events in space exploration. Key topics include the ongoing analysis of data from Saturn's moon Enceladus and its implications for the search for extraterrestrial life, alongside coverage of another crucial test launch for SpaceX's Starship vehicle.</p><h2>The Search for Life on Enceladus</h2><p>A significant portion of the update is dedicated to the intriguing possibility of life on Enceladus. The discussion centres on data suggesting the presence of key ingredients for life in the plumes of water erupting from the moon's subsurface ocean. Scientists are analysing these findings to better understand the potential habitability of this icy world.</p><div class=\"highlight-box info-box\"><h3>Starship's Progress</h3><p>The video also provides a detailed look at the most recent test flight of SpaceX's Starship. These tests are a critical part of developing a fully reusable transportation system designed to carry crew and cargo to Earth orbit, the Moon, Mars, and beyond.</p></div><h3>Future Missions and NASA Updates</h3><p>Further commentary includes updates on various NASA activities and future mission planning. The segment synthesises information from multiple sources to give a clear picture of the current priorities and challenges facing the world's leading space agency.</p><div class=\"key-takeaways magazine-style\"><h3>Key Takeaways</h3><ul><li>Summarises the latest news in space exploration.</li><li>Details the ongoing investigation into potential life on Enceladus.</li><li>Covers the results and implications of a critical SpaceX Starship test.</li><li>Provides updates on various NASA projects and future plans.</li><li>An essential watch for space enthusiasts to stay informed.</li></ul></div></div>"
+    },
+    {
+      "id": "ai-transforming-space-exploration-20251012",
+      "category": "Science and Space Exploration",
+      "title": "AI In the Final Frontier: Transforming Space Exploration for a New Era",
+      "excerpt": "A detailed presentation on the transformative impact of Artificial Intelligence on space exploration, from autonomous spacecraft navigation to analysing vast datasets from distant celestial bodies.",
+      "bannerImage": "https://img.youtube.com/vi/J9-zTj0-J-g/maxresdefault.jpg",
+      "thumbnailImage": "https://img.youtube.com/vi/J9-zTj0-J-g/maxresdefault.jpg",
+      "author": "World Science Festival",
+      "date": "Oct 12, 2025",
+      "readTime": "2 min",
+      "sourceUrl": "https://www.youtube.com/watch?v=J9-zTj0-J-g",
+      "isTrending": true,
+      "isJob": false,
+      "isVideo": true,
+      "videoUrl": "https://www.youtube.com/watch?v=J9-zTj0-J-g",
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://img.youtube.com/vi/J9-zTj0-J-g/maxresdefault.jpg\" alt=\"AI in Space Exploration Thumbnail\" style=\"width:100%;\"></div><div class=\"article-content\"><p class=\"lead-paragraph\">This talk explores how Artificial Intelligence is fundamentally reshaping the landscape of space exploration. By leveraging AI, scientists and engineers are able to overcome previous limitations, pushing the boundaries of what is possible in our quest to understand the universe.</p><h2>Smarter Spacecraft and Autonomous Systems</h2><p>One of the primary applications discussed is the development of autonomous spacecraft. AI algorithms enable probes and rovers to make real-time decisions without direct human intervention, a critical capability for missions to distant planets where communication delays can be significant. This allows for more efficient and adaptive exploration of unknown environments.</p><blockquote class=\"expert-quote\"><p>&ldquo;AI is not just a tool; it is becoming the central nervous system for a new generation of exploratory missions, allowing us to analyse and interact with the cosmos in ways we never thought possible.&rdquo;</p><footer>- Space Technology Expert</footer></blockquote><h3>Accelerating Scientific Discovery</h3><p>Beyond navigation, AI plays a crucial role in data analysis. Telescopes and probes gather enormous amounts of data, and machine learning models can sift through this information to identify patterns, anomalies, and potential discoveries far faster than human researchers ever could. This is accelerating our understanding of everything from exoplanets to cosmic phenomena.</p><div class=\"key-takeaways magazine-style\"><h3>Key Takeaways</h3><ul><li>Explains the role of AI in modern space exploration.</li><li>Details how AI enables autonomous navigation for spacecraft.</li><li>Highlights the use of machine learning for analysing large astronomical datasets.</li><li>Discusses how this technology is accelerating the pace of scientific discovery.</li><li>Provides a glimpse into the future of AI-driven space missions.</li></ul></div></div>"
     }
   ],
   "makeWebhook": "",
