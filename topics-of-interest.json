@@ -1,102 +1,22 @@
 {
-  "Artificial Intelligence and Technology": {
-    "AI Systems and Innovations": [
-      "(\"AI tools\" OR \"LLMs\" OR \"large language models\" OR \"AI models\" OR \"machine learning models\") AND (\"game development\" OR \"robotics\" OR \"automation\" OR \"chatbots\" OR \"automated systems\") AND (\"new\" OR \"latest\" OR \"recent\" OR \"breakthrough\" OR \"discovery\") AND (\"AI discovered\" OR \"AI generated\" OR \"AI designed\" OR \"AI created\") AND (\"AI tools\" OR \"LLM framework\" OR \"open-source AI\") AND (\"GitHub\" OR \"API\" OR \"integration\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ],
-    "AI Software and Applications": [
-      "(\"AI creative tools\" OR \"AI generators\" OR \"AI media creation\" OR \"AI image\" OR \"AI video\" OR \"AI music\") AND (\"new\" OR \"latest\" OR \"release\" OR \"update\" OR \"feature\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"automation platforms\" OR \"workflow automation\" OR \"Make.com\" OR \"n8n\" OR \"Python automation\" OR \"Zapier alternative\") AND (\"integration\" OR \"AI workflows\" OR \"productivity\" OR \"tools\") AND (\"new\" OR \"update\" OR \"release\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"AI job seeking tools\" OR \"career assistant AI\" OR \"resume AI\" OR \"interview AI\" OR \"job search automation\") AND (\"new\" OR \"latest\" OR \"release\" OR \"update\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ],
-    "Robotics and Advanced Hardware": [
-      "(\"humanoid robot\" OR \"Optimus\" OR \"AgiBot\" OR \"Unitree\" OR \"advanced robotics\") AND (\"research\" OR \"development\" OR \"AI\" OR \"demonstration\") AND (\"latest\" OR \"update\" OR \"prototype\" OR \"announcement\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"robot pets\" OR \"smart devices\" OR \"AI pet\" OR \"Loona\" OR \"robot frog\" OR \"virtual pets\") AND (\"consumer\" OR \"interactive\" OR \"home robot\" OR \"AI companion\") AND (\"new\" OR \"release\" OR \"feature\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"drone technology\" OR \"FPV drones\" OR \"AI drones\" OR \"drone simulation\" OR \"UAV developments\") AND (\"latest\" OR \"update\" OR \"prototype\" OR \"new feature\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ],
-    "Extended Reality (XR) and Display Technology": [
-      "(\"AR headset\" OR \"VR headset\" OR \"mixed reality headset\" OR \"AR glasses\" OR \"XR device\" OR \"spatial computing\") AND (\"new\" OR \"latest\" OR \"recent\" OR \"release\" OR \"announcement\" OR \"features\" OR \"specs\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"3D displays\" OR \"holographic displays\" OR \"light-field technology\" OR \"volumetric displays\") AND (\"advanced\" OR \"new\" OR \"prototype\" OR \"breakthrough\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"Gaussian splatting\" OR \"light-field rendering\" OR \"neural rendering\" OR \"view synthesis\") AND (\"new research\" OR \"latest methods\" OR \"applications\" OR \"real-time graphics\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ]
-  },
-  "Science and Space Exploration": {
-    "Quantum Physics and Mechanics": [
-      "(\"quantum entanglement\" OR \"quantum teleportation\") AND (\"breakthrough\" OR \"experiment\" OR \"research\" OR \"new findings\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"experimental physics\" OR \"new states of matter\" OR \"time crystals\" OR \"supersolids\") AND (\"latest research\" OR \"discovery\" OR \"update\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"quantum theory\" AND (\"consciousness\" OR \"neural activity\" OR \"brain function\")) AND (\"study\" OR \"research\" OR \"new findings\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ],
-    "Astrophysics and Cosmology": [
-      "(\"James Webb Telescope\" OR \"JWST\" OR \"Euclid Telescope\") AND (\"discoveries\" OR \"images\" OR \"findings\" OR \"data release\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"Mars\" OR \"black holes\" OR \"asteroids\" OR \"exoplanets\") AND (\"anomalies\" OR \"exploration\" OR \"missions\" OR \"discoveries\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"interstellar objects\" OR \"Voyager 1\" OR \"Oumuamua\" OR \"deep space probes\") AND (\"new data\" OR \"trajectory\" OR \"findings\" OR \"exploration\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ],
-    "Earth and Environmental Science": [
-      "(\"climate change\" AND (\"polar vortex\" OR \"ocean currents\")) AND (\"impact\" OR \"research\" OR \"study\" OR \"modeling\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"geological research\" OR \"geophysical research\" OR \"gravity hole\" OR \"magnetic field anomalies\") AND (\"new study\" OR \"findings\" OR \"discovery\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"clean energy\" OR \"renewable energy\" OR \"fusion energy\" OR \"physics breakthrough\") AND (\"new\" OR \"update\" OR \"recent development\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ]
-  },
-  "Ancient History and Archaeology": {
-    "Egyptology and Pyramid Construction": [
-      "(\"Egyptian pyramids\" OR \"construction methods\" OR \"ancient materials\") AND (\"alternative theories\" OR \"research\" OR \"discovery\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"acoustic resonance\" OR \"vibration analysis\" OR \"ancient architecture\") AND (\"pyramid\" OR \"temple\" OR \"structure\") AND (\"testing\" OR \"study\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"ancient tombs\" OR \"lost cities\" OR \"Luxor\" OR \"Pompeii\") AND (\"archaeological discovery\" OR \"excavation\" OR \"find\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ],
-    "Global Archaeological Discoveries": [
-      "(\"ancient monuments\" OR \"lost civilizations\" OR \"Uzbekistan ruins\" OR \"Amazon discoveries\") AND (\"new\" OR \"recent\" OR \"archaeological find\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"ancient artifacts\" OR \"historical technology\" OR \"archaeological analysis\") AND (\"research\" OR \"discovery\" OR \"study\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ]
-  },
-  "Digital Media and Gaming": {
-    "Massively Multiplayer and RPG Games": [
-      "(\"Diablo Immortal\" AND (\"update\" OR \"Tempest class\" OR \"legendary gear\")) AND (\"patch notes\" OR \"new content\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"Star Citizen\" AND (\"development update\" OR \"Pyro\" OR \"server meshing\" OR \"RSI Galaxy\")) AND (\"new\" OR \"progress report\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"anime MMORPG\" OR \"RPG game\" OR \"Ananta\" OR \"Zenless Zone Zero\" OR \"Crystal of Atlan\") AND (\"release\" OR \"update\" OR \"new content\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ],
-    "Game Modding and Simulation": [
-      "(\"Cities Skylines 2\" AND (\"modding\" OR \"road builder\" OR \"asset creation\")) AND (\"update\" OR \"new tools\" OR \"community content\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"game remakes\" OR \"retro remaster\" OR \"emulation projects\") AND (\"new\" OR \"release\" OR \"update\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"real-time game physics\" OR \"simulation engines\" OR \"BeamNG.drive\" OR \"LiquiGen\") AND (\"update\" OR \"new feature\" OR \"release\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ],
-    "Streaming and Entertainment Content": [
-      "(\"new anime series\" OR \"Solo Levelling\" OR \"Martial Peak\" OR \"Shrouding the Heavens\") AND (\"release\" OR \"update\" OR \"season\" OR \"announcement\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"TV series\" OR \"streaming services\" OR \"The Last of Us\" OR \"Wicked series\") AND (\"release dates\" OR \"updates\" OR \"announcements\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"video encoding\" OR \"HDR\" OR \"Dolby Vision\" OR \"animated WebP\") AND (\"improvements\" OR \"new format\" OR \"technology\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ]
-  },
-  "Perth Local Services and Lifestyle": {
-    "Employment and Career Development": [
-      "(\"Perth job listings\" OR \"hiring in Perth\" OR \"Graphic Design jobs\" OR \"IT jobs\" OR \"3D artist jobs\") AND (\"available\" OR \"current openings\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"Perth training courses\" OR \"TAFE WA\" OR \"AI skills\" OR \"certification programs\") AND (\"enrolment\" OR \"new courses\" OR \"education\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"Perth job seeker services\" OR \"disability employment\" OR \"Workforce Australia\" OR \"NDIS employment support\") AND (\"updates\" OR \"availability\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ],
-    "Housing, Property, and Utilities": [
-      "(\"Perth rentals\" OR \"WA tenancy\" OR \"housing legal information\") AND (\"search\" OR \"availability\" OR \"law changes\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"storage solutions\" OR \"self storage Perth\" OR \"National Storage\" OR \"Belmont\" OR \"Midland\" OR \"Cannington\") AND (\"availability\" OR \"offers\" OR \"facilities\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"energy providers WA\" OR \"Synergy\" OR \"Alinta\" OR \"HUGS program\") AND (\"financial assistance\" OR \"hardship support\" OR \"rebate\" OR \"update\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ],
-    "Health, Wellness, and Disability Support": [
-      "(\"ADHD diagnosis Perth\" OR \"autism support Perth\" OR \"NDIS clinics\") AND (\"services\" OR \"availability\" OR \"new programs\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"medical imaging Perth\" OR \"DICOM viewer\" OR \"radiology access\") AND (\"software\" OR \"tools\" OR \"availability\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"mental health Perth\" OR \"experimental therapy\" OR \"psilocybin therapy\" OR \"somatic therapy\") AND (\"research\" OR \"access\" OR \"trial\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ],
-    "Retail and Consumer Products": [
-      "(\"specialty food Perth\" OR \"hot sauce\" OR \"coffee beans\" OR \"rennet\" OR \"cigars\") AND (\"availability\" OR \"new stock\" OR \"local store\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"DIY items\" OR \"home improvement Perth\" OR \"heaters\" OR \"furniture\" OR \"car accessories\" OR \"towels\") AND (\"deals\" OR \"availability\" OR \"new stock\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"vehicle maintenance Perth\" OR \"tyre services\" OR \"jump starters\" OR \"mechanic Perth\") AND (\"new\" OR \"offers\" OR \"availability\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ]
-  },
-  "Custom Searches": {
-    "Anime": [
-      "(\"Martial Peak\" AND (\"anime\" OR \"TV series\")) AND (\"news\" OR \"release\" OR \"update\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"Solo Leveling\" AND (\"anime\" OR \"TV series\")) AND (\"news\" OR \"season\" OR \"release\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"The Daily Life of the Immortal King\" AND (\"anime\" OR \"series\")) AND (\"update\" OR \"season\" OR \"announcement\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"Redo of Healer\" AND (\"anime\" OR \"series\")) AND (\"update\" OR \"news\" OR \"season\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ],
-    "Jobs": [
-      "(\"Perth jobs\" AND (\"3DS Max\" OR \"3D visualisation\")) AND (\"hiring\" OR \"available positions\" OR \"current openings\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"Perth jobs\" AND (\"Unity\" OR \"Unreal Engine\")) AND (\"hiring\" OR \"available\" OR \"positions\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)",
-      "(\"Perth jobs\" AND (\"3D visualisation\" OR \"rendering\" OR \"architectural visualisation\")) AND (\"hiring\" OR \"open roles\" OR \"positions\") after:(Gemini to add the date 7 days ago here in the format YYYY-MM-DD)"
-    ]
-  }
+  "topics": [
+    "Artificial Intelligence and Technology > AI Systems and Innovations",
+    "Artificial Intelligence and Technology > AI Software and Applications",
+    "Artificial Intelligence and Technology > Robotics and Advanced Hardware",
+    "Artificial Intelligence and Technology > Extended Reality (XR) and Display Technology",
+    "Science and Space Exploration > Quantum Physics and Mechanics",
+    "Science and Space Exploration > Astrophysics and Cosmology",
+    "Science and Space Exploration > Earth and Environmental Science",
+    "Ancient History and Archaeology > Egyptology and Pyramid Construction",
+    "Ancient History and Archaeology > Global Archaeological Discoveries",
+    "Digital Media and Gaming > Massively Multiplayer and RPG Games",
+    "Digital Media and Gaming > Game Modding and Simulation",
+    "Digital Media and Gaming > Streaming and Entertainment Content",
+    "Perth Local Services and Lifestyle > Employment and Career Development",
+    "Perth Local Services and Lifestyle > Housing, Property, and Utilities",
+    "Perth Local Services and Lifestyle > Health, Wellness, and Disability Support",
+    "Perth Local Services and Lifestyle > Retail and Consumer Products",
+    "Custom Searches > Anime",
+    "Custom Searches > Jobs"
+  ]
 }
