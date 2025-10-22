@@ -32,6 +32,11 @@
       "active": false
     },
     {
+      "id": "local-news",
+      "name": "Local News",
+      "active": false
+    },
+    {
       "id": "particle-physics",
       "name": "Particle Physics",
       "active": false
@@ -42,8 +47,258 @@
       "active": false
     }
   ],
-  "trending": [],
+  "trending": [
+    {
+      "id": "sesame-conversational-ai-launches-with-250m-funding",
+      "category": "ai-technology-and-news",
+      "title": "Sesame, a Conversational AI Startup From Oculus Founders, Launches Beta After Raising $250 Million",
+      "bannerImage": "https://images.pexels.com/photos/8566472/pexels-photo-8566472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/8566472/pexels-photo-8566472.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
+      "author": "TechCrunch",
+      "date": "Oct 22, 2025"
+    },
+    {
+      "id": "veeam-acquires-securiti-ai-for-1-725-billion",
+      "category": "ai-technology-and-news",
+      "title": "Veeam Acquires Data Security Company Securiti AI for $1.725 Billion",
+      "bannerImage": "https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
+      "author": "SecurityWeek",
+      "date": "Oct 21, 2025"
+    },
+    {
+      "id": "multimodal-ai-startup-fal-ai-raises-250m-at-4b-valuation",
+      "category": "ai-technology-and-news",
+      "title": "Multimodal AI Startup Fal.ai Raises $250M at Over $4 Billion Valuation",
+      "bannerImage": "https://images.pexels.com/photos/7464213/pexels-photo-7464213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/7464213/pexels-photo-7464213.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
+      "author": "TechCrunch",
+      "date": "Oct 21, 2025"
+    },
+    {
+      "id": "tutankhamuns-tomb-at-risk-of-collapse-experts-warn",
+      "category": "archaeology-and-history",
+      "title": "Tutankhamun\u2019s Tomb Faces Collapse Risk, Experts Warn",
+      "bannerImage": "https://images.pexels.com/photos/1577735/pexels-photo-1577735.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/1577735/pexels-photo-1577735.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
+      "author": "The Independent",
+      "date": "Oct 21, 2025"
+    }
+  ],
   "articles": [
+    {
+      "id": "sesame-conversational-ai-launches-with-250m-funding",
+      "sourceUrl": "https://techcrunch.com/2025/10/22/sesame-a-conversational-ai-startup-from-the-founders-of-oculus-launches-its-beta-after-raising-250-million/",
+      "category": "ai-technology-and-news",
+      "subCategory": "startups",
+      "title": "Sesame, a Conversational AI Startup From Oculus Founders, Launches Beta After Raising $250 Million",
+      "author": "TechCrunch",
+      "publishDate": "Oct 22, 2025",
+      "readTime": 2,
+      "isTrending": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://images.pexels.com/photos/8566472/pexels-photo-8566472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/8566472/pexels-photo-8566472.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
+      "images": [
+        "https://images.pexels.com/photos/8566472/pexels-photo-8566472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      ],
+      "videos": [],
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://images.pexels.com/photos/8566472/pexels-photo-8566472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"Conceptual image of conversational AI and smart glasses\"><h1>Sesame, a Conversational AI Startup From Oculus Founders, Launches Beta After Raising $250 Million</h1></div><p class=\"lead-paragraph\">Conversational AI startup Sesame has launched an early beta version of its iOS app after closing a $250 million Series B funding round. The company, founded by former Oculus CEO Brendan Iribe, aims to develop a personal AI agent that interacts with a natural human voice, with the ultimate goal of integration into lightweight smart glasses.</p><div class=\"side-image-left\"><img src=\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600' width='800' height='600'><defs><linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:rgb(55,65,81);stop-opacity:1' /><stop offset='100%' style='stop-color:rgb(31,41,55);stop-opacity:1' /></linearGradient></defs><rect width='100%' height='100%' fill='url(%23grad1)'/><text fill='rgba(255,255,255,0.8)' font-family='sans-serif' font-size='30' x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'>Sesame AI Beta Launch</text><text fill='rgba(255,255,255,0.6)' font-family='sans-serif' font-size='18' x='20' y='580'>AI Startup Funding</text></svg>\" alt=\"Sesame AI funding announcement\"><p>The funding round included major investors such as Sequoia Capital and Spark Capital. Sesame gained significant market interest after releasing two technical demonstration voices, &#8220;Maya&#8221; and &#8220;Miles,&#8221; which attracted approximately one million users in their first few weeks and generated over five million minutes of conversation. The company is developing its own hardware, bringing together core executives from the former Oculus team to create stylish AI-powered glasses.</p></div><blockquote class=\"expert-quote\">“This experience is different from anything we&#8217;ve used before. The conversational layer of Sesame feels very different.” &#8212; Sequoia Capital</blockquote><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The successful $250 million Series B funding round highlights strong investor confidence in the future of conversational AI and wearable technology. The beta app will initially allow users to test search, text, and thinking functionalities.</p></div><h3>Broader Impact</h3><p>Sesame is entering a competitive market but its focus on a vertically integrated system, combining emotionally intelligent voice agents with proprietary hardware, sets it apart. This approach could represent the next major shift in human-computer interaction, moving beyond touchscreens to more natural voice commands for daily tasks.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>AI startup Sesame, from the founders of Oculus, raised $250 million in a Series B round.</li><li>The company launched an early beta of its iOS app for its conversational AI agent.</li><li>Sesame is developing both advanced AI voice software and proprietary smart glasses hardware.</li><li>The funding signals significant investor belief in voice as the next primary user interface.</li></ul></div>"
+    },
+    {
+      "id": "veeam-acquires-securiti-ai-for-1-725-billion",
+      "sourceUrl": "https://www.securityweek.com/veeam-to-acquire-data-security-firm-securiti-ai-for-1-7-billion/",
+      "category": "ai-technology-and-news",
+      "subCategory": "acquisitions",
+      "title": "Veeam Acquires Data Security Company Securiti AI for $1.725 Billion",
+      "author": "SecurityWeek",
+      "publishDate": "Oct 21, 2025",
+      "readTime": 2,
+      "isTrending": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
+      "images": [
+        "https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      ],
+      "videos": [],
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"Abstract image representing data security and acquisition\"><h1>Veeam Acquires Data Security Company Securiti AI for $1.725 Billion</h1></div><p class=\"lead-paragraph\">Data resilience provider Veeam Software has announced a definitive agreement to acquire data security posture management (DSPM) company Securiti AI for $1.725 billion in cash and stock. The acquisition is one of Veeam&#8217;s largest and marks its entry into the AI security market, aiming to unify data protection across production and backup environments.</p><div class=\"side-image-left\"><img src=\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600' width='800' height='600'><defs><linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:rgb(16,185,129);stop-opacity:1' /><stop offset='100%' style='stop-color:rgb(5,150,105);stop-opacity:1' /></linearGradient></defs><rect width='100%' height='100%' fill='url(%23grad1)'/><text fill='rgba(255,255,255,0.9)' font-family='sans-serif' font-size='30' x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'>Veeam + Securiti AI</text><text fill='rgba(255,255,255,0.7)' font-family='sans-serif' font-size='18' x='20' y='580'>Data Security Acquisition</text></svg>\" alt=\"Veeam acquires Securiti AI\"><p>The deal combines Veeam&#8217;s leadership in data backup and recovery with Securiti AI&#8217;s expertise in data governance, privacy, and compliance. This integration will provide enterprises with a single platform to manage, secure, and recover their data, which is critical for the safe deployment of artificial intelligence systems. The transaction is expected to close in the fourth quarter.</p></div><blockquote class=\"expert-quote\">“We&#8217;ve entered a new era for data. It&#8217;s no longer about just protecting data from cyber threats and unforeseen disasters; it&#8217;s also about identifying all your data, ensuring it&#8217;s governed and trusted to power AI transparently.” &#8212; Anand Eswaran, CEO at Veeam</blockquote><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>Securiti AI, founded in 2019, specialises in helping organisations manage data security across multi-cloud environments. Following the acquisition, Securiti AI&#8217;s CEO, Rehan Jalil, will join Veeam as President of Security and AI.</p></div><h3>Broader Impact</h3><p>This acquisition addresses a critical gap for enterprises that are struggling to launch AI initiatives safely. Many AI projects fail due to issues with data accuracy, governance, and permissions. By creating a unified command centre for all data, the combined company aims to help organisations understand and trust their data, mitigating risks and unlocking its value for AI innovation.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Veeam is acquiring Securiti AI for $1.725 billion to enhance its data security capabilities.</li><li>The deal combines Veeam&#8217;s data resilience with Securiti AI&#8217;s data security posture management (DSPM).</li><li>It aims to provide a single platform for data management, security, and recovery for enterprises deploying AI.</li><li>Securiti AI CEO Rehan Jalil will become Veeam&#8217;s President of Security and AI.</li></ul></div>"
+    },
+    {
+      "id": "multimodal-ai-startup-fal-ai-raises-250m-at-4b-valuation",
+      "sourceUrl": "https://techcrunch.com/2025/10/21/fal-ai-a-multimodal-ai-startup-is-said-to-have-raised-funds-at-a-valuation-of-over-4-billion/",
+      "category": "ai-technology-and-news",
+      "subCategory": "funding",
+      "title": "Multimodal AI Startup Fal.ai Raises $250M at Over $4 Billion Valuation",
+      "author": "TechCrunch",
+      "publishDate": "Oct 21, 2025",
+      "readTime": 2,
+      "isTrending": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://images.pexels.com/photos/7464213/pexels-photo-7464213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/7464213/pexels-photo-7464213.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
+      "images": [
+        "https://images.pexels.com/photos/7464213/pexels-photo-7464213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      ],
+      "videos": [],
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://images.pexels.com/photos/7464213/pexels-photo-7464213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"Abstract image of AI and data processing\"><h1>Multimodal AI Startup Fal.ai Raises $250M at Over $4 Billion Valuation</h1></div><p class=\"lead-paragraph\">Multimodal AI infrastructure startup Fal.ai has reportedly secured approximately $250 million in a new funding round, pushing its valuation past $4 billion. The late-stage financing was led by prominent venture capital firms Kleiner Perkins and Sequoia Capital, reflecting surging investor demand for companies powering the next wave of AI applications.</p><div class=\"side-image-left\"><img src=\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600' width='800' height='600'><defs><linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:rgb(79,70,229);stop-opacity:1' /><stop offset='100%' style='stop-color:rgb(109,40,217);stop-opacity:1' /></linearGradient></defs><rect width='100%' height='100%' fill='url(%23grad1)'/><text fill='rgba(255,255,255,0.9)' font-family='sans-serif' font-size='30' x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'>Fal.ai Valuation Growth</text><text fill='rgba(255,255,255,0.7)' font-family='sans-serif' font-size='18' x='20' y='580'>AI Infrastructure Funding</text></svg>\" alt=\"Fal.ai funding growth chart\"><p>This new valuation represents a significant increase for Fal.ai, which was valued at $1.5 billion just a few months prior during a $125 million Series C round. The company provides developers with cloud infrastructure for hosting and running over 600 image, video, and audio AI models, claiming to operate thousands of Nvidia H100 and H200 GPUs optimised for fast performance.</p></div><blockquote class=\"expert-quote\">“Generative media is expanding faster than we ever imagined, and video is its next frontier. Fal has raised a $49M Series B to fuel our mission: building the core infrastructure for AI-driven media creation.” &#8212; Fal.ai Team (on a previous round)</blockquote><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>Fal.ai has seen explosive growth, with its revenue reportedly exceeding $95 million and its developer community growing to over 2 million users. This rapid expansion is driven by the high demand for multimodal AI capabilities, spurred by the popularity of video generation models like OpenAI&#8217;s Sora.</p></div><h3>Broader Impact</h3><p>The substantial funding for Fal.ai underscores the critical role of infrastructure providers in the booming generative AI ecosystem. As developers and enterprises race to build applications using complex AI models, platforms that offer optimised, scalable, and easy-to-use computational resources are becoming increasingly valuable.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Multimodal AI startup Fal.ai raised around $250 million in new funding.</li><li>The company&#8217;s valuation has surged to over $4 billion.</li><li>The round was co-led by Kleiner Perkins and Sequoia Capital.</li><li>Fal.ai provides the essential cloud infrastructure for running generative AI models for images, audio, and video.</li></ul></div>"
+    },
+    {
+      "id": "nexos-ai-raises-30m-for-enterprise-ai-platform",
+      "sourceUrl": "https://techcrunch.com/2025/10/21/nexos-ai-from-the-founders-of-nordvpn-raises-30m-to-become-a-switzerland-for-llms/",
+      "category": "ai-technology-and-news",
+      "subCategory": "funding",
+      "title": "European AI Startup Nexos.ai, From Nord Security Founders, Raises \u20ac30 Million",
+      "author": "EU-Startups",
+      "publishDate": "Oct 21, 2025",
+      "readTime": 2,
+      "isTrending": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://images.pexels.com/photos/5926382/pexels-photo-5926382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/5926382/pexels-photo-5926382.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
+      "images": [
+        "https://images.pexels.com/photos/5926382/pexels-photo-5926382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      ],
+      "videos": [],
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://images.pexels.com/photos/5926382/pexels-photo-5926382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"Image of a secure data center representing AI governance\"><h1>European AI Startup Nexos.ai, From Nord Security Founders, Raises \u20ac30 Million</h1></div><p class=\"lead-paragraph\">Lithuanian startup Nexos.ai has raised \u20ac30 million in a Series A funding round to develop its enterprise AI adoption platform. The company, founded by the same team behind cybersecurity firm Nord Security, aims to help large organisations use AI tools safely and efficiently by managing governance, security, and costs.</p><div class=\"side-image-left\"><img src=\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600' width='800' height='600'><defs><linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:rgb(30,64,175);stop-opacity:1' /><stop offset='100%' style='stop-color:rgb(29,78,216);stop-opacity:1' /></linearGradient></defs><rect width='100%' height='100%' fill='url(%23grad1)'/><text fill='rgba(255,255,255,0.9)' font-family='sans-serif' font-size='30' x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'>Nexos.ai Series A</text><text fill='rgba(255,255,255,0.7)' font-family='sans-serif' font-size='18' x='20' y='580'>Enterprise AI Governance</text></svg>\" alt=\"Nexos.ai logo and funding info\"><p>The funding round was co-led by Evantic Capital and Index Ventures, with participation from Creandum and Dig Ventures. Nexos.ai is tackling the challenge of &#8220;Shadow AI,&#8221; where employees use consumer AI tools for work tasks, potentially uploading confidential data to public models without oversight. The platform acts as a neutral intermediary, or a &#8220;Switzerland for LLMs,&#8221; balancing productivity with enterprise-grade data control.</p></div><blockquote class=\"expert-quote\">“Nexos.ai addresses the fundamental infrastructure gap preventing enterprises from capturing AI\u2019s value while maintaining security control.” &#8212; Matt Miller, Evantic Capital</blockquote><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The company provides a unified platform with two main products: an AI Workspace for employees and an AI Gateway for developers. The Gateway offers a single API endpoint for over 200 AI models from providers like OpenAI, Google, and Anthropic, with built-in security, routing, and cost management.</p></div><h3>Broader Impact</h3><p>As enterprises grapple with the risks of fragmented and unmonitored AI usage, platforms like Nexos.ai are becoming essential. By providing a secure and governed framework, they enable companies to innovate and experiment with AI confidently, ensuring compliance with privacy laws and internal policies. This trend mirrors the evolution of cloud computing, where security and cost governance became prerequisites for scaling.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Nexos.ai, from the founders of Nord Security, raised \u20ac30 million in a Series A round.</li><li>The platform helps enterprises adopt AI securely by managing governance, security, and costs.</li><li>It aims to solve the &#8220;Shadow AI&#8221; problem of employees using unsecured public AI tools.</li><li>The round was co-led by Evantic Capital and Index Ventures.</li></ul></div>"
+    },
+    {
+      "id": "cloudflare-ceo-urges-uk-to-break-up-google-ai-crawler",
+      "sourceUrl": "https://www.thetechbuzz.com/cloudflare-ceo-pushes-uk-to-break-up-googles-ai-crawler-bundle/",
+      "category": "ai-technology-and-news",
+      "subCategory": "regulation",
+      "title": "Cloudflare CEO Urges UK Regulators to Address Google's AI Crawling Dominance",
+      "author": "The Tech Buzz",
+      "publishDate": "Oct 21, 2025",
+      "readTime": 2,
+      "isTrending": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
+      "images": [
+        "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      ],
+      "videos": [],
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"Image of a gavel and laptop representing tech regulation\"><h1>Cloudflare CEO Urges UK Regulators to Address Google's AI Crawling Dominance</h1></div><p class=\"lead-paragraph\">Cloudflare CEO Matthew Prince is lobbying UK regulators to force Google to separate its search and AI web crawlers, arguing that the current bundled system gives the search giant an unfair advantage in the artificial intelligence race. Prince met with the UK&#8217;s Competition and Markets Authority (CMA) to push for new rules that would promote equal footing among AI companies.</p><div class=\"side-image-left\"><img src=\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600' width='800' height='600'><defs><linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:rgb(220,38,38);stop-opacity:1' /><stop offset='100%' style='stop-color:rgb(159,18,57);stop-opacity:1' /></linearGradient></defs><rect width='100%' height='100%' fill='url(%23grad1)'/><text fill='rgba(255,255,255,0.9)' font-family='sans-serif' font-size='30' x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'>Regulatory Scrutiny</text><text fill='rgba(255,255,255,0.7)' font-family='sans-serif' font-size='18' x='20' y='580'>AI &amp; Antitrust</text></svg>\" alt=\"Cloudflare vs Google regulation concept\"><p>The core of the issue is that Google uses a combined crawler for both its search index and its AI model training. This forces website owners into an all-or-nothing choice: allow Google access for search traffic, which can account for a significant portion of revenue, or block the crawler entirely and lose that traffic, thereby also preventing their content from being used for AI training. This differs from competitors like OpenAI and Anthropic, who often have to pay for the content used to train their models.</p></div><blockquote class=\"expert-quote\">Prince&#8217;s solution envisions thousands of AI companies competing to buy content from publishers and small businesses &#8212; a true marketplace rather than Google&#8217;s current take-it-or-leave-it approach. &#8212; The Tech Buzz</blockquote><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The CMA recently designated Google with a special regulatory status due to its dominance in the search market. Prince argues that Google&#8217;s ability to harvest vast amounts of web content without payment, while its AI competitors must pay, creates an artificial barrier to competition in the AI sector.</p></div><h3>Broader Impact</h3><p>If UK authorities act on Cloudflare&#8217;s recommendations, it could set a significant global precedent. Such a move could reshape the AI industry by forcing a separation between search indexing and AI data collection, potentially creating a more competitive market for content licensing and influencing how other regulators approach the intersection of search dominance and AI development.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Cloudflare&#8217;s CEO is asking UK regulators to unbundle Google&#8217;s search and AI web crawlers.</li><li>He argues the current system gives Google an unfair data advantage for training its AI models.</li><li>Websites must choose between allowing access for search traffic or blocking Google&#8217;s AI training.</li><li>A regulatory change could create a more competitive market for AI training data and set a global precedent.</li></ul></div>"
+    },
+    {
+      "id": "tutankhamuns-tomb-at-risk-of-collapse-experts-warn",
+      "sourceUrl": "https://www.independent.co.uk/news/science/archaeology/tutankhamun-tomb-collapse-risk-b2844225.html",
+      "category": "archaeology-and-history",
+      "subCategory": "egyptology",
+      "title": "Tutankhamun\u2019s Tomb Faces Collapse Risk, Experts Warn",
+      "author": "The Independent",
+      "publishDate": "Oct 21, 2025",
+      "readTime": 2,
+      "isTrending": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://images.pexels.com/photos/1577735/pexels-photo-1577735.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/1577735/pexels-photo-1577735.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
+      "images": [
+        "https://images.pexels.com/photos/1577735/pexels-photo-1577735.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "https://images.pexels.com/photos/712067/pexels-photo-712067.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
+      ],
+      "videos": [],
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://images.pexels.com/photos/1577735/pexels-photo-1577735.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"The golden sarcophagus of Tutankhamun\"><h1>Tutankhamun\u2019s Tomb Faces Collapse Risk, Experts Warn</h1></div><p class=\"lead-paragraph\">The 3,300-year-old tomb of Tutankhamun is in a dangerously fragile state and faces a significant risk of collapse due to widespread structural damage. Recent studies have identified spreading cracks, deteriorating rock from humidity, and fading murals, all of which threaten one of archaeology&#8217;s most important discoveries.</p><div class=\"side-image-left\"><img src=\"https://images.pexels.com/photos/712067/pexels-photo-712067.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2\" alt=\"Wall paintings inside an Egyptian tomb\"><p>A major fracture running across the ceiling of the burial chamber has allowed rainwater to seep into the structure, dramatically increasing humidity levels. This moisture has accelerated fungal growth on the priceless wall paintings and weakened the tomb&#8217;s integrity. The tomb&#8217;s construction within unstable Esna shale rock, which expands and contracts with humidity changes, has exacerbated the damage.</p></div><blockquote class=\"expert-quote\">“There are current and future risks that will affect the structural integrity of the tomb of Tutankhamun in the long term, and the tomb may not withstand for thousands of years in its current condition.” &#8212; Dr. Sayed Hemeda, Cairo University</blockquote><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>A catastrophic flash flood in the Valley of the Kings in 1994 marked a turning point for the tomb&#8217;s preservation. The event caused significant water ingress and triggered the fungal growth that continues to damage the murals today. Professor Sayed Hemeda of Cairo University identified this flood as a primary cause of the current structural weaknesses.</p></div><h3>Broader Impact</h3><p>The potential collapse of Tutankhamun&#8217;s tomb would be an irreplaceable loss for world heritage. Experts are calling for urgent conservation measures, including stabilising the internal climate and reinforcing the ceiling structure to prevent further deterioration and protect the iconic monument.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Tutankhamun&#8217;s tomb is at serious risk of collapse due to structural damage.</li><li>Key factors include a major ceiling fracture, water infiltration, and humidity.</li><li>The tomb was constructed in unstable Esna shale, making it vulnerable to moisture.</li><li>A major flood in 1994 is cited as a critical event that accelerated the decay.</li></ul></div>"
+    },
+    {
+      "id": "netflix-signals-commitment-to-generative-ai",
+      "sourceUrl": "https://mashable.com/article/netflix-generative-ai-guidelines",
+      "category": "ai-technology-and-news",
+      "subCategory": "media",
+      "title": "Netflix Signals Strong Commitment to Generative AI in Operations",
+      "author": "Mashable",
+      "publishDate": "Oct 20, 2025",
+      "readTime": 2,
+      "isTrending": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://images.pexels.com/photos/1201996/pexels-photo-1201996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/1201996/pexels-photo-1201996.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
+      "images": [
+        "https://images.pexels.com/photos/1201996/pexels-photo-1201996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      ],
+      "videos": [],
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://images.pexels.com/photos/1201996/pexels-photo-1201996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"Person using Netflix on a laptop\"><h1>Netflix Signals Strong Commitment to Generative AI in Operations</h1></div><p class=\"lead-paragraph\">Streaming giant Netflix is deepening its commitment to integrating generative AI, positioning the technology as a valuable tool to make content creation better and more efficient. The company recently confirmed the first use of final, on-screen generative AI footage in one of its original series and has published new guidelines for its creative partners regarding the use of AI tools.</p><div class=\"side-image-left\"><img src=\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600' width='800' height='600'><defs><linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:rgb(190,24,24);stop-opacity:1' /><stop offset='100%' style='stop-color:rgb(127,29,29);stop-opacity:1' /></linearGradient></defs><rect width='100%' height='100%' fill='url(%23grad1)'/><text fill='rgba(255,255,255,0.9)' font-family='sans-serif' font-size='30' x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'>Generative AI in Media</text><text fill='rgba(255,255,255,0.7)' font-family='sans-serif' font-size='18' x='20' y='580'>Netflix AI Guidelines</text></svg>\" alt=\"Netflix AI concept\"><p>In the Spanish-language series *The Eternaut*, AI was used to generate a complex visual effects sequence of a collapsing building in Buenos Aires. According to co-CEO Ted Sarandos, the sequence was completed ten times faster than with traditional methods and at a cost that would have otherwise been unfeasible for the show&#8217;s budget.</p></div><blockquote class=\"expert-quote\">“We remain convinced that AI represents an incredible opportunity to help creators make films and series better, not just cheaper. This is real people doing real work with better tools.” &#8212; Ted Sarandos, co-CEO of Netflix</blockquote><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>Netflix has published new guidelines for its partners, outlining low-risk and high-risk use cases for AI. The company stresses that the use of AI should not replace work typically done by union-represented individuals without proper agreements and must respect creative rights and data privacy.</p></div><h3>Broader Impact</h3><p>As one of the world&#8217;s largest content producers, Netflix&#8217;s public embrace of generative AI sets a major precedent for the entertainment industry. While unions remain cautious, the company is framing AI as an assistive tool that enhances human creativity rather than replacing it. Netflix also plans to expand its use of AI in other areas, such as search functions and advertising.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Netflix has confirmed its first use of generative AI for final footage in an original series.</li><li>AI was used to create a VFX scene in *The Eternaut* ten times faster than traditional methods.</li><li>The company released new guidelines for partners on the responsible use of AI in production.</li><li>Netflix views AI as a creative aid to make content better, not just cheaper.</li></ul></div>"
+    },
+    {
+      "id": "archaeologists-unearth-ancient-roman-basin-in-gabii",
+      "sourceUrl": "https://news.artnet.com/art-world/ancient-roman-city-yields-huge-2200-year-old-water-basin-2741586",
+      "category": "archaeology-and-history",
+      "subCategory": "roman",
+      "title": "Archaeologists Unearth Massive Ancient Roman Water Basin Near Rome",
+      "author": "Artnet News",
+      "publishDate": "Oct 18, 2025",
+      "readTime": 2,
+      "isTrending": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://images.pexels.com/photos/161482/roman-forum-rome-italy-161482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/161482/roman-forum-rome-italy-161482.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
+      "images": [
+        "https://images.pexels.com/photos/161482/roman-forum-rome-italy-161482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "https://images.pexels.com/photos/208756/pexels-photo-208756.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
+      ],
+      "videos": [],
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://images.pexels.com/photos/161482/roman-forum-rome-italy-161482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"Ruins of the Roman Forum\"><h1>Archaeologists Unearth Massive Ancient Roman Water Basin Near Rome</h1></div><p class=\"lead-paragraph\">Archaeologists have unearthed a massive, 2,200-year-old stone-lined water basin in the ancient Roman city of Gabii, approximately eleven miles east of Rome. Dating to around 250 BC, the structure is considered one of the earliest examples of Roman monumental architecture beyond temples and city walls, offering new insights into early Roman urban planning.</p><div class=\"side-image-left\"><img src=\"https://images.pexels.com/photos/208756/pexels-photo-208756.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2\" alt=\"Close-up of ancient Roman stone architecture\"><p>The discovery was made by a team led by Professor Marcello Mogetta from the University of Missouri. The basin was partly carved directly into the bedrock and was likely part of a monumental pool within the city&#8217;s forum, the centre of public and civic life. Its existence challenges the traditional narrative that early Roman architecture was modest before the conquest of Greece.</p></div><blockquote class=\"expert-quote\">“This discovery gives us a rare look at how the early Romans experimented with city planning.” &#8212; Marcello Mogetta, University of Missouri</blockquote><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The ancient city of Gabii was a rival to Rome that was largely abandoned by 50 BC. This abandonment left its original streets and foundations remarkably well-preserved, providing a clearer view of an early Roman city than is possible in Rome itself, where later construction has buried ancient layers. Italy&#8217;s Ministry of Culture has designated Gabii as an archaeological park.</p></div><h3>Broader Impact</h3><p>This finding helps reshape the understanding of early Roman civilisation, suggesting they were engaging in sophisticated, large-scale urban design earlier than previously thought. The ongoing excavations at Gabii continue to provide a unique window into the development of Roman engineering, architecture, and society.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>A massive stone water basin from 250 BC has been discovered in the ancient Roman city of Gabii.</li><li>It is one of the earliest known examples of Roman monumental public architecture.</li><li>The discovery was made by a team from the University of Missouri.</li><li>Gabii&#8217;s exceptional preservation offers a rare glimpse into early Roman urban life.</li></ul></div>"
+    },
+    {
+      "id": "perth-animal-shelters-overwhelmed-by-dog-surrenders",
+      "sourceUrl": "https://www.perthnow.com.au/news/animals/dog-shelters-under-pressure-as-state-government-remains-tight-lipped-on-next-steps-to-stamp-out-puppy-farms-c-16442089",
+      "category": "local-news",
+      "subCategory": "perth",
+      "title": "Perth Animal Shelters Overwhelmed by Unprecedented Number of Dog Surrenders",
+      "author": "PerthNow",
+      "publishDate": "Oct 18, 2025",
+      "readTime": 2,
+      "isTrending": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
+      "images": [
+        "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      ],
+      "videos": [],
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"Several dogs looking out from a kennel\"><h1>Perth Animal Shelters Overwhelmed by Unprecedented Number of Dog Surrenders</h1></div><p class=\"lead-paragraph\">Animal shelters across Perth are reporting they are completely overwhelmed by a massive increase in dog surrenders, pushing their resources to the limit. The Dogs&#8217; Refuge Home in Shenton Park has stated that the number of dogs coming into their care this year is higher than they have ever experienced before.</p><div class=\"side-image-left\"><img src=\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600' width='800' height='600'><defs><linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:rgb(202,138,4);stop-opacity:1' /><stop offset='100%' style='stop-color:rgb(161,98,7);stop-opacity:1' /></linearGradient></defs><rect width='100%' height='100%' fill='url(%23grad1)'/><text fill='rgba(255,255,255,0.9)' font-family='sans-serif' font-size='30' x='50%' y='50%' dominant-baseline='middle' text-anchor='middle'>Perth Shelter Crisis</text><text fill='rgba(255,255,255,0.7)' font-family='sans-serif' font-size='18' x='20' y='580'>Local Animal Welfare</text></svg>\" alt=\"Dog surrender crisis in Perth\"><p>Other shelters, such as Swan Animal Haven, report a similar situation, with surrender requests at the highest level seen in 25 years of operation. As soon as a kennel becomes free, there is another dog on the waiting list to take its place, leaving staff unable to keep up with the demand and forced to turn many animals away.</p></div><blockquote class=\"expert-quote\">“I&#8217;ve been doing this for about 25 years now and like it&#8217;s just never been this extreme. We&#8217;ve never had to turn away so many dogs.” &#8212; Jess Sackmann, President of Swan Animal Haven</blockquote><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>While national data suggests fewer animals have entered shelters in 2024-25, the situation in Perth appears to be bucking this trend. RSPCA WA noted a 15 per cent increase in voluntary surrenders, with owners citing lack of time, housing insecurity, and rising costs as the primary reasons for giving up their pets.</p></div><h3>Broader Impact</h3><p>The crisis highlights growing social and economic pressures on pet owners in Western Australia. The increase in surrenders places immense strain on the resources of non-profit shelters, which rely on donations and volunteers to care for the animals until new homes can be found.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Perth dog shelters are experiencing an unprecedented surge in surrendered animals.</li><li>The Dogs' Refuge Home in Shenton Park has reported record numbers of dogs in their care.</li><li>Reasons for surrender include housing insecurity and the rising cost of living.</li><li>The situation is placing significant pressure on shelter resources and capacity.</li></ul></div>"
+    },
+    {
+      "id": "traces-of-martian-life-may-be-preserved-in-ice",
+      "sourceUrl": "https://www.space.com/mars-life-preserved-in-ice",
+      "category": "astrophysics-and-cosmology",
+      "subCategory": "mars",
+      "title": "Traces of Ancient Microbial Life on Mars May Be Preserved in Subsurface Ice",
+      "author": "Space.com",
+      "publishDate": "Oct 17, 2025",
+      "readTime": 2,
+      "isTrending": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://images.pexels.com/photos/73910/mars-mars-rover-space-travel-robot-73910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "thumbnailImage": "https://images.pexels.com/photos/73910/mars-mars-rover-space-travel-robot-73910.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=2",
+      "images": [
+        "https://images.pexels.com/photos/73910/mars-mars-rover-space-travel-robot-73910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "https://images.pexels.com/photos/2152/sky-earth-space-working.jpg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2"
+      ],
+      "videos": [],
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://images.pexels.com/photos/73910/mars-mars-rover-space-travel-robot-73910.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"A Mars rover on the surface of the planet\"><h1>Traces of Ancient Microbial Life on Mars May Be Preserved in Subsurface Ice</h1></div><p class=\"lead-paragraph\">If microbial life ever existed on Mars, its biological traces could be preserved within the planet&#8217;s subsurface ice for tens of millions of years. A new study by NASA and Penn State University suggests that fragments of biomolecules, such as amino acids, could survive the harsh Martian radiation environment if trapped in pure water ice.</p><div class=\"side-image-left\"><img src=\"https://images.pexels.com/photos/2152/sky-earth-space-working.jpg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2\" alt=\"An astronaut working on equipment with a planetary background\"><p>In laboratory experiments, researchers simulated Martian conditions by freezing E. coli bacteria in both pure ice and ice mixed with simulated Martian soil. They then exposed the samples to radiation levels equivalent to what they would experience over millions of years on Mars. The results showed that amino acids survived far better in pure ice compared to ice mixed with sediment, where they degraded almost completely.</p></div><blockquote class=\"expert-quote\">“Fifty million years is far greater than the expected age for some current surface ice deposits on Mars, which are often less than two million years old, meaning any organic life present within the ice would be preserved.” &#8212; Christopher House, Penn State University</blockquote><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The study challenges the view that organic materials cannot survive Mars&#8217;s intense surface radiation. In pure ice, harmful secondary particles generated by radiation are immobilised, reducing damage to trapped organic compounds. This makes regions of pure subsurface ice prime targets for future missions searching for signs of past life.</p></div><h3>Broader Impact</h3><p>These findings could significantly reshape the strategy for detecting life on Mars. Instead of focusing solely on complex rock or clay environments, future missions could be designed with tools capable of drilling into and analysing pure ice deposits. This provides a clear and accessible target that could increase the probability of discovering direct evidence of past life on the Red Planet.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>A study suggests ancient microbial life on Mars could be preserved in subsurface ice.</li><li>Amino acids survived simulated Martian radiation for millions of years when trapped in pure ice.</li><li>Preservation was significantly lower in ice mixed with sediment, similar to Martian soil.</li><li>The findings suggest future Mars missions should target pure ice deposits to search for biosignatures.</li></ul></div>"
+    },
     {
       "id": "this-tiny-laser-could-transform-how-we-see-and-sense-the-world",
       "category": "quantum-physics",
