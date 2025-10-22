@@ -1,7 +1,5 @@
  
 {
-  "makeWebhook": "https://hooks.zapier.com/hooks/catch/12345/abcde",
-  "authToken": "Bearer sk_1234567890abcdef",
   "categories": [
     {
       "id": "all",
@@ -9,53 +7,51 @@
       "active": true
     },
     {
-      "id": "technology",
-      "name": "Technology"
+      "id": "space",
+      "name": "Space",
+      "active": false
     },
     {
       "id": "science",
-      "name": "Science"
+      "name": "Science",
+      "active": false
     },
     {
-      "id": "entertainment",
-      "name": "Entertainment"
+      "id": "technology",
+      "name": "Technology",
+      "active": false
     }
   ],
   "trending": [
-    "quantum-echoes-reveal-the-potential-of-googles-quantum-computer",
-    "jujutsu-kaisen-execution-compilation-movie-reveals-exclusive-imax-visual",
-    "on-this-day-in-space-oct-22-1992-gene-roddenberrys-ashes-fly-on-space-s",
-    "european-ai-rising-star-nexos-ai-raises-30m-to-unlock-enterprise-ai"
+    {
+      "articleId": "on-this-day-in-space-oct-22-1992-gene-roddenberrys-ashes-in-space",
+      "reason": "New Space History"
+    },
+    {
+      "articleId": "quantum-echoes-reveal-the-potential-of-googles-quantum-computer",
+      "reason": "Quantum Breakthrough"
+    },
+    {
+      "articleId": "cloudflare-ceo-pushing-uk-regulator-to-unbundle-googles-search-and-ai",
+      "reason": "Big Tech Regulation"
+    },
+    {
+      "articleId": "i-spent-a-month-living-with-a-430-ai-pet-the-casio-moflin",
+      "reason": "AI & Robotics"
+    },
+    {
+      "articleId": "ftc-removes-lina-khan-era-posts-about-ai-risks-and-open-source",
+      "reason": "Policy Change"
+    }
   ],
   "articles": [
     {
-      "id": "quantum-echoes-reveal-the-potential-of-googles-quantum-computer",
-      "sourceUrl": "https://www.sciencenews.org/article/quantum-echoes-google-computer",
-      "category": "science",
-      "subCategory": "Quantum Computing",
-      "title": "Quantum 'echoes' reveal the potential of Google's quantum computer",
-      "author": "Science News",
-      "publishDate": "Oct 22, 2025",
-      "readTime": 1,
-      "isTrending": true,
-      "isVideo": false,
-      "videoUrl": "",
-      "isJob": false,
-      "bannerImage": "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg",
-      "thumbnailImage": "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg",
-      "images": [
-        "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg"
-      ],
-      "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg\" alt=\"A stylised representation of quantum computing.\"><h1>Quantum 'echoes' reveal the potential of Google's quantum computer</h1></div><p class=\"lead-paragraph\">Researchers claim Google's Willow quantum chip has achieved a verifiable quantum advantage, performing a calculation that is seemingly beyond the reach of classical computers but with a result that can be confirmed as correct.</p><div class=\"side-image-left\"><img src=\"https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg\" alt=\"Context image for quantum computing advancements.\"><p>This development marks a crucial step toward finding practical applications for quantum computers, moving the technology from theoretical to demonstrable advantage.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The calculation, measuring a phenomenon called “quantum echoes,” runs 13,000 times faster on the Willow chip than on the Frontier supercomputer. The full set of calculations would take about 150 years on Frontier but took only days on Willow.</p></div><h3>Broader Impact</h3><p>Achieving a verifiable quantum advantage is a major milestone. It builds confidence in the scalability and accuracy of quantum systems, paving the way for future research into complex problems in fields like medicine, materials science, and cryptography that are intractable for even the most powerful supercomputers today.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Google's Willow chip has achieved a verifiable quantum advantage.</li><li>It performed a specific calculation 13,000 times faster than a top supercomputer.</li><li>This is a critical step towards practical real-world use of quantum computers.</li></ul></div>"
-    },
-    {
-      "id": "on-this-day-in-space-oct-22-1992-gene-roddenberrys-ashes-fly-on-space-s",
+      "id": "on-this-day-in-space-oct-22-1992-gene-roddenberrys-ashes-in-space",
       "sourceUrl": "https://www.space.com/39251-on-this-day-in-space.html",
-      "category": "science",
-      "subCategory": "Space History",
-      "title": "On this day in space: Oct. 22, 1992: Gene Roddenberry's ashes fly on Space S",
-      "author": "space.com",
+      "category": "space",
+      "subCategory": "space-exploration",
+      "title": "On this day in space: Oct. 22, 1992: Gene Roddenberry's ashes in space",
+      "author": "Hanneke Weitering",
       "publishDate": "Oct 22, 2025",
       "readTime": 1,
       "isTrending": true,
@@ -68,60 +64,81 @@
         "https://cdn.mos.cms.futurecdn.net/JCt47QxNCZjHeadW7wgUQb-1920-80.jpg"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/JCt47QxNCZjHeadW7wgUQb-1920-80.jpg\" alt=\"The Space Shuttle Columbia in orbit.\"><h1>On this day in space: Oct. 22, 1992: Gene Roddenberry's ashes fly on Space S</h1></div><p class=\"lead-paragraph\">On This Day in Space, October 22, 1992, some of the ashes of \"Star Trek\" creator Gene Roddenberry were launched into orbit aboard the Space Shuttle Columbia.</p><p>This symbolic journey fulfilled Roddenberry's wish to have his remains travel through the cosmos that so heavily inspired his work. The shuttle mission, STS-52, carried the ashes in a small canister along with its primary payloads, honouring the legacy of a man whose vision of the future inspired millions to look to the stars.</p><h3>Broader Impact</h3><p>The event highlighted the deep connection between science fiction and real-world space exploration. Roddenberry's optimistic and inclusive vision for humanity's future in space has been cited by countless scientists, engineers, and astronauts as a primary source of their inspiration, demonstrating the powerful role storytelling plays in driving scientific progress.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>A portion of Gene Roddenberry's ashes were flown into space on Oct 22, 1992.</li><li>The mission was carried out by the Space Shuttle Columbia (STS-52).</li><li>The act fulfilled Roddenberry's wish and symbolized the link between sci-fi and space exploration.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/JCt47QxNCZjHeadW7wgUQb-1920-80.jpg\" alt=\"Article image\"><h1>On this day in space: Oct. 22, 1992: Gene Roddenberry&apos;s ashes in space</h1></div><p class=\"lead-paragraph\">On October 22, 1992, a portion of the ashes of &quot;Star Trek&quot; creator Gene Roddenberry were flown into space aboard the space shuttle Columbia on mission STS-52.</p><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>This event is considered the first-ever &quot;space burial.&quot;</p></div><h3>Broader Impact</h3><p>This unique tribute honored the creator of a franchise that inspired generations to look to the stars, literally sending a part of him into the environment he so vividly imagined.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Gene Roddenberry&apos;s ashes were flown on the space shuttle Columbia.</li><li>The mission, STS-52, took place on October 22, 1992.</li><li>It is regarded as the first instance of a space burial.</li></ul></div>"
     },
     {
-      "id": "jujutsu-kaisen-execution-compilation-movie-reveals-exclusive-imax-visual",
-      "sourceUrl": "https://www.crunchyroll.com/news/latest/2025/10/22/jujutsu-kaisen-execution-compilation-movie-exclusive-imax-visual-japan",
-      "category": "entertainment",
-      "subCategory": "Anime",
-      "title": "JUJUTSU KAISEN: Execution Compilation Movie Reveals Exclusive IMAX Visual",
-      "author": "Crunchyroll News",
+      "id": "quantum-echoes-reveal-the-potential-of-googles-quantum-computer",
+      "sourceUrl": "https://www.sciencenews.org/article/quantum-echoes-google-computer",
+      "category": "science",
+      "subCategory": "quantum-computing",
+      "title": "Quantum 'echoes' reveal the potential of Google's quantum computer",
+      "author": "Emily Conover",
       "publishDate": "Oct 22, 2025",
       "readTime": 1,
       "isTrending": true,
       "isVideo": false,
       "videoUrl": "",
       "isJob": false,
-      "bannerImage": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1200\" height=\"800\" viewBox=\"0 0 1200 800\"><defs><linearGradient id=\"grad1\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" style=\"stop-color:rgb(55,0,65);stop-opacity:1\" /><stop offset=\"100%\" style=\"stop-color:rgb(155,50,110);stop-opacity:1\" /></linearGradient></defs><rect width=\"1200\" height=\"800\" fill=\"url(#grad1)\" /><text fill=\"#ffffff\" font-family=\"'Segoe UI', Roboto, sans-serif\" font-size=\"48\" font-weight=\"bold\" x=\"60\" y=\"740\" text-anchor=\"start\">JUJUTSU KAISEN: Execution Compilation Movie</text></svg>",
-      "thumbnailImage": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"400\" height=\"300\" viewBox=\"0 0 400 300\"><defs><linearGradient id=\"grad1\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" style=\"stop-color:rgb(55,0,65);stop-opacity:1\" /><stop offset=\"100%\" style=\"stop-color:rgb(155,50,110);stop-opacity:1\" /></linearGradient></defs><rect width=\"400\" height=\"300\" fill=\"url(#grad1)\" /><text fill=\"#ffffff\" font-family=\"'Segoe UI', Roboto, sans-serif\" font-size=\"24\" font-weight=\"bold\" x=\"20\" y=\"275\" text-anchor=\"start\">JUJUTSU KAISEN: Execution Compilation Movie</text></svg>",
+      "bannerImage": "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg",
+      "thumbnailImage": "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg",
       "images": [
-        "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1200\" height=\"800\" viewBox=\"0 0 1200 800\"><defs><linearGradient id=\"grad1\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" style=\"stop-color:rgb(55,0,65);stop-opacity:1\" /><stop offset=\"100%\" style=\"stop-color:rgb(155,50,110);stop-opacity:1\" /></linearGradient></defs><rect width=\"1200\" height=\"800\" fill=\"url(#grad1)\" /><text fill=\"#ffffff\" font-family=\"'Segoe UI', Roboto, sans-serif\" font-size=\"48\" font-weight=\"bold\" x=\"60\" y=\"740\" text-anchor=\"start\">JUJUTSU KAISEN: Execution Compilation Movie</text></svg>"
+        "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='800' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:rgb(55,0,65);stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:rgb(155,50,110);stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='800' fill='url(%23grad1)' /%3E%3Ctext fill='%23ffffff' font-family=''Segoe UI', Roboto, sans-serif' font-size='48' font-weight='bold' x='60' y='740' text-anchor='start'%3EJUJUTSU KAISEN: Execution Compilation Movie%3C/text%3E%3C/svg%3E\" alt=\"JUJUTSU KAISEN: Execution Compilation Movie\"><h1>JUJUTSU KAISEN: Execution Compilation Movie Reveals Exclusive IMAX Visual</h1></div><p class=\"lead-paragraph\">In preparation for its release in Japan, the JUJUTSU KAISEN: Execution compilation movie has revealed a new visual for its IMAX screenings.</p><p>The film recaps the anime's popular Shibuya Incident arc and includes the first two episodes of the upcoming Culling Game arc, bridging the gap between seasons for fans.</p><h3>Broader Impact</h3><p>The movie will be released in Japan on November 7, with international release dates to follow. This includes a North American release on December 5, indicating the franchise's significant global appeal and the studio's commitment to its international fanbase.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>A new IMAX visual has been released for the upcoming compilation movie.</li><li>The film recaps the Shibuya Incident arc and previews the Culling Game arc.</li><li>It will be released in Japan on Nov 7 and North America on Dec 5.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg\" alt=\"Article image\"><h1>Quantum &apos;echoes&apos; reveal the potential of Google&apos;s quantum computer</h1></div><p class=\"lead-paragraph\">Google&apos;s Willow quantum chip has achieved a verifiable quantum advantage, performing a calculation that is apparently out of reach for a traditional computer, with a result that can be confirmed as correct.</p><div class=\"side-image-left\"><img src=\"https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg\" alt=\"Context image\"><p>The calculation, which measures a phenomenon known as &quot;quantum echoes,&quot; ran 13,000 times faster on the Willow chip than it would on the Frontier supercomputer, one of the world&apos;s most powerful.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>Google&apos;s Willow chip performed a quantum calculation 13,000 times faster than the Frontier supercomputer.</p></div><h3>Broader Impact</h3><p>This achievement marks a significant milestone in quantum computing, demonstrating a practical instance where a quantum machine verifiably outperforms the best classical systems on a specific task.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Google&apos;s Willow chip has demonstrated a verifiable quantum advantage.</li><li>The calculation involved measuring &quot;quantum echoes&quot;.</li><li>It was significantly faster than the world&apos;s top supercomputers could achieve.</li></ul></div>"
     },
     {
-      "id": "european-ai-rising-star-nexos-ai-raises-30m-to-unlock-enterprise-ai",
-      "sourceUrl": "https://techcrunch.com/2025/10/20/european-ai-rising-star-nexos-ai-raises-30m-to-unlock-enterprise-ai-adoption/",
+      "id": "cloudflare-ceo-pushing-uk-regulator-to-unbundle-googles-search-and-ai",
+      "sourceUrl": "https://techcrunch.com/2025/10/21/cloudflare-ceo-matthew-prince-is-pushing-uk-regulator-to-unbundle-googles-search-and-ai-crawlers/",
       "category": "technology",
-      "subCategory": "Startups",
-      "title": "European AI rising star Nexos AI raises \u20ac30M to unlock enterprise AI",
-      "author": "Tech.eu",
+      "subCategory": "artificial-intelligence",
+      "title": "Cloudflare CEO pushing UK regulator to unbundle Google's search and AI",
+      "author": "TechCrunch",
       "publishDate": "Oct 21, 2025",
       "readTime": 1,
       "isTrending": true,
       "isVideo": false,
       "videoUrl": "",
       "isJob": false,
-      "bannerImage": "https://techcrunch.com/wp-content/uploads/2025/01/Tomas-Okmanas-nexos-2-e1737037636521.jpg?resize=1200,676",
-      "thumbnailImage": "https://techcrunch.com/wp-content/uploads/2025/01/Tomas-Okmanas-nexos-2-e1737037636521.jpg?resize=1200,676",
+      "bannerImage": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' width='1200' height='800' style='background-color: %231a2a3a;'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232a3a4a;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%231a2a3a;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='800' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='85%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='36' fill='%23ffffff'%3ECloudflare CEO pushing UK regulator...%3C/text%3E%3C/svg%3E",
+      "thumbnailImage": "https://techcrunch.com/wp-content/uploads/2025/10/videoframe_402382.png?resize=1200,675",
       "images": [
-        "https://techcrunch.com/wp-content/uploads/2025/01/Tomas-Okmanas-nexos-2-e1737037636521.jpg?resize=1200,676"
+        "https://techcrunch.com/wp-content/uploads/2025/10/videoframe_402382.png?resize=1200,675"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://techcrunch.com/wp-content/uploads/2025/01/Tomas-Okmanas-nexos-2-e1737037636521.jpg?resize=1200,676\" alt=\"Tomas Okmanas of nexos.ai\"><h1>European AI rising star Nexos AI raises \u20ac30M to unlock enterprise AI</h1></div><p class=\"lead-paragraph\">Vilnius-based nexos.ai has raised \u20ac30 million in a Series A round to help enterprises adopt AI securely and at scale.</p><p>The financing, co-led by Evantic Capital and existing investor Index Ventures, aims to address “Shadow AI” risks and eliminate barriers preventing enterprises from effectively using AI tools.</p><h3>Broader Impact</h3><p>The funding will be used to scale the platform and support expansion across Europe and North America. The company's focus on tackling core barriers to enterprise AI adoption, such as security and governance, positions it to become a key player in the growing market for safe and scalable AI solutions in the corporate sector.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Nexos.ai has raised \u20ac30 million in a Series A funding round.</li><li>The company focuses on secure and scalable AI adoption for enterprises.</li><li>Funding will be used to expand its platform across Europe and North America.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' width='1200' height='800' style='background-color: %231a2a3a;'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232a3a4a;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%231a2a3a;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='800' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='85%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='36' fill='%23ffffff'%3ECloudflare CEO pushing UK regulator...%3C/text%3E%3C/svg%3E\" alt=\"Article image\"><h1>Cloudflare CEO pushing UK regulator to unbundle Google&apos;s search and AI</h1></div><p class=\"lead-paragraph\">Cloudflare CEO Matthew Prince is advocating for the UK&apos;s Competition and Markets Authority (CMA) to impose stricter regulations on Google&apos;s search and AI operations.</p><div class=\"side-image-left\"><img src=\"https://techcrunch.com/wp-content/uploads/2025/10/videoframe_402382.png?resize=1200,675\" alt=\"Context image\"><p>Prince argues that Google&apos;s dominance is unfair, as it uses its existing web crawler for both its search engine and AI products, giving it an undue advantage. He suggests this bundling forces media companies to allow Google access to their content without compensation.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The core issue is Google using a single web crawler to gather content for two distinct product lines: its search engine and its AI models.</p></div><h3>Broader Impact</h3><p>This regulatory push could set a precedent for how dominant tech companies are allowed to leverage their existing infrastructure to expand into new markets like AI, potentially leading to fairer competition and better compensation for content creators.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Cloudflare&apos;s CEO is urging the UK&apos;s CMA to regulate Google.</li><li>The complaint centers on Google bundling its search and AI data collection.</li><li>This practice is claimed to give Google an unfair competitive advantage.</li></ul></div>"
+    },
+    {
+      "id": "i-spent-a-month-living-with-a-430-ai-pet-the-casio-moflin",
+      "sourceUrl": "https://techcrunch.com/2025/10/21/i-spent-a-month-living-with-a-430-ai-pet-the-casio-moflin/",
+      "category": "technology",
+      "subCategory": "artificial-intelligence",
+      "title": "I spent a month living with a $430 AI pet, the Casio Moflin",
+      "author": "Amanda Silberling",
+      "publishDate": "Oct 21, 2025",
+      "readTime": 1,
+      "isTrending": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' width='1200' height='800' style='background-color: %231a2a3a;'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232a3a4a;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%231a2a3a;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='800' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='85%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='36' fill='%23ffffff'%3EI spent a month living with a $430 AI pet...%3C/text%3E%3C/svg%3E",
+      "thumbnailImage": "https://techcrunch.com/wp-content/uploads/2025/10/IMG_4487.jpg?resize=1200,675",
+      "images": [
+        "https://techcrunch.com/wp-content/uploads/2025/10/IMG_4487.jpg?resize=1200,675"
+      ],
+      "videos": [],
+      "fullContent": "<div class=\"article-hero\"><img src=\"data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' width='1200' height='800' style='background-color: %231a2a3a;'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232a3a4a;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%231a2a3a;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='800' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='85%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='36' fill='%23ffffff'%3EI spent a month living with a $430 AI pet...%3C/text%3E%3C/svg%3E\" alt=\"Article image\"><h1>I spent a month living with a $430 AI pet, the Casio Moflin</h1></div><p class=\"lead-paragraph\">Casio&apos;s Moflin is an AI-enabled robotic pet that learns and evolves over weeks, offering a low-maintenance pet alternative for $430.</p><div class=\"side-image-left\"><img src=\"https://techcrunch.com/wp-content/uploads/2025/10/IMG_4487.jpg?resize=1200,675\" alt=\"Context image\"><p>It develops a personality tracked through the MofLife app and does not record speech, instead converting audio to non-identifiable data to recognize its owner&apos;s voice.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The Moflin AI pet costs $430 and uses voice recognition without recording speech, ensuring user privacy.</p></div><h3>Broader Impact</h3><p>The development of AI companions like Moflin signifies a growing market for robotic pets that offer emotional engagement without the responsibilities of a live animal, raising questions about the future of human-robot interaction.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Moflin is a $430 AI robotic pet from Casio.</li><li>It learns and develops a unique personality over time.</li><li>It features privacy-conscious voice recognition that does not record audio.</li></ul></div>"
     },
     {
       "id": "ftc-removes-lina-khan-era-posts-about-ai-risks-and-open-source",
       "sourceUrl": "https://techcrunch.com/2025/10/20/ftc-removes-lina-khan-era-posts-about-ai-risks-and-open-source/",
       "category": "technology",
-      "subCategory": "AI",
+      "subCategory": "artificial-intelligence",
       "title": "FTC removes Lina Khan-era posts about AI risks and open source",
-      "author": "TechCrunch",
+      "author": "Rebecca Bellan",
       "publishDate": "Oct 20, 2025",
       "readTime": 1,
-      "isTrending": false,
+      "isTrending": true,
       "isVideo": false,
       "videoUrl": "",
       "isJob": false,
@@ -131,18 +148,18 @@
         "https://techcrunch.com/wp-content/uploads/2021/06/GettyImages-1232440387.jpg?resize=1200,800"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://techcrunch.com/wp-content/uploads/2021/06/GettyImages-1232440387.jpg?resize=1200,800\" alt=\"The Federal Trade Commission building.\"><h1>FTC removes Lina Khan-era posts about AI risks and open source</h1></div><p class=\"lead-paragraph\">The Federal Trade Commission has deleted several Lina Khan–era blog posts that warned about artificial intelligence risks and debated the role of open-source and open-weights models.</p><p>The removal of posts titled \"On Open-Weights Foundation Models\", \"Consumers Are Voicing Concerns About AI\", and \"AI and the Risk of Consumer Harm\" followed the recent administration change. These posts had outlined the FTC's examination of real-world AI harms like fraud, impersonation, and discriminatory outcomes.</p><h3>Broader Impact</h3><p>The takedowns signal a significant shift in the agency's public stance on AI regulation. This repositions the FTC's approach and recasts how Washington talks about AI, competition, and consumer protection, potentially indicating a less aggressive regulatory posture in the near future.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>The FTC has deleted several blog posts about the risks of AI.</li><li>The removed posts were from the tenure of former chair Lina Khan.</li><li>This action suggests a change in the agency's regulatory stance on AI.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://techcrunch.com/wp-content/uploads/2021/06/GettyImages-1232440387.jpg?resize=1200,800\" alt=\"Article image\"><h1>FTC removes Lina Khan-era posts about AI risks and open source</h1></div><p class=\"lead-paragraph\">The Federal Trade Commission (FTC) has taken down several blog posts from the Lina Khan era that discussed open-source AI and the risks AI poses to consumers.</p><div class=\"side-image-left\"><img src=\"https://techcrunch.com/wp-content/uploads/2021/06/GettyImages-1232440387.jpg?resize=1200,800\" alt=\"Context image\"><p>This move is seen as a shift away from the aggressive antitrust agenda of Lina Khan and towards deregulation for Big Tech, aligning with the Trump administration&apos;s AI Action Plan which favors rapid growth over safety measures.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The removal of the FTC blog posts indicates a policy shift towards deregulation and prioritizing AI growth over consumer safety concerns.</p></div><h3>Broader Impact</h3><p>This action signals a significant change in the U.S. government&apos;s approach to AI regulation, potentially reducing oversight on major tech companies and accelerating AI development with fewer safeguards.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>The FTC has removed blog posts concerning AI risks from its website.</li><li>These posts were published during Lina Khan&apos;s tenure.</li><li>The move is interpreted as a shift towards deregulation of the tech industry.</li></ul></div>"
     },
     {
-      "id": "virtual-particles-how-physicists-clever-bookkeeping-trick-could-underlie-reality",
+      "id": "virtual-particles-a-physicists-clever-bookkeeping-trick",
       "sourceUrl": "https://www.space.com/science/particle-physics/virtual-particles-how-physicists-clever-bookkeeping-trick-could-underlie-reality",
       "category": "science",
-      "subCategory": "Physics",
-      "title": "Virtual particles: How physicists' clever bookkeeping trick could underlie reality",
-      "author": "The Conversation",
+      "subCategory": "particle-physics",
+      "title": "Virtual particles: A physicist's clever bookkeeping trick",
+      "author": "Dipangkar Dutta",
       "publishDate": "Oct 20, 2025",
       "readTime": 1,
-      "isTrending": false,
+      "isTrending": true,
       "isVideo": false,
       "videoUrl": "",
       "isJob": false,
@@ -152,78 +169,57 @@
         "https://cdn.mos.cms.futurecdn.net/sWhmjZCkCuKVFsnmWYJ6p-1920-80.png"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/sWhmjZCkCuKVFsnmWYJ6p-1920-80.png\" alt=\"An abstract representation of particle interactions.\"><h1>Virtual particles: How physicists' clever bookkeeping trick could underlie reality</h1></div><p class=\"lead-paragraph\">Virtual particles are a sophisticated mathematical tool used to describe the interactions between real subatomic particles and the forces of nature.</p><p>Invented by physicist Richard Feynman to make calculations about particle interactions more manageable, they are not real in the sense that they cannot be directly detected. They are an essential tool for describing three of the fundamental forces: electromagnetism, and the strong and weak nuclear forces.</p><h3>Broader Impact</h3><p>Although they are a mathematical construct, the calculations using virtual particles predict real-world effects with incredible accuracy. This success leads some scientists to believe they must have a real existence, challenging our fundamental understanding of reality and the nature of the universe.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Virtual particles are a mathematical tool, not directly detectable particles.</li><li>They were invented by Richard Feynman to simplify calculations of particle interactions.</li><li>Their high predictive accuracy has led to debate about their potential real-world existence.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/sWhmjZCkCuKVFsnmWYJ6p-1920-80.png\" alt=\"Article image\"><h1>Virtual particles: A physicist&apos;s clever bookkeeping trick</h1></div><p class=\"lead-paragraph\">Virtual particles are a mathematical tool that physicists use to calculate how forces work in the subatomic world.</p><div class=\"side-image-left\"><img src=\"https://cdn.mos.cms.futurecdn.net/sWhmjZCkCuKVFsnmWYJ6p-1920-80.png\" alt=\"Context image\"><p>Although they are not real particles, they are essential for calculating the interactions between real particles and resolving how forces can act across empty space. Calculations using virtual particles have predicted the behavior of subatomic particles with high accuracy.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>Virtual particles are a mathematical concept, not real particles, used to make highly accurate predictions about subatomic interactions.</p></div><h3>Broader Impact</h3><p>This concept is fundamental to the Standard Model of particle physics, providing the predictive power that has been confirmed by experiments for decades, reinforcing our understanding of the fundamental forces of nature.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Virtual particles are a mathematical tool in physics.</li><li>They are used to calculate interactions between real subatomic particles.</li><li>This method has led to highly accurate predictions of particle behavior.</li></ul></div>"
     },
     {
-      "id": "watch-comets-lemmon-and-swan-make-their-closest-approach-to-earth-live-online-on",
-      "sourceUrl": "https://www.space.com/astronomy/comets/watch-comets-lemmon-and-swan-make-their-closest-approach-to-earth-live-online-on-oct-20",
+      "id": "teleportation-is-possibleat-least-at-the-quantum-level",
+      "sourceUrl": "https://www.ancient-origins.net/unexplained-phenomena/one-step-closer-beam-me-teleportation-possible-least-quantum-level-009052",
       "category": "science",
-      "subCategory": "Astronomy",
-      "title": "Watch comets Lemmon and SWAN make their closest approach to Earth live online on",
-      "author": "space.com",
-      "publishDate": "Oct 20, 2025",
+      "subCategory": "quantum-physics",
+      "title": "Teleportation is Possible…At Least at the Quantum Level",
+      "author": "Ancient Origins",
+      "publishDate": "Oct 19, 2025",
       "readTime": 1,
       "isTrending": false,
       "isVideo": false,
       "videoUrl": "",
       "isJob": false,
-      "bannerImage": "https://cdn.mos.cms.futurecdn.net/qbUbJnRBsyELTqQstWj3Zj-1920-80.jpg",
-      "thumbnailImage": "https://cdn.mos.cms.futurecdn.net/qbUbJnRBsyELTqQstWj3Zj-1920-80.jpg",
+      "bannerImage": "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Beam-Me-Up.jpg?itok=-qe3SvtH",
+      "thumbnailImage": "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Beam-Me-Up.jpg?itok=-qe3SvtH",
       "images": [
-        "https://cdn.mos.cms.futurecdn.net/qbUbJnRBsyELTqQstWj3Zj-1920-80.jpg"
+        "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Beam-Me-Up.jpg?itok=-qe3SvtH"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/qbUbJnRBsyELTqQstWj3Zj-1920-80.jpg\" alt=\"A comet streaking across the night sky.\"><h1>Watch comets Lemmon and SWAN make their closest approach to Earth live online on</h1></div><p class=\"lead-paragraph\">Stargazers can watch two comets, C/2023 A3 (Tsuchinshan-ATLAS) and C/2025 G3 (Lemmon), make their closest passes by Earth on October 20.</p><p>Both comets are expected to be visible with binoculars or a small telescope from a location with dark skies, offering a great opportunity for amateur astronomers.</p><h3>Broader Impact</h3><p>To make the event accessible to everyone, the Virtual Telescope Project will host a free livestream of the celestial event. This will allow a global audience to witness the comets' close approach through robotic telescopes, regardless of their location or local weather conditions.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Two comets, Lemmon and SWAN, made their closest approach to Earth on Oct 20.</li><li>The event was visible with binoculars or a small telescope in dark sky locations.</li><li>The Virtual Telescope Project hosted a free livestream for global viewing.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Beam-Me-Up.jpg?itok=-qe3SvtH\" alt=\"Article image\"><h1>Teleportation is Possible…At Least at the Quantum Level</h1></div><p class=\"lead-paragraph\">While human teleportation remains in science fiction, scientists have made significant strides in quantum teleportation, achieving success with photons, light fields, nuclear spins, and trapped ions.</p><div class=\"side-image-left\"><img src=\"https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Beam-Me-Up.jpg?itok=-qe3SvtH\" alt=\"Context image\"><p>In 1993, scientists confirmed that perfect teleportation is possible in principle. A major breakthrough occurred in 2017 when scientists sent a photon into space, taking quantum teleportation out of the laboratory for the first time.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>In 2017, scientists successfully teleported a photon into space, a landmark achievement for quantum communication.</p></div><h3>Broader Impact</h3><p>These advances in quantum teleportation are crucial steps towards building a quantum internet, which could offer unhackable communication and powerful distributed quantum computing networks.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Quantum teleportation has been successfully achieved with various particles.</li><li>Scientists confirmed in 1993 that perfect teleportation is theoretically possible.</li><li>In 2017, a photon was teleported to a satellite in space.</li></ul></div>"
     },
     {
-      "id": "best-star-projectors-for-kids-night-lights-toys-and-more-space",
-      "sourceUrl": "https://www.space.com/stargazing/astronomy-kit/best-star-projectors-for-kids",
-      "category": "technology",
-      "subCategory": "Gadgets",
-      "title": "Best star projectors for kids: Night lights, toys and more | Space",
-      "author": "Tantse Walter",
-      "publishDate": "Oct 20, 2025",
+      "id": "if-life-on-mars-exists-it-may-be-preserved-in-a-frozen-time-capsule",
+      "sourceUrl": "https://www.space.com/astronomy/mars/if-life-on-mars-exists-it-may-be-preserved-in-a-frozen-time-capsule",
+      "category": "space",
+      "subCategory": "mars",
+      "title": "If life on Mars exists, it may be preserved in a frozen time capsule",
+      "author": "Samantha Mathewson",
+      "publishDate": "Oct 17, 2025",
       "readTime": 1,
       "isTrending": false,
       "isVideo": false,
       "videoUrl": "",
       "isJob": false,
-      "bannerImage": "https://cdn.mos.cms.futurecdn.net/h4EeY8jJxhRt7AcYzDd6Hd-2133-80.jpg",
-      "thumbnailImage": "https://cdn.mos.cms.futurecdn.net/h4EeY8jJxhRt7AcYzDd6Hd-2133-80.jpg",
+      "bannerImage": "https://cdn.mos.cms.futurecdn.net/NNCZd4j7xKGvYsAg39fVxC-1920-80.jpg",
+      "thumbnailImage": "https://cdn.mos.cms.futurecdn.net/NNCZd4j7xKGvYsAg39fVxC-1920-80.jpg",
       "images": [
-        "https://cdn.mos.cms.futurecdn.net/h4EeY8jJxhRt7AcYzDd6Hd-2133-80.jpg"
+        "https://cdn.mos.cms.futurecdn.net/NNCZd4j7xKGvYsAg39fVxC-1920-80.jpg"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/h4EeY8jJxhRt7AcYzDd6Hd-2133-80.jpg\" alt=\"A child's room illuminated by a star projector.\"><h1>Best star projectors for kids: Night lights, toys and more | Space</h1></div><p class=\"lead-paragraph\">A new guide rounds up the best star projectors for children, with options that serve as STEM kits projecting realistic night sky imagery, and others that act as ambient night-lights.</p><p>The guide offers a comprehensive list that includes reviews and analyses of various models to suit different needs and budgets, helping parents make informed decisions ahead of Black Friday 2025.</p><h3>Broader Impact</h3><p>These devices range from novelty designs to scientifically accurate planetariums, providing both educational value and a tool to help soothe a child before bed. They cater to a growing market for products that combine technology, education, and child wellness.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>A guide has been released for the best star projectors for kids.</li><li>Options range from educational STEM kits to ambient night-lights.</li><li>The list helps parents choose a suitable model based on budget and features.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/NNCZd4j7xKGvYsAg39fVxC-1920-80.jpg\" alt=\"Article image\"><h1>If life on Mars exists, it may be preserved in a frozen time capsule</h1></div><p class=\"lead-paragraph\">A new study suggests that traces of ancient microbial life on Mars, such as amino acids, could be preserved in the planet&apos;s subsurface ice for tens of millions of years.</p><div class=\"side-image-left\"><img src=\"https://cdn.mos.cms.futurecdn.net/NNCZd4j7xKGvYsAg39fVxC-1920-80.jpg\" alt=\"Context image\"><p>Laboratory experiments by NASA and Penn State University simulated Martian conditions and showed that amino acids could survive in pure ice long enough for future missions to potentially discover them.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>Lab experiments confirm amino acids can survive for tens of millions of years in simulated Martian subsurface ice.</p></div><h3>Broader Impact</h3><p>This finding provides a strong scientific rationale for future Mars missions to target icy regions in the search for biosignatures, significantly narrowing down the areas of interest for finding evidence of past life.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Evidence of ancient Martian life may be preserved in subsurface ice.</li><li>A study showed amino acids can survive for millions of years in these conditions.</li><li>This guides future missions to search for life in the planet&apos;s icy regions.</li></ul></div>"
     },
     {
-      "id": "how-can-europe-fight-back-against-incursions-by-drone-aircraft",
-      "sourceUrl": "https://www.space.com/technology/aerospace/how-can-europe-fight-back-against-incursions-by-drone-aircraft",
-      "category": "technology",
-      "subCategory": "Aerospace",
-      "title": "How can Europe fight back against incursions by drone aircraft?",
-      "author": "Matthew Powell",
-      "publishDate": "Oct 18, 2025",
-      "readTime": 1,
-      "isTrending": false,
-      "isVideo": false,
-      "videoUrl": "",
-      "isJob": false,
-      "bannerImage": "https://cdn.mos.cms.futurecdn.net/7RHwAXRLUfFkoVqd869UA4-1920-80.jpg",
-      "thumbnailImage": "https://cdn.mos.cms.futurecdn.net/7RHwAXRLUfFkoVqd869UA4-1920-80.jpg",
-      "images": [
-        "https://cdn.mos.cms.futurecdn.net/7RHwAXRLUfFkoVqd869UA4-1920-80.jpg"
-      ],
-      "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/7RHwAXRLUfFkoVqd869UA4-1920-80.jpg\" alt=\"A military drone in flight.\"><h1>How can Europe fight back against incursions by drone aircraft?</h1></div><p class=\"lead-paragraph\">Following a series of drone sightings around airports in Denmark and other European countries, an academic analysis explores the risks and how to counter the threat.</p><p>The risks posed by drone aircraft range from disruptions at civilian airports to potential military and civilian attacks, prompting an urgent need for effective countermeasures.</p><h3>Broader Impact</h3><p>Potential solutions include high-powered lasers like the UK's DragonFire system, specialized jamming technology, and combat aircraft. However, each method presents significant challenges, including the risk of falling debris from downed drones and the difficulty of targeting small, fast-moving objects, highlighting the complexity of modern aerospace security.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>European nations are analysing the threat posed by drone incursions.</li><li>Potential solutions include lasers, jamming, and combat aircraft.</li><li>Each countermeasure comes with its own set of challenges and risks.</li></ul></div>"
-    },
-    {
-      "id": "could-the-worlds-1st-private-space-telescope-help-find-stars-with-habitable-e",
+      "id": "could-the-worlds-1st-private-space-telescope-find-habitable-exoplanets",
       "sourceUrl": "https://www.space.com/astronomy/exoplanets/could-the-worlds-1st-private-space-telescope-help-find-stars-with-habitable-exoplanets",
-      "category": "science",
-      "subCategory": "Astronomy",
-      "title": "Could the world's 1st private space telescope help find stars with habitable e",
-      "author": "space.com",
+      "category": "space",
+      "subCategory": "exoplanets",
+      "title": "Could the world's 1st private space telescope find habitable exoplanets?",
+      "author": "Tereza Pultarova",
       "publishDate": "Oct 17, 2025",
       "readTime": 1,
       "isTrending": false,
@@ -236,15 +232,15 @@
         "https://cdn.mos.cms.futurecdn.net/hNsL9kAde2BruFSpAiD8xB-1920-80.jpg"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/hNsL9kAde2BruFSpAiD8xB-1920-80.jpg\" alt=\"An artist's impression of the Mauve telescope in orbit.\"><h1>Could the world's 1st private space telescope help find stars with habitable e</h1></div><p class=\"lead-paragraph\">The first commercial deep space astronomy telescope, named Mauve, is set to search for stars that could potentially host habitable exoplanets in their orbits.</p><p>Developed by London-based start-up Blue Skies Space, the Mauve telescope is a suitcase-sized satellite equipped with an ultraviolet spectrometer to monitor flaring stars.</p><h3>Broader Impact</h3><p>By tracking the intensity and frequency of stellar flares, the telescope will help scientists identify which stars are stable enough to allow for the emergence of life on orbiting planets and which are too volatile. This commercial approach to astronomical research could accelerate the search for life beyond Earth by providing targeted data to the scientific community.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>The first private space telescope, Mauve, will search for habitable exoplanet systems.</li><li>It will monitor stellar flares to determine the stability of stars.</li><li>This commercial venture aims to accelerate the search for extraterrestrial life.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/hNsL9kAde2BruFSpAiD8xB-1920-80.jpg\" alt=\"Article image\"><h1>Could the world&apos;s 1st private space telescope find habitable exoplanets?</h1></div><p class=\"lead-paragraph\">The first commercial deep space astronomy telescope, named Mauve, is set to launch on a SpaceX mission in November 2025 to search for stars that could host habitable exoplanets.</p><div class=\"side-image-left\"><img src=\"https://cdn.mos.cms.futurecdn.net/hNsL9kAde2BruFSpAiD8xB-1920-80.jpg\" alt=\"Context image\"><p>Developed by the London-based startup Blue Skies Space, the small satellite will carry an ultraviolet spectrometer to monitor flaring stars. By studying stellar activity, Mauve will help astronomers identify which stars are more likely to host habitable exoplanets.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The Mauve telescope, launching in November 2025, will use an ultraviolet spectrometer to study stellar flares and assess planetary habitability.</p></div><h3>Broader Impact</h3><p>The launch of Mauve represents a shift towards the commercialisation of deep space astronomy, potentially accelerating the pace of discovery by complementing publicly funded missions in the search for life beyond Earth.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>The first commercial deep space telescope, Mauve, will launch in November 2025.</li><li>It is developed by the startup Blue Skies Space.</li><li>Its mission is to study stellar flares to identify stars that could host habitable planets.</li></ul></div>"
     },
     {
       "id": "where-the-ridge-meets-the-river-photo-of-the-day-for-oct-16-2025",
       "sourceUrl": "https://www.space.com/astronomy/earth/where-the-ridge-meets-the-river-space-photo-of-the-day-for-oct-16-2025",
-      "category": "science",
-      "subCategory": "Earth",
+      "category": "space",
+      "subCategory": "earth",
       "title": "Where the ridge meets the river photo of the day for Oct. 16, 2025",
-      "author": "NASA Earth Observatory",
+      "author": "Kenna Hughes-Castleberry",
       "publishDate": "Oct 16, 2025",
       "readTime": 1,
       "isTrending": false,
@@ -257,7 +253,10 @@
         "https://cdn.mos.cms.futurecdn.net/Bi2FZCzemUYWLNntvfgC8Y-1920-80.jpg"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/Bi2FZCzemUYWLNntvfgC8Y-1920-80.jpg\" alt=\"Satellite image of Mazartagh Ridge and Hotan River.\"><h1>Where the ridge meets the river photo of the day for Oct. 16, 2025</h1></div><p class=\"lead-paragraph\">A stunning satellite image from Landsat 9 captures the Mazartagh Ridge and Hotan River in the Takla Makan Desert in western China, showcasing a unique geological crossroads.</p><p>The image, taken from 438 miles above Earth by the Operational Land Imager-2 (OLI-2), shows the ridge acting as a natural barrier against winds while the river, carrying glacial meltwater, appears as a dark thread through the arid landscape.</p><h3>Broader Impact</h3><p>This photograph reveals the deep and intricate connections between geology, climate, and history in one of the world's most arid regions. It serves as a valuable data point for scientists studying desertification, water resource management, and the long-term effects of climate change on remote ecosystems.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>A Landsat 9 satellite image shows a unique geological feature in the Takla Makan Desert.</li><li>The image captures the intersection of the Mazartagh Ridge and the Hotan River.</li><li>It highlights the interplay of geology and climate in one of the world's most arid regions.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/Bi2FZCzemUYWLNntvfgC8Y-1920-80.jpg\" alt=\"Article image\"><h1>Where the ridge meets the river photo of the day for Oct. 16, 2025</h1></div><p class=\"lead-paragraph\">A satellite image from Landsat 9 captures the Mazartagh Ridge and the Hotan River in the Takla Makan Desert of western China.</p><div class=\"side-image-left\"><img src=\"https://cdn.mos.cms.futurecdn.net/Bi2FZCzemUYWLNntvfgC8Y-1920-80.jpg\" alt=\"Context image\"><p>The Hotan River, which carries glacial meltwater, supports vegetation along its banks as it flows through the arid region. The area was historically a significant stop on the Silk Road due to the presence of nephrite jade in the river&apos;s sediments.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The image from the Landsat 9 satellite shows the contrast between the arid Mazartagh Ridge and the life-sustaining Hotan River in China.</p></div><h3>Broader Impact</h3><p>This imagery not only highlights the beauty of Earth&apos;s geography but also underscores the historical significance of water sources in sustaining trade routes and civilizations, like the Silk Road, in harsh environments.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>The image shows the Mazartagh Ridge and Hotan River in China.</li><li>The Hotan River supports vegetation in the Takla Makan Desert.</li><li>The area was once a key location on the Silk Road due to valuable jade deposits.</li></ul></div>"
     }
-  ]
+  ],
+  "videos": [],
+  "makeWebhook": "",
+  "authToken": ""
 }
