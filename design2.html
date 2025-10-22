@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News Portal</title>
+<style>
+/* Reset & Global */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif; line-height:1.6; color:#333; background:#f4f4f4; min-height:100vh; }
+a { text-decoration:none; color:inherit; }
+
+/* Header */
+header { background:#fff; border-bottom:1px solid #ddd; position:sticky; top:0; z-index:1000; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+.header-container { max-width:1600px; margin:0 auto; padding:1rem 2rem; display:flex; justify-content:space-between; align-items:center; }
+.site-title { font-size:2rem; font-weight:700; color:#0077cc; }
+
+/* Navigation */
+nav { background:#fff; border-bottom:1px solid #ddd; }
+.nav-container { max-width:1600px; margin:0 auto; padding:0 2rem; }
+.category-menu { display:flex; list-style:none; gap:0.5rem; padding:0.75rem 0; overflow-x:auto; }
+.category-item { white-space:nowrap; }
+.category-link { display:block; padding:0.5rem 1rem; border-radius:6px; background:#f9f9f9; color:#555; font-weight:600; transition:0.3s; }
+.category-link:hover { background:#0077cc; color:#fff; }
+.category-link.active { background:#0077cc; color:#fff; font-weight:700; }
+
+/* Main Layout */
+.main-layout { max-width:1600px; margin:2rem auto; padding:0 2rem; display:grid; grid-template-columns:1fr 320px; gap:2rem; }
+.content-area { min-width:0; }
+.article-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:2rem; }
+.article-card { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,0.1); cursor:pointer; transition:all 0.3s; }
+.article-card:hover { transform:translateY(-4px); box-shadow:0 6px 16px rgba(0,0,0,0.15); }
+.article-image-container { position:relative; height:200px; overflow:hidden; }
+.article-image { width:100%; height:100%; object-fit:cover; transition:transform 0.3s; }
+.article-card:hover .article-image { transform:scale(1.05); }
+.article-badges { position:absolute; top:0.75rem; left:0.75rem; display:flex; gap:0.5rem; flex-wrap:wrap; }
+.badge { padding:0.3rem 0.6rem; font-size:0.7rem; font-weight:700; text-transform:uppercase; border-radius:4px; color:#fff; }
+.badge-trending { background:#ff9900; }
+.badge-job { background:#00cc66; }
+.badge-video { background:#cc0000; }
+.article-content { padding:1rem; }
+.article-category { display:inline-block; font-size:0.7rem; font-weight:700; text-transform:uppercase; color:#0077cc; margin-bottom:0.5rem; }
+.article-title { font-size:1.2rem; font-weight:700; margin-bottom:0.5rem; }
+.article-excerpt { font-size:0.95rem; color:#555; margin-bottom:1rem; }
+.article-meta { font-size:0.85rem; color:#888; display:flex; justify-content:space-between; }
+
+/* Headlines Sidebar */
+.headlines-sidebar { background:#fff; border-radius:12px; padding:1.5rem; position:sticky; top:100px; box-shadow:0 2px 8px rgba(0,0,0,0.1); height:fit-content; }
+.headlines-title { font-size:1.3rem; font-weight:700; margin-bottom:1rem; color:#0077cc; text-transform:uppercase; letter-spacing:1px; }
+.headline-item { padding:0.5rem 0; border-bottom:1px solid #eee; cursor:pointer; transition:all 0.3s; }
+.headline-item:last-child { border-bottom:none; }
+.headline-item:hover { padding-left:0.5rem; }
+.headline-category { font-size:0.7rem; color:#0077cc; font-weight:700; text-transform:uppercase; }
+.headline-title { font-size:0.95rem; font-weight:600; color:#333; }
+.headline-time { font-size:0.75rem; color:#888; margin-top:0.25rem; }
+
+/* Full-width Article View */
+.full-article { background:#fff; padding:2rem; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.1); margin-bottom:2rem; }
+.full-article img { width:100%; max-height:400px; object-fit:cover; border-radius:8px; margin-bottom:1rem; }
+.full-article h1 { font-size:2rem; margin-bottom:1rem; }
+.full-article .meta { color:#888; font-size:0.85rem; margin-bottom:1rem; display:flex; gap:1rem; flex-wrap:wrap; }
+.full-article .content { line-height:1.8; color:#555; }
+
+/* Loading & Spinner */
+.loading { text-align:center; padding:2rem; color:#888; }
+.spinner { border:3px solid #eee; border-top:3px solid #0077cc; border-radius:50%; width:40px; height:40px; animation:spin 1s linear infinite; margin:0 auto 1rem; }
+@keyframes spin { 0%{transform:rotate(0deg);} 100%{transform:rotate(360deg);} }
+
+/* Responsive */
+@media (max-width:1200px) { .main-layout { grid-template-columns:1fr; } .headlines-sidebar { display:none; } }
+@media (max-width:768px) { .category-menu { gap:0.25rem; padding:0.5rem 0; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1 class="site-title">NewsHub</h1>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-container">
+    <ul class="category-menu" id="categoryMenu">
+      <li class="loading">Loading categories...</li>
+    </ul>
+  </div>
+</nav>
+
+<div class="main-layout">
+  <div class="content-area" id="contentArea">
+    <div class="article-grid" id="articleGrid">
+      <div class="loading">
+        <div class="spinner"></div>
+        Loading articles...
+      </div>
+    </div>
+  </div>
+  <aside class="headlines-sidebar">
+    <h2 class="headlines-title">Headlines</h2>
+    <div id="headlinesList"><div class="loading">Loading...</div></div>
+  </aside>
+</div>
+
+<script>
+// Globals
+let articlesData = [], categoriesData = [];
+let currentFilter = 'all';
+
+// Load JSON
+async function loadNewsData() {
+  try {
+    const res = await fetch('news-data.json');
+    const data = await res.json();
+    articlesData = data.articles || [];
+    categoriesData = data.categories || [];
+    renderCategories();
+    renderArticles();
+    renderHeadlines();
+  } catch(e) { console.error(e); }
+}
+
+// Render Categories
+function renderCategories() {
+  const menu = document.getElementById('categoryMenu');
+  menu.innerHTML = '';
+  const homeLi = document.createElement('li');
+  homeLi.className = 'category-item';
+  const homeLink = document.createElement('a');
+  homeLink.className = 'category-link active';
+  homeLink.textContent = 'Home';
+  homeLink.onclick = (e) => { e.preventDefault(); filterByCategory('all'); };
+  homeLi.appendChild(homeLink);
+  menu.appendChild(homeLi);
+
+  categoriesData.forEach(c => {
+    const li = document.createElement('li');
+    li.className = 'category-item';
+    const link = document.createElement('a');
+    link.className = 'category-link';
+    link.textContent = c.name;
+    link.onclick = (e) => { e.preventDefault(); filterByCategory(c.id); };
+    li.appendChild(link);
+    menu.appendChild(li);
+  });
+}
+
+// Render Articles
+function renderArticles(filter='all') {
+  const grid = document.getElementById('articleGrid');
+  grid.innerHTML = '';
+  const filtered = filter === 'all' ? articlesData : articlesData.filter(a=>a.category===filter);
+  if(filtered.length===0){ grid.innerHTML='<div class="loading">No articles found.</div>'; return; }
+  filtered.forEach(a=>{
+    const card = document.createElement('div');
+    card.className='article-card';
+    card.innerHTML=`
+      <div class="article-image-container">
+        <img src="${a.thumbnailImage}" class="article-image" loading="lazy">
+      </div>
+      <div class="article-content">
+        <span class="article-category">${a.category}</span>
+        <h2 class="article-title">${a.title}</h2>
+        <p class="article-excerpt">${a.excerpt}</p>
+        <div class="article-meta"><span>${a.author}</span><span>${a.date}</span></div>
+      </div>
+    `;
+    card.onclick=()=>openArticle(a.id);
+    grid.appendChild(card);
+  });
+}
+
+// Render Headlines
+function renderHeadlines() {
+  const hl = document.getElementById('headlinesList'); hl.innerHTML='';
+  articlesData.slice(0,10).forEach(a=>{
+    const div=document.createElement('div'); div.className='headline-item';
+    div.innerHTML=`<div class="headline-category">${a.category}</div><div class="headline-title">${a.title}</div><div class="headline-time">${a.date}</div>`;
+    div.onclick=()=>openArticle(a.id); hl.appendChild(div);
+  });
+}
+
+// Filter
+function filterByCategory(cat) {
+  currentFilter=cat;
+  document.querySelectorAll('.category-link').forEach(l=>l.classList.remove('active'));
+  const link = [...document.querySelectorAll('.category-link')].find(l=>l.textContent.toLowerCase()===(cat==='all'?'home':categoriesData.find(c=>c.id===cat)?.name.toLowerCase()));
+  if(link) link.classList.add('active');
+  renderArticles(cat);
+  history.pushState({view:'category', category:cat}, '', '');
+}
+
+// Open Article
+function openArticle(id){
+  const article=articlesData.find(a=>a.id===id);
+  if(!article) return;
+  const content=document.getElementById('contentArea');
+  content.innerHTML=`
+    <div class="full-article">
+      <img src="${article.bannerImage}" loading="lazy">
+      <h1>${article.title}</h1>
+      <div class="meta">By ${article.author} | ${article.date}</div>
+      <div class="content">${article.content || article.excerpt}</div>
+    </div>
+  `;
+  history.pushState({view:'article', articleId:id}, '', '');
+}
+
+// Back Button Support
+window.onpopstate=function(event){
+  if(!event.state || event.state.view==='category'){ renderArticles(event.state?.category||'all'); }
+  else if(event.state.view==='article'){ openArticle(event.state.articleId); }
+}
+
+loadNewsData();
+</script>
+
+</body>
+</html>
