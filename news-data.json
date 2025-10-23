@@ -7,8 +7,8 @@
       "active": true
     },
     {
-      "id": "space",
-      "name": "Space",
+      "id": "technology",
+      "name": "Technology",
       "active": false
     },
     {
@@ -17,149 +17,192 @@
       "active": false
     },
     {
-      "id": "technology",
-      "name": "Technology",
+      "id": "news",
+      "name": "News",
+      "active": false
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment",
       "active": false
     }
   ],
   "trending": [
     {
-      "articleId": "on-this-day-in-space-oct-22-1992-gene-roddenberrys-ashes-in-space",
-      "reason": "New Space History"
+      "articleId": "mariah-carey-perth-20251023",
+      "reason": "Recent major entertainment event in Western Australia."
     },
     {
-      "articleId": "quantum-echoes-reveal-the-potential-of-googles-quantum-computer",
-      "reason": "Quantum Breakthrough"
+      "articleId": "serena-downey-fundraiser-20251022",
+      "reason": "Significant community response to a tragic event."
     },
     {
-      "articleId": "cloudflare-ceo-pushing-uk-regulator-to-unbundle-googles-search-and-ai",
-      "reason": "Big Tech Regulation"
+      "articleId": "bom-website-update-fury-20251022",
+      "reason": "Widespread public reaction to a major government website update."
     },
     {
-      "articleId": "i-spent-a-month-living-with-a-430-ai-pet-the-casio-moflin",
-      "reason": "AI & Robotics"
-    },
-    {
-      "articleId": "ftc-removes-lina-khan-era-posts-about-ai-risks-and-open-source",
-      "reason": "Policy Change"
+      "articleId": "fal-ai-funding-20251021",
+      "reason": "Major funding announcement for a key AI startup."
     }
   ],
   "articles": [
     {
-      "id": "on-this-day-in-space-oct-22-1992-gene-roddenberrys-ashes-in-space",
-      "sourceUrl": "https://www.space.com/39251-on-this-day-in-space.html",
-      "category": "space",
-      "subCategory": "space-exploration",
-      "title": "On this day in space: Oct. 22, 1992: Gene Roddenberry's ashes in space",
-      "author": "Hanneke Weitering",
+      "id": "mariah-carey-perth-20251023",
+      "sourceUrl": "https://www.perthnow.com.au/wa/mariah-carey-the-songbird-supreme-flies-in-to-perth-for-first-wa-performance-in-more-than-a-decade-c-20447367",
+      "category": "entertainment",
+      "subCategory": "music",
+      "title": "Mariah Carey Arrives in Perth for First WA Performance in Over a Decade",
+      "author": "Kellie Balaam",
+      "publishDate": "Oct 23, 2025",
+      "readTime": 1,
+      "isTrending": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://images.perthnow.com.au/publication/C-20447367/7b7b8ee8a1290e9c517f41d840bec8a8a9c54876-16x9-x1y0w2446h1376.jpg?imwidth=1200",
+      "thumbnailImage": "https://images.perthnow.com.au/publication/C-20447367/7b7b8ee8a1290e9c517f41d840bec8a8a9c54876-16x9-x1y0w2446h1376.jpg?imwidth=400",
+      "images": [
+        "https://images.perthnow.com.au/publication/C-20447367/7b7b8ee8a1290e9c517f41d840bec8a8a9c54876-16x9-x1y0w2446h1376.jpg?imwidth=1200"
+      ],
+      "videos": [],
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://images.perthnow.com.au/publication/C-20447367/7b7b8ee8a1290e9c517f41d840bec8a8a9c54876-16x9-x1y0w2446h1376.jpg?imwidth=1200\" alt=\"Mariah Carey arrives in Perth\"><h1>Mariah Carey Arrives in Perth for First WA Performance in Over a Decade</h1></div><p class=\"lead-paragraph\">Pop superstar Mariah Carey has landed in Perth for her headline performance at the R&B festival Fridayz Live, marking her first show in Western Australia in more than ten years. Her arrival has generated significant excitement among local fans.</p><div class=\"side-image-left\"><img src=\"https://images.perthnow.com.au/publication/C-20447367/7b7b8ee8a1290e9c517f41d840bec8a8a9c54876-16x9-x1y0w2446h1376.jpg?imwidth=800\" alt=\"Mariah Carey at Fridayz Live festival\"><p>The performance is scheduled to take place at Langley Park. Carey&apos;s recent accolades include the Video Vanguard Award at the 2025 MTV Video Music Awards and being named the upcoming 2026 MusiCares Person of the Year.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>Carey will be performing alongside other major artists including Pitbull, Wiz Khalifa, and Lil Jon at the Fridayz Live festival. The event is a significant date on Perth&apos;s music calendar for 2025.</p></div><h3>Broader Impact</h3><p>This concert is a rare opportunity for Western Australian fans to see the iconic performer live. Carey's recent international appearances have received positive reviews for her vocal performances.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Mariah Carey is in Perth for the Fridayz Live R&B festival.</li><li>This is her first performance in WA in over a decade.</li><li>She was recently awarded the MTV Video Vanguard Award.</li></ul></div>"
+    },
+    {
+      "id": "serena-downey-fundraiser-20251022",
+      "sourceUrl": "https://www.perthnow.com.au/wa/serena-downey-perth-fundraiser-to-repatriate-irish-expat-raises-staggering-amount-overnight-c-20432445",
+      "category": "news",
+      "subCategory": "western-australia",
+      "title": "Fundraiser for Irish FIFO worker Serena Downey raises over $100,000",
+      "author": "Tegwen Bescoby",
       "publishDate": "Oct 22, 2025",
       "readTime": 1,
       "isTrending": true,
       "isVideo": false,
       "videoUrl": "",
       "isJob": false,
-      "bannerImage": "https://cdn.mos.cms.futurecdn.net/JCt47QxNCZjHeadW7wgUQb-1920-80.jpg",
-      "thumbnailImage": "https://cdn.mos.cms.futurecdn.net/JCt47QxNCZjHeadW7wgUQb-1920-80.jpg",
+      "bannerImage": "https://images.perthnow.com.au/publication/C-20432445/01fee3923ea5b0c7c9e6ae35a352ea70b2ebf000-16x9-x1y0w2446h1376.jpg?imwidth=1200",
+      "thumbnailImage": "https://images.perthnow.com.au/publication/C-20432445/01fee3923ea5b0c7c9e6ae35a352ea70b2ebf000-16x9-x1y0w2446h1376.jpg?imwidth=400",
       "images": [
-        "https://cdn.mos.cms.futurecdn.net/JCt47QxNCZjHeadW7wgUQb-1920-80.jpg"
+        "https://images.perthnow.com.au/publication/C-20432445/01fee3923ea5b0c7c9e6ae35a352ea70b2ebf000-16x9-x1y0w2446h1376.jpg?imwidth=1200"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/JCt47QxNCZjHeadW7wgUQb-1920-80.jpg\" alt=\"Article image\"><h1>On this day in space: Oct. 22, 1992: Gene Roddenberry&apos;s ashes in space</h1></div><p class=\"lead-paragraph\">On October 22, 1992, a portion of the ashes of &quot;Star Trek&quot; creator Gene Roddenberry were flown into space aboard the space shuttle Columbia on mission STS-52.</p><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>This event is considered the first-ever &quot;space burial.&quot;</p></div><h3>Broader Impact</h3><p>This unique tribute honored the creator of a franchise that inspired generations to look to the stars, literally sending a part of him into the environment he so vividly imagined.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Gene Roddenberry&apos;s ashes were flown on the space shuttle Columbia.</li><li>The mission, STS-52, took place on October 22, 1992.</li><li>It is regarded as the first instance of a space burial.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://images.perthnow.com.au/publication/C-20432445/01fee3923ea5b0c7c9e6ae35a352ea70b2ebf000-16x9-x1y0w2446h1376.jpg?imwidth=1200\" alt=\"Fundraiser for Serena Downey\"><h1>Fundraiser for Irish FIFO worker Serena Downey raises over $100,000</h1></div><p class=\"lead-paragraph\">A GoFundMe campaign for Serena Downey, a 28-year-old Irish FIFO worker who passed away suddenly in Western Australia, raised more than $100,000 in less than 24 hours. The funds are to help repatriate her body and belongings to Ireland.</p><div class=\"side-image-left\"><img src=\"https://images.perthnow.com.au/publication/C-20432445/01fee3923ea5b0c7c9e6ae35a352ea70b2ebf000-16x9-x1y0w2446h1376.jpg?imwidth=800\" alt=\"Serena Downey\"><p>Downey had been living in WA for six years. The fundraiser was organised to relieve the financial burden on her family. The Department of Foreign Affairs is providing consular assistance.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The GoFundMe campaign saw contributions from over 1,100 donors within the first day, demonstrating a powerful community response. By Thursday morning, the total had surpassed $129,000.</p></div><h3>Broader Impact</h3><p>The tragic event has highlighted the challenges faced by expats and the strength of the Irish community in Australia, with many sharing messages of support and calling for awareness of mental health struggles. The response underscores the community&apos;s solidarity in times of crisis.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>A fundraiser for deceased Irish FIFO worker Serena Downey has exceeded $100,000.</li><li>The funds will be used for repatriation costs.</li><li>The community response has been immense, with over a thousand individual donors.</li></ul></div>"
     },
     {
-      "id": "quantum-echoes-reveal-the-potential-of-googles-quantum-computer",
-      "sourceUrl": "https://www.sciencenews.org/article/quantum-echoes-google-computer",
-      "category": "science",
-      "subCategory": "quantum-computing",
-      "title": "Quantum 'echoes' reveal the potential of Google's quantum computer",
-      "author": "Emily Conover",
+      "id": "bom-website-update-fury-20251022",
+      "sourceUrl": "https://www.perthnow.com.au/wa/weather/epic-fail-bureau-of-meteorology-website-update-sparks-fury-across-australia-c-20443509",
+      "category": "news",
+      "subCategory": "weather",
+      "title": "Bureau of Meteorology's New Website Sparks Public Outcry",
+      "author": "Tegwen Bescoby",
       "publishDate": "Oct 22, 2025",
       "readTime": 1,
       "isTrending": true,
       "isVideo": false,
       "videoUrl": "",
       "isJob": false,
-      "bannerImage": "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg",
-      "thumbnailImage": "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg",
+      "bannerImage": "https://images.perthnow.com.au/publication/C-20443509/6e879cbcab2455265e608906b82a63780b810115-16x9-x712y0w1736h976.jpg?imwidth=1200",
+      "thumbnailImage": "https://images.perthnow.com.au/publication/C-20443509/6e879cbcab2455265e608906b82a63780b810115-16x9-x712y0w1736h976.jpg?imwidth=400",
       "images": [
-        "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg"
+        "https://images.perthnow.com.au/publication/C-20443509/6e879cbcab2455265e608906b82a63780b810115-16x9-x712y0w1736h976.jpg?imwidth=1200"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg\" alt=\"Article image\"><h1>Quantum &apos;echoes&apos; reveal the potential of Google&apos;s quantum computer</h1></div><p class=\"lead-paragraph\">Google&apos;s Willow quantum chip has achieved a verifiable quantum advantage, performing a calculation that is apparently out of reach for a traditional computer, with a result that can be confirmed as correct.</p><div class=\"side-image-left\"><img src=\"https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg\" alt=\"Context image\"><p>The calculation, which measures a phenomenon known as &quot;quantum echoes,&quot; ran 13,000 times faster on the Willow chip than it would on the Frontier supercomputer, one of the world&apos;s most powerful.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>Google&apos;s Willow chip performed a quantum calculation 13,000 times faster than the Frontier supercomputer.</p></div><h3>Broader Impact</h3><p>This achievement marks a significant milestone in quantum computing, demonstrating a practical instance where a quantum machine verifiably outperforms the best classical systems on a specific task.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Google&apos;s Willow chip has demonstrated a verifiable quantum advantage.</li><li>The calculation involved measuring &quot;quantum echoes&quot;.</li><li>It was significantly faster than the world&apos;s top supercomputers could achieve.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://images.perthnow.com.au/publication/C-20443509/6e879cbcab2455265e608906b82a63780b810115-16x9-x712y0w1736h976.jpg?imwidth=1200\" alt=\"Bureau of Meteorology website\"><h1>Bureau of Meteorology's New Website Sparks Public Outcry</h1></div><p class=\"lead-paragraph\">The Bureau of Meteorology (BoM) has faced widespread public criticism following the launch of its updated website this week. Many users have reported the new interface is confusing and difficult to navigate, particularly for accessing local forecasts and radar maps.</p><div class=\"side-image-left\"><img src=\"https://images.perthnow.com.au/publication/C-20443509/6e879cbcab2455265e608906b82a63780b810115-16x9-x712y0w1736h976.jpg?imwidth=800\" alt=\"New BoM website interface\"><p>The update was intended to simplify language and improve customisation options. However, social media platforms were flooded with complaints, with users branding the redesign an 'epic fail' and 'a step backwards'.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The Bureau of Meteorology's website is one of Australia's most visited government sites, with daily traffic averaging 1.8 million users, which can surge to 5.7 million during severe weather events. The previous site contained over 72,000 pages.</p></div><h3>Broader Impact</h3><p>In response to the backlash, the Bureau stated that community feedback during the beta testing phase was 'overwhelmingly positive'. They anticipate an initial dip in user satisfaction as people become familiar with the new layout, similar to the 2020 relaunch of the BOM Weather app.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>The Bureau of Meteorology's new website has been met with significant public criticism.</li><li>Users have found the new design difficult to navigate for essential weather information.</li><li>The Bureau defends the update, citing positive feedback during testing and the need for modernisation.</li></ul></div>"
     },
     {
-      "id": "cloudflare-ceo-pushing-uk-regulator-to-unbundle-googles-search-and-ai",
-      "sourceUrl": "https://techcrunch.com/2025/10/21/cloudflare-ceo-matthew-prince-is-pushing-uk-regulator-to-unbundle-googles-search-and-ai-crawlers/",
+      "id": "morley-cinemas-reopen-20251022",
+      "sourceUrl": "https://www.perthnow.com.au/wa/perth/morley-recently-shut-greater-union-cinemas-to-return-to-screens-in-new-hoyts-ace-collaboration-c-20445399",
+      "category": "entertainment",
+      "subCategory": "movies",
+      "title": "HOYTS and ACE to open new cinema complex in Morley",
+      "author": "Tegwen Bescoby",
+      "publishDate": "Oct 22, 2025",
+      "readTime": 1,
+      "isTrending": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://images.perthnow.com.au/publication/C-20445399/96e136967c9745cc75334ace00dc08c08d4d3bff-16x9-x1y0w2446h1376.jpg?imwidth=1200",
+      "thumbnailImage": "https://images.perthnow.com.au/publication/C-20445399/96e136967c9745cc75334ace00dc08c08d4d3bff-16x9-x1y0w2446h1376.jpg?imwidth=400",
+      "images": [
+        "https://images.perthnow.com.au/publication/C-20445399/96e136967c9745cc75334ace00dc08c08d4d3bff-16x9-x1y0w2446h1376.jpg?imwidth=1200"
+      ],
+      "videos": [],
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://images.perthnow.com.au/publication/C-20445399/96e136967c9745cc75334ace00dc08c08d4d3bff-16x9-x1y0w2446h1376.jpg?imwidth=1200\" alt=\"Cinema seating\"><h1>HOYTS and ACE to open new cinema complex in Morley</h1></div><p class=\"lead-paragraph\">A new cinema complex will be opened at Morley's Galleria shopping centre through a partnership between HOYTS and ACE Cinemas. The announcement comes after the recent closure of the Greater Union Cinemas at the same location.</p><div class=\"side-image-left\"><img src=\"https://images.perthnow.com.au/publication/C-20445399/96e136967c9745cc75334ace00dc08c08d4d3bff-16x9-x1y0w2446h1376.jpg?imwidth=800\" alt=\"Morley Galleria shopping centre\"><p>The new cinema's development is part of a broader $240 million redevelopment of the shopping centre. Construction is planned to commence in 2026, with the cinema expected to open in late 2026.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The new cinema will feature modern amenities including extra-comfy recliners and D-BOX motion seats, aiming to provide an enhanced movie-going experience for patrons in the Morley area.</p></div><h3>Broader Impact</h3><p>This collaboration between two major cinema operators signifies a strong commitment to the future of theatrical movie experiences in suburban Perth. The redevelopment is expected to revitalise the entertainment offerings at the Galleria shopping centre.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>HOYTS and ACE Cinemas are partnering to open a new cinema in Morley.</li><li>The complex will replace the recently closed Greater Union Cinemas.</li><li>The opening is scheduled for late 2026 as part of a major centre redevelopment.</li></ul></div>"
+    },
+    {
+      "id": "fal-ai-funding-20251021",
+      "sourceUrl": "https://techcrunch.com/2025/10/21/sources-multimodal-ai-startup-fal-ai-already-raised-at-4b-valuation/",
       "category": "technology",
       "subCategory": "artificial-intelligence",
-      "title": "Cloudflare CEO pushing UK regulator to unbundle Google's search and AI",
-      "author": "TechCrunch",
+      "title": "Multimodal AI Startup Fal.ai Secures Funding at $4B+ Valuation",
+      "author": "Manish Singh",
       "publishDate": "Oct 21, 2025",
       "readTime": 1,
       "isTrending": true,
       "isVideo": false,
       "videoUrl": "",
       "isJob": false,
-      "bannerImage": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' width='1200' height='800' style='background-color: %231a2a3a;'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232a3a4a;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%231a2a3a;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='800' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='85%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='36' fill='%23ffffff'%3ECloudflare CEO pushing UK regulator...%3C/text%3E%3C/svg%3E",
-      "thumbnailImage": "https://techcrunch.com/wp-content/uploads/2025/10/videoframe_402382.png?resize=1200,675",
+      "bannerImage": "https://techcrunch.com/wp-content/uploads/2024/12/2025-vc-predictions.jpg?resize=1200,800",
+      "thumbnailImage": "https://techcrunch.com/wp-content/uploads/2024/12/2025-vc-predictions.jpg?resize=400,300",
       "images": [
-        "https://techcrunch.com/wp-content/uploads/2025/10/videoframe_402382.png?resize=1200,675"
+        "https://techcrunch.com/wp-content/uploads/2024/12/2025-vc-predictions.jpg?resize=1200,800"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' width='1200' height='800' style='background-color: %231a2a3a;'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232a3a4a;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%231a2a3a;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='800' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='85%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='36' fill='%23ffffff'%3ECloudflare CEO pushing UK regulator...%3C/text%3E%3C/svg%3E\" alt=\"Article image\"><h1>Cloudflare CEO pushing UK regulator to unbundle Google&apos;s search and AI</h1></div><p class=\"lead-paragraph\">Cloudflare CEO Matthew Prince is advocating for the UK&apos;s Competition and Markets Authority (CMA) to impose stricter regulations on Google&apos;s search and AI operations.</p><div class=\"side-image-left\"><img src=\"https://techcrunch.com/wp-content/uploads/2025/10/videoframe_402382.png?resize=1200,675\" alt=\"Context image\"><p>Prince argues that Google&apos;s dominance is unfair, as it uses its existing web crawler for both its search engine and AI products, giving it an undue advantage. He suggests this bundling forces media companies to allow Google access to their content without compensation.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The core issue is Google using a single web crawler to gather content for two distinct product lines: its search engine and its AI models.</p></div><h3>Broader Impact</h3><p>This regulatory push could set a precedent for how dominant tech companies are allowed to leverage their existing infrastructure to expand into new markets like AI, potentially leading to fairer competition and better compensation for content creators.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Cloudflare&apos;s CEO is urging the UK&apos;s CMA to regulate Google.</li><li>The complaint centers on Google bundling its search and AI data collection.</li><li>This practice is claimed to give Google an unfair competitive advantage.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://techcrunch.com/wp-content/uploads/2024/12/2025-vc-predictions.jpg?resize=1200,800\" alt=\"AI startup funding\"><h1>Multimodal AI Startup Fal.ai Secures Funding at $4B+ Valuation</h1></div><p class=\"lead-paragraph\">Fal.ai, a startup providing infrastructure for developers hosting AI models for multimedia content, has reportedly secured approximately $250 million in new funding. This investment has propelled the company's valuation to over $4 billion.</p><div class=\"side-image-left\"><img src=\"https://techcrunch.com/wp-content/uploads/2024/12/2025-vc-predictions.jpg?resize=800,600\" alt=\"Fal.ai logo\"><p>The funding round saw significant participation from major investors including Kleiner Perkins and Sequoia Capital. This represents a substantial increase from its $1.5 billion valuation following a Series C round just three months prior.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>Fal.ai hosts over 600 AI models and serves a diverse client base that includes prominent companies like Adobe, Canva, and Shopify. The company's annual recurring revenue has reportedly surged to $95 million.</p></div><h3>Broader Impact</h3><p>The rapid rise in Fal.ai's valuation highlights the intense investor confidence in the AI infrastructure sector, particularly for platforms that support the growing demand for multimodal AI applications in image, video, and audio generation.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Fal.ai has raised around $250 million, reaching a valuation over $4 billion.</li><li>Key investors include Kleiner Perkins and Sequoia Capital.</li><li>The company provides critical infrastructure for a growing number of AI-powered creative tools.</li></ul></div>"
     },
     {
-      "id": "i-spent-a-month-living-with-a-430-ai-pet-the-casio-moflin",
-      "sourceUrl": "https://techcrunch.com/2025/10/21/i-spent-a-month-living-with-a-430-ai-pet-the-casio-moflin/",
+      "id": "codi-ai-office-manager-20251021",
+      "sourceUrl": "https://techcrunch.com/2025/10/21/a16z-backed-codi-launches-ai-agent-office-manager/",
       "category": "technology",
-      "subCategory": "artificial-intelligence",
-      "title": "I spent a month living with a $430 AI pet, the Casio Moflin",
-      "author": "Amanda Silberling",
+      "subCategory": "startups",
+      "title": "Codi Launches AI-Powered Office Manager",
+      "author": "Natasha Mascarenhas",
       "publishDate": "Oct 21, 2025",
       "readTime": 1,
       "isTrending": true,
       "isVideo": false,
       "videoUrl": "",
       "isJob": false,
-      "bannerImage": "data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' width='1200' height='800' style='background-color: %231a2a3a;'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232a3a4a;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%231a2a3a;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='800' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='85%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='36' fill='%23ffffff'%3EI spent a month living with a $430 AI pet...%3C/text%3E%3C/svg%3E",
-      "thumbnailImage": "https://techcrunch.com/wp-content/uploads/2025/10/IMG_4487.jpg?resize=1200,675",
+      "bannerImage": "https://techcrunch.com/wp-content/uploads/2025/10/Christelle_Rohaut.jpeg?resize=1200,800",
+      "thumbnailImage": "https://techcrunch.com/wp-content/uploads/2025/10/Christelle_Rohaut.jpeg?resize=400,300",
       "images": [
-        "https://techcrunch.com/wp-content/uploads/2025/10/IMG_4487.jpg?resize=1200,675"
+        "https://techcrunch.com/wp-content/uploads/2025/10/Christelle_Rohaut.jpeg?resize=1200,800"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800' width='1200' height='800' style='background-color: %231a2a3a;'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232a3a4a;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%231a2a3a;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='800' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='85%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial, sans-serif' font-size='36' fill='%23ffffff'%3EI spent a month living with a $430 AI pet...%3C/text%3E%3C/svg%3E\" alt=\"Article image\"><h1>I spent a month living with a $430 AI pet, the Casio Moflin</h1></div><p class=\"lead-paragraph\">Casio&apos;s Moflin is an AI-enabled robotic pet that learns and evolves over weeks, offering a low-maintenance pet alternative for $430.</p><div class=\"side-image-left\"><img src=\"https://techcrunch.com/wp-content/uploads/2025/10/IMG_4487.jpg?resize=1200,675\" alt=\"Context image\"><p>It develops a personality tracked through the MofLife app and does not record speech, instead converting audio to non-identifiable data to recognize its owner&apos;s voice.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The Moflin AI pet costs $430 and uses voice recognition without recording speech, ensuring user privacy.</p></div><h3>Broader Impact</h3><p>The development of AI companions like Moflin signifies a growing market for robotic pets that offer emotional engagement without the responsibilities of a live animal, raising questions about the future of human-robot interaction.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Moflin is a $430 AI robotic pet from Casio.</li><li>It learns and develops a unique personality over time.</li><li>It features privacy-conscious voice recognition that does not record audio.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://techcrunch.com/wp-content/uploads/2025/10/Christelle_Rohaut.jpeg?resize=1200,800\" alt=\"Codi CEO Christelle Rohaut\"><h1>Codi Launches AI-Powered Office Manager</h1></div><p class=\"lead-paragraph\">Codi, a startup backed by Andreessen Horowitz (a16z), has launched an AI agent designed to function as a complete office manager. The platform automates the daily logistical tasks involved in running a physical office space.</p><div class=\"side-image-left\"><img src=\"https://techcrunch.com/wp-content/uploads/2025/10/Christelle_Rohaut.jpeg?resize=800,600\" alt=\"Codi AI platform\"><p>The AI handles duties such as vendor coordination, scheduling, and managing recurring services like cleaning and pantry restocking. Codi's AI was trained on years of operational data to handle these complex logistical tasks efficiently.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>During its beta phase, Codi successfully onboarded 40 customers, including notable companies like TaskRabbit and Northbeam. The company achieved $100,000 in annual recurring revenue within just five weeks of the beta release.</p></div><h3>Broader Impact</h3><p>Codi's platform aims to significantly reduce the administrative burden on companies, saving them time and resources. By automating office management, the startup is positioning itself to be a key player in the future of workplace operations as more companies adopt hybrid or full return-to-office models.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>a16z-backed Codi has launched an AI to automate office management.</li><li>The platform handles tasks like vendor coordination and supply restocking.</li><li>The company quickly gained traction, signing 40 clients in its beta phase.</li></ul></div>"
     },
     {
-      "id": "ftc-removes-lina-khan-era-posts-about-ai-risks-and-open-source",
-      "sourceUrl": "https://techcrunch.com/2025/10/20/ftc-removes-lina-khan-era-posts-about-ai-risks-and-open-source/",
+      "id": "sesame-ai-funding-20251021",
+      "sourceUrl": "https://techcrunch.com/2025/10/21/sesame-the-conversational-ai-startup-from-oculus-founders-raises-250m-and-launches-beta/",
       "category": "technology",
       "subCategory": "artificial-intelligence",
-      "title": "FTC removes Lina Khan-era posts about AI risks and open source",
-      "author": "Rebecca Bellan",
-      "publishDate": "Oct 20, 2025",
+      "title": "Oculus Founders' AI Startup Sesame Raises $250M for Conversational Tech",
+      "author": "Kyle Wiggers",
+      "publishDate": "Oct 21, 2025",
       "readTime": 1,
       "isTrending": true,
       "isVideo": false,
       "videoUrl": "",
       "isJob": false,
-      "bannerImage": "https://techcrunch.com/wp-content/uploads/2021/06/GettyImages-1232440387.jpg?resize=1200,800",
-      "thumbnailImage": "https://techcrunch.com/wp-content/uploads/2021/06/GettyImages-1232440387.jpg?resize=1200,800",
+      "bannerImage": "https://techcrunch.com/wp-content/uploads/2025/10/5.webp?resize=1200,800",
+      "thumbnailImage": "https://techcrunch.com/wp-content/uploads/2025/10/5.webp?resize=400,300",
       "images": [
-        "https://techcrunch.com/wp-content/uploads/2021/06/GettyImages-1232440387.jpg?resize=1200,800"
+        "https://techcrunch.com/wp-content/uploads/2025/10/5.webp?resize=1200,800"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://techcrunch.com/wp-content/uploads/2021/06/GettyImages-1232440387.jpg?resize=1200,800\" alt=\"Article image\"><h1>FTC removes Lina Khan-era posts about AI risks and open source</h1></div><p class=\"lead-paragraph\">The Federal Trade Commission (FTC) has taken down several blog posts from the Lina Khan era that discussed open-source AI and the risks AI poses to consumers.</p><div class=\"side-image-left\"><img src=\"https://techcrunch.com/wp-content/uploads/2021/06/GettyImages-1232440387.jpg?resize=1200,800\" alt=\"Context image\"><p>This move is seen as a shift away from the aggressive antitrust agenda of Lina Khan and towards deregulation for Big Tech, aligning with the Trump administration&apos;s AI Action Plan which favors rapid growth over safety measures.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The removal of the FTC blog posts indicates a policy shift towards deregulation and prioritizing AI growth over consumer safety concerns.</p></div><h3>Broader Impact</h3><p>This action signals a significant change in the U.S. government&apos;s approach to AI regulation, potentially reducing oversight on major tech companies and accelerating AI development with fewer safeguards.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>The FTC has removed blog posts concerning AI risks from its website.</li><li>These posts were published during Lina Khan&apos;s tenure.</li><li>The move is interpreted as a shift towards deregulation of the tech industry.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://techcrunch.com/wp-content/uploads/2025/10/5.webp?resize=1200,800\" alt=\"AI conversational technology\"><h1>Oculus Founders' AI Startup Sesame Raises $250M for Conversational Tech</h1></div><p class=\"lead-paragraph\">Sesame, a conversational AI startup led by former Oculus co-founder Brendan Iribe, has raised $250 million in a Series B funding round. The company is developing smart glasses that use natural-sounding voice AI for user interaction.</p><div class=\"side-image-left\"><img src=\"https://techcrunch.com/wp-content/uploads/2025/10/5.webp?resize=800,600\" alt=\"Sesame AI smart glasses concept\"><p>The funding was co-led by prominent venture capital firms Sequoia Capital and Spark Capital. In conjunction with the funding announcement, Sesame has also launched an invite-only beta for its iOS application to test its AI companion.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The founding team of Sesame includes several former key executives from Oculus and Meta, bringing significant experience in consumer hardware to the new venture. The AI is designed for response times between 200-300 milliseconds to enable natural conversation.</p></div><h3>Broader Impact</h3><p>Sesame is entering a competitive market for voice-driven AI and smart wearables. The company's focus on creating a lifelike, conversational AI companion rather than a simple command-based assistant could differentiate it from competitors like Meta and Apple.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Sesame, from Oculus co-founder Brendan Iribe, has raised $250 million.</li><li>The company is developing voice-driven AI smart glasses.</li><li>An invite-only iOS app beta has been launched.</li></ul></div>"
     },
     {
-      "id": "virtual-particles-a-physicists-clever-bookkeeping-trick",
+      "id": "virtual-particles-physics-20251020",
       "sourceUrl": "https://www.space.com/science/particle-physics/virtual-particles-how-physicists-clever-bookkeeping-trick-could-underlie-reality",
       "category": "science",
       "subCategory": "particle-physics",
-      "title": "Virtual particles: A physicist's clever bookkeeping trick",
-      "author": "Dipangkar Dutta",
+      "title": "Virtual Particles: The Mathematical Tool Underlying Reality",
+      "author": "Paul Sutter",
       "publishDate": "Oct 20, 2025",
       "readTime": 1,
-      "isTrending": true,
+      "isTrending": false,
       "isVideo": false,
       "videoUrl": "",
       "isJob": false,
@@ -169,36 +212,36 @@
         "https://cdn.mos.cms.futurecdn.net/sWhmjZCkCuKVFsnmWYJ6p-1920-80.png"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/sWhmjZCkCuKVFsnmWYJ6p-1920-80.png\" alt=\"Article image\"><h1>Virtual particles: A physicist&apos;s clever bookkeeping trick</h1></div><p class=\"lead-paragraph\">Virtual particles are a mathematical tool that physicists use to calculate how forces work in the subatomic world.</p><div class=\"side-image-left\"><img src=\"https://cdn.mos.cms.futurecdn.net/sWhmjZCkCuKVFsnmWYJ6p-1920-80.png\" alt=\"Context image\"><p>Although they are not real particles, they are essential for calculating the interactions between real particles and resolving how forces can act across empty space. Calculations using virtual particles have predicted the behavior of subatomic particles with high accuracy.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>Virtual particles are a mathematical concept, not real particles, used to make highly accurate predictions about subatomic interactions.</p></div><h3>Broader Impact</h3><p>This concept is fundamental to the Standard Model of particle physics, providing the predictive power that has been confirmed by experiments for decades, reinforcing our understanding of the fundamental forces of nature.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Virtual particles are a mathematical tool in physics.</li><li>They are used to calculate interactions between real subatomic particles.</li><li>This method has led to highly accurate predictions of particle behavior.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/sWhmjZCkCuKVFsnmWYJ6p-1920-80.png\" alt=\"Particle interactions diagram\"><h1>Virtual Particles: The Mathematical Tool Underlying Reality</h1></div><p class=\"lead-paragraph\">Physicists employ the concept of virtual particles as a mathematical method to understand and calculate the interactions between real subatomic particles. These entities are not directly detectable but are crucial for describing fundamental forces.</p><div class=\"side-image-left\"><img src=\"https://cdn.mos.cms.futurecdn.net/sWhmjZCkCuKVFsnmWYJ6p-1920-80.png\" alt=\"Abstract quantum field\"><p>Virtual particles are used to model three of the four fundamental forces: electromagnetism, the strong nuclear force, and the weak nuclear force. They provide a framework for understanding how forces can act over a distance in empty space.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>Calculations involving virtual particles, often visualised using Feynman diagrams, have been experimentally verified with extremely high precision. This success has led some physicists to debate whether these 'bookkeeping' tricks might represent a deeper aspect of reality.</p></div><h3>Broader Impact</h3><p>The existence of virtual particles is a consequence of the Heisenberg uncertainty principle in quantum field theory. While they are considered a mathematical convenience by many, their effects are measurable and essential for the accuracy of the Standard Model of particle physics.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Virtual particles are a mathematical tool used in quantum field theory.</li><li>They help explain the mechanisms of three fundamental forces.</li><li>Calculations using virtual particles are highly accurate and experimentally verified.</li></ul></div>"
     },
     {
-      "id": "teleportation-is-possibleat-least-at-the-quantum-level",
-      "sourceUrl": "https://www.ancient-origins.net/unexplained-phenomena/one-step-closer-beam-me-teleportation-possible-least-quantum-level-009052",
-      "category": "science",
-      "subCategory": "quantum-physics",
-      "title": "Teleportation is Possible…At Least at the Quantum Level",
-      "author": "Ancient Origins",
-      "publishDate": "Oct 19, 2025",
+      "id": "europe-drone-defence-20251018",
+      "sourceUrl": "https://www.space.com/technology/aerospace/how-can-europe-fight-back-against-incursions-by-drone-aircraft",
+      "category": "technology",
+      "subCategory": "aerospace",
+      "title": "Europe Develops Coordinated Defence Against Drone Threats",
+      "author": "Matthew Powell",
+      "publishDate": "Oct 18, 2025",
       "readTime": 1,
       "isTrending": false,
       "isVideo": false,
       "videoUrl": "",
       "isJob": false,
-      "bannerImage": "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Beam-Me-Up.jpg?itok=-qe3SvtH",
-      "thumbnailImage": "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Beam-Me-Up.jpg?itok=-qe3SvtH",
+      "bannerImage": "https://cdn.mos.cms.futurecdn.net/7RHwAXRLUfFkoVqd869UA4-1920-80.jpg",
+      "thumbnailImage": "https://cdn.mos.cms.futurecdn.net/7RHwAXRLUfFkoVqd869UA4-1920-80.jpg",
       "images": [
-        "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Beam-Me-Up.jpg?itok=-qe3SvtH"
+        "https://cdn.mos.cms.futurecdn.net/7RHwAXRLUfFkoVqd869UA4-1920-80.jpg"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Beam-Me-Up.jpg?itok=-qe3SvtH\" alt=\"Article image\"><h1>Teleportation is Possible…At Least at the Quantum Level</h1></div><p class=\"lead-paragraph\">While human teleportation remains in science fiction, scientists have made significant strides in quantum teleportation, achieving success with photons, light fields, nuclear spins, and trapped ions.</p><div class=\"side-image-left\"><img src=\"https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Beam-Me-Up.jpg?itok=-qe3SvtH\" alt=\"Context image\"><p>In 1993, scientists confirmed that perfect teleportation is possible in principle. A major breakthrough occurred in 2017 when scientists sent a photon into space, taking quantum teleportation out of the laboratory for the first time.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>In 2017, scientists successfully teleported a photon into space, a landmark achievement for quantum communication.</p></div><h3>Broader Impact</h3><p>These advances in quantum teleportation are crucial steps towards building a quantum internet, which could offer unhackable communication and powerful distributed quantum computing networks.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Quantum teleportation has been successfully achieved with various particles.</li><li>Scientists confirmed in 1993 that perfect teleportation is theoretically possible.</li><li>In 2017, a photon was teleported to a satellite in space.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/7RHwAXRLUfFkoVqd869UA4-1920-80.jpg\" alt=\"Drone in flight\"><h1>Europe Develops Coordinated Defence Against Drone Threats</h1></div><p class=\"lead-paragraph\">European nations are developing a unified strategy to counter the increasing threat of drone incursions in both civilian and military airspace. The European Commission has introduced the European Drone Defence Initiative as part of its 'Defence Readiness Roadmap 2030'.</p><div class=\"side-image-left\"><img src=\"https://cdn.mos.cms.futurecdn.net/7RHwAXRLUfFkoVqd869UA4-1920-80.jpg\" alt=\"Military radar system\"><p>The initiative aims to establish a comprehensive system to detect, track, and neutralise drone threats, including swarms. It will also incorporate capabilities for precision strikes against ground targets.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>Recent drone incidents over airports in Munich and Copenhagen, as well as incursions into Polish airspace, have underscored the urgent need for a coordinated response. The initial operational capabilities of the drone defence system are expected by the end of 2026, with full functionality planned for 2027.</p></div><h3>Broader Impact</h3><p>This move signifies a major step towards a more integrated European defence policy. The initiative is one of four 'European Readiness Flagships' designed to address pressing security threats and fortify the continent's borders. The plan is to leverage joint funding and draw lessons from the use of drones in Ukraine.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>The EU is launching the European Drone Defence Initiative.</li><li>The system will detect, track, and neutralise drone threats.</li><li>It is a response to recent drone incursions across Europe and is expected to be fully operational by 2027.</li></ul></div>"
     },
     {
-      "id": "if-life-on-mars-exists-it-may-be-preserved-in-a-frozen-time-capsule",
+      "id": "life-on-mars-ice-20251017",
       "sourceUrl": "https://www.space.com/astronomy/mars/if-life-on-mars-exists-it-may-be-preserved-in-a-frozen-time-capsule",
-      "category": "space",
-      "subCategory": "mars",
-      "title": "If life on Mars exists, it may be preserved in a frozen time capsule",
-      "author": "Samantha Mathewson",
+      "category": "science",
+      "subCategory": "astronomy",
+      "title": "Evidence of Ancient Martian Life May Be Preserved in Ice",
+      "author": "Robert Lea",
       "publishDate": "Oct 17, 2025",
       "readTime": 1,
       "isTrending": false,
@@ -211,49 +254,7 @@
         "https://cdn.mos.cms.futurecdn.net/NNCZd4j7xKGvYsAg39fVxC-1920-80.jpg"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/NNCZd4j7xKGvYsAg39fVxC-1920-80.jpg\" alt=\"Article image\"><h1>If life on Mars exists, it may be preserved in a frozen time capsule</h1></div><p class=\"lead-paragraph\">A new study suggests that traces of ancient microbial life on Mars, such as amino acids, could be preserved in the planet&apos;s subsurface ice for tens of millions of years.</p><div class=\"side-image-left\"><img src=\"https://cdn.mos.cms.futurecdn.net/NNCZd4j7xKGvYsAg39fVxC-1920-80.jpg\" alt=\"Context image\"><p>Laboratory experiments by NASA and Penn State University simulated Martian conditions and showed that amino acids could survive in pure ice long enough for future missions to potentially discover them.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>Lab experiments confirm amino acids can survive for tens of millions of years in simulated Martian subsurface ice.</p></div><h3>Broader Impact</h3><p>This finding provides a strong scientific rationale for future Mars missions to target icy regions in the search for biosignatures, significantly narrowing down the areas of interest for finding evidence of past life.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Evidence of ancient Martian life may be preserved in subsurface ice.</li><li>A study showed amino acids can survive for millions of years in these conditions.</li><li>This guides future missions to search for life in the planet&apos;s icy regions.</li></ul></div>"
-    },
-    {
-      "id": "could-the-worlds-1st-private-space-telescope-find-habitable-exoplanets",
-      "sourceUrl": "https://www.space.com/astronomy/exoplanets/could-the-worlds-1st-private-space-telescope-help-find-stars-with-habitable-exoplanets",
-      "category": "space",
-      "subCategory": "exoplanets",
-      "title": "Could the world's 1st private space telescope find habitable exoplanets?",
-      "author": "Tereza Pultarova",
-      "publishDate": "Oct 17, 2025",
-      "readTime": 1,
-      "isTrending": false,
-      "isVideo": false,
-      "videoUrl": "",
-      "isJob": false,
-      "bannerImage": "https://cdn.mos.cms.futurecdn.net/hNsL9kAde2BruFSpAiD8xB-1920-80.jpg",
-      "thumbnailImage": "https://cdn.mos.cms.futurecdn.net/hNsL9kAde2BruFSpAiD8xB-1920-80.jpg",
-      "images": [
-        "https://cdn.mos.cms.futurecdn.net/hNsL9kAde2BruFSpAiD8xB-1920-80.jpg"
-      ],
-      "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/hNsL9kAde2BruFSpAiD8xB-1920-80.jpg\" alt=\"Article image\"><h1>Could the world&apos;s 1st private space telescope find habitable exoplanets?</h1></div><p class=\"lead-paragraph\">The first commercial deep space astronomy telescope, named Mauve, is set to launch on a SpaceX mission in November 2025 to search for stars that could host habitable exoplanets.</p><div class=\"side-image-left\"><img src=\"https://cdn.mos.cms.futurecdn.net/hNsL9kAde2BruFSpAiD8xB-1920-80.jpg\" alt=\"Context image\"><p>Developed by the London-based startup Blue Skies Space, the small satellite will carry an ultraviolet spectrometer to monitor flaring stars. By studying stellar activity, Mauve will help astronomers identify which stars are more likely to host habitable exoplanets.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The Mauve telescope, launching in November 2025, will use an ultraviolet spectrometer to study stellar flares and assess planetary habitability.</p></div><h3>Broader Impact</h3><p>The launch of Mauve represents a shift towards the commercialisation of deep space astronomy, potentially accelerating the pace of discovery by complementing publicly funded missions in the search for life beyond Earth.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>The first commercial deep space telescope, Mauve, will launch in November 2025.</li><li>It is developed by the startup Blue Skies Space.</li><li>Its mission is to study stellar flares to identify stars that could host habitable planets.</li></ul></div>"
-    },
-    {
-      "id": "where-the-ridge-meets-the-river-photo-of-the-day-for-oct-16-2025",
-      "sourceUrl": "https://www.space.com/astronomy/earth/where-the-ridge-meets-the-river-space-photo-of-the-day-for-oct-16-2025",
-      "category": "space",
-      "subCategory": "earth",
-      "title": "Where the ridge meets the river photo of the day for Oct. 16, 2025",
-      "author": "Kenna Hughes-Castleberry",
-      "publishDate": "Oct 16, 2025",
-      "readTime": 1,
-      "isTrending": false,
-      "isVideo": false,
-      "videoUrl": "",
-      "isJob": false,
-      "bannerImage": "https://cdn.mos.cms.futurecdn.net/Bi2FZCzemUYWLNntvfgC8Y-1920-80.jpg",
-      "thumbnailImage": "https://cdn.mos.cms.futurecdn.net/Bi2FZCzemUYWLNntvfgC8Y-1920-80.jpg",
-      "images": [
-        "https://cdn.mos.cms.futurecdn.net/Bi2FZCzemUYWLNntvfgC8Y-1920-80.jpg"
-      ],
-      "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/Bi2FZCzemUYWLNntvfgC8Y-1920-80.jpg\" alt=\"Article image\"><h1>Where the ridge meets the river photo of the day for Oct. 16, 2025</h1></div><p class=\"lead-paragraph\">A satellite image from Landsat 9 captures the Mazartagh Ridge and the Hotan River in the Takla Makan Desert of western China.</p><div class=\"side-image-left\"><img src=\"https://cdn.mos.cms.futurecdn.net/Bi2FZCzemUYWLNntvfgC8Y-1920-80.jpg\" alt=\"Context image\"><p>The Hotan River, which carries glacial meltwater, supports vegetation along its banks as it flows through the arid region. The area was historically a significant stop on the Silk Road due to the presence of nephrite jade in the river&apos;s sediments.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The image from the Landsat 9 satellite shows the contrast between the arid Mazartagh Ridge and the life-sustaining Hotan River in China.</p></div><h3>Broader Impact</h3><p>This imagery not only highlights the beauty of Earth&apos;s geography but also underscores the historical significance of water sources in sustaining trade routes and civilizations, like the Silk Road, in harsh environments.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>The image shows the Mazartagh Ridge and Hotan River in China.</li><li>The Hotan River supports vegetation in the Takla Makan Desert.</li><li>The area was once a key location on the Silk Road due to valuable jade deposits.</li></ul></div>"
+      "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/NNCZd4j7xKGvYsAg39fVxC-1920-80.jpg\" alt=\"Ice on the surface of Mars\"><h1>Evidence of Ancient Martian Life May Be Preserved in Ice</h1></div><p class=\"lead-paragraph\">A new study suggests that if microbial life ever existed on Mars, its chemical traces could be preserved within the planet's ice for tens of millions of years. This finding makes Mars's ice-rich regions compelling targets for future astrobiology missions.</p><div class=\"side-image-left\"><img src=\"https://cdn.mos.cms.futurecdn.net/NNCZd4j7xKGvYsAg39fVxC-1920-80.jpg\" alt=\"Microscopic view of bacteria\"><p>Laboratory experiments simulating Martian conditions revealed that biomolecules, such as amino acids from bacteria like E. coli, can survive for extended periods when frozen in pure ice. The research, supported by NASA, demonstrated that pure ice acts as a more effective shield against radiation than ice mixed with soil or rock.</p></div><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The study found that amino acids survived far better when frozen in pure water ice compared to a mixture containing silicates and other materials found in Martian soil. It is believed that some Martian ice deposits are less than two million years old, well within the preservation timeframe suggested by the research.</p></div><h3>Broader Impact</h3><p>This research refines the strategy for searching for life on Mars, indicating that drilling into subsurface ice deposits may be more fruitful than analysing soil samples. Future missions could be designed specifically to access these potential frozen time capsules of Martian biology.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Chemical traces of life on Mars could be preserved in ice for millions of years.</li><li>Lab experiments showed pure ice protects biomolecules from radiation.</li><li>The findings suggest future missions should target Mars's ice-dominated regions.</li></ul></div>"
     }
   ],
   "videos": [],
