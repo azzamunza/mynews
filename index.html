@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News Portal</title>
-    
+    <link id="themeStylesheet" rel="stylesheet" href="./css/newsStyles/darkstyle.css">
 </head>
 <body>
 <header>
@@ -31,6 +31,23 @@
             <div class="g_id_signin" data-type="standard"></div>
         </div>
     </div>
+
+    <!-- Style Selector Dropdown -->
+    <div class="style-selector-container">
+        <label for="styleSelector" class="style-selector-label">Theme:</label>
+        <select id="styleSelector" class="style-selector">
+            <option value="">Loading styles...</option>
+        </select>
+    </div>
+
+    <!-- Desktop Navigation (moved inside header) -->
+    <nav id="desktopNav">
+        <div class="nav-container">
+            <ul class="category-menu" id="categoryMenu">
+                <li class="loading">Loading categories...</li>
+            </ul>
+        </div>
+    </nav>
 </header>
 
     <!-- Mobile Menu -->
@@ -43,15 +60,6 @@
             <li class="loading">Loading...</li>
         </ul>
     </div>
-
-    <!-- Desktop Navigation -->
-    <nav id="desktopNav">
-        <div class="nav-container">
-            <ul class="category-menu" id="categoryMenu">
-                <li class="loading">Loading categories...</li>
-            </ul>
-        </div>
-    </nav>
 
     <div class="main-layout">
         <div class="content-area">
@@ -101,9 +109,47 @@
     let carouselInterval, makeWebhook = '', authToken = '';
 
         document.addEventListener('DOMContentLoaded', function() {
+            loadAvailableStyles();
             loadNewsData();
             setupEventListeners();
         });
+
+        // Load available styles dynamically
+        async function loadAvailableStyles() {
+            const styleSelector = document.getElementById('styleSelector');
+            const stylesPath = './css/newsStyles/';
+            
+            // List of available styles (you could also fetch this dynamically via a directory listing API)
+            // For GitHub Pages, we'll maintain a list here
+            const availableStyles = ['darkstyle.css', 'time.css'];
+            
+            styleSelector.innerHTML = '';
+            
+            availableStyles.forEach(styleFile => {
+                const option = document.createElement('option');
+                option.value = stylesPath + styleFile;
+                option.textContent = styleFile.replace('.css', '').replace(/([A-Z])/g, ' $1').trim();
+                option.textContent = option.textContent.charAt(0).toUpperCase() + option.textContent.slice(1);
+                styleSelector.appendChild(option);
+            });
+            
+            // Load saved preference or default to darkstyle
+            const savedStyle = localStorage.getItem('selectedStyle') || stylesPath + 'darkstyle.css';
+            styleSelector.value = savedStyle;
+            loadStyle(savedStyle);
+            
+            // Add change event listener
+            styleSelector.addEventListener('change', function() {
+                const selectedStyle = this.value;
+                loadStyle(selectedStyle);
+                localStorage.setItem('selectedStyle', selectedStyle);
+            });
+        }
+
+        function loadStyle(styleUrl) {
+            const themeLink = document.getElementById('themeStylesheet');
+            themeLink.href = styleUrl;
+        }
 
         // Expose handleCredentialResponse globally so Google can call it
         function handleCredentialResponse(response) {
@@ -177,6 +223,9 @@
                     </div>
                 </div>
                 ${videoEmbed}
+                <div class="modal-article-content">
+                    ${article.fullContent}
+                </div>
             </div>
         `;
 
@@ -532,13 +581,11 @@
             `;
             
             modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
             const modal = document.getElementById('articleModal');
             modal.classList.remove('active');
-            document.body.style.overflow = 'auto';
         }
 
         function toggleMobileMenu() {
@@ -708,12 +755,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
