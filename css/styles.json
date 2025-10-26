@@ -1,0 +1,25 @@
+{
+  "styles": [
+    {
+      "file": "darkstyle.css",
+      "name": "Dark Style",
+      "description": "Modern dark theme with cyan accents"
+    },
+    {
+      "file": "time.css",
+      "name": "TIME",
+      "description": "Classic TIME Magazine inspired design"
+    },
+    {
+      "file": "perthnow.css",
+      "name": "Perth Now",
+      "description": "Clean Australian news aesthetic"
+    },
+    {
+      "file": "newspaper.css",
+      "name": "Newspaper",
+      "description": "Elegant dark theme with gold accents"
+    }
+  ],
+  "default": "darkstyle.css"
+}
