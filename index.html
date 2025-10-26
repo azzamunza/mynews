@@ -101,83 +101,101 @@
         </div>
     </div>
 
-    <script>
+   <script>
     let isLoggedIn = false;
     let loggedInUserEmail = '';
     let articlesData = [], categoriesData = [], trendingData = [], videosData = [];
     let currentFilter = 'all', currentCarouselIndex = 0;
     let carouselInterval, makeWebhook = '', authToken = '';
-
+    
         document.addEventListener('DOMContentLoaded', function() {
             loadAvailableStyles();
             loadNewsData();
             setupEventListeners();
         });
-
-        // Load available styles dynamically
+    
+        // Load available styles dynamically from JSON
         async function loadAvailableStyles() {
             const styleSelector = document.getElementById('styleSelector');
             const stylesPath = './css/newsStyles/';
+            const stylesJsonPath = './css/styles.json';
             
-            // List of available styles (you could also fetch this dynamically via a directory listing API)
-            // For GitHub Pages, we'll maintain a list here
-            const availableStyles = ['darkstyle.css', 'time.css'];
-            
-            styleSelector.innerHTML = '';
-            
-            availableStyles.forEach(styleFile => {
-                const option = document.createElement('option');
-                option.value = stylesPath + styleFile;
-                option.textContent = styleFile.replace('.css', '').replace(/([A-Z])/g, ' $1').trim();
-                option.textContent = option.textContent.charAt(0).toUpperCase() + option.textContent.slice(1);
-                styleSelector.appendChild(option);
-            });
-            
-            // Load saved preference or default to darkstyle
-            const savedStyle = localStorage.getItem('selectedStyle') || stylesPath + 'darkstyle.css';
-            styleSelector.value = savedStyle;
-            loadStyle(savedStyle);
-            
-            // Add change event listener
-            styleSelector.addEventListener('change', function() {
-                const selectedStyle = this.value;
-                loadStyle(selectedStyle);
-                localStorage.setItem('selectedStyle', selectedStyle);
-            });
+            try {
+                // Fetch the styles configuration
+                const response = await fetch(stylesJsonPath);
+                
+                if (!response.ok) {
+                    throw new Error(`Failed to load styles.json: ${response.status}`);
+                }
+                
+                const stylesConfig = await response.json();
+                
+                styleSelector.innerHTML = '';
+                
+                // Populate dropdown with styles from JSON
+                stylesConfig.styles.forEach(style => {
+                    const option = document.createElement('option');
+                    option.value = stylesPath + style.file;
+                    option.textContent = style.name;
+                    option.setAttribute('data-description', style.description);
+                    styleSelector.appendChild(option);
+                });
+                
+                // Load saved preference or default style
+                const savedStyle = localStorage.getItem('selectedStyle') || stylesPath + stylesConfig.default;
+                styleSelector.value = savedStyle;
+                loadStyle(savedStyle);
+                
+                // Add change event listener
+                styleSelector.addEventListener('change', function() {
+                    const selectedStyle = this.value;
+                    loadStyle(selectedStyle);
+                    localStorage.setItem('selectedStyle', selectedStyle);
+                });
+                
+            } catch (error) {
+                console.error('Error loading styles configuration:', error);
+                
+                // Fallback to hardcoded styles if JSON fails
+                styleSelector.innerHTML = '<option value="./css/newsStyles/darkstyle.css">Dark Style</option>';
+                const fallbackStyle = './css/newsStyles/darkstyle.css';
+                styleSelector.value = fallbackStyle;
+                loadStyle(fallbackStyle);
+            }
         }
-
+    
         function loadStyle(styleUrl) {
             const themeLink = document.getElementById('themeStylesheet');
             themeLink.href = styleUrl;
         }
-
+    
         // Expose handleCredentialResponse globally so Google can call it
         function handleCredentialResponse(response) {
         const user = jwt_decode(response.credential);
         const userInfoDiv = document.getElementById('user-info');
         userInfoDiv.textContent = user.name;
-
+    
         isLoggedIn = true;
         loggedInUserEmail = user.email;
-
+    
         if (user.email === 'azzamunza@gmail.com') {
             const jobButtons = document.querySelectorAll('.btn-job');
             jobButtons.forEach(btn => btn.style.display = 'inline-block');
         }
     }
-
+    
     function openModal(articleId) {
         const article = articlesData.find(a => a.id === articleId);
         if (!article) return;
-
+    
         const modal = document.getElementById('articleModal');
         const modalContent = document.getElementById('modalContentArea');
-
+    
         let badges = '';
         if (article.isTrending) badges += '<span class="badge badge-trending">🔥 Trending</span>';
         if (article.isJob) badges += '<span class="badge badge-job">💼 Job Listing</span>';
         if (article.isVideo) badges += '<span class="badge badge-video">▶ Video Content</span>';
-
+    
         let videoEmbed = '';
         if (article.isVideo && article.videoUrl) {
             const videoId = extractYouTubeId(article.videoUrl);
@@ -189,7 +207,7 @@
                 </div>`;
             }
         }
-
+    
         let jobButton = '';
         if (article.isJob && makeWebhook && authToken && isLoggedIn && loggedInUserEmail === 'azzamunza@gmail.com') {
             jobButton = `<button class="btn btn-job" onclick="submitJobApplication(
@@ -198,13 +216,13 @@
                 '${escapeHtml(article.title)}'
             )">💼 Create Job Application</button>`;
         }
-
+    
         const shareButtons = `
             <button class="btn btn-secondary" onclick="shareArticle('twitter','${escapeHtml(article.title)}','${escapeHtml(article.sourceUrl)}')">Share on Twitter</button>
             <button class="btn btn-secondary" onclick="shareArticle('linkedin','${escapeHtml(article.title)}','${escapeHtml(article.sourceUrl)}')">Share on LinkedIn</button>
             <button class="btn btn-secondary" onclick="copyToClipboard('${escapeHtml(article.sourceUrl)}')">📋 Copy Link</button>
         `;
-
+    
         modalContent.innerHTML = `
             <img src="${article.bannerImage}" alt="${article.title}" class="modal-banner" loading="lazy">
             <div class="modal-body">
@@ -228,10 +246,10 @@
                 </div>
             </div>
         `;
-
+    
         modal.classList.add('active');
     }
-
+    
         function setupEventListeners() {
             document.getElementById('hamburgerMenu').addEventListener('click', toggleMobileMenu);
             document.getElementById('closeMobileMenu').addEventListener('click', toggleMobileMenu);
@@ -246,7 +264,7 @@
                 if (e.key === 'Escape') closeModal();
             });
         }
-
+    
         async function loadNewsData() {
             try {
                 // Fetch the external JSON file
@@ -275,7 +293,7 @@
                 showError(error.message);
             }
         }
-
+    
         function showError(message) {
             document.getElementById('categoryMenu').innerHTML = 
                 `<li style="color: var(--accent-color);">Error loading data: ${message}</li>`;
@@ -285,7 +303,7 @@
                     <p style="font-size: 0.9rem; margin-top: 1rem;">Make sure news-data.json is in the same directory as this HTML file.</p>
                 </div>`;
         }
-
+    
         function renderCategories() {
             const desktopMenu = document.getElementById('categoryMenu');
             const mobileMenu = document.getElementById('mobileMenuItems');
@@ -322,7 +340,7 @@
                 mobileMenu.appendChild(mli);
             });
         }
-
+    
         function renderCarousel() {
             const trendingArticles = articlesData.filter(a => a.isTrending);
             
@@ -369,7 +387,7 @@
                 startCarousel();
             }
         }
-
+    
         function changeSlide(direction) {
             const slides = document.querySelectorAll('.carousel-slide');
             const dots = document.querySelectorAll('.carousel-dot');
@@ -384,7 +402,7 @@
             
             resetCarousel();
         }
-
+    
         function goToSlide(index) {
             const slides = document.querySelectorAll('.carousel-slide');
             const dots = document.querySelectorAll('.carousel-dot');
@@ -399,18 +417,18 @@
             
             resetCarousel();
         }
-
+    
         function startCarousel() {
             carouselInterval = setInterval(() => {
                 changeSlide(1);
             }, 5000);
         }
-
+    
         function resetCarousel() {
             clearInterval(carouselInterval);
             startCarousel();
         }
-
+    
         function renderArticles(filterCategory = 'all') {
             const gridContainer = document.getElementById('articleGrid');
             gridContainer.innerHTML = '';
@@ -461,7 +479,7 @@
                 gridContainer.appendChild(card);
             });
         }
-
+    
         function renderHeadlines() {
             const headlinesList = document.getElementById('headlinesList');
             headlinesList.innerHTML = '';
@@ -480,7 +498,7 @@
                 headlinesList.appendChild(headline);
             });
         }
-
+    
         function filterByCategory(category) {
             currentFilter = category;
             
@@ -497,7 +515,7 @@
             renderCarousel();
             renderArticles(category);
         }
-
+    
         function openModal(articleId) {
             const article = articlesData.find(a => a.id === articleId);
             if (!article) return;
@@ -540,7 +558,7 @@
                 // Ensure button is hidden if not logged in
                 jobButton = '';
             }
-
+    
             
             const shareButtons = `
                 <button class="btn btn-secondary" onclick="shareArticle('twitter', '${escapeHtml(article.title)}', '${escapeHtml(article.sourceUrl)}')">
@@ -582,29 +600,29 @@
             
             modal.classList.add('active');
         }
-
+    
         function closeModal() {
             const modal = document.getElementById('articleModal');
             modal.classList.remove('active');
         }
-
+    
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('active');
         }
-
+    
         function extractYouTubeId(url) {
             const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
             const match = url.match(regExp);
             return (match && match[2].length === 11) ? match[2] : null;
         }
-
+    
         function escapeHtml(text) {
             const div = document.createElement('div');
             div.textContent = text;
             return div.innerHTML;
         }
-
+    
         async function submitJobApplication(articleId, jobUrl, jobTitle) {
             if (!makeWebhook || !authToken) {
                 alert('Job application system not configured.');
@@ -639,7 +657,7 @@
                 alert('❌ Failed to submit job application. Please try again.');
             }
         }
-
+    
         function shareArticle(platform, title, url) {
             const encodedTitle = encodeURIComponent(title);
             const encodedUrl = encodeURIComponent(url);
@@ -656,7 +674,7 @@
                 window.open(shareUrl, '_blank', 'width=600,height=400');
             }
         }
-
+    
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
                 alert('✅ Link copied to clipboard!');
@@ -664,7 +682,7 @@
                 alert('❌ Failed to copy link');
             });
         }
-
+    
         (function () {
           const btn = document.getElementById('reloadDataBtn');
           if (!btn) return;
@@ -686,66 +704,36 @@
           async function reloadNewsData() {
             setWorking(true);
             try {
-              // Fetch fresh JSON with no-cache to ensure latest copy is retrieved
+              // First, reload the styles configuration
+              await loadAvailableStyles();
+              
+              // Then fetch fresh news data with no-cache to ensure latest copy is retrieved
               const resp = await fetch('./news-data.json', { cache: 'no-store' });
               if (!resp.ok) throw new Error('Failed to fetch news-data.json: ' + resp.status);
         
               const json = await resp.json();
         
-              // Store the data in a globally-accessible variable for the existing app code to use.
-              // Many apps attach data or initialization functions to window; we populate a safe place.
-              window.__newsData = json;
-        
-              // Try calling common initialization / rendering entry points that might exist in the page.
-              // This is defensive: if the project uses a particular function name, it will be invoked;
-              // otherwise we'll fallback to a hard reload which is always safe.
-              const candidates = [
-                'renderFromNewsData',    // hypothetical render function
-                'renderArticles',        // another common name
-                'initializeApp',         // generic init
-                'initNewsApp',           // possible name
-                'loadNewsDataAndRender'  // descriptive
-              ];
-        
-              let refreshed = false;
-              for (const name of candidates) {
-                const fn = window[name];
-                if (typeof fn === 'function') {
-                  try {
-                    // call it with the newly fetched data when possible
-                    // prefer calling with data if the function accepts it
-                    fn.length ? fn(json) : fn();
-                    refreshed = true;
-                    break;
-                  } catch (err) {
-                    // Continue to next candidate if call fails
-                    console.warn('Call to', name, 'failed:', err);
-                  }
-                }
-              }
-        
-              // If no known renderer found, try to trigger app-level events that some apps listen for.
-              if (!refreshed) {
-                try {
-                  const event = new CustomEvent('newsDataReloaded', { detail: json });
-                  window.dispatchEvent(event);
-                  // Consumers can listen for this event and re-render.
-                  refreshed = true;
-                } catch (err) {
-                  // ignore
-                }
-              }
-        
-              // Fallback: reload the page so the app picks up the new JSON on fresh load.
-              if (!refreshed) {
-                // Give a tiny delay so user sees the UI feedback before reload
-                setTimeout(() => location.reload(true), 250);
-              }
+              // Update global data
+              categoriesData = json.categories || [];
+              articlesData = json.articles || [];
+              trendingData = json.trending || [];
+              videosData = json.videos || [];
+              makeWebhook = json.makeWebhook || '';
+              authToken = json.authToken || '';
+              
+              // Re-render all components
+              renderCategories();
+              renderCarousel();
+              renderArticles(currentFilter);
+              renderHeadlines();
+              
+              // Show success message
+              console.log('✅ Data and styles reloaded successfully!');
+              
             } catch (err) {
               console.error(err);
-              alert('Error reloading news data: ' + (err.message || err));
+              alert('Error reloading data: ' + (err.message || err));
             } finally {
-              // If page was reloaded, this code won't run; otherwise restore button state.
               setWorking(false);
             }
           }
@@ -755,3 +743,4 @@
     </script>
 </body>
 </html>
+
