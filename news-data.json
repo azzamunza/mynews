@@ -69,6 +69,10 @@
   ],
   "trending": [
     {
+      "articleId": "space-radiation-can-produce-some-organic-molecules-on-icy-moons-oct-26-2025",
+      "reason": "Complicates the search for extraterrestrial life by suggesting non-biological origins for some organic molecules."
+    },
+    {
       "articleId": "real-estate-is-entering-its-ai-slop-era-oct-26-2025",
       "reason": "Examines the growing, undisclosed use of AI in real estate marketing."
     },
@@ -81,15 +85,36 @@
       "reason": "Investigates the potential of AI to mitigate hurricane damage."
     },
     {
-      "articleId": "the-glaring-security-risks-with-ai-browser-agents-20251025",
-      "reason": "Emerging cybersecurity threats in AI."
+      "articleId": "four-aussies-score-a-life-changing-slice-of-the-saturday-lotto-draw-oct-25-2025",
+      "reason": "Reports on a significant lottery win affecting four Australians."
     },
     {
-      "articleId": "maya-queen-who-ruled-coba-identified-as-ix-chak-cheen-20251025",
-      "reason": "Significant archaeological discovery."
+      "articleId": "the-glaring-security-risks-with-ai-browser-agents-20251025",
+      "reason": "Emerging cybersecurity threats in AI."
     }
   ],
   "articles": [
+    {
+      "id": "space-radiation-can-produce-some-organic-molecules-on-icy-moons-oct-26-2025",
+      "sourceUrl": "https://www.space.com/space-exploration/search-for-life/space-radiation-can-produce-some-organic-molecules-detected-on-icy-moons",
+      "category": "science",
+      "subCategory": "astrophysics-and-cosmology",
+      "title": "Space radiation can produce some organic molecules on icy moons",
+      "author": "Javier Barbuzano",
+      "publishDate": "Oct 26, 2025",
+      "readTime": 1,
+      "isTrending": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://cdn.mos.cms.futurecdn.net/CMZT7rLDrR8LU2h2ALcdZ3-1920-80.jpg",
+      "thumbnailImage": "https://cdn.mos.cms.futurecdn.net/CMZT7rLDrR8LU2h2ALcdZ3-1920-80.jpg",
+      "images": [
+        "https://cdn.mos.cms.futurecdn.net/CMZT7rLDrR8LU2h2ALcdZ3-1920-80.jpg"
+      ],
+      "videos": [],
+      "fullContent": "<article class=\"news-article-content\"><div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/CMZT7rLDrR8LU2h2ALcdZ3-1920-80.jpg\" alt=\"An artist's impression of Saturn's moon Enceladus with plumes erupting.\" style=\"max-width: 100%; height: auto; display: block; width: 100%;\"><h1 class=\"article-title\">Space radiation can produce some organic molecules on icy moons</h1><div class=\"article-meta\"><span class=\"author\">By Javier Barbuzano</span><span class=\"publish-date\">Oct 26, 2025</span><span class=\"read-time\">1 min read</span></div></div><p class=\"lead-paragraph\">New laboratory research indicates that some organic molecules found in the plumes of Saturn's moon Enceladus could be the result of natural radiation, complicating the search for life.</p><p>This discovery may require scientists to reassess the astrobiological significance of these compounds, as they may not originate from the moon&rsquo;s subsurface ocean as previously hoped. As future missions prepare to visit ocean worlds like Enceladus and Europa, researchers will need to develop methods to distinguish between organics created by radiation and those that might genuinely indicate a habitable environment.</p><div class=\"key-takeaways\" style=\"background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.5rem; margin: 2rem 0;\"><h3 style=\"margin-top: 0;\">Key Takeaways</h3><ul class=\"key-points\" style=\"margin-bottom: 0;\"><li>Space radiation can form organic molecules on icy moons.</li><li>This discovery complicates the search for life, as these molecules may not be from biological sources.</li><li>Future space missions will need to differentiate between radiation-formed and potentially life-indicating organics.</li></ul></div><div class=\"article-footer\" style=\"margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e5e5;\"><p class=\"source-link\" style=\"font-size: 0.9rem; color: #666;\">Read the full article at <a href=\"https://www.space.com/space-exploration/search-for-life/space-radiation-can-produce-some-organic-molecules-detected-on-icy-moons\" target=\"_blank\" rel=\"noopener\" style=\"color: #2563eb;\">space.com</a></p></div></article>"
+    },
     {
       "id": "real-estate-is-entering-its-ai-slop-era-oct-26-2025",
       "sourceUrl": "https://www.wired.com/story/real-estate-is-entering-its-ai-slop-era/",
@@ -154,6 +179,27 @@
       "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/7GWqvecWRvA5VFiecH8zSA-1280-80.jpg\" alt=\"Article image\"><h1>How AI can improve storm surge forecasts to help save lives</h1></div><p class=\"lead-paragraph\">Artificial intelligence models offer the potential to improve hurricane and storm surge forecasting, giving coastal communities faster and more detailed warnings about oncoming risks.</p><div class=\"side-image-left\"><img src=\"https://cdn.mos.cms.futurecdn.net/7GWqvecWRvA5VFiecH8zSA-1280-80.jpg\" alt=\"Context image\"><p>Hurricanes are America’s most destructive natural hazards, with storm surge being the number one cause of damages and deaths. Accurate predictions are critical for evacuations and emergency preparations.</p></div><blockquote class=\"expert-quote\">“As artificial intelligence models rapidly spread through every aspect of our lives and more data becomes available for training them, the technology offers potential to improve hurricane and storm surge forecasting in the future.” — Navid Tahvildari</blockquote><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>Since 1980, hurricanes have caused over US$1.5 trillion in damage and killed more than 7,000 people in the United States. Storm surge is the leading cause of these devastating impacts.</p></div><h3>Broader Impact</h3><p>By leveraging AI for more accurate and timely storm surge forecasts, emergency responders can be better prepared, and coastal residents can be given crucial extra time to evacuate, ultimately saving lives and reducing property damage.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>AI technology has the potential to significantly improve storm surge forecasting.</li><li>Better forecasts can lead to more effective evacuations and emergency response.</li><li>Storm surge is the primary cause of death and damage from hurricanes in the U.S.</li></ul></div>"
     },
     {
+      "id": "four-aussies-score-a-life-changing-slice-of-the-saturday-lotto-draw-oct-25-2025",
+      "sourceUrl": "https://www.perthnow.com.au/lifestyle/lotto/saturday-lotto-four-aussies-score-a-life-changing-slice-of-the-draw-c-20468698",
+      "category": "local-news",
+      "subCategory": "lotto",
+      "title": "Four Aussies score a life-changing slice of the Saturday Lotto draw",
+      "author": "PerthNow",
+      "publishDate": "Oct 25, 2025",
+      "readTime": 1,
+      "isTrending": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://images.perthnow.com.au/publication/C-20468698/16b8add942b3c0890f0c7178826b0686c92bd665-16x9-x0y107w2048h1152.jpg?imwidth=1200",
+      "thumbnailImage": "https://images.perthnow.com.au/publication/C-20468698/16b8add942b3c0890f0c7178826b0686c92bd665-16x9-x0y107w2048h1152.jpg?imwidth=1200",
+      "images": [
+        "https://images.perthnow.com.au/publication/C-20468698/16b8add942b3c0890f0c7178826b0686c92bd665-16x9-x0y107w2048h1152.jpg?imwidth=1200"
+      ],
+      "videos": [],
+      "fullContent": "<article class=\"news-article-content\"><div class=\"article-hero\"><img src=\"https://images.perthnow.com.au/publication/C-20468698/16b8add942b3c0890f0c7178826b0686c92bd665-16x9-x0y107w2048h1152.jpg?imwidth=1200\" alt=\"Lotto balls showing winning numbers.\" style=\"max-width: 100%; height: auto; display: block; width: 100%;\"><h1 class=\"article-title\">Four Aussies score a life-changing slice of the Saturday Lotto draw</h1><div class=\"article-meta\"><span class=\"author\">By PerthNow</span><span class=\"publish-date\">Oct 25, 2025</span><span class=\"read-time\">1 min read</span></div></div><p class=\"lead-paragraph\">Four Australians had their lives changed on Saturday night, each winning a staggering $1,556,751.24 in the latest Saturday Lotto draw.</p><p>While none of the Division One winning tickets originated from Western Australia, the state did see six local players each secure a significant $13,563.90 prize in Division Two, spreading the good fortune across the country.</p><div class=\"highlight-box info-box\" style=\"background: #f5f5f5; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0;\"><h3 style=\"margin-top: 0;\">Winning Numbers</h3><ul style=\"margin-bottom: 0;\"><li>Main Numbers: 14, 13, 41, 29, 23, 40</li><li>Supplementary Numbers: 17, 1</li></ul></div><div class=\"article-footer\" style=\"margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e5e5;\"><p class=\"source-link\" style=\"font-size: 0.9rem; color: #666;\">Read the full article at <a href=\"https://www.perthnow.com.au/lifestyle/lotto/saturday-lotto-four-aussies-score-a-life-changing-slice-of-the-draw-c-20468698\" target=\"_blank\" rel=\"noopener\" style=\"color: #2563eb;\">PerthNow</a></p></div></article>"
+    },
+    {
       "id": "the-glaring-security-risks-with-ai-browser-agents-20251025",
       "sourceUrl": "https://techcrunch.com/2025/10/25/the-glaring-security-risks-with-ai-browser-agents/",
       "category": "ai-technology-and-news",
@@ -188,13 +234,76 @@
       "isVideo": false,
       "videoUrl": "",
       "isJob": false,
-      "bannerImage": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%271200%27%20height%3D%27800%27%20viewBox%3D%270%200%201200%20800%27%3E%3Cdefs%3E%3ClinearGradient%20id%3D%27grad%27%20x1%3D%270%25%27%20y1%3D%270%25%27%20x2%3D%27100%25%27%20y2%3D%27100%25%27%3E%3Cstop%20offset%3D%270%25%27%20style%3D%27stop-color%3A%23654321%3Bstop-opacity%3A1%27%20/%3E%3Cstop%20offset%3D%27100%25%27%20style%3D%27stop-color%3A%23d4a76a%3Bstop-opacity%3A1%27%20/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%271200%27%20height%3D%27800%27%20fill%3D%27url%28%23grad%29%27/%3E%3Ctext%20x%3D%27600%27%20y%3D%27400%27%20font-family%3D%27Arial%2C%20sans-serif%27%20font-size%3D%2748%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%20dominant-baseline%3D%27middle%27%3EMaya%20Archaeological%20Discovery%3C/text%3E%3C/svg%3E",
+      "bannerImage": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20width%3D'1200'%20height%3D'800'%20viewBox%3D'0%200%201200%20800'%3E%3Cdefs%3E%3ClinearGradient%20id%3D'grad'%20x1%3D'0%25'%20y1%3D'0%25'%20x2%3D'100%25'%20y2%3D'100%25'%3E%3Cstop%20offset%3D'0%25'%20style%3D'stop-color%3A%23654321%3Bstop-opacity%3A1'%20/%3E%3Cstop%20offset%3D'100%25'%20style%3D'stop-color%3A%23d4a76a%3Bstop-opacity%3A1'%20/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D'1200'%20height%3D'800'%20fill%3D'url(%23grad)'/%3E%3Ctext%20x%3D'600'%20y%3D'400'%20font-family%3D'Arial%2C%20sans-serif'%20font-size%3D'48'%20fill%3D'%23ffffff'%20text-anchor%3D'middle'%20dominant-baseline%3D'middle'%3EMaya%20Archaeological%20Discovery%3C/text%3E%3C/svg%3E",
       "thumbnailImage": "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Coba.jpg?itok=Yn0yogFT",
       "images": [
         "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Coba.jpg?itok=Yn0yogFT"
       ],
       "videos": [],
       "fullContent": "<div class=\"article-hero\"><img src=\"https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Coba.jpg?itok=Yn0yogFT\" alt=\"Ancient Maya ruins at Cobá\" style=\"max-width: 100%; height: auto; display: block;\"></div><h1>Maya Queen Who Ruled Cobá Identified As Ix Ch'ak Ch'een</h1><p>In a groundbreaking archaeological discovery, researchers have successfully identified a powerful Maya queen who ruled the ancient city of Cobá. The queen, now known as Ix Ch'ak Ch'een, played a crucial role in the political landscape of the classical Maya period.</p><h2>The Discovery</h2><p>Through meticulous analysis of hieroglyphic inscriptions and architectural evidence, archaeologists have pieced together the identity and significance of this remarkable ruler. The findings shed new light on the role of women in Maya society and governance.</p><h3>Historical Context</h3><p>Cobá was one of the most significant Maya cities, reaching its peak between 500 and 900 CE. The city controlled a vast network of trade routes and maintained political alliances across the Yucatan Peninsula.</p><img src=\"https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Coba.jpg?itok=Yn0yogFT\" alt=\"Cobá archaeological site\" style=\"max-width: 100%; height: auto; display: block; margin: 1.5rem 0;\"><div class=\"key-takeaways\"><h3>Key Findings</h3><ul><li>Ix Ch'ak Ch'een ruled during a critical period of Maya expansion</li><li>She maintained diplomatic relations with neighboring city-states</li><li>Her reign saw significant architectural developments in Cobá</li><li>Evidence suggests she wielded considerable military and religious authority</li></ul></div><h2>Significance for Maya Studies</h2><p>This discovery challenges previous assumptions about gender roles in ancient Maya civilization. It provides concrete evidence that women could and did hold supreme political power in major Maya centers.</p><blockquote>\"The identification of Ix Ch'ak Ch'een represents a watershed moment in our understanding of Maya political structures. Her story reveals a more complex and nuanced picture of ancient Maya society than previously understood.\" - Lead Archaeologist</blockquote><h3>Future Research</h3><p>The research team plans to continue excavations at Cobá, hoping to uncover more artifacts and inscriptions related to Ix Ch'ak Ch'een's reign. This ongoing work promises to reveal even more details about this fascinating historical figure and her impact on Maya civilization.</p><p>The discovery serves as a reminder that there is still much to learn about ancient civilizations and the powerful individuals who shaped their destinies.</p>"
+    },
+    {
+      "id": "a-comprehensive-list-of-2025-tech-layoffs-oct-24-2025",
+      "sourceUrl": "https://techcrunch.com/2025/10/24/tech-layoffs-2025-list/",
+      "category": "technology",
+      "subCategory": "startups",
+      "title": "A comprehensive list of 2025 tech layoffs",
+      "author": "Jack Turner",
+      "publishDate": "Oct 24, 2025",
+      "readTime": 1,
+      "isTrending": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://techcrunch.com/wp-content/uploads/2023/02/layoffs-e1684946575831.jpg?w=1200",
+      "thumbnailImage": "https://techcrunch.com/wp-content/uploads/2023/02/layoffs-e1684946575831.jpg?w=1200",
+      "images": [
+        "https://techcrunch.com/wp-content/uploads/2023/02/layoffs-e1684946575831.jpg?w=1200"
+      ],
+      "videos": [],
+      "fullContent": "<article class=\"news-article-content\"><div class=\"article-hero\"><img src=\"https://techcrunch.com/wp-content/uploads/2023/02/layoffs-e1684946575831.jpg?w=1200\" alt=\"An abstract image representing job layoffs.\" style=\"max-width: 100%; height: auto; display: block; width: 100%;\"><h1 class=\"article-title\">A comprehensive list of 2025 tech layoffs</h1><div class=\"article-meta\"><span class=\"author\">By Jack Turner</span><span class=\"publish-date\">Oct 24, 2025</span><span class=\"read-time\">1 min read</span></div></div><p class=\"lead-paragraph\">The trend of tech layoffs has continued into 2025, with major companies like Amazon and Google, as well as smaller startups, reducing their workforce.</p><p>This ongoing restructuring reflects a broader industry reorganisation around artificial intelligence, a stronger push for profitability, and the adoption of leaner operating models. While widespread hiring freezes are less common than in previous years, companies are making targeted cuts to enhance operational efficiency and to free up resources for strategic AI initiatives.</p><div class=\"key-takeaways\" style=\"background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.5rem; margin: 2rem 0;\"><h3 style=\"margin-top: 0;\">Key Takeaways</h3><ul class=\"key-points\" style=\"margin-bottom: 0;\"><li>Tech layoffs are continuing in 2025 across both large corporations and startups.</li><li>The cuts are driven by a strategic shift towards AI and increased profitability.</li><li>Companies are focusing on targeted restructuring rather than broad hiring freezes.</li></ul></div><div class=\"article-footer\" style=\"margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e5e5;\"><p class=\"source-link\" style=\"font-size: 0.9rem; color: #666;\">Read the full article at <a href=\"https://techcrunch.com/2025/10/24/tech-layoffs-2025-list/\" target=\"_blank\" rel=\"noopener\" style=\"color: #2563eb;\">TechCrunch</a></p></div></article>"
+    },
+    {
+      "id": "how-ai-is-powering-the-future-of-space-at-disrupt-2025-oct-24-2025",
+      "sourceUrl": "https://techcrunch.com/2025/10/24/ai-at-the-edge-how-startups-are-powering-the-future-of-space-at-techcrunch-disrupt-2025/",
+      "category": "technology",
+      "subCategory": "artificial-intelligence",
+      "title": "How AI is powering the future of space at Disrupt 2025",
+      "author": "TechCrunch",
+      "publishDate": "Oct 24, 2025",
+      "readTime": 1,
+      "isTrending": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://techcrunch.com/wp-content/uploads/2025/10/TC25_Emmons-Hoag-Maher-Speaker-16x9-Dark.png?resize=1200,675",
+      "thumbnailImage": "https://techcrunch.com/wp-content/uploads/2025/10/TC25_Emmons-Hoag-Maher-Speaker-16x9-Dark.png?resize=1200,675",
+      "images": [
+        "https://techcrunch.com/wp-content/uploads/2025/10/TC25_Emmons-Hoag-Maher-Speaker-16x9-Dark.png?resize=1200,675"
+      ],
+      "videos": [],
+      "fullContent": "<article class=\"news-article-content\"><div class=\"article-hero\"><img src=\"https://techcrunch.com/wp-content/uploads/2025/10/TC25_Emmons-Hoag-Maher-Speaker-16x9-Dark.png?resize=1200,675\" alt=\"Promotional image for TechCrunch Disrupt 2025 session on AI in space.\" style=\"max-width: 100%; height: auto; display: block; width: 100%;\"><h1 class=\"article-title\">How AI is powering the future of space at Disrupt 2025</h1><div class=\"article-meta\"><span class=\"author\">By TechCrunch</span><span class=\"publish-date\">Oct 24, 2025</span><span class=\"read-time\">1 min read</span></div></div><p class=\"lead-paragraph\">TechCrunch Disrupt 2025 is set to highlight the significant impact of artificial intelligence and startups on the aerospace sector, with a focus on the challenges and innovations in space exploration.</p><p>The event will feature two key sessions hosted by the Aerospace Corporation, which will delve into how startups are becoming essential in driving the next phase of space exploration through AI-powered advancements. These discussions will explore the intersection of cutting-edge technology and the final frontier.</p><div class=\"key-takeaways\" style=\"background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.5rem; margin: 2rem 0;\"><h3 style=\"margin-top: 0;\">Key Takeaways</h3><ul class=\"key-points\" style=\"margin-bottom: 0;\"><li>AI and startups are central to the future of the aerospace industry.</li><li>TechCrunch Disrupt 2025 will feature dedicated sessions on this topic.</li><li>The Aerospace Corporation will host discussions on space exploration challenges and AI's role.</li></ul></div><div class=\"article-footer\" style=\"margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e5e5;\"><p class=\"source-link\" style=\"font-size: 0.9rem; color: #666;\">Read the full article at <a href=\"https://techcrunch.com/2025/10/24/ai-at-the-edge-how-startups-are-powering-the-future-of-space-at-techcrunch-disrupt-2025/\" target=\"_blank\" rel=\"noopener\" style=\"color: #2563eb;\">TechCrunch</a></p></div></article>"
+    },
+    {
+      "id": "maya-queen-who-ruled-coba-identified-as-ix-chak-cheen-oct-24-2025",
+      "sourceUrl": "https://www.ancient-origins.net/news-history-archaeology/maya-queen-coba-00102248",
+      "category": "archaeology-and-history",
+      "subCategory": "archaeology",
+      "title": "Maya Queen Who Ruled Cobá Identified As Ix Ch'ak Ch'een",
+      "author": "Ancient Origins",
+      "publishDate": "Oct 24, 2025",
+      "readTime": 1,
+      "isTrending": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Coba.jpg?itok=Yn0yogFT",
+      "thumbnailImage": "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Coba.jpg?itok=Yn0yogFT",
+      "images": [
+        "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Coba.jpg?itok=Yn0yogFT"
+      ],
+      "videos": [],
+      "fullContent": "<article class=\"news-article-content\"><div class=\"article-hero\"><img src=\"https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Coba.jpg?itok=Yn0yogFT\" alt=\"The ancient Maya city of Cobá.\" style=\"max-width: 100%; height: auto; display: block; width: 100%;\"><h1 class=\"article-title\">Maya Queen Who Ruled Cobá Identified As Ix Ch'ak Ch'een</h1><div class=\"article-meta\"><span class=\"author\">By Ancient Origins</span><span class=\"publish-date\">Oct 24, 2025</span><span class=\"read-time\">1 min read</span></div></div><p class=\"lead-paragraph\">Epigraphists have identified a powerful woman who ruled the ancient Maya city of Cobá during the 6th century AD, known as Ix Ch&rsquo;ak Ch&rsquo;een.</p><p>The ruler's identity was pieced together from inscriptions on a limestone monument called the &ldquo;Foundation Rock.&rdquo; This significant discovery offers new insights into female political authority within the ancient Maya world and helps to reveal the complex dynastic networks that connected powerful city-states during the Classic Period.</p><div class=\"key-takeaways\" style=\"background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.5rem; margin: 2rem 0;\"><h3 style=\"margin-top: 0;\">Key Takeaways</h3><ul class=\"key-points\" style=\"margin-bottom: 0;\"><li>A powerful 6th-century female Maya ruler has been identified as Ix Ch&rsquo;ak Ch&rsquo;een.</li><li>The discovery was made from inscriptions on a monument in the ancient city of Cobá.</li><li>This finding provides crucial evidence of female political authority in the Classic Maya period.</li></ul></div><div class=\"article-footer\" style=\"margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e5e5;\"><p class=\"source-link\" style=\"font-size: 0.9rem; color: #666;\">Read the full article at <a href=\"https://www.ancient-origins.net/news-history-archaeology/maya-queen-coba-00102248\" target=\"_blank\" rel=\"noopener\" style=\"color: #2563eb;\">Ancient Origins</a></p></div></article>"
     },
     {
       "id": "how-compact-can-a-neutron-star-get-before-collapsing-into-a-black-hole-oct-24-2025",
@@ -218,25 +327,46 @@
       "fullContent": "<div class=\"article-hero\"><img src=\"https://cdn.mos.cms.futurecdn.net/UCZiq6kER7xYpraXPCtmkF-1920-80.jpg\" alt=\"Article image\"><h1>How compact can a neutron star get before collapsing into a black hole?</h1></div><p class=\"lead-paragraph\">Neutron stars are the densest objects in the universe, but there's a limit to how massive they can get before they collapse into a black hole, and two independent teams of researchers have provided a new estimate for this limit.</p><div class=\"side-image-left\"><img src=\"https://cdn.mos.cms.futurecdn.net/UCZiq6kER7xYpraXPCtmkF-1920-80.jpg\" alt=\"Context image\"><p>As the crushed remnants of massive stars that exploded as supernovae, neutron stars pack more mass than our sun into a sphere no wider than a city, making them incredibly dense.</p></div><blockquote class=\"expert-quote\">“Exactly where that limit lies is a mystery, but two independent teams of researchers have now provided a new estimate for it.” — Keith Cooper</blockquote><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>Neutron stars can contain more mass than the sun within a diameter equivalent to the width of a city. New research from two separate teams has offered a new estimate for the mass limit before they collapse.</p></div><h3>Broader Impact</h3><p>Determining the precise mass limit for neutron stars is crucial for understanding the final stages of stellar evolution, the formation of black holes, and the fundamental properties of matter under extreme conditions.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Neutron stars have a mass limit beyond which they collapse into black holes.</li><li>Two research teams have independently provided a new estimate for this critical limit.</li><li>These objects are the densest in the universe, formed from supernova explosions.</li></ul></div>"
     },
     {
-      "id": "maya-queen-who-ruled-cobá-identified-as-ix-ch-ak-ch-een-oct-24-2025",
-      "sourceUrl": "https://www.ancient-origins.net/news-history-archaeology/maya-queen-coba-00102248",
-      "category": "archaeology-and-history",
-      "subCategory": "archaeology",
-      "title": "Maya Queen Who Ruled Cobá Identified As Ix Ch'ak Ch'een",
-      "author": "Ancient Origins",
-      "publishDate": "Oct 24, 2025",
+      "id": "perth-fundraiser-to-repatriate-irish-expat-raises-staggering-amount-oct-23-2025",
+      "sourceUrl": "https://www.perthnow.com.au/wa/serena-downey-perth-fundraiser-to-repatriate-irish-expat-raises-staggering-amount-overnight-c-20432445",
+      "category": "local-news",
+      "subCategory": "community",
+      "title": "Perth fundraiser to repatriate Irish expat raises staggering amount",
+      "author": "PerthNow",
+      "publishDate": "Oct 23, 2025",
       "readTime": 1,
-      "isTrending": true,
+      "isTrending": false,
       "isVideo": false,
       "videoUrl": "",
       "isJob": false,
-      "bannerImage": "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Coba.jpg?itok=Yn0yogFT",
-      "thumbnailImage": "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Coba.jpg?itok=Yn0yogFT",
+      "bannerImage": "https://images.perthnow.com.au/publication/C-20432445/01fee3923ea5b0c7c9e6ae35a352ea70b2ebf000-16x9-x1y0w2446h1376.jpg?imwidth=1200",
+      "thumbnailImage": "https://images.perthnow.com.au/publication/C-20432445/01fee3923ea5b0c7c9e6ae35a352ea70b2ebf000-16x9-x1y0w2446h1376.jpg?imwidth=1200",
       "images": [
-        "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Coba.jpg?itok=Yn0yogFT"
+        "https://images.perthnow.com.au/publication/C-20432445/01fee3923ea5b0c7c9e6ae35a352ea70b2ebf000-16x9-x1y0w2446h1376.jpg?imwidth=1200"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Coba.jpg?itok=Yn0yogFT\" alt=\"Article image\"><h1>Maya Queen Who Ruled Cobá Identified As Ix Ch'ak Ch'een</h1></div><p class=\"lead-paragraph\">Epigraphists have successfully identified a woman who held supreme power in the ancient Maya city of Cobá during the 6th century AD, known as Ix Ch’ak Ch’een.</p><div class=\"side-image-left\"><img src=\"https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/Coba.jpg?itok=Yn0yogFT\" alt=\"Context image\"><p>The ruler's identity emerges from inscriptions on the “Foundation Rock,” a limestone monument discovered near a water reservoir in Cobá, Mexico. This breakthrough offers new insights into female political authority in the ancient Maya world.</p></div><blockquote class=\"expert-quote\">“This breakthrough provides unprecedented insight into female political authority in the ancient Maya world and reveals the complex dynastic networks that connected powerful city-states during the Classic Period.” — Ancient Origins</blockquote><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>The ruler, Ix Ch’ak Ch’een, governed during the 6th century AD. Her identity was discovered through inscriptions on the “Foundation Rock” monument in Cobá, Quintana Roo, Mexico.</p></div><h3>Broader Impact</h3><p>The identification of a female ruler at a major city-state like Cobá challenges previous understandings of Maya political structures and highlights the significant role women could play in the power dynamics of the Classic Period.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>A powerful female Maya ruler, Ix Ch’ak Ch’een, has been identified in the city of Cobá.</li><li>The discovery was made from inscriptions on a limestone monument.</li><li>This finding provides new evidence of female political authority in ancient Maya civilization.</li></ul></div>"
+      "fullContent": "<article class=\"news-article-content\"><div class=\"article-hero\"><img src=\"https://images.perthnow.com.au/publication/C-20432445/01fee3923ea5b0c7c9e6ae35a352ea70b2ebf000-16x9-x1y0w2446h1376.jpg?imwidth=1200\" alt=\"Photo of Serena Downey.\" style=\"max-width: 100%; height: auto; display: block; width: 100%;\"><h1 class=\"article-title\">Perth fundraiser to repatriate Irish expat raises staggering amount</h1><div class=\"article-meta\"><span class=\"author\">By PerthNow</span><span class=\"publish-date\">Oct 23, 2025</span><span class=\"read-time\">1 min read</span></div></div><p class=\"lead-paragraph\">A GoFundMe page to repatriate the body of Serena Downey, a 28-year-old Irish woman who passed away suddenly in Western Australia, has raised over $100,000 in less than 24 hours.</p><p>Ms. Downey, who had been a FIFO worker in the state for six years, is remembered fondly by friends and family. The fundraiser was established to help ease the significant financial burden on her family for transporting her body and belongings back to her hometown in Ireland, demonstrating a massive outpouring of community support.</p><div class=\"highlight-box info-box\" style=\"background: #f5f5f5; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0;\"><h3 style=\"margin-top: 0;\">Fundraiser Snapshot</h3><ul style=\"margin-bottom: 0;\"><li><strong>Goal:</strong> Assist with repatriation costs.</li><li><strong>Amount Raised:</strong> Over $100,000.</li><li><strong>Timeframe:</strong> Under 24 hours.</li></ul></div><div class=\"article-footer\" style=\"margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e5e5;\"><p class=\"source-link\" style=\"font-size: 0.9rem; color: #666;\">Read the full article at <a href=\"https://www.perthnow.com.au/wa/serena-downey-perth-fundraiser-to-repatriate-irish-expat-raises-staggering-amount-overnight-c-20432445\" target=\"_blank\" rel=\"noopener\" style=\"color: #2563eb;\">PerthNow</a></p></div></article>"
+    },
+    {
+      "id": "egypts-forbidden-archaeological-site-military-lockdown-hides-complex-oct-23-2025",
+      "sourceUrl": "https://www.ancient-origins.net/news-history-archaeology/zawyet-el-aryan-00102244",
+      "category": "archaeology-and-history",
+      "subCategory": "archaeology",
+      "title": "Egypt's Forbidden Archaeological Site: Military Lockdown Hides Complex",
+      "author": "Ancient Origins",
+      "publishDate": "Oct 23, 2025",
+      "readTime": 1,
+      "isTrending": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false,
+      "bannerImage": "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/ZawyetConstruction.jpg?itok=QpuvoMvc",
+      "thumbnailImage": "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/ZawyetConstruction.jpg?itok=QpuvoMvc",
+      "images": [
+        "https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/ZawyetConstruction.jpg?itok=QpuvoMvc"
+      ],
+      "videos": [],
+      "fullContent": "<article class=\"news-article-content\"><div class=\"article-hero\"><img src=\"https://www.ancient-origins.net/sites/default/files/styles/article_image/public/field/image/ZawyetConstruction.jpg?itok=QpuvoMvc\" alt=\"The underground structures at Zawyet El Aryan.\" style=\"max-width: 100%; height: auto; display: block; width: 100%;\"><h1 class=\"article-title\">Egypt's Forbidden Archaeological Site: Military Lockdown Hides Complex</h1><div class=\"article-meta\"><span class=\"author\">By Ancient Origins</span><span class=\"publish-date\">Oct 23, 2025</span><span class=\"read-time\">1 min read</span></div></div><p class=\"lead-paragraph\">The archaeological site of Zawyet El Aryan, located near the Giza Pyramids, has been a restricted military zone since the 1960s, preventing any modern investigation into its mysterious underground structures.</p><p>Often nicknamed &ldquo;Egypt&rsquo;s Area 51,&rdquo; the lockdown has prevented archaeologists from conducting modern studies on its enigmatic features, which include a massive pit lined with granite blocks. Many Egyptologists believe the site could be an unfinished pyramid complex dating back to the 3rd or 4th Dynasty, leaving its true purpose and contents a mystery.</p><div class=\"key-takeaways\" style=\"background: #fef3c7; border-left: 4px solid #f59e0b; padding: 1.5rem; margin: 2rem 0;\"><h3 style=\"margin-top: 0;\">Key Points</h3><ul class=\"key-points\" style=\"margin-bottom: 0;\"><li>The Zawyet El Aryan site has been a restricted military zone since the 1960s.</li><li>This has blocked modern archaeological research of its large underground structures.</li><li>The site is speculated to be an unfinished pyramid from the Old Kingdom.</li></ul></div><div class=\"article-footer\" style=\"margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e5e5;\"><p class=\"source-link\" style=\"font-size: 0.9rem; color: #666;\">Read the full article at <a href=\"https://www.ancient-origins.net/news-history-archaeology/zawyet-el-aryan-00102244\" target=\"_blank\" rel=\"noopener\" style=\"color: #2563eb;\">Ancient Origins</a></p></div></article>"
     },
     {
       "id": "mariah-carey-perth-20251023",
@@ -260,11 +390,11 @@
       "fullContent": "<div class=\"article-hero\"><img src=\"https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"Mariah Carey arrives in Perth\" style=\"max-width: 100%; height: auto; display: block;\"></div><h1>Mariah Carey Arrives in Perth for First WA Performance in Over a Decade</h1><p>The legendary Mariah Carey, known worldwide as the \"Songbird Supreme,\" has touched down in Perth for her highly anticipated performance—her first in Western Australia in more than ten years. Fans across the state are buzzing with excitement as the five-time Grammy winner prepares to take the stage.</p><h2>A Long-Awaited Return</h2><p>Perth music enthusiasts have been eagerly awaiting this moment since the announcement earlier this year. Carey's last performance in WA was over a decade ago, making this concert a historic event for local fans.</p><img src=\"https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2\" alt=\"Concert venue preparation\" style=\"max-width: 100%; height: auto; display: block; margin: 1.5rem 0;\"><h3>What to Expect</h3><p>The concert promises to be a spectacular showcase of Carey's incredible career, spanning over three decades of chart-topping hits. Fans can expect to hear:</p><ul><li>Classic hits like \"Hero\" and \"Vision of Love\"</li><li>Holiday favorites including \"All I Want for Christmas Is You\"</li><li>Fan-favorite ballads showcasing her legendary five-octave vocal range</li><li>Recent releases and surprise performances</li></ul><div class=\"highlight-box\"><h3>Concert Details</h3><p><strong>Venue:</strong> RAC Arena, Perth<br><strong>Date:</strong> October 25, 2025<br><strong>Doors Open:</strong> 6:30 PM<br><strong>Show Starts:</strong> 8:00 PM</p></div><h2>Economic Impact</h2><p>The arrival of such a high-profile international artist is expected to provide a significant boost to Perth's entertainment and hospitality sectors. Hotels near the venue have reported high occupancy rates, and local restaurants are preparing for increased patronage.</p><blockquote>\"Having Mariah Carey perform in Perth is a testament to our city's growing status as a world-class entertainment destination. This is exactly the kind of event that puts Perth on the international touring map.\" - Tourism Minister</blockquote><h3>Fan Reactions</h3><p>Social media has been ablaze with excitement since Carey's plane touched down at Perth Airport. Long-time fans have shared their memories of her previous Perth performances, while a new generation of admirers can't wait to experience her legendary vocals live for the first time.</p><p>Local fan clubs have organized meet-ups before the concert, and some dedicated supporters have been camping outside the venue for days to secure prime viewing positions.</p><h2>A Career of Excellence</h2><p>With over 200 million records sold worldwide, 19 number-one singles on the Billboard Hot 100, and countless accolades, Mariah Carey remains one of the best-selling music artists of all time. Her influence on pop and R&B music is immeasurable, and her Perth performance is sure to be an unforgettable celebration of her remarkable legacy.</p><p>For Perth residents and visitors alike, this concert represents a once-in-a-decade opportunity to witness one of music's greatest voices in an intimate setting. As the countdown to showtime continues, the excitement in the air is palpable.</p>"
     },
     {
-      "id": "quantum-echoes-reveal-the-potential-of-googles-quantum-computer-oct-22-2025",
+      "id": "quantum-echoes-reveal-googles-quantum-computer-potential-oct-22-2025",
       "sourceUrl": "https://www.sciencenews.org/article/quantum-echoes-google-computer",
       "category": "science",
       "subCategory": "quantum-physics",
-      "title": "Quantum 'echoes' reveal the potential of Google's quantum computer",
+      "title": "Quantum 'echoes' reveal Google's quantum computer potential",
       "author": "Emily Conover",
       "publishDate": "Oct 22, 2025",
       "readTime": 1,
@@ -272,13 +402,13 @@
       "isVideo": false,
       "videoUrl": "",
       "isJob": false,
-      "bannerImage": "https://www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg",
-      "thumbnailImage": "https://www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg",
+      "bannerImage": "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg",
+      "thumbnailImage": "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg",
       "images": [
-        "https://www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg"
+        "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg"
       ],
       "videos": [],
-      "fullContent": "<div class=\"article-hero\"><img src=\"https://www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg\" alt=\"Article image\"><h1>Quantum 'echoes' reveal the potential of Google's quantum computer</h1></div><p class=\"lead-paragraph\">For quantum computers to change the game of computation, scientists need to show that the machines’ calculations are correct, and Google’s Willow quantum chip has now achieved verifiable quantum advantage.</p><div class=\"side-image-left\"><img src=\"https://www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg\" alt=\"Context image\"><p>This represents a quantum calculation that is apparently out of reach for a traditional, classical computer, but with a result that can be confirmed to be correct. Verification is an essential step toward potential applications of quantum computers.</p></div><blockquote class=\"expert-quote\">“The result of the calculation, reported October 22 in Nature, could be verified by another quantum computer — although it hasn’t been yet.” — Emily Conover</blockquote><div class=\"highlight-box info-box\"><h3>Data &amp; Insights</h3><p>Google's Willow quantum chip has performed a calculation that is reportedly beyond the reach of classical computers. The result is verifiable, a key step for practical quantum applications, as reported in Nature.</p></div><h3>Broader Impact</h3><p>Achieving verifiable quantum advantage is a critical milestone. It moves quantum computing from a theoretical field to one with practical potential, opening the door for future applications that could solve problems currently intractable for even the most powerful supercomputers.</p><div class=\"key-takeaways magazine-style\"><h4>Key Takeaways</h4><ul class=\"key-points\"><li>Google's Willow chip has achieved verifiable quantum advantage.</li><li>This means it performed a calculation beyond classical computers that can be proven correct.</li><li>Verification is a crucial step for the practical application of quantum computers.</li></ul></div>"
+      "fullContent": "<article class=\"news-article-content\"><div class=\"article-hero\"><img src=\"https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2025/10/1022125_ec_quantum-echoes_feat.jpg\" alt=\"A visualization of Google's Willow quantum chip.\" style=\"max-width: 100%; height: auto; display: block; width: 100%;\"><h1 class=\"article-title\">Quantum 'echoes' reveal Google's quantum computer potential</h1><div class=\"article-meta\"><span class=\"author\">By Emily Conover</span><span class=\"publish-date\">Oct 22, 2025</span><span class=\"read-time\">1 min read</span></div></div><p class=\"lead-paragraph\">Google&rsquo;s Willow quantum chip has achieved a significant milestone by demonstrating verifiable quantum advantage, performing a calculation that is reportedly beyond the capabilities of even the most powerful traditional supercomputers.</p><p>Crucially, the result of the calculation&mdash;which measures a phenomenon known as &ldquo;quantum echoes&rdquo;&mdash;can be verified for correctness. This verification is a vital step toward the practical and reliable application of quantum computers for real-world problems. According to the report in Nature, the calculation ran 13,000 times faster on the Willow chip than it would on the Frontier supercomputer.</p><div class=\"highlight-box info-box\" style=\"background: #f5f5f5; border-left: 4px solid #2563eb; padding: 1.5rem; margin: 2rem 0;\"><h3 style=\"margin-top: 0;\">Key Data &amp; Insights</h3><ul style=\"margin-bottom: 0;\"><li>Google's Willow chip has demonstrated verifiable quantum advantage.</li><li>It performed a calculation 13,000 times faster than the Frontier supercomputer.</li><li>The ability to verify the result is a critical step for practical quantum computing.</li></ul></div><div class=\"article-footer\" style=\"margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e5e5e5;\"><p class=\"source-link\" style=\"font-size: 0.9rem; color: #666;\">Read the full article at <a href=\"https://www.sciencenews.org/article/quantum-echoes-google-computer\" target=\"_blank\" rel=\"noopener\" style=\"color: #2563eb;\">Science News</a></p></div></article>"
     },
     {
       "id": "quantum-echoes-reveal-the-potential-of-googles-quantum-computer",
