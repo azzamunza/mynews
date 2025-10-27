@@ -439,6 +439,8 @@
         // Add this to your existing renderArticles function in index.html
         // Replace the existing renderArticles function with this enhanced version:
         
+       // Replace your renderArticles function with this structured version
+
         function renderArticles(filterCategory = 'all') {
             const gridContainer = document.getElementById('articleGrid');
             gridContainer.innerHTML = '';
@@ -452,39 +454,48 @@
                 return;
             }
             
-            // Professional grid pattern distribution
-            // Creates visual variety while maintaining organized structure
-            const gridPatterns = [
-                'card-4x2',  // Large feature (0)
-                'card-2x2',  // Medium with content (1)
-                'card-1x2',  // Compact vertical (2)
-                'card-1x2',  // Compact vertical (3)
-                'card-3x2',  // Wide overlay (4)
-                'card-2x1',  // Horizontal (5)
-                'card-2x1',  // Horizontal (6)
-                'card-2x2',  // Medium with content (7)
-                'card-1x2',  // Compact vertical (8)
-                'card-1x2',  // Compact vertical (9)
-                'card-1x2',  // Compact vertical (10)
-                'card-1x2',  // Compact vertical (11)
-                'card-3x2',  // Wide overlay (12)
-                'card-2x2',  // Medium with content (13)
-                'card-2x2',  // Medium with content (14)
-                'card-4x2',  // Large feature (15)
-                'card-2x1',  // Horizontal (16)
-                'card-2x1',  // Horizontal (17)
-                'card-1x2',  // Compact vertical (18)
-                'card-1x2',  // Compact vertical (19)
+            // STRUCTURED PATTERN - Repeating 20-article blocks
+            // Pattern matches your example:
+            // Row 1-2: AA BB CC (where carousel CC is handled separately)
+            // Row 3-4: D E F G K S
+            // Row 5-6: (divider)
+            // Row 7-8: NNN LLL TT
+            // Row 9-10: ZZ OO YY NN LL
+            // Row 11-12: E BB BB BB E
+            // Row 13-14: H N L O E S X L
+            
+            const pattern = [
+                'type-a', 'type-a',  // AA (2x2 each) = 4 cols
+                'type-b', 'type-b',  // BB (1x2 each) = 2 cols
+                'type-b', 'type-b',  // CC (handled by carousel, these fill remaining 2 cols)
+                
+                'type-d', 'type-e', 'type-f', 'type-g', 'type-k', 'type-s',  // Row 2: DEFGKS (1x2 each)
+                
+                'type-n',           // NNN (3x2)
+                'type-l',           // LLL (3x2)
+                'type-t', 'type-t', // TT (2x2 each)
+                
+                'type-z', 'type-z', // ZZ (2x2 each)
+                'type-o', 'type-o', // OO (2x2 each)
+                'type-y', 'type-y', // YY (2x2 each)
+                'type-n',           // NN (3x2)
+                'type-l',           // LL (3x2)
+                
+                'type-e',           // E (1x2)
+                'type-b', 'type-b', 'type-b', 'type-b', 'type-b', 'type-b',  // BBBBBB (1x2 each, 6 total = 6 cols)
+                'type-e',           // E (1x2)
+                
+                'type-b', 'type-n', 'type-l', 'type-o', 'type-e', 'type-s', 'type-x', 'type-l',  // HNLOESXL mix
             ];
             
             filteredArticles.forEach((article, index) => {
                 const card = document.createElement('div');
                 
-                // Cycle through patterns, creating organized variety
-                const patternIndex = index % gridPatterns.length;
-                const cardSize = gridPatterns[patternIndex];
+                // Cycle through the structured pattern
+                const patternIndex = index % pattern.length;
+                const cardType = pattern[patternIndex];
                 
-                card.className = `article-card magazine-card ${cardSize}`;
+                card.className = `article-card magazine-card ${cardType}`;
                 card.setAttribute('data-category', article.category);
                 
                 let badges = '';
@@ -492,7 +503,6 @@
                 if (article.isJob) badges += '<span class="badge badge-job">💼</span>';
                 if (article.isVideo) badges += '<span class="badge badge-video">▶</span>';
                 
-                // Video or Image rendering
                 const imageHtml = article.isVideo 
                     ? `<div class="video-thumbnail">
                          <img src="${article.thumbnailImage}" alt="${article.title}" class="article-image" loading="lazy">
@@ -522,7 +532,6 @@
                 gridContainer.appendChild(card);
             });
         }
-    
         function renderHeadlines() {
             const headlinesList = document.getElementById('headlinesList');
             headlinesList.innerHTML = '';
