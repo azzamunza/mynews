@@ -436,6 +436,9 @@
             startCarousel();
         }
     
+        // Add this to your existing renderArticles function in index.html
+        // Replace the existing renderArticles function with this enhanced version:
+        
         function renderArticles(filterCategory = 'all') {
             const gridContainer = document.getElementById('articleGrid');
             gridContainer.innerHTML = '';
@@ -449,24 +452,47 @@
                 return;
             }
             
-            // Magazine-style varied card sizes
+            // Professional grid pattern distribution
+            // Creates visual variety while maintaining organized structure
+            const gridPatterns = [
+                'card-4x2',  // Large feature (0)
+                'card-2x2',  // Medium with content (1)
+                'card-1x2',  // Compact vertical (2)
+                'card-1x2',  // Compact vertical (3)
+                'card-3x2',  // Wide overlay (4)
+                'card-2x1',  // Horizontal (5)
+                'card-2x1',  // Horizontal (6)
+                'card-2x2',  // Medium with content (7)
+                'card-1x2',  // Compact vertical (8)
+                'card-1x2',  // Compact vertical (9)
+                'card-1x2',  // Compact vertical (10)
+                'card-1x2',  // Compact vertical (11)
+                'card-3x2',  // Wide overlay (12)
+                'card-2x2',  // Medium with content (13)
+                'card-2x2',  // Medium with content (14)
+                'card-4x2',  // Large feature (15)
+                'card-2x1',  // Horizontal (16)
+                'card-2x1',  // Horizontal (17)
+                'card-1x2',  // Compact vertical (18)
+                'card-1x2',  // Compact vertical (19)
+            ];
+            
             filteredArticles.forEach((article, index) => {
                 const card = document.createElement('div');
                 
-                // Vary card sizes for magazine look - CNN-inspired pattern
-                let cardSize = 'standard';
-                if (index % 7 === 0) cardSize = 'large';
-                else if (index % 5 === 0) cardSize = 'wide';
-                else if (index % 11 === 0) cardSize = 'tall';
+                // Cycle through patterns, creating organized variety
+                const patternIndex = index % gridPatterns.length;
+                const cardSize = gridPatterns[patternIndex];
                 
-                card.className = `article-card magazine-card card-${cardSize}`;
+                card.className = `article-card magazine-card ${cardSize}`;
                 card.setAttribute('data-category', article.category);
                 
                 let badges = '';
-                if (article.isTrending) badges += '<span class="badge badge-trending">🔥 Trending</span>';
-                if (article.isJob) badges += '<span class="badge badge-job">💼 Job</span>';
-                if (article.isVideo) badges += '<span class="badge badge-video">▶ Video</span>';
+                if (article.isTrending) badges += '<span class="badge badge-trending">🔥</span>';
+                if (article.isJob) badges += '<span class="badge badge-job">💼</span>';
+                if (article.isVideo) badges += '<span class="badge badge-video">▶</span>';
                 
+                // Video or Image rendering
                 const imageHtml = article.isVideo 
                     ? `<div class="video-thumbnail">
                          <img src="${article.thumbnailImage}" alt="${article.title}" class="article-image" loading="lazy">
@@ -478,7 +504,7 @@
                 card.innerHTML = `
                     <div class="article-image-container">
                         ${imageHtml}
-                        <div class="article-badges">${badges}</div>
+                        ${badges ? `<div class="article-badges">${badges}</div>` : ''}
                         <div class="article-overlay-category">${article.category.toUpperCase()}</div>
                     </div>
                     <div class="article-content magazine-content">
