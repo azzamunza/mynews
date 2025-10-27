@@ -1,26 +1,80 @@
 /* ==========================================
-   MAGAZINE-STYLE LAYOUT ENHANCEMENTS
-   CNN-Inspired News Portal Design
+   MAGAZINE-STYLE LAYOUT - GRID SYSTEM
+   8-Column Professional News Portal
+   1:1 Aspect Ratio Grid Cells
    ========================================== */
 
-/* Enhanced Carousel with Magazine Overlays */
+/* === GRID FOUNDATION === */
+.magazine-grid {
+    display: grid !important;
+    grid-template-columns: repeat(8, 1fr) !important;
+    gap: 1rem !important;
+    grid-auto-rows: auto !important;
+    max-width: 100%;
+}
+
+/* Calculate grid cell aspect ratio based on available width */
+.magazine-grid::before {
+    content: '';
+    width: 0;
+    padding-bottom: calc(100% / 8); /* Creates 1:1 aspect ratio per cell */
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+}
+
+/* === MAIN LAYOUT STRUCTURE === */
+.main-layout {
+    display: grid !important;
+    grid-template-columns: 1fr 25% !important;
+    gap: 1.5rem !important;
+    max-width: 1800px !important;
+    margin: 2rem auto !important;
+    padding: 0 1.5rem !important;
+}
+
+/* === CAROUSEL: 6x2 Grid (Top Left) === */
+.hero-section {
+    margin-bottom: 0 !important;
+}
+
 .magazine-carousel {
     border-radius: 0 !important;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+    position: relative;
+    overflow: hidden;
 }
 
 .carousel-slides {
-    height: 600px !important;
+    position: relative;
+    /* 6 columns wide, 2 rows tall with 1:1 aspect ratio */
+    aspect-ratio: 3 / 1;
+    min-height: 400px;
 }
 
+.carousel-slide {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+}
+
+/* Carousel overlay - ONLY at bottom for key content */
 .carousel-overlay-top {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 2rem;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
-    z-index: 2;
+    top: 1.5rem;
+    left: 2rem;
+    z-index: 3;
 }
 
 .carousel-overlay-top .trending-badge {
@@ -30,173 +84,475 @@
     background: var(--accent-color);
     color: var(--primary-bg);
     font-weight: 800;
+    text-transform: uppercase;
     border-radius: 2px;
 }
 
 .carousel-content.magazine-overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.85) 60%, transparent 100%);
-    padding: 3rem 3rem 2.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.5rem;
+    /* Only gradient at bottom - less overwhelming */
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, transparent 100%);
+    z-index: 2;
 }
 
 .carousel-category {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--accent-color);
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin-bottom: 0.75rem;
     text-transform: uppercase;
 }
 
 .carousel-title {
-    font-size: 3rem !important;
-    line-height: 1.1 !important;
-    margin-bottom: 1rem !important;
+    font-size: 2.5rem !important;
+    line-height: 1.15 !important;
+    margin-bottom: 0.75rem !important;
     font-weight: 700 !important;
-    text-shadow: 2px 2px 20px rgba(0,0,0,0.9) !important;
+    color: white !important;
+    max-width: 90%;
 }
 
 .carousel-excerpt {
-    font-size: 1.15rem !important;
-    line-height: 1.6 !important;
-    margin-bottom: 1.5rem !important;
-    max-width: 800px;
+    font-size: 1.05rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1rem !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    max-width: 80%;
 }
 
 .carousel-meta {
-    font-size: 0.9rem !important;
+    font-size: 0.85rem !important;
     display: flex !important;
     gap: 0.75rem !important;
     align-items: center;
+    color: rgba(255, 255, 255, 0.85) !important;
 }
 
-/* Magazine Grid Layout - CNN-Style Varied Sizes */
-.magazine-grid {
-    display: grid !important;
-    grid-template-columns: repeat(12, 1fr) !important;
-    gap: 1.5rem !important;
-    grid-auto-rows: 280px !important;
+/* === HEADLINES SIDEBAR: 2x6 Grid (Top Right) === */
+.headlines-sidebar {
+    position: sticky !important;
+    top: 120px !important;
+    height: fit-content !important;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    background: var(--card-bg) !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
+.headlines-title {
+    font-size: 0.85rem !important;
+    font-weight: 800 !important;
+    margin: 0 !important;
+    padding: 1.5rem 1.5rem 1rem !important;
+    color: var(--accent-color) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    border-bottom: 2px solid var(--border-color) !important;
+}
+
+.magazine-headline {
+    display: flex !important;
+    gap: 1rem;
+    padding: 1rem 1.5rem !important;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--border-color);
+    transition: background 0.3s ease;
+}
+
+.magazine-headline:last-child {
+    border-bottom: none;
+}
+
+.magazine-headline:hover {
+    background: rgba(255, 255, 255, 0.03) !important;
+    padding-left: 1.5rem !important;
+}
+
+.headline-thumbnail {
+    position: relative;
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--secondary-bg);
+}
+
+.headline-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.magazine-headline:hover .headline-thumbnail img {
+    transform: scale(1.08);
+}
+
+.headline-video-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 28px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: var(--primary-bg);
+}
+
+.headline-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.headline-category {
+    font-size: 0.65rem !important;
+    color: var(--accent-color) !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.4rem !important;
+    letter-spacing: 1.5px !important;
+}
+
+.headline-title {
+    font-size: 0.875rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.4rem !important;
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.headline-time {
+    font-size: 0.7rem !important;
+    color: var(--text-muted) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* === ARTICLE GRID CARDS === */
 .magazine-card {
     position: relative;
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    background: var(--card-bg);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border-radius: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Varied Card Sizes - Magazine Layout */
-.magazine-card.card-large {
-    grid-column: span 8;
+.magazine-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px);
+}
+
+/* === GRID SIZE PATTERNS === */
+
+/* 1x2: Image Above (1 row), Headline Below (1 row) */
+.magazine-card.card-1x2 {
+    grid-column: span 1;
     grid-row: span 2;
 }
 
-.magazine-card.card-wide {
-    grid-column: span 6;
-    grid-row: span 1;
+.card-1x2 .article-image-container {
+    height: 50%;
 }
 
-.magazine-card.card-tall {
-    grid-column: span 4;
+.card-1x2 .article-content.magazine-content {
+    position: relative;
+    height: 50%;
+    padding: 1rem;
+    background: var(--card-bg);
+}
+
+.card-1x2 .article-overlay-category {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    font-size: 0.6rem;
+    padding: 0.4rem 0.7rem;
+    z-index: 2;
+}
+
+.card-1x2 .article-title {
+    font-size: 0.95rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.card-1x2 .article-excerpt {
+    display: none;
+}
+
+.card-1x2 .article-meta {
+    font-size: 0.7rem !important;
+    border: none !important;
+    padding-top: 0 !important;
+}
+
+/* 2x2: Image Top (2 rows), Headline Bottom (2 rows) */
+.magazine-card.card-2x2 {
+    grid-column: span 2;
+    grid-row: span 4;
+}
+
+.card-2x2 .article-image-container {
+    height: 50%;
+}
+
+.card-2x2 .article-content.magazine-content {
+    position: relative;
+    height: 50%;
+    padding: 1.5rem;
+    background: var(--card-bg);
+}
+
+.card-2x2 .article-overlay-category {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.65rem;
+    padding: 0.5rem 0.9rem;
+    z-index: 2;
+}
+
+.card-2x2 .article-title {
+    font-size: 1.25rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.card-2x2 .article-excerpt {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: var(--text-secondary) !important;
+}
+
+/* 3x2: Full Background Image with Overlay Text (Bottom Row Only) */
+.magazine-card.card-3x2 {
+    grid-column: span 3;
     grid-row: span 2;
 }
 
-.magazine-card.card-standard {
-    grid-column: span 4;
-    grid-row: span 1;
-}
-
-/* Enhanced Card Styling */
-.magazine-card .article-image-container {
+.card-3x2 .article-image-container {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    overflow: hidden;
 }
 
-.magazine-card .article-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+.card-3x2 .article-image {
     filter: brightness(0.85);
 }
 
-.magazine-card:hover .article-image {
-    transform: scale(1.08);
-    filter: brightness(0.7);
+.card-3x2:hover .article-image {
+    transform: scale(1.05);
+    filter: brightness(0.75);
 }
 
-.magazine-card .article-overlay-category {
+.card-3x2 .article-overlay-category {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    z-index: 3;
+}
+
+.card-3x2 .article-content.magazine-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 70%, transparent 100%);
+}
+
+.card-3x2 .article-title {
+    font-size: 1.4rem !important;
+    line-height: 1.25 !important;
+    color: white !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.card-3x2 .article-excerpt {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 0.95rem !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-3x2 .article-meta {
+    color: rgba(255, 255, 255, 0.85) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* 2x1: Horizontal Card */
+.magazine-card.card-2x1 {
+    grid-column: span 2;
+    grid-row: span 1;
+    display: flex;
+}
+
+.card-2x1 .article-image-container {
+    width: 45%;
+    position: relative;
+}
+
+.card-2x1 .article-content.magazine-content {
+    width: 55%;
+    position: relative;
+    padding: 1rem;
+    background: var(--card-bg);
+}
+
+.card-2x1 .article-overlay-category {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 2;
+}
+
+.card-2x1 .article-title {
+    font-size: 1rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.card-2x1 .article-excerpt {
+    display: none;
+}
+
+/* 4x2: Large Feature Card */
+.magazine-card.card-4x2 {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.card-4x2 .article-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.card-4x2 .article-overlay-category {
     position: absolute;
     top: 1.5rem;
     left: 1.5rem;
-    font-size: 0.65rem;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    padding: 0.5rem 1rem;
-    background: var(--accent-color);
-    color: var(--primary-bg);
-    z-index: 2;
-    border-radius: 2px;
+    z-index: 3;
 }
 
-.magazine-card .article-content.magazine-content {
+.card-4x2 .article-content.magazine-content {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     padding: 2rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.7) 70%, transparent);
-    transform: translateY(0);
+    background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.65) 60%, transparent 100%);
+}
+
+.card-4x2 .article-title {
+    font-size: 1.8rem !important;
+    line-height: 1.2 !important;
+    color: white !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.card-4x2 .article-excerpt {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 1.05rem !important;
+    line-height: 1.5 !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-4x2 .article-meta {
+    color: rgba(255, 255, 255, 0.85) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+/* === SHARED CARD ELEMENTS === */
+.article-image-container {
+    position: relative;
+    overflow: hidden;
+    background: var(--secondary-bg);
+}
+
+.article-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.magazine-card:hover .article-content.magazine-content {
-    transform: translateY(-8px);
+.magazine-card:hover .article-image {
+    transform: scale(1.06);
 }
 
-.magazine-card .article-title {
-    font-size: 1.4rem !important;
-    line-height: 1.3 !important;
-    margin-bottom: 0.75rem !important;
+.article-overlay-category {
+    background: var(--accent-color);
+    color: var(--primary-bg);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    padding: 0.5rem 0.85rem;
+    text-transform: uppercase;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.article-badges {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+.article-title {
     font-weight: 700 !important;
-    color: white !important;
-    text-shadow: 1px 1px 8px rgba(0,0,0,0.8);
+    color: var(--text-primary) !important;
+    margin-bottom: 0.75rem !important;
 }
 
-.magazine-card.card-large .article-title {
-    font-size: 2.2rem !important;
-    line-height: 1.2 !important;
-}
-
-.magazine-card.card-wide .article-title {
-    font-size: 1.6rem !important;
-}
-
-.magazine-card .article-excerpt {
-    color: rgba(255,255,255,0.9) !important;
-    font-size: 0.95rem !important;
-    line-height: 1.5 !important;
-    margin-bottom: 1rem !important;
-}
-
-.magazine-card.card-standard .article-excerpt {
-    display: none;
-}
-
-.magazine-card .article-meta {
-    border-top: 1px solid rgba(255,255,255,0.2) !important;
-    padding-top: 0.75rem !important;
-    font-size: 0.8rem !important;
-    color: rgba(255,255,255,0.8) !important;
+.article-meta {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
 }
 
 .meta-separator {
     opacity: 0.5;
+    font-size: 0.6rem;
 }
 
 /* Video Enhancements */
@@ -209,274 +565,223 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background: var(--accent-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--primary-bg);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
     transition: all 0.3s;
     z-index: 2;
 }
 
 .magazine-card:hover .video-play-icon {
     transform: translate(-50%, -50%) scale(1.15);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8);
 }
 
 .video-duration {
     position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    background: rgba(0, 0, 0, 0.9);
+    bottom: 0.75rem;
+    right: 0.75rem;
+    background: rgba(0, 0, 0, 0.85);
     color: white;
-    padding: 0.4rem 0.8rem;
-    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.7rem;
     font-weight: 700;
-    border-radius: 3px;
+    border-radius: 2px;
     z-index: 2;
 }
 
-/* Enhanced Headlines Sidebar with Thumbnails */
-.magazine-headline {
-    display: flex !important;
-    gap: 1rem;
-    padding: 1rem 0 !important;
-    align-items: flex-start;
+/* === SECTION DIVIDERS === */
+.section-divider {
+    grid-column: 1 / -1;
+    height: 2px;
+    background: var(--border-color);
+    margin: 1rem 0;
 }
 
-.magazine-headline:hover {
-    padding-left: 0 !important;
-    opacity: 1 !important;
-    background: rgba(255, 255, 255, 0.02);
+.section-title-row {
+    grid-column: 1 / -1;
+    padding: 1.5rem 0 1rem;
+    border-bottom: 2px solid var(--accent-color);
 }
 
-.headline-thumbnail {
-    position: relative;
-    flex-shrink: 0;
-    width: 80px;
-    height: 80px;
-    border-radius: 4px;
-    overflow: hidden;
-    background: var(--card-bg);
+.section-title-row h2 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    margin: 0;
 }
 
-.headline-thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s;
-}
-
-.magazine-headline:hover .headline-thumbnail img {
-    transform: scale(1.1);
-}
-
-.headline-video-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30px;
-    height: 30px;
-    background: var(--accent-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    color: var(--primary-bg);
-}
-
-.headline-content {
-    flex: 1;
-    min-width: 0;
-}
-
-.headline-title {
-    font-size: 0.9rem !important;
-    line-height: 1.4 !important;
-    margin-bottom: 0.5rem !important;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-/* Responsive Design for Magazine Layout */
+/* === RESPONSIVE BREAKPOINTS === */
 @media (max-width: 1400px) {
-    .magazine-grid {
-        grid-template-columns: repeat(8, 1fr) !important;
-    }
-    
-    .magazine-card.card-large {
-        grid-column: span 8;
-    }
-    
-    .magazine-card.card-wide {
-        grid-column: span 4;
-    }
-    
-    .magazine-card.card-tall {
-        grid-column: span 4;
-    }
-    
-    .magazine-card.card-standard {
-        grid-column: span 4;
-    }
-}
-
-@media (max-width: 1024px) {
-    .carousel-slides {
-        height: 500px !important;
+    .main-layout {
+        grid-template-columns: 1fr 30% !important;
     }
     
     .carousel-title {
         font-size: 2.2rem !important;
     }
+}
+
+@media (max-width: 1200px) {
+    .main-layout {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    
+    .headlines-sidebar {
+        position: relative !important;
+        top: 0 !important;
+        max-height: none !important;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+    }
+    
+    .headlines-title {
+        grid-column: 1 / -1;
+    }
+    
+    .magazine-headline {
+        border-right: 1px solid var(--border-color);
+    }
+    
+    .magazine-headline:nth-child(even) {
+        border-right: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .carousel-slides {
+        aspect-ratio: 2 / 1;
+        min-height: 350px;
+    }
+    
+    .carousel-title {
+        font-size: 1.9rem !important;
+    }
     
     .magazine-grid {
         grid-template-columns: repeat(6, 1fr) !important;
-        gap: 1rem !important;
     }
     
-    .magazine-card.card-large,
-    .magazine-card.card-wide {
+    .magazine-card.card-4x2 {
         grid-column: span 6;
     }
     
-    .magazine-card.card-tall,
-    .magazine-card.card-standard {
+    .magazine-card.card-3x2 {
+        grid-column: span 3;
+    }
+    
+    .magazine-card.card-2x2 {
         grid-column: span 3;
     }
 }
 
 @media (max-width: 768px) {
     .carousel-slides {
-        height: 400px !important;
-    }
-    
-    .carousel-title {
-        font-size: 1.8rem !important;
+        aspect-ratio: 16 / 10;
+        min-height: 300px;
     }
     
     .carousel-content.magazine-overlay {
-        padding: 2rem 1.5rem !important;
+        padding: 1.5rem;
+    }
+    
+    .carousel-title {
+        font-size: 1.5rem !important;
+        max-width: 100%;
+    }
+    
+    .carousel-excerpt {
+        max-width: 100%;
+        font-size: 0.95rem !important;
     }
     
     .magazine-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        grid-auto-rows: 220px !important;
+        grid-template-columns: repeat(4, 1fr) !important;
     }
     
-    .magazine-card.card-large {
+    .magazine-card.card-4x2,
+    .magazine-card.card-3x2 {
+        grid-column: span 4;
+    }
+    
+    .magazine-card.card-2x2 {
         grid-column: span 2;
-        grid-row: span 2;
     }
     
-    .magazine-card.card-wide,
-    .magazine-card.card-tall,
-    .magazine-card.card-standard {
-        grid-column: span 1;
-        grid-row: span 1;
+    .magazine-card.card-1x2 {
+        grid-column: span 2;
     }
     
-    .magazine-card .article-title {
-        font-size: 1.1rem !important;
+    .headlines-sidebar {
+        grid-template-columns: 1fr;
     }
     
-    .magazine-card.card-large .article-title {
-        font-size: 1.6rem !important;
-    }
-    
-    .headline-thumbnail {
-        width: 60px;
-        height: 60px;
+    .magazine-headline {
+        border-right: none !important;
     }
 }
 
 @media (max-width: 480px) {
+    .main-layout {
+        padding: 0 1rem !important;
+    }
+    
     .carousel-slides {
-        height: 350px !important;
+        aspect-ratio: 4 / 3;
+        min-height: 250px;
+    }
+    
+    .carousel-title {
+        font-size: 1.25rem !important;
     }
     
     .magazine-grid {
-        grid-template-columns: 1fr !important;
-        grid-auto-rows: 200px !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.75rem !important;
     }
     
-    .magazine-card.card-large,
-    .magazine-card.card-wide,
-    .magazine-card.card-tall,
-    .magazine-card.card-standard {
+    .magazine-card.card-4x2,
+    .magazine-card.card-3x2,
+    .magazine-card.card-2x2,
+    .magazine-card.card-2x1 {
+        grid-column: span 2 !important;
+    }
+    
+    .magazine-card.card-1x2 {
         grid-column: span 1 !important;
-        grid-row: span 1 !important;
     }
     
-    .magazine-card .article-overlay-category {
-        font-size: 0.6rem;
-        padding: 0.4rem 0.8rem;
-        top: 1rem;
-        left: 1rem;
+    .card-2x1 {
+        flex-direction: column;
     }
     
-    .magazine-card .article-content.magazine-content {
-        padding: 1.5rem;
+    .card-2x1 .article-image-container,
+    .card-2x1 .article-content.magazine-content {
+        width: 100%;
     }
 }
 
-/* Print-friendly Magazine Layout */
-@media print {
-    .magazine-grid {
-        display: block !important;
-    }
-    
-    .magazine-card {
-        page-break-inside: avoid;
-        margin-bottom: 2rem;
-    }
-}
-
-/* Dark Mode Enhancements */
-@media (prefers-color-scheme: dark) {
-    .magazine-card .article-image {
-        filter: brightness(0.75);
-    }
-    
-    .magazine-card:hover .article-image {
-        filter: brightness(0.6);
-    }
-}
-
-/* Accessibility Improvements */
+/* === ACCESSIBILITY === */
 .magazine-card:focus,
 .magazine-headline:focus {
-    outline: 2px solid var(--accent-color);
+    outline: 3px solid var(--accent-color);
     outline-offset: 2px;
 }
 
-/* Loading Animation for Magazine Cards */
-@keyframes magazineCardLoad {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+@media (prefers-reduced-motion: reduce) {
+    .magazine-card,
+    .article-image,
+    .headline-thumbnail img {
+        transition: none !important;
     }
 }
-
-.magazine-card {
-    animation: magazineCardLoad 0.6s ease-out forwards;
-}
-
-.magazine-card:nth-child(1) { animation-delay: 0.05s; }
-.magazine-card:nth-child(2) { animation-delay: 0.1s; }
-.magazine-card:nth-child(3) { animation-delay: 0.15s; }
-.magazine-card:nth-child(4) { animation-delay: 0.2s; }
-.magazine-card:nth-child(5) { animation-delay: 0.25s; }
