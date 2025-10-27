@@ -1,0 +1,482 @@
+/* ==========================================
+   MAGAZINE-STYLE LAYOUT ENHANCEMENTS
+   CNN-Inspired News Portal Design
+   ========================================== */
+
+/* Enhanced Carousel with Magazine Overlays */
+.magazine-carousel {
+    border-radius: 0 !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+.carousel-slides {
+    height: 600px !important;
+}
+
+.carousel-overlay-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    z-index: 2;
+}
+
+.carousel-overlay-top .trending-badge {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    padding: 0.6rem 1.2rem;
+    background: var(--accent-color);
+    color: var(--primary-bg);
+    font-weight: 800;
+    border-radius: 2px;
+}
+
+.carousel-content.magazine-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.85) 60%, transparent 100%);
+    padding: 3rem 3rem 2.5rem;
+}
+
+.carousel-category {
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.carousel-title {
+    font-size: 3rem !important;
+    line-height: 1.1 !important;
+    margin-bottom: 1rem !important;
+    font-weight: 700 !important;
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.9) !important;
+}
+
+.carousel-excerpt {
+    font-size: 1.15rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.5rem !important;
+    max-width: 800px;
+}
+
+.carousel-meta {
+    font-size: 0.9rem !important;
+    display: flex !important;
+    gap: 0.75rem !important;
+    align-items: center;
+}
+
+/* Magazine Grid Layout - CNN-Style Varied Sizes */
+.magazine-grid {
+    display: grid !important;
+    grid-template-columns: repeat(12, 1fr) !important;
+    gap: 1.5rem !important;
+    grid-auto-rows: 280px !important;
+}
+
+.magazine-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Varied Card Sizes - Magazine Layout */
+.magazine-card.card-large {
+    grid-column: span 8;
+    grid-row: span 2;
+}
+
+.magazine-card.card-wide {
+    grid-column: span 6;
+    grid-row: span 1;
+}
+
+.magazine-card.card-tall {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.magazine-card.card-standard {
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+/* Enhanced Card Styling */
+.magazine-card .article-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.magazine-card .article-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0.85);
+}
+
+.magazine-card:hover .article-image {
+    transform: scale(1.08);
+    filter: brightness(0.7);
+}
+
+.magazine-card .article-overlay-category {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    padding: 0.5rem 1rem;
+    background: var(--accent-color);
+    color: var(--primary-bg);
+    z-index: 2;
+    border-radius: 2px;
+}
+
+.magazine-card .article-content.magazine-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.7) 70%, transparent);
+    transform: translateY(0);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.magazine-card:hover .article-content.magazine-content {
+    transform: translateY(-8px);
+}
+
+.magazine-card .article-title {
+    font-size: 1.4rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.75rem !important;
+    font-weight: 700 !important;
+    color: white !important;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.8);
+}
+
+.magazine-card.card-large .article-title {
+    font-size: 2.2rem !important;
+    line-height: 1.2 !important;
+}
+
+.magazine-card.card-wide .article-title {
+    font-size: 1.6rem !important;
+}
+
+.magazine-card .article-excerpt {
+    color: rgba(255,255,255,0.9) !important;
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1rem !important;
+}
+
+.magazine-card.card-standard .article-excerpt {
+    display: none;
+}
+
+.magazine-card .article-meta {
+    border-top: 1px solid rgba(255,255,255,0.2) !important;
+    padding-top: 0.75rem !important;
+    font-size: 0.8rem !important;
+    color: rgba(255,255,255,0.8) !important;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.meta-separator {
+    opacity: 0.5;
+}
+
+/* Video Enhancements */
+.video-thumbnail {
+    position: relative;
+}
+
+.video-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--primary-bg);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s;
+    z-index: 2;
+}
+
+.magazine-card:hover .video-play-icon {
+    transform: translate(-50%, -50%) scale(1.15);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8);
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+/* Enhanced Headlines Sidebar with Thumbnails */
+.magazine-headline {
+    display: flex !important;
+    gap: 1rem;
+    padding: 1rem 0 !important;
+    align-items: flex-start;
+}
+
+.magazine-headline:hover {
+    padding-left: 0 !important;
+    opacity: 1 !important;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.headline-thumbnail {
+    position: relative;
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--card-bg);
+}
+
+.headline-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.magazine-headline:hover .headline-thumbnail img {
+    transform: scale(1.1);
+}
+
+.headline-video-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--primary-bg);
+}
+
+.headline-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.headline-title {
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.5rem !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Responsive Design for Magazine Layout */
+@media (max-width: 1400px) {
+    .magazine-grid {
+        grid-template-columns: repeat(8, 1fr) !important;
+    }
+    
+    .magazine-card.card-large {
+        grid-column: span 8;
+    }
+    
+    .magazine-card.card-wide {
+        grid-column: span 4;
+    }
+    
+    .magazine-card.card-tall {
+        grid-column: span 4;
+    }
+    
+    .magazine-card.card-standard {
+        grid-column: span 4;
+    }
+}
+
+@media (max-width: 1024px) {
+    .carousel-slides {
+        height: 500px !important;
+    }
+    
+    .carousel-title {
+        font-size: 2.2rem !important;
+    }
+    
+    .magazine-grid {
+        grid-template-columns: repeat(6, 1fr) !important;
+        gap: 1rem !important;
+    }
+    
+    .magazine-card.card-large,
+    .magazine-card.card-wide {
+        grid-column: span 6;
+    }
+    
+    .magazine-card.card-tall,
+    .magazine-card.card-standard {
+        grid-column: span 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-slides {
+        height: 400px !important;
+    }
+    
+    .carousel-title {
+        font-size: 1.8rem !important;
+    }
+    
+    .carousel-content.magazine-overlay {
+        padding: 2rem 1.5rem !important;
+    }
+    
+    .magazine-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-auto-rows: 220px !important;
+    }
+    
+    .magazine-card.card-large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    
+    .magazine-card.card-wide,
+    .magazine-card.card-tall,
+    .magazine-card.card-standard {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    .magazine-card .article-title {
+        font-size: 1.1rem !important;
+    }
+    
+    .magazine-card.card-large .article-title {
+        font-size: 1.6rem !important;
+    }
+    
+    .headline-thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-slides {
+        height: 350px !important;
+    }
+    
+    .magazine-grid {
+        grid-template-columns: 1fr !important;
+        grid-auto-rows: 200px !important;
+    }
+    
+    .magazine-card.card-large,
+    .magazine-card.card-wide,
+    .magazine-card.card-tall,
+    .magazine-card.card-standard {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+    
+    .magazine-card .article-overlay-category {
+        font-size: 0.6rem;
+        padding: 0.4rem 0.8rem;
+        top: 1rem;
+        left: 1rem;
+    }
+    
+    .magazine-card .article-content.magazine-content {
+        padding: 1.5rem;
+    }
+}
+
+/* Print-friendly Magazine Layout */
+@media print {
+    .magazine-grid {
+        display: block !important;
+    }
+    
+    .magazine-card {
+        page-break-inside: avoid;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+    .magazine-card .article-image {
+        filter: brightness(0.75);
+    }
+    
+    .magazine-card:hover .article-image {
+        filter: brightness(0.6);
+    }
+}
+
+/* Accessibility Improvements */
+.magazine-card:focus,
+.magazine-headline:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Loading Animation for Magazine Cards */
+@keyframes magazineCardLoad {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.magazine-card {
+    animation: magazineCardLoad 0.6s ease-out forwards;
+}
+
+.magazine-card:nth-child(1) { animation-delay: 0.05s; }
+.magazine-card:nth-child(2) { animation-delay: 0.1s; }
+.magazine-card:nth-child(3) { animation-delay: 0.15s; }
+.magazine-card:nth-child(4) { animation-delay: 0.2s; }
+.magazine-card:nth-child(5) { animation-delay: 0.25s; }
