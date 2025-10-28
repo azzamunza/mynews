@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Portal</title>
+    <link id="themeStylesheet" rel="stylesheet" href="./css/newsStyles/darkstyle.css">
+    <style>
+        /* CNN-inspired layout overrides */
+        * {
+            box-sizing: border-box;
+        }
+
+        .main-layout {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .content-area {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Hero section - Featured article */
+        .hero-section {
+            display: none;
+        }
+
+        .hero-section.active {
+            display: block;
+        }
+
+        .featured-article {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .featured-article:hover {
+            transform: scale(1.02);
+        }
+
+        .featured-article-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .featured-article-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 2rem;
+            color: white;
+        }
+
+        .featured-article-badges {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .featured-article-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 0.5rem 0;
+            line-height: 1.3;
+        }
+
+        .featured-article-meta {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* Article grid - CNN style multi-column */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            grid-auto-flow: dense;
+        }
+
+        .article-card {
+            border-radius: 6px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: var(--card-bg, rgba(255,255,255,0.05));
+            height: 100%;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Featured cards - larger */
+        .article-card:nth-child(1),
+        .article-card:nth-child(2) {
+            grid-column: span 1.5;
+            grid-row: span 2;
+        }
+
+        .article-card:nth-child(1) .article-image-container,
+        .article-card:nth-child(2) .article-image-container {
+            height: 300px;
+        }
+
+        /* Standard cards */
+        .article-card:nth-child(n+3) {
+            grid-column: span 1;
+        }
+
+        .article-card:nth-child(n+3) .article-image-container {
+            height: 180px;
+        }
+
+        .article-image-container {
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .article-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .article-badges {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+            z-index: 2;
+        }
+
+        .badge {
+            font-size: 0.7rem;
+            padding: 0.4rem 0.6rem;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            border-radius: 3px;
+            backdrop-filter: blur(4px);
+        }
+
+        .badge-trending {
+            background: #ff3b3b;
+        }
+
+        .badge-job {
+            background: #4a90e2;
+        }
+
+        .badge-video {
+            background: #7c3aed;
+        }
+
+        .article-content {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            flex-grow: 1;
+        }
+
+        .article-category {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            opacity: 0.7;
+        }
+
+        .article-title {
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin: 0;
+        }
+
+        .article-card:nth-child(1) .article-title,
+        .article-card:nth-child(2) .article-title {
+            font-size: 1.2rem;
+        }
+
+        .article-excerpt {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin: 0;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        .article-card:nth-child(1) .article-excerpt,
+        .article-card:nth-child(2) .article-excerpt {
+            font-size: 0.9rem;
+        }
+
+        .article-meta {
+            font-size: 0.75rem;
+            opacity: 0.6;
+            display: flex;
+            justify-content: space-between;
+            margin-top: auto;
+        }
+
+        .video-thumbnail {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: white;
+            background: rgba(0,0,0,0.5);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Headlines sidebar */
+        .headlines-sidebar {
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+        }
+
+        .headlines-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color, #ff3b3b);
+        }
+
+        .headline-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        .headline-item:hover {
+            opacity: 0.7;
+        }
+
+        .headline-category {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            opacity: 0.6;
+            margin-bottom: 0.3rem;
+        }
+
+        .headline-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 0.4rem;
+        }
+
+        .headline-time {
+            font-size: 0.75rem;
+            opacity: 0.5;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            overflow-y: auto;
+            backdrop-filter: blur(2px);
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        .modal-content {
+            background: var(--modal-bg, #1a1a1a);
+            border-radius: 8px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .modal-close {
+            position: sticky;
+            top: 0;
+            right: 0;
+            background: transparent;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 1rem;
+            color: white;
+            z-index: 10;
+            float: right;
+        }
+
+        .modal-banner {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .modal-header-section {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .modal-badges {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .modal-meta {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .btn {
+            padding: 0.7rem 1.2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: #ff3b3b;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #e60000;
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .btn-job {
+            background: #4a90e2;
+            color: white;
+        }
+
+        .btn-job:hover {
+            background: #3a7bc8;
+        }
+
+        .modal-article-content {
+            margin-top: 2rem;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .video-player-container {
+            margin: 1.5rem 0;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .video-player-container iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: none;
+        }
+
+        /* Responsive design */
+        @media (max-width: 1024px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .article-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .article-card:nth-child(1),
+            .article-card:nth-child(2) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .article-card:nth-child(1) .article-image-container,
+            .article-card:nth-child(2) .article-image-container {
+                height: 200px;
+            }
+
+            .headlines-sidebar {
+                position: static;
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .article-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .article-card {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .article-image-container {
+                width: 140px;
+                min-width: 140px;
+                height: 100px;
+            }
+
+            .article-content {
+                padding: 0.8rem;
+            }
+
+            .featured-article-content {
+                padding: 1.5rem;
+            }
+
+            .featured-article-title {
+                font-size: 1.3rem;
+            }
+
+            .modal-banner {
+                height: 250px;
+            }
+
+            .modal-title {
+                font-size: 1.5rem;
+            }
+
+            .modal-body {
+                padding: 1.5rem;
+            }
+        }
+
+        .loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 1rem;
+            gap: 1rem;
+            color: var(--text-color, #999);
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(255,255,255,0.2);
+            border-top: 3px solid var(--accent-color, #ff3b3b);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Navigation styling */
+        nav#desktopNav {
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 1rem;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .category-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+        }
+
+        .category-item {
+            flex-shrink: 0;
+        }
+
+        .category-link {
+            display: block;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-bottom: 3px solid transparent;
+            transition: border-color 0.2s ease;
+            cursor: pointer;
+        }
+
+        .category-link:hover,
+        .category-link.active {
+            border-bottom-color: var(--accent-color, #ff3b3b);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="hamburger" id="hamburgerMenu"><span></span><span></span><span></span></div>
+        <h1 class="site-title">NewsHub</h1>
+        <div class="header-login">
+            <div id="user-info" class="header-user-info"></div>
+            <button id="reloadDataBtn" class="btn btn-secondary" title="Reload news data" style="display:inline-flex; align-items:center;">
+                ⟳ Reload
+            </button>
+            <div id="g_id_onload"
+                 data-client_id="752307788655-djf0dae2j8h10q040g1ombshla687l0j.apps.googleusercontent.com"
+                 data-login_uri="https://azzamunza.github.io/mynews/oauth2callback.html"
+                 data-auto_prompt="false"
+                 data-callback="handleCredentialResponse">
+            </div>
+            <div class="g_id_signin" data-type="standard"></div>
+        </div>
+    </div>
+
+    <div class="style-selector-container">
+        <label for="styleSelector" class="style-selector-label">Theme:</label>
+        <select id="styleSelector" class="style-selector">
+            <option value="">Loading styles...</option>
+        </select>
+    </div>
+
+    <nav id="desktopNav">
+        <div class="nav-container">
+            <ul class="category-menu" id="categoryMenu">
+                <li class="loading">Loading categories...</li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="mobile-menu-overlay" id="mobileMenu">
+    <div class="mobile-menu-header">
+        <h2 style="color: var(--accent-color);">Menu</h2>
+        <span class="mobile-menu-close" id="closeMobileMenu">&times;</span>
+    </div>
+    <ul class="mobile-menu-items" id="mobileMenuItems">
+        <li class="loading">Loading...</li>
+    </ul>
+</div>
+
+<div class="main-layout">
+    <div class="content-area">
+        <div class="article-grid" id="articleGrid">
+            <div class="loading">
+                <div class="spinner"></div>
+                Loading articles...
+            </div>
+        </div>
+    </div>
+
+    <aside class="headlines-sidebar">
+        <h2 class="headlines-title">Top Headlines</h2>
+        <div id="headlinesList">
+            <div class="loading">Loading...</div>
+        </div>
+    </aside>
+</div>
+
+<div class="modal" id="articleModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div id="modalContentArea"></div>
+    </div>
+</div>
+
+<script>
+    let isLoggedIn = false;
+    let loggedInUserEmail = '';
+    let articlesData = [], categoriesData = [], trendingData = [], videosData = [];
+    let currentFilter = 'all', currentCarouselIndex = 0;
+    let carouselInterval, makeWebhook = '', authToken = '';
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        loadAvailableStyles();
+        loadNewsData();
+        setupEventListeners();
+    });
+
+    async function loadAvailableStyles() {
+        const styleSelector = document.getElementById('styleSelector');
+        const stylesPath = './css/newsStyles/';
+        const stylesJsonPath = './css/styles.json';
+        
+        try {
+            const response = await fetch(stylesJsonPath);
+            if (!response.ok) {
+                throw new Error(`Failed to load styles.json: ${response.status}`);
+            }
+            
+            const stylesConfig = await response.json();
+            styleSelector.innerHTML = '';
+            
+            stylesConfig.styles.forEach(style => {
+                const option = document.createElement('option');
+                option.value = stylesPath + style.file;
+                option.textContent = style.name;
+                option.setAttribute('data-description', style.description);
+                styleSelector.appendChild(option);
+            });
+            
+            const savedStyle = localStorage.getItem('selectedStyle') || stylesPath + stylesConfig.default;
+            styleSelector.value = savedStyle;
+            loadStyle(savedStyle);
+            
+            styleSelector.addEventListener('change', function() {
+                const selectedStyle = this.value;
+                loadStyle(selectedStyle);
+                localStorage.setItem('selectedStyle', selectedStyle);
+            });
+            
+        } catch (error) {
+            console.error('Error loading styles configuration:', error);
+            styleSelector.innerHTML = '<option value="./css/newsStyles/darkstyle.css">Dark Style</option>';
+            const fallbackStyle = './css/newsStyles/darkstyle.css';
+            styleSelector.value = fallbackStyle;
+            loadStyle(fallbackStyle);
+        }
+    }
+
+    function loadStyle(styleUrl) {
+        const themeLink = document.getElementById('themeStylesheet');
+        themeLink.href = styleUrl;
+    }
+
+    function handleCredentialResponse(response) {
+        const user = jwt_decode(response.credential);
+        const userInfoDiv = document.getElementById('user-info');
+        userInfoDiv.textContent = user.name;
+        
+        isLoggedIn = true;
+        loggedInUserEmail = user.email;
+        
+        if (user.email === 'azzamunza@gmail.com') {
+            const jobButtons = document.querySelectorAll('.btn-job');
+            jobButtons.forEach(btn => btn.style.display = 'inline-block');
+        }
+    }
+
+    function setupEventListeners() {
+        document.getElementById('hamburgerMenu').addEventListener('click', toggleMobileMenu);
+        document.getElementById('closeMobileMenu').addEventListener('click', toggleMobileMenu);
+        document.getElementById('articleModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+    }
+
+    async function loadNewsData() {
+        try {
+            const response = await fetch('news-data.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            
+            categoriesData = data.categories || [];
+            articlesData = data.articles || [];
+            trendingData = data.trending || [];
+            videosData = data.videos || [];
+            makeWebhook = data.makeWebhook || '';
+            authToken = data.authToken || '';
+            
+            renderCategories();
+            renderArticles();
+            renderHeadlines();
+            
+        } catch (error) {
+            console.error('Error loading news data:', error);
+            showError(error.message);
+        }
+    }
+
+    function showError(message) {
+        document.getElementById('categoryMenu').innerHTML = 
+            `<li style="color: var(--accent-color);">Error loading data: ${message}</li>`;
+        document.getElementById('articleGrid').innerHTML = 
+            `<div class="loading" style="color: var(--accent-color);">
+                <p>Error loading articles: ${message}</p>
+                <p style="font-size: 0.9rem; margin-top: 1rem;">Make sure news-data.json is in the same directory as this HTML file.</p>
+            </div>`;
+    }
+
+    function renderCategories() {
+        const desktopMenu = document.getElementById('categoryMenu');
+        const mobileMenu = document.getElementById('mobileMenuItems');
+        
+        desktopMenu.innerHTML = '';
+        mobileMenu.innerHTML = '';
+        
+        categoriesData.forEach(category => {
+            const li = document.createElement('li');
+            li.className = 'category-item';
+            const link = document.createElement('a');
+            link.className = 'category-link' + (category.active ? ' active' : '');
+            link.textContent = category.name;
+            link.onclick = (e) => {
+                e.preventDefault();
+                filterByCategory(category.id);
+            };
+            li.appendChild(link);
+            desktopMenu.appendChild(li);
+            
+            const mli = document.createElement('li');
+            mli.className = 'mobile-menu-item';
+            const mlink = document.createElement('a');
+            mlink.className = 'mobile-menu-link' + (category.active ? ' active' : '');
+            mlink.textContent = category.name;
+            mlink.onclick = (e) => {
+                e.preventDefault();
+                filterByCategory(category.id);
+                toggleMobileMenu();
+            };
+            mli.appendChild(mlink);
+            mobileMenu.appendChild(mli);
+        });
+    }
+
+    function renderArticles(filterCategory = 'all') {
+        const gridContainer = document.getElementById('articleGrid');
+        gridContainer.innerHTML = '';
+        
+        const filteredArticles = filterCategory === 'all' 
+            ? articlesData 
+            : articlesData.filter(article => article.category === filterCategory);
+        
+        if (filteredArticles.length === 0) {
+            gridContainer.innerHTML = '<div class="loading">No articles found in this category.</div>';
+            return;
+        }
+        
+        filteredArticles.forEach(article => {
+            const card = document.createElement('div');
+            card.className = 'article-card';
+            card.setAttribute('data-category', article.category);
+            
+            let badges = '';
+            if (article.isTrending) badges += '<span class="badge badge-trending">🔥 Trending</span>';
+            if (article.isJob) badges += '<span class="badge badge-job">💼 Job</span>';
+            if (article.isVideo) badges += '<span class="badge badge-video">▶ Video</span>';
+            
+            const imageHtml = article.isVideo 
+                ? `<div class="video-thumbnail">
+                     <img src="${article.thumbnailImage}" alt="${article.title}" class="article-image" loading="lazy">
+                     <div class="video-play-icon">▶</div>
+                   </div>`
+                : `<img src="${article.thumbnailImage}" alt="${article.title}" class="article-image" loading="lazy">`;
+            
+            card.innerHTML = `
+                <div class="article-image-container">
+                    ${imageHtml}
+                    <div class="article-badges">${badges}</div>
+                </div>
+                <div class="article-content">
+                    <span class="article-category">${article.category}</span>
+                    <h2 class="article-title">${article.title}</h2>
+                    <p class="article-excerpt">${article.excerpt}</p>
+                    <div class="article-meta">
+                        <span>${article.author}</span>
+                        <span>${article.date}</span>
+                    </div>
+                </div>
+            `;
+            
+            card.onclick = () => openModal(article.id);
+            gridContainer.appendChild(card);
+        });
+    }
+
+    function renderHeadlines() {
+        const headlinesList = document.getElementById('headlinesList');
+        headlinesList.innerHTML = '';
+        
+        const recentArticles = articlesData.slice(0, 10);
+        
+        recentArticles.forEach(article => {
+            const headline = document.createElement('div');
+            headline.className = 'headline-item';
+            headline.innerHTML = `
+                <div class="headline-category">${article.category}</div>
+                <div class="headline-title">${article.title}</div>
+                <div class="headline-time">${article.date}</div>
+            `;
+            headline.onclick = () => openModal(article.id);
+            headlinesList.appendChild(headline);
+        });
+    }
+
+    function filterByCategory(category) {
+        currentFilter = category;
+        
+        document.querySelectorAll('.category-link, .mobile-menu-link').forEach(link => {
+            link.classList.remove('active');
+        });
+        
+        document.querySelectorAll('.category-link, .mobile-menu-link').forEach(link => {
+            if (link.textContent.toLowerCase() === categoriesData.find(c => c.id === category)?.name.toLowerCase()) {
+                link.classList.add('active');
+            }
+        });
+        
+        renderArticles(category);
+    }
+
+    function openModal(articleId) {
+        const article = articlesData.find(a => a.id === articleId);
+        if (!article) return;
+        
+        const modal = document.getElementById('articleModal');
+        const modalContent = document.getElementById('modalContentArea');
+        
+        let badges = '';
+        if (article.isTrending) badges += '<span class="badge badge-trending">🔥 Trending</span>';
+        if (article.isJob) badges += '<span class="badge badge-job">💼 Job Listing</span>';
+        if (article.isVideo) badges += '<span class="badge badge-video">▶ Video Content</span>';
+        
+        let videoEmbed = '';
+        if (article.isVideo && article.videoUrl) {
+            const videoId = extractYouTubeId(article.videoUrl);
+            if (videoId) {
+                videoEmbed = `
+                    <div class="video-player-container">
+                        <iframe src="https://www.youtube.com/embed/${videoId}?rel=0" 
+                                allowfullscreen 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                        </iframe>
+                    </div>
+                `;
+            }
+        }
+        
+        let jobButton = '';
+        if (article.isJob && makeWebhook && authToken) {
+            jobButton = `
+                <button class="btn btn-job" onclick="submitJobApplication(
+                    '${article.id}',
+                    '${escapeHtml(article.sourceUrl)}',
+                    '${escapeHtml(article.title)}'
+                )">
+                    💼 Create Job Application
+                </button>
+            `;
+        }
+        
+        const shareButtons = `
+            <button class="btn btn-secondary" onclick="shareArticle('twitter', '${escapeHtml(article.title)}', '${escapeHtml(article.sourceUrl)}')">
+                Share on Twitter
+            </button>
+            <button class="btn btn-secondary" onclick="shareArticle('linkedin', '${escapeHtml(article.title)}', '${escapeHtml(article.sourceUrl)}')">
+                Share on LinkedIn
+            </button>
+            <button class="btn btn-secondary" onclick="copyToClipboard('${escapeHtml(article.sourceUrl)}')">
+                📋 Copy Link
+            </button>
+        `;
+        
+        modalContent.innerHTML = `
+            <img src="${article.bannerImage}" alt="${article.title}" class="modal-banner" loading="lazy">
+            <div class="modal-body">
+                <div class="modal-header-section">
+                    <div class="modal-badges">${badges}</div>
+                    <h1 class="modal-title">${article.title}</h1>
+                    <div class="modal-meta">
+                        <span>By ${article.author}</span>
+                        <span>${article.date}</span>
+                        <span>${article.readTime}</span>
+                    </div>
+                    <div class="modal-actions">
+                        <a href="${article.sourceUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            📰 Read Original Source
+                        </a>
+                        ${jobButton}
+                        ${shareButtons}
+                    </div>
+                </div>
+                ${videoEmbed}
+                <div class="modal-article-content">
+                    ${article.fullContent}
+                </div>
+            </div>
+        `;
+        
+        modal.classList.add('active');
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('articleModal');
+        modal.classList.remove('active');
+    }
+
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('active');
+    }
+
+    function extractYouTubeId(url) {
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+        const match = url.match(regExp);
+        return (match && match[2].length === 11) ? match[2] : null;
+    }
+
+    function escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    async function submitJobApplication(articleId, jobUrl, jobTitle) {
+        if (!makeWebhook || !authToken) {
+            alert('Job application system not configured.');
+            return;
+        }
+        
+        const confirmed = confirm(`Submit job application for: ${jobTitle}?`);
+        if (!confirmed) return;
+        
+        try {
+            const response = await fetch(makeWebhook, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${authToken}`
+                },
+                body: JSON.stringify({
+                    articleId: articleId,
+                    jobUrl: jobUrl,
+                    jobTitle: jobTitle,
+                    timestamp: new Date().toISOString()
+                })
+            });
+            
+            if (response.ok) {
+                alert('✅ Job application submitted successfully!');
+            } else {
+                throw new Error('Failed to submit');
+            }
+        } catch (error) {
+            console.error('Error submitting job application:', error);
+            alert('❌ Failed to submit job application. Please try again.');
+        }
+    }
+
+    function shareArticle(platform, title, url) {
+        const encodedTitle = encodeURIComponent(title);
+        const encodedUrl = encodeURIComponent(url);
+        
+        let shareUrl = '';
+        
+        if (platform === 'twitter') {
+            shareUrl = `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`;
+        } else if (platform === 'linkedin') {
+            shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+        }
+        
+        if (shareUrl) {
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+    }
+
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+            alert('✅ Link copied to clipboard!');
+        }).catch(() => {
+            alert('❌ Failed to copy link');
+        });
+    }
+
+    (function () {
+      const btn = document.getElementById('reloadDataBtn');
+      if (!btn) return;
+    
+      function setWorking(isWorking) {
+        if (isWorking) {
+          btn.disabled = true;
+          btn.dataset.origText = btn.textContent;
+          btn.textContent = 'Reloading...';
+          btn.style.opacity = '0.8';
+        } else {
+          btn.disabled = false;
+          btn.textContent = btn.dataset.origText || '⟳ Reload';
+          btn.style.opacity = '';
+        }
+      }
+    
+      async function reloadNewsData() {
+        setWorking(true);
+        try {
+          await loadAvailableStyles();
+          
+          const resp = await fetch('./news-data.json', { cache: 'no-store' });
+          if (!resp.ok) throw new Error('Failed to fetch news-data.json: ' + resp.status);
+    
+          const json = await resp.json();
+    
+          categoriesData = json.categories || [];
+          articlesData = json.articles || [];
+          trendingData = json.trending || [];
+          videosData = json.videos || [];
+          makeWebhook = json.makeWebhook || '';
+          authToken = json.authToken || '';
+          
+          renderCategories();
+          renderArticles(currentFilter);
+          renderHeadlines();
+          
+          console.log('✅ Data and styles reloaded successfully!');
+          
+        } catch (err) {
+          console.error(err);
+          alert('Error reloading data: ' + (err.message || err));
+        } finally {
+          setWorking(false);
+        }
+      }
+    
+      btn.addEventListener('click', reloadNewsData);
+    })();
+</script>
+</body>
+</html>
