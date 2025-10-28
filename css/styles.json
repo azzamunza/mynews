@@ -19,7 +19,12 @@
       "file": "newspaper.css",
       "name": "Newspaper",
       "description": "Elegant dark theme with gold accents"
+    },
+    {
+      "file": "cnn.css",
+      "name": "cnn",
+      "description": "CNN News Style"
     }
   ],
-  "default": "darkstyle.css"
+  "default": "cnn.css"
 }
