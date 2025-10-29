@@ -1,0 +1,161 @@
+/* Custom layout & behavior (keeps theme variables intact) */
+
+/* ---------- Header / Nav ---------- */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  transition: transform 280ms ease, opacity 280ms ease;
+  background: var(--bg, #0b0b0b);
+  z-index: 40;
+}
+
+/* smaller header visual (reduce height) */
+.site-title { font-size: 1.25rem; margin: 0; }
+
+/* places style selector inline in header */
+.style-selector-container.header-inline {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* when header-container is scrolled out, slide it up */
+header.header-hidden .header-container {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+/* desktop nav must remain visible — sticky */
+#desktopNav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--nav-bg, rgba(0,0,0,0.85));
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+/* ensure desktop nav items are visible and not overlapped */
+#desktopNav .nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+}
+
+/* header and nav stacking order so main-layout scrolls behind */
+header {
+  position: relative;
+  z-index: 60;
+}
+
+/* main layout sits below header; allow content to scroll behind sticky nav */
+.main-layout {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Carousel: two small cards per slide ---------- */
+.carousel-container { width: 100%; overflow: hidden; }
+.carousel-pair { display:flex; gap: 0.75rem; align-items: stretch; }
+.carousel-card {
+  flex: 1 1 0;
+  display:flex;
+  flex-direction: column;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--card-bg, #111);
+  cursor: pointer;
+}
+.carousel-card img { width:100%; height:110px; object-fit:cover; display:block; }
+.carousel-card .carousel-card-content { padding:0.5rem; }
+.carousel-card h4 { font-size: 0.95rem; margin:0; }
+
+/* small dots, nav buttons visually smaller to accommodate smaller slide height */
+.carousel-nav .carousel-btn { font-size: 1.4rem; padding: 0.4rem 0.6rem; }
+
+/* ---------- First-row custom grid (left, middle wider, right) ---------- */
+.grid-first-row {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr; /* middle ~30% wider */
+  gap: 1rem;
+  margin: 1rem 0;
+  align-items: start;
+}
+
+/* LEFT: AI TECHNOLOGY column */
+.col-left { background: transparent; }
+.col-left .section-title { margin: 0 0 0.5rem 0; font-size: 1rem; color: var(--accent-color); }
+.ai-main img { width:100%; height:180px; object-fit:cover; border-radius:6px; }
+.ai-main-title { margin:0.5rem 0; font-size:1rem; }
+.ai-list { margin-top: 0.5rem; }
+.ai-list-item { padding: 0.5rem 0; cursor: pointer; }
+.ai-list-item .ai-title-only { font-size: 0.95rem; }
+
+/* MIDDLE: wide article with slideshow */
+.col-middle .middle-main-article { background: transparent; }
+.middle-slideshow { position: relative; overflow: hidden; border-radius:6px; }
+.middle-slide { display:none; }
+.middle-slide.active { display:block; }
+.middle-slide img { width:100%; height:320px; object-fit: cover; display:block; }
+.middle-slideshow-nav { position:absolute; bottom:10px; right:10px; display:flex; gap:6px; }
+.middle-slideshow-nav button { background: rgba(0,0,0,0.45); color: #fff; border:none; padding:6px 8px; border-radius:4px; cursor:pointer; }
+
+/* small horizontal cards under the main middle article */
+.middle-small-list { margin-top: 0.75rem; display: grid; gap: 0.5rem; grid-template-columns: repeat(auto-fill, minmax(140px,1fr)); }
+.middle-small-item { display:flex; gap: 0.5rem; align-items:center; cursor:pointer; }
+.middle-small-item img { width:64px; height:48px; object-fit:cover; border-radius:4px; }
+.middle-small-title { font-size:0.9rem; }
+
+/* RIGHT: GAME NEWS */
+.col-right .section-title { margin-bottom:0.5rem; color: var(--accent-color); }
+.col-right .game-item { display:flex; gap:0.75rem; align-items:flex-start; padding:0.5rem 0; cursor:pointer; }
+.col-right .game-item img { width:48%; height:80px; object-fit:cover; border-radius:6px; }
+.col-right .game-title { font-size:0.95rem; }
+
+/* ---------- ANIME section ---------- */
+.anime-section { margin: 1rem 0; }
+.anime-grid { display:grid; grid-template-columns: 60% 40%; gap:1rem; align-items:stretch; }
+.anime-main-card { position: relative; overflow:hidden; border-radius:8px; cursor:pointer; }
+.anime-main-card img { width:100%; height:100%; object-fit:cover; display:block; }
+.anime-overlay { position:absolute; left:0; right:0; bottom:0; padding: 0.75rem; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.6)); color:#fff; }
+.anime-right { display:flex; flex-direction:column; gap:0.75rem; }
+.anime-small-card { flex:1; overflow:hidden; border-radius:6px; cursor:pointer; }
+.anime-small-card img { width:100%; height:100%; object-fit:cover; display:block; }
+.anime-small-title { padding:0.5rem 0; }
+
+/* ---------- Remaining three-equal column grid ---------- */
+.rest-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top:1rem; }
+
+/* ---------- Article card and video byline ---------- */
+.article-card { background: var(--card-bg, #0f0f0f); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; cursor:pointer; }
+.article-image { width:100%; height:160px; object-fit:cover; display:block; }
+.article-image-container { position: relative; }
+.article-badges { position:absolute; top:8px; left:8px; display:flex; gap:6px; }
+
+/* video thumbnail play icon */
+.video-thumbnail { position: relative; }
+.video-play-icon { position:absolute; right:8px; bottom:8px; background: rgba(0,0,0,0.6); color:#fff; padding:6px;border-radius:50%; font-size:14px; }
+
+/* Byline showing play icon & duration */
+.article-meta .video-duration { margin-left:8px; display:inline-flex; align-items:center; gap:6px; font-size:0.85rem; color:var(--muted-color,#bbb); }
+.article-meta .video-duration .play-mini { width:14px;height:14px;border-radius:50%;background:var(--accent-color,#f59e0b);display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:10px; }
+
+/* ---------- Modal width behavior (default) ---------- */
+.modal .modal-content {
+  width: 100%;
+  max-width: 1100px; /* fallback; JS can adjust to match content-area width */
+  margin: 1.5rem auto;
+  position: relative;
+  border-radius:8px;
+  overflow:auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1000px) {
+  .grid-first-row { grid-template-columns: 1fr; }
+  .anime-grid { grid-template-columns: 1fr; }
+  .rest-grid { grid-template-columns: 1fr; }
+  .carousel-pair { flex-direction: column; }
+}
