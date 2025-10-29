@@ -7,6 +7,8 @@
     <title>News Portal</title>
     <link rel="stylesheet" href="./css/article-magazine.css">
     <link id="themeStylesheet" rel="stylesheet" href="./css/newsStyles/darkstyle.css">
+    <!-- Custom layout overrides that do not interfere with theme variables -->
+    <link rel="stylesheet" href="./css/custom-layout.css">
 </head>
 <body>
 <header>
@@ -14,15 +16,22 @@
         <div class="hamburger" id="hamburgerMenu"><span></span><span></span><span></span></div>
         <h1 class="site-title">NewsHub</h1>
 
+        <!-- Style Selector Dropdown moved into header container and placed to the left of reload -->
+        <div class="style-selector-container header-inline">
+            <label for="styleSelector" class="style-selector-label">Theme:</label>
+            <select id="styleSelector" class="style-selector">
+                <option value="">Loading styles...</option>
+            </select>
+        </div>
+
         <!-- Reload data button: placed here so it's visible in the header menu -->
         <div class="header-login">
             <div id="user-info" class="header-user-info"></div>
 
-            
             <button id="reloadDataBtn" class="btn btn-secondary" title="Reload news data" style="display:inline-flex; align-items:center;">
                 ⟳ Reload
             </button>
-            
+
             <div id="g_id_onload"
                  data-client_id="752307788655-djf0dae2j8h10q040g1ombshla687l0j.apps.googleusercontent.com"
                  data-login_uri="https://azzamunza.github.io/mynews/oauth2callback.html"
@@ -33,15 +42,7 @@
         </div>
     </div>
 
-    <!-- Style Selector Dropdown -->
-    <div class="style-selector-container">
-        <label for="styleSelector" class="style-selector-label">Theme:</label>
-        <select id="styleSelector" class="style-selector">
-            <option value="">Loading styles...</option>
-        </select>
-    </div>
-
-    <!-- Desktop Navigation (moved inside header) -->
+    <!-- Desktop Navigation (sticky so it remains once header scrolls away) -->
     <nav id="desktopNav">
         <div class="nav-container">
             <ul class="category-menu" id="categoryMenu">
@@ -113,7 +114,25 @@
             loadAvailableStyles();
             loadNewsData();
             setupEventListeners();
+            // header scroll handling to allow header-container to scroll away while desktopNav remains sticky
+            document.addEventListener('scroll', handleHeaderScroll, { passive: true });
         });
+    
+        function handleHeaderScroll() {
+            const header = document.querySelector('header');
+            const headerContainer = document.querySelector('.header-container');
+            const desktopNav = document.getElementById('desktopNav');
+
+            // Leave header in normal flow; the desktopNav is sticky via CSS so it will remain once it reaches top
+            // Slight class toggles for visual effects when header is scrolled past
+            const rect = headerContainer.getBoundingClientRect();
+            if (rect.bottom <= 0) {
+                // header-container fully scrolled out
+                header.classList.add('header-hidden');
+            } else {
+                header.classList.remove('header-hidden');
+            }
+        }
     
         // Load available styles dynamically from JSON
         async function loadAvailableStyles() {
@@ -184,7 +203,6 @@
             jobButtons.forEach(btn => btn.style.display = 'inline-block');
         }
     }
-    
     function openModal(articleId) {
         const article = articlesData.find(a => a.id === articleId);
         if (!article) return;
@@ -232,8 +250,8 @@
                     <h1 class="modal-title">${article.title}</h1>
                     <div class="modal-meta">
                         <span>By ${article.author}</span>
-                        <span>${article.date}</span>
-                        <span>${article.readTime}</span>
+                        <span>${article.date || article.publishDate}</span>
+                        <span>${article.readTime} min read</span>
                     </div>
                     <div class="modal-actions">
                         <a href="${article.sourceUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">📰 Read Original Source</a>
@@ -250,7 +268,6 @@
     
         modal.classList.add('active');
     }
-    
         function setupEventListeners() {
             document.getElementById('hamburgerMenu').addEventListener('click', toggleMobileMenu);
             document.getElementById('closeMobileMenu').addEventListener('click', toggleMobileMenu);
@@ -357,34 +374,32 @@
             slidesContainer.innerHTML = '';
             dotsContainer.innerHTML = '';
             
-            trendingArticles.forEach((article, index) => {
-                // Create slide
+            // Create slides that contain up to 2 small article cards each (so carousel will show 2 cards per slide)
+            for (let i = 0; i < trendingArticles.length; i += 2) {
+                const pair = trendingArticles.slice(i, i + 2);
                 const slide = document.createElement('div');
-                slide.className = 'carousel-slide' + (index === 0 ? ' active' : '');
-                slide.innerHTML = `
-                    <img src="${article.bannerImage}" alt="${article.title}" loading="lazy">
-                    <div class="carousel-content">
-                        <span class="trending-badge">🔥 Trending</span>
-                        <h2 class="carousel-title">${article.title}</h2>
-                        <p class="carousel-excerpt">${article.excerpt}</p>
-                        <div class="carousel-meta">
-                            <span>By ${article.author}</span>
-                            <span>${article.date}</span>
-                            <span>${article.readTime}</span>
+                slide.className = 'carousel-slide' + (i === 0 ? ' active' : '');
+
+                const cardsHtml = pair.map(article => `
+                    <div class="carousel-card" onclick="openModal('${article.id}')">
+                        <img src="${article.bannerImage}" alt="${article.title}" loading="lazy">
+                        <div class="carousel-card-content">
+                            <h4>${article.title}</h4>
                         </div>
                     </div>
-                `;
-                slide.onclick = () => openModal(article.id);
+                `).join('');
+
+                slide.innerHTML = `<div class="carousel-pair">${cardsHtml}</div>`;
                 slidesContainer.appendChild(slide);
-                
-                // Create dot
+
                 const dot = document.createElement('div');
-                dot.className = 'carousel-dot' + (index === 0 ? ' active' : '');
-                dot.onclick = () => goToSlide(index);
+                dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+                const dotIndex = i / 2;
+                dot.onclick = () => goToSlide(dotIndex);
                 dotsContainer.appendChild(dot);
-            });
+            }
             
-            if (trendingArticles.length > 1) {
+            if (trendingArticles.length > 2) {
                 startCarousel();
             }
         }
@@ -420,6 +435,7 @@
         }
     
         function startCarousel() {
+            clearInterval(carouselInterval);
             carouselInterval = setInterval(() => {
                 changeSlide(1);
             }, 5000);
@@ -443,41 +459,211 @@
                 return;
             }
             
-            filteredArticles.forEach(article => {
-                const card = document.createElement('div');
-                card.className = 'article-card';
-                card.setAttribute('data-category', article.category);
-                
-                let badges = '';
-                if (article.isTrending) badges += '<span class="badge badge-trending">🔥 Trending</span>';
-                if (article.isJob) badges += '<span class="badge badge-job">💼 Job</span>';
-                if (article.isVideo) badges += '<span class="badge badge-video">▶ Video</span>';
-                
-                const imageHtml = article.isVideo 
-                    ? `<div class="video-thumbnail">
-                         <img src="${article.thumbnailImage}" alt="${article.title}" class="article-image" loading="lazy">
-                         <div class="video-play-icon">▶</div>
-                       </div>`
-                    : `<img src="${article.thumbnailImage}" alt="${article.title}" class="article-image" loading="lazy">`;
-                
-                card.innerHTML = `
-                    <div class="article-image-container">
-                        ${imageHtml}
-                        <div class="article-badges">${badges}</div>
-                    </div>
-                    <div class="article-content">
-                        <span class="article-category">${article.category}</span>
-                        <h2 class="article-title">${article.title}</h2>
-                        <p class="article-excerpt">${article.excerpt}</p>
-                        <div class="article-meta">
-                            <span>${article.author}</span>
-                            <span>${article.date}</span>
-                        </div>
+            // First Row: custom 3-column layout (left AI, middle wide slideshow article, right GAME NEWS)
+            const firstRow = document.createElement('div');
+            firstRow.className = 'grid-first-row';
+
+            // LEFT column: AI TECHNOLOGY
+            const leftCol = document.createElement('div');
+            leftCol.className = 'col-left';
+            leftCol.innerHTML = `<h3 class="section-title">AI TECHNOLOGY</h3>`;
+            const aiArticles = filteredArticles.filter(a => a.category === 'ai-technology-and-news').slice(0, 6);
+            if (aiArticles.length > 0) {
+                const firstAI = aiArticles[0];
+                const firstAIHtml = `
+                    <div class="ai-main">
+                        <img src="${firstAI.bannerImage}" alt="${firstAI.title}" loading="lazy">
+                        <h4 class="ai-main-title">${firstAI.title}</h4>
+                        <hr>
                     </div>
                 `;
-                
-                card.onclick = () => openModal(article.id);
-                gridContainer.appendChild(card);
+                leftCol.insertAdjacentHTML('beforeend', firstAIHtml);
+
+                const list = document.createElement('div');
+                list.className = 'ai-list';
+                aiArticles.slice(1).forEach(a => {
+                    const item = document.createElement('div');
+                    item.className = 'ai-list-item';
+                    item.innerHTML = `<div class="ai-title-only">${a.title}</div><hr />`;
+                    item.onclick = () => openModal(a.id);
+                    list.appendChild(item);
+                });
+                leftCol.appendChild(list);
+            } else {
+                leftCol.innerHTML += '<div class="ai-empty">No AI Technology articles found.</div>';
+            }
+
+            // MIDDLE column: wider article card with slideshow if multiple images
+            const middleCol = document.createElement('div');
+            middleCol.className = 'col-middle';
+
+            const mainArticle = filteredArticles[0];
+            if (mainArticle) {
+                const images = mainArticle.images && mainArticle.images.length ? mainArticle.images : [mainArticle.bannerImage || mainArticle.thumbnailImage];
+                const slideshowId = `slideshow-${mainArticle.id}`;
+                let slidesHtml = images.map((src, idx) => `
+                    <div class="middle-slide${idx === 0 ? ' active' : ''}"><img src="${src}" alt="${mainArticle.title}" loading="lazy"></div>
+                `).join('');
+
+                middleCol.innerHTML = `
+                    <div class="middle-main-article">
+                        <div class="middle-slideshow" id="${slideshowId}">
+                            ${slidesHtml}
+                            <div class="middle-slideshow-nav">
+                                <button class="ms-prev">‹</button>
+                                <button class="ms-next">›</button>
+                            </div>
+                        </div>
+                        <h2 class="middle-title">${mainArticle.title}</h2>
+                        <p class="middle-excerpt">${mainArticle.excerpt || ''}</p>
+                    </div>
+                `;
+
+                // small horizontal cards under if space
+                const smallList = document.createElement('div');
+                smallList.className = 'middle-small-list';
+                const smallArticles = filteredArticles.slice(1, 5);
+                smallArticles.forEach(a => {
+                    const item = document.createElement('div');
+                    item.className = 'middle-small-item';
+                    item.innerHTML = `
+                        <img src="${a.thumbnailImage}" alt="${a.title}" loading="lazy">
+                        <div class="middle-small-title">${a.title}</div>
+                    `;
+                    item.onclick = () => openModal(a.id);
+                    smallList.appendChild(item);
+                });
+                middleCol.appendChild(smallList);
+
+                // add slideshow controls behavior
+                setTimeout(() => initMiddleSlideshow(slideshowId), 40);
+            }
+
+            // RIGHT column: GAME NEWS
+            const rightCol = document.createElement('div');
+            rightCol.className = 'col-right';
+            rightCol.innerHTML = `<h3 class="section-title">GAME NEWS</h3>`;
+            const gameArticles = filteredArticles.filter(a => a.subCategory === 'games' || a.category === 'entertainment').slice(0, 6);
+            if (gameArticles.length > 0) {
+                gameArticles.forEach(a => {
+                    const item = document.createElement('div');
+                    item.className = 'game-item';
+                    item.innerHTML = `
+                        <img src="${a.thumbnailImage}" alt="${a.title}" loading="lazy">
+                        <div class="game-title">${a.title}</div>
+                    `;
+                    item.onclick = () => openModal(a.id);
+                    rightCol.appendChild(item);
+                });
+            } else {
+                rightCol.innerHTML += '<div class="game-empty">No Game News found.</div>';
+            }
+
+            firstRow.appendChild(leftCol);
+            firstRow.appendChild(middleCol);
+            firstRow.appendChild(rightCol);
+
+            gridContainer.appendChild(firstRow);
+
+            // ANIME Section (below first row)
+            const animeSection = document.createElement('section');
+            animeSection.className = 'anime-section';
+            animeSection.innerHTML = '<h3 class="section-title">ANIME</h3>';
+            const animeGrid = document.createElement('div');
+            animeGrid.className = 'anime-grid';
+
+            const animeArticles = filteredArticles.filter(a => a.category === 'anime').slice(0, 3);
+            if (animeArticles.length > 0) {
+                const leftMain = document.createElement('div');
+                leftMain.className = 'anime-left';
+                const main = animeArticles[0];
+                leftMain.innerHTML = `
+                    <div class="anime-main-card" onclick="openModal('${main.id}')">
+                        <img src="${main.bannerImage || main.thumbnailImage}" alt="${main.title}" loading="lazy">
+                        <div class="anime-overlay"><h4>${main.title}</h4></div>
+                    </div>
+                `;
+                animeGrid.appendChild(leftMain);
+
+                const rightColAnime = document.createElement('div');
+                rightColAnime.className = 'anime-right';
+                const stacked = animeArticles.slice(1,3);
+                stacked.forEach(a => {
+                    const c = document.createElement('div');
+                    c.className = 'anime-small-card';
+                    c.innerHTML = `
+                        <img src="${a.thumbnailImage}" alt="${a.title}" loading="lazy">
+                        <div class="anime-small-title">${a.title}</div>
+                    `;
+                    c.onclick = () => openModal(a.id);
+                    rightColAnime.appendChild(c);
+                });
+                animeGrid.appendChild(rightColAnime);
+            } else {
+                animeGrid.innerHTML = '<div class="anime-empty">No Anime articles found.</div>';
+            }
+
+            animeSection.appendChild(animeGrid);
+            gridContainer.appendChild(animeSection);
+
+            // Remaining articles in 3-equal columns
+            const remaining = filteredArticles.slice(5);
+            if (remaining.length > 0) {
+                const restGrid = document.createElement('div');
+                restGrid.className = 'rest-grid';
+                remaining.forEach(article => {
+                    const card = document.createElement('div');
+                    card.className = 'article-card';
+
+                    let badges = '';
+                    if (article.isTrending) badges += '<span class="badge badge-trending">🔥 Trending</span>';
+                    if (article.isJob) badges += '<span class="badge badge-job">💼 Job</span>';
+                    if (article.isVideo) badges += '<span class="badge badge-video">▶ Video</span>';
+
+                    const imageHtml = article.isVideo 
+                        ? `<div class="video-thumbnail">
+                             <img src="${article.thumbnailImage}" alt="${article.title}" class="article-image" loading="lazy">
+                             <div class="video-play-icon">▶</div>
+                           </div>`
+                        : `<img src="${article.thumbnailImage}" alt="${article.title}" class="article-image" loading="lazy">`;
+
+                    card.innerHTML = `
+                        <div class="article-image-container">
+                            ${imageHtml}
+                            <div class="article-badges">${badges}</div>
+                        </div>
+                        <div class="article-content">
+                            <span class="article-category">${article.category}</span>
+                            <h2 class="article-title">${article.title}</h2>
+                            <p class="article-excerpt">${article.excerpt}</p>
+                            <div class="article-meta">
+                                <span>${article.author}</span>
+                                <span>${article.date || article.publishDate}</span>
+                            </div>
+                        </div>
+                    `;
+
+                    card.onclick = () => openModal(article.id);
+                    restGrid.appendChild(card);
+                });
+                gridContainer.appendChild(restGrid);
+            }
+        }
+    
+        function initMiddleSlideshow(id) {
+            const container = document.getElementById(id);
+            if (!container) return;
+            const slides = container.querySelectorAll('.middle-slide');
+            let idx = 0;
+            container.querySelector('.ms-prev').addEventListener('click', () => {
+                slides[idx].classList.remove('active');
+                idx = (idx - 1 + slides.length) % slides.length;
+                slides[idx].classList.add('active');
+            });
+            container.querySelector('.ms-next').addEventListener('click', () => {
+                slides[idx].classList.remove('active');
+                idx = (idx + 1) % slides.length;
+                slides[idx].classList.add('active');
             });
         }
     
@@ -493,7 +679,7 @@
                 headline.innerHTML = `
                     <div class="headline-category">${article.category}</div>
                     <div class="headline-title">${article.title}</div>
-                    <div class="headline-time">${article.date}</div>
+                    <div class="headline-time">${article.date || article.publishDate}</div>
                 `;
                 headline.onclick = () => openModal(article.id);
                 headlinesList.appendChild(headline);
@@ -515,91 +701,6 @@
             
             renderCarousel();
             renderArticles(category);
-        }
-    
-        function openModal(articleId) {
-            const article = articlesData.find(a => a.id === articleId);
-            if (!article) return;
-            
-            const modal = document.getElementById('articleModal');
-            const modalContent = document.getElementById('modalContentArea');
-            
-            let badges = '';
-            if (article.isTrending) badges += '<span class="badge badge-trending">🔥 Trending</span>';
-            if (article.isJob) badges += '<span class="badge badge-job">💼 Job Listing</span>';
-            if (article.isVideo) badges += '<span class="badge badge-video">▶ Video Content</span>';
-            
-            let videoEmbed = '';
-            if (article.isVideo && article.videoUrl) {
-                const videoId = extractYouTubeId(article.videoUrl);
-                if (videoId) {
-                    videoEmbed = `
-                        <div class="video-player-container">
-                            <iframe src="https://www.youtube.com/embed/${videoId}?rel=0" 
-                                    allowfullscreen 
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-                            </iframe>
-                        </div>
-                    `;
-                }
-            }
-            
-            let jobButton = '';
-            if (article.isJob && makeWebhook && authToken) {
-                jobButton = `
-                    <button class="btn btn-job" onclick="submitJobApplication(
-                        '${article.id}',
-                        '${escapeHtml(article.sourceUrl)}',
-                        '${escapeHtml(article.title)}'
-                    )">
-                        💼 Create Job Application
-                    </button>
-                `;
-            } else {
-                // Ensure button is hidden if not logged in
-                jobButton = '';
-            }
-    
-            
-            const shareButtons = `
-                <button class="btn btn-secondary" onclick="shareArticle('twitter', '${escapeHtml(article.title)}', '${escapeHtml(article.sourceUrl)}')">
-                    Share on Twitter
-                </button>
-                <button class="btn btn-secondary" onclick="shareArticle('linkedin', '${escapeHtml(article.title)}', '${escapeHtml(article.sourceUrl)}')">
-                    Share on LinkedIn
-                </button>
-                <button class="btn btn-secondary" onclick="copyToClipboard('${escapeHtml(article.sourceUrl)}')">
-                    📋 Copy Link
-                </button>
-            `;
-            
-            modalContent.innerHTML = `
-                <img src="${article.bannerImage}" alt="${article.title}" class="modal-banner" loading="lazy">
-                <div class="modal-body">
-                    <div class="modal-header-section">
-                        <div class="modal-badges">${badges}</div>
-                        <h1 class="modal-title">${article.title}</h1>
-                        <div class="modal-meta">
-                            <span>By ${article.author}</span>
-                            <span>${article.date}</span>
-                            <span>${article.readTime}</span>
-                        </div>
-                        <div class="modal-actions">
-                            <a href="${article.sourceUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                📰 Read Original Source
-                            </a>
-                            ${jobButton}
-                            ${shareButtons}
-                        </div>
-                    </div>
-                    ${videoEmbed}
-                    <div class="modal-article-content">
-                        ${article.fullContent}
-                    </div>
-                </div>
-            `;
-            
-            modal.classList.add('active');
         }
     
         function closeModal() {
@@ -744,6 +845,3 @@
     </script>
 </body>
 </html>
-
-
-
