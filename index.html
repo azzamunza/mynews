@@ -265,7 +265,39 @@
                 </div>
             </div>
         `;
+    (function adjustModalWidth() {
+      // make the modal match the content-area width
+      const contentArea = document.querySelector('.content-area');
+      const modalBox = document.querySelector('.modal .modal-content');
+      if (contentArea && modalBox) {
+        modalBox.style.maxWidth = Math.min(contentArea.clientWidth, window.innerWidth * 0.95) + 'px';
+      }
     
+      // keep modal width in sync if user resizes the window while modal is open
+      function onResize() {
+        if (!modalBox) return;
+        modalBox.style.maxWidth = Math.min(contentArea.clientWidth, window.innerWidth * 0.95) + 'px';
+      }
+    
+      // attach a one-time resize handler while modal is open
+      const resizeHandler = () => onResize();
+      window.addEventListener('resize', resizeHandler);
+    
+      // remove the listener when modal closes
+      const observer = new MutationObserver((mutations) => {
+        for (const m of mutations) {
+          if (m.type === 'attributes' && m.attributeName === 'class') {
+            const modal = document.querySelector('.modal');
+            if (modal && !modal.classList.contains('active')) {
+              window.removeEventListener('resize', resizeHandler);
+              observer.disconnect();
+            }
+          }
+        }
+      });
+      const modalEl = document.querySelector('.modal');
+      if (modalEl) observer.observe(modalEl, { attributes: true });
+    })();
         modal.classList.add('active');
     }
         function setupEventListeners() {
