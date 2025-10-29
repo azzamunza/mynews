@@ -1,0 +1,525 @@
+/* Layout Grid Styles - Magazine Layout Enhancement */
+/* This file provides specialized grid layouts without affecting theme or article styles */
+
+/* ============================================
+   HEADER SCROLL BEHAVIOR
+   ============================================ */
+
+body {
+    padding-top: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+header.header-hidden .header-container {
+    transform: translateY(-100%);
+}
+
+header.header-hidden .style-selector-container {
+    transform: translateY(-100%);
+}
+
+/* Desktop Nav stays visible */
+#desktopNav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    transition: top 0.3s ease;
+}
+
+header.header-hidden #desktopNav {
+    position: fixed;
+    top: 0;
+}
+
+/* Main layout with proper padding for fixed header */
+.main-layout {
+    margin-top: 180px; /* Adjust based on header height */
+    transition: margin-top 0.3s ease;
+}
+
+header.header-hidden ~ .main-layout {
+    margin-top: 60px; /* Only nav height when header hidden */
+}
+
+/* ============================================
+   HEADER LAYOUT ADJUSTMENTS
+   ============================================ */
+
+.header-container {
+    transition: transform 0.3s ease;
+}
+
+.header-login {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Move style selector inline with buttons */
+.style-selector-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0.75rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+/* Alternative: Inline style selector in header */
+.header-inline-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* ============================================
+   MODAL WIDTH MATCHING
+   ============================================ */
+
+.modal-content {
+    max-width: 1600px; /* Match main portal width */
+    width: 95%;
+}
+
+/* ============================================
+   CAROUSEL - 2 CARDS LAYOUT
+   ============================================ */
+
+.carousel-container {
+    height: auto;
+    min-height: 300px;
+}
+
+.carousel-slides {
+    height: 300px;
+    display: flex;
+    gap: 1rem;
+}
+
+.carousel-slide {
+    width: calc(50% - 0.5rem);
+    position: relative;
+    display: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carousel-slide.active,
+.carousel-slide.active + .carousel-slide {
+    display: block;
+}
+
+.carousel-slide img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.carousel-content {
+    position: static;
+    padding: 1rem;
+    background: var(--card-bg);
+}
+
+.carousel-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-excerpt {
+    display: none;
+}
+
+.carousel-meta {
+    font-size: 0.75rem;
+    gap: 0.5rem;
+}
+
+/* ============================================
+   SPECIALIZED GRID LAYOUTS
+   ============================================ */
+
+/* First Grid Row: AI Tech (30%) | Featured (40%) | Game News (30%) */
+.grid-row-first {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Second Grid Row: Anime Section */
+.grid-row-anime {
+    margin-bottom: 3rem;
+}
+
+.grid-row-anime-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+.grid-anime-content {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 2rem;
+}
+
+/* ============================================
+   COLUMN SECTIONS
+   ============================================ */
+
+.column-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+}
+
+/* AI Technology Section - Left Column */
+.ai-tech-section .featured-article {
+    margin-bottom: 1rem;
+}
+
+.ai-tech-section .featured-article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.ai-tech-section .featured-article .article-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.ai-tech-section .divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 1rem 0;
+}
+
+.ai-tech-section .title-only-article {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.ai-tech-section .title-only-article:last-child {
+    border-bottom: none;
+}
+
+.ai-tech-section .title-only-article .article-title {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.ai-tech-section .title-only-article .article-title:hover {
+    color: var(--accent-color);
+}
+
+/* Featured Article Section - Middle Column */
+.featured-article-section .main-featured {
+    margin-bottom: 2rem;
+}
+
+.featured-slideshow {
+    position: relative;
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.slideshow-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.slideshow-image.active {
+    display: block;
+}
+
+.slideshow-controls {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.slideshow-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.slideshow-dot.active {
+    background: var(--accent-color);
+    width: 24px;
+    border-radius: 5px;
+}
+
+.featured-article-section .horizontal-card {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.featured-article-section .horizontal-card:last-child {
+    border-bottom: none;
+}
+
+.featured-article-section .horizontal-card img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.featured-article-section .horizontal-card .card-content {
+    flex: 1;
+}
+
+.featured-article-section .horizontal-card .article-title {
+    font-size: 0.95rem;
+    line-height: 1.3;
+}
+
+/* Game News Section - Right Column */
+.game-news-section .game-article {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.game-news-section .game-article:last-child {
+    border-bottom: none;
+}
+
+.game-news-section .game-article img {
+    width: 50%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.game-news-section .game-article .article-content {
+    flex: 1;
+}
+
+.game-news-section .game-article .article-title {
+    font-size: 0.95rem;
+    line-height: 1.3;
+}
+
+/* Anime Section */
+.anime-section-left .anime-large {
+    position: relative;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.anime-section-left .anime-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.anime-section-left .anime-large .overlay-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.anime-section-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.anime-section-right .anime-small {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.anime-section-right .anime-small img {
+    width: 100%;
+    height: 195px;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+}
+
+.anime-section-right .anime-small .article-title {
+    padding: 0 1rem 1rem;
+    font-size: 1rem;
+}
+
+/* ============================================
+   VIDEO ARTICLE BYLINE
+   ============================================ */
+
+.video-byline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.video-byline .play-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    background: #ff0000;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.6rem;
+}
+
+.video-duration {
+    font-weight: 600;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1200px) {
+    .grid-row-first {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .grid-anime-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .anime-section-right {
+        flex-direction: row;
+    }
+
+    .anime-section-right .anime-small img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-layout {
+        margin-top: 140px;
+    }
+
+    header.header-hidden ~ .main-layout {
+        margin-top: 50px;
+    }
+
+    .carousel-slides {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .carousel-slide {
+        width: 100%;
+    }
+
+    .carousel-slide.active + .carousel-slide {
+        display: none;
+    }
+
+    .featured-slideshow {
+        height: 250px;
+    }
+
+    .anime-section-right {
+        flex-direction: column;
+    }
+
+    .game-news-section .game-article {
+        flex-direction: column;
+    }
+
+    .game-news-section .game-article img {
+        width: 100%;
+        height: 180px;
+    }
+
+    .featured-article-section .horizontal-card {
+        flex-direction: column;
+    }
+
+    .featured-article-section .horizontal-card img {
+        width: 100%;
+        height: 150px;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
