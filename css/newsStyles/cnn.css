@@ -668,7 +668,7 @@ nav {
 
 .modal-content {
     background: var(--primary-bg);
-    max-width: 850px;
+    max-width: 1600px;
     width: 95%;
     box-shadow: var(--shadow-lg);
     position: relative;
