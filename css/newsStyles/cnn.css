@@ -592,7 +592,6 @@ nav {
     background: var(--card-bg);
     padding: 1.25rem;
     height: fit-content;
-    position: sticky;
     top: 100px;
     box-shadow: var(--shadow);
     border: 1px solid var(--border-color);
