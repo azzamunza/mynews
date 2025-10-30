@@ -535,7 +535,95 @@
         clearInterval(carouselInterval);
         startCarousel();
     }
-
+    
+    function changeSlideshow(index) {
+        const images = document.querySelectorAll('.slideshow-image');
+        const dots = document.querySelectorAll('.slideshow-dot');
+        
+        images.forEach((img, i) => {
+            img.classList.toggle('active', i === index);
+        });
+        
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
+    
+    // ADD THIS FUNCTION HERE - BEFORE renderSpecializedSections()
+    // NEW REQUIREMENT #5: Check if there's space in GAME NEWS column and add OTHER NEWS or gradient
+    function renderGameNewsWithFill() {
+        const gameArticles = articlesData.filter(a => 
+            a.category === 'entertainment' || 
+            a.title.toLowerCase().includes('game') || 
+            a.title.toLowerCase().includes('gaming')
+        ).slice(0, 5);
+        
+        const gameContent = document.getElementById('gameNewsContent');
+        
+        if (gameArticles.length > 0) {
+            let html = '';
+            gameArticles.forEach(article => {
+                html += `
+                    <div class="game-article cursor-pointer" onclick="openModal('${article.id}')">
+                        <img src="${article.thumbnailImage}" alt="${article.title}" loading="lazy">
+                        <div class="article-content">
+                            <h4 class="article-title">${article.title}</h4>
+                        </div>
+                    </div>
+                `;
+            });
+            gameContent.innerHTML = html;
+        }
+        
+        // NEW REQUIREMENT #5: Add OTHER NEWS section or retro gradient
+        const gameNewsSection = document.querySelector('.game-news-section');
+        
+        // Get articles not yet included
+        const usedIds = [
+            ...articlesData.filter(a => a.isTrending).map(a => a.id),
+            ...articlesData.filter(a => !a.isTrending).slice(0, 2).map(a => a.id),
+            ...articlesData.filter(a => a.category === 'ai-technology-and-news').slice(0, 6).map(a => a.id),
+            ...articlesData.filter(a => a.isTrending || a.images?.length > 1).slice(0, 5).map(a => a.id),
+            ...gameArticles.map(a => a.id),
+            ...articlesData.filter(a => a.category === 'anime').slice(0, 3).map(a => a.id)
+        ];
+        
+        const otherArticles = articlesData.filter(a => !usedIds.includes(a.id)).slice(0, 3);
+        
+        // Remove existing OTHER NEWS or gradient
+        const existingOtherNews = gameNewsSection.querySelector('.other-news-section');
+        const existingGradient = gameNewsSection.querySelector('.retro-gradient-fill');
+        if (existingOtherNews) existingOtherNews.remove();
+        if (existingGradient) existingGradient.remove();
+        
+        if (otherArticles.length > 0) {
+            // Add OTHER NEWS section
+            const otherNewsDiv = document.createElement('div');
+            otherNewsDiv.className = 'other-news-section';
+            
+            let otherHtml = '<h3 class="column-title">OTHER NEWS</h3>';
+            otherArticles.forEach(article => {
+                otherHtml += `
+                    <div class="other-news-article cursor-pointer" onclick="openModal('${article.id}')">
+                        <img src="${article.thumbnailImage}" alt="${article.title}" loading="lazy">
+                        <div class="article-content">
+                            <h4 class="article-title">${article.title}</h4>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            otherNewsDiv.innerHTML = otherHtml;
+            gameNewsSection.appendChild(otherNewsDiv);
+        } else {
+            // Add 80s retro raster gradient
+            const gradientDiv = document.createElement('div');
+            gradientDiv.className = 'retro-gradient-fill';
+            gameNewsSection.appendChild(gradientDiv);
+        }
+    }
+    
+    // NOW renderSpecializedSections() can call it
     function renderSpecializedSections() {
         // AI Technology Section
         const aiArticles = articlesData.filter(a => a.category === 'ai-technology-and-news').slice(0, 6);
@@ -640,18 +728,7 @@
         }
     }
 
-    function changeSlideshow(index) {
-        const images = document.querySelectorAll('.slideshow-image');
-        const dots = document.querySelectorAll('.slideshow-dot');
-        
-        images.forEach((img, i) => {
-            img.classList.toggle('active', i === index);
-        });
-        
-        dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === index);
-        });
-    }
+       
 
     function renderArticles(filterCategory = 'all') {
         const gridContainer = document.getElementById('articleGrid');
