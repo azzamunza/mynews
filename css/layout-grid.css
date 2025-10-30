@@ -743,7 +743,7 @@
 }
 
 /* ============================================
-   Headlines Sidebar - Smart Sticky Scroll Behavior
+   Headlines Sidebar - Scrolls Naturally with Page
    ============================================ */
 
 .main-layout {
@@ -760,34 +760,11 @@
 }
 
 .headlines-sidebar {
-    position: sticky; /* Changed back to sticky for smart scrolling */
-    top: 120px; /* Offset from top to account for header (adjust based on your header height) */
-    align-self: start; /* Important: allows it to stick properly */
+    position: relative; /* No sticky behavior - scrolls naturally */
     background: var(--card-bg, #1a1a1a);
     border-radius: 8px;
     padding: 1.5rem;
     height: fit-content;
-    max-height: calc(100vh - 140px); /* Prevents sidebar from being taller than viewport */
-    overflow-y: auto; /* Allows scrolling within sidebar if content is too long */
-}
-
-/* Custom scrollbar for headlines sidebar */
-.headlines-sidebar::-webkit-scrollbar {
-    width: 6px;
-}
-
-.headlines-sidebar::-webkit-scrollbar-track {
-    background: var(--border-color, #333);
-    border-radius: 3px;
-}
-
-.headlines-sidebar::-webkit-scrollbar-thumb {
-    background: var(--accent-color, #00d9ff);
-    border-radius: 3px;
-}
-
-.headlines-sidebar::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-hover, #00bfe6);
 }
 
 .headlines-title {
@@ -796,12 +773,6 @@
     margin-bottom: 1rem;
     border-bottom: 2px solid var(--accent-color, #00d9ff);
     padding-bottom: 0.5rem;
-    position: sticky; /* Makes the title stick at the top of the sidebar */
-    top: -1.5rem; /* Negative padding to account for sidebar padding */
-    background: var(--card-bg, #1a1a1a); /* Ensures title has solid background */
-    z-index: 10;
-    margin-top: -1.5rem; /* Negative margin to compensate for padding */
-    padding-top: 1.5rem; /* Add padding back */
 }
 
 .headline-item {
