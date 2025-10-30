@@ -625,7 +625,6 @@ nav {
     border-radius: 2px;
     padding: 2rem;
     height: fit-content;
-    position: sticky;
     top: 120px;
     box-shadow: var(--shadow);
     border: 1px solid var(--border-color);
