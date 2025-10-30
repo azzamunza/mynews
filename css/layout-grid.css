@@ -20,15 +20,25 @@
     transition: transform 0.3s ease;
 }
 
+/* NEW REQUIREMENT #2: Header menu uses theme background color */
 #desktopNav {
     position: sticky;
     top: 0;
     z-index: 999;
-    background: var(--nav-bg, #000);
+    background: var(--card-bg, #000); /* Uses theme background */
+    border-bottom: 2px solid var(--border-color, #333);
+}
+
+.nav-container {
+    background: transparent; /* Let parent background show through */
+}
+
+.category-menu {
+    background: transparent;
 }
 
 /* ============================================
-   NEW REQUIREMENT #1: Hero Section - Half Size Left Column with 2 Articles
+   HERO SECTION - NEW REQUIREMENT #1: Image Above, Title Below
    ============================================ */
 
 .hero-section {
@@ -48,6 +58,7 @@
 .hero-small-card {
     flex: 1; /* Each of the 2 cards takes exactly 50% of height */
     display: flex;
+    flex-direction: column; /* NEW: Changed from row to column - image above, content below */
     overflow: hidden;
     border-bottom: 1px solid var(--border-color, #333);
     background: var(--card-bg, #1a1a1a);
@@ -59,18 +70,18 @@
 }
 
 .hero-small-card:hover {
-    transform: translateX(5px);
+    transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .hero-small-card img {
-    width: 40%;
-    height: 100%;
+    width: 100%; /* NEW: Full width instead of 40% */
+    height: 60%; /* NEW: Takes 60% of card height */
     object-fit: cover;
 }
 
 .hero-small-card-content {
-    flex: 1;
+    flex: 1; /* NEW: Takes remaining 40% */
     padding: 0.75rem;
     display: flex;
     flex-direction: column;
@@ -86,18 +97,18 @@
 }
 
 .hero-small-card .article-title {
-    font-size: 0.9rem;
-    line-height: 1.3;
+    font-size: 0.85rem; /* Slightly reduced since we have less vertical space */
+    line-height: 1.2;
     margin: 0.25rem 0;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2; /* Reduced from 3 to 2 lines */
     -webkit-box-orient: vertical;
     font-weight: 500;
 }
 
 .hero-small-card .article-meta {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     opacity: 0.7;
     display: flex;
     gap: 0.5rem;
@@ -105,7 +116,7 @@
 }
 
 .hero-small-card .video-byline {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     margin-top: 0.25rem;
     display: flex;
     align-items: center;
@@ -243,12 +254,12 @@
 }
 
 /* ============================================
-   NEW REQUIREMENT #2: AI TECHNOLOGY Column - Reduced by 20%
+   FIRST GRID ROW - NEW REQUIREMENT #3: GAME NEWS reduced by 20%
    ============================================ */
 
 .grid-row-first {
     display: grid;
-    grid-template-columns: 0.64fr 1.6fr 1fr; /* AI: 0.64fr (was 0.8fr, reduced 20%), Featured: 1.6fr, Game: 1fr */
+    grid-template-columns: 0.64fr 1.6fr 0.8fr; /* AI: 0.64fr, Featured: 1.6fr, Game: 0.8fr (was 1fr, reduced 20%) */
     gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -317,16 +328,17 @@
     margin: 0.5rem 0;
 }
 
-/* Featured Article Section */
+/* Featured Article Section - NEW REQUIREMENT #4: Larger images with padding */
 .featured-article-section {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem; /* Increased from 1rem */
 }
 
 .main-featured {
     cursor: pointer;
     transition: transform 0.2s ease;
+    margin-bottom: 1rem;
 }
 
 .main-featured:hover {
@@ -380,45 +392,50 @@
     background: var(--accent-color, #00d9ff);
 }
 
+/* NEW REQUIREMENT #4: Larger images with padding for horizontal cards */
 .horizontal-card {
     display: flex;
-    gap: 1rem;
+    gap: 1.25rem; /* Increased from 1rem */
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     background: var(--card-bg, #1a1a1a);
     border-radius: 8px;
     overflow: hidden;
+    padding: 0.75rem; /* NEW: Added padding */
+    margin-bottom: 0.75rem; /* NEW: Added margin between cards */
 }
 
 .horizontal-card:hover {
     transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .horizontal-card img {
-    width: 120px;
-    height: 90px;
+    width: 180px; /* Increased from 120px */
+    height: 135px; /* Increased from 90px (maintains 4:3 ratio) */
     object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
 }
 
 .horizontal-card .card-content {
     flex: 1;
-    padding: 0.75rem;
+    padding: 0.5rem;
     display: flex;
     align-items: center;
 }
 
 .horizontal-card .article-title {
-    font-size: 0.95rem;
+    font-size: 1rem; /* Slightly increased from 0.95rem */
     line-height: 1.4;
 }
 
-/* ============================================
-   NEW REQUIREMENT #3: GAME NEWS Column - Images Reduced by 30%
-   ============================================ */
-
+/* Game News Section */
 .game-news-section {
     max-width: 100%; /* Prevent expansion into sidebar */
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .game-article {
@@ -455,6 +472,101 @@
 .game-article .article-title {
     font-size: 0.9rem;
     line-height: 1.4;
+}
+
+/* NEW REQUIREMENT #5: OTHER NEWS section or 80s retro gradient */
+.other-news-section {
+    margin-top: auto; /* Push to bottom of column */
+    padding-top: 1.5rem;
+}
+
+.other-news-section .column-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.other-news-article {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    background: var(--card-bg, #1a1a1a);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 0.5rem;
+}
+
+.other-news-article:hover {
+    transform: translateX(5px);
+}
+
+.other-news-article img {
+    width: 35%;
+    max-width: 120px;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.other-news-article .article-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.other-news-article .article-title {
+    font-size: 0.85rem;
+    line-height: 1.3;
+}
+
+/* 80s Retro Raster Line Gradient (when no OTHER NEWS articles) */
+.retro-gradient-fill {
+    margin-top: auto;
+    min-height: 200px;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            #ff006e 0px,
+            #ff006e 2px,
+            #8338ec 2px,
+            #8338ec 4px,
+            #3a86ff 4px,
+            #3a86ff 6px,
+            #06ffa5 6px,
+            #06ffa5 8px,
+            #ffbe0b 8px,
+            #ffbe0b 10px
+        );
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    animation: rasterScroll 3s linear infinite;
+}
+
+@keyframes rasterScroll {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 10px;
+    }
+}
+
+.retro-gradient-fill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0.3) 100%
+    );
 }
 
 /* ============================================
@@ -550,7 +662,7 @@
 }
 
 /* ============================================
-   NEW REQUIREMENT #5 & #6: Tab Filtering - Show Articles in ANIME Layout
+   TAB FILTERING - Show Articles in ANIME Layout
    ============================================ */
 
 .tab-filtered-view {
@@ -631,7 +743,7 @@
 }
 
 /* ============================================
-   NEW REQUIREMENT #4: Headlines Sidebar - Scrolls with Body
+   Headlines Sidebar - Scrolls with Body
    ============================================ */
 
 .main-layout {
@@ -1141,7 +1253,7 @@
     }
     
     .hero-small-card {
-        height: 150px;
+        height: 200px;
     }
     
     .hero-right-carousel {
@@ -1167,5 +1279,10 @@
     
     .modal-title {
         font-size: 1.8rem;
+    }
+    
+    .horizontal-card img {
+        width: 120px;
+        height: 90px;
     }
 }
