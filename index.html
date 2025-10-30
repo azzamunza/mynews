@@ -537,7 +537,7 @@
     }
 
     function renderSpecializedSections() {
-        // AI Technology Section (NEW REQUIREMENT #2: Width reduced by 20%)
+        // AI Technology Section
         const aiArticles = articlesData.filter(a => a.category === 'ai-technology-and-news').slice(0, 6);
         const aiContent = document.getElementById('aiTechContent');
         
@@ -564,7 +564,7 @@
             
             aiContent.innerHTML = html;
         }
-
+    
         // Featured Article with Slideshow
         const featuredArticles = articlesData.filter(a => a.isTrending || a.images?.length > 1).slice(0, 5);
         const featuredContent = document.getElementById('featuredContent');
@@ -608,30 +608,10 @@
             
             featuredContent.innerHTML = html;
         }
-
-        // Game News Section (NEW REQUIREMENT #3: Images reduced by 30%)
-        const gameArticles = articlesData.filter(a => 
-            a.category === 'entertainment' || 
-            a.title.toLowerCase().includes('game') || 
-            a.title.toLowerCase().includes('gaming')
-        ).slice(0, 5);
-        const gameContent = document.getElementById('gameNewsContent');
-        
-        if (gameArticles.length > 0) {
-            let html = '';
-            gameArticles.forEach(article => {
-                html += `
-                    <div class="game-article cursor-pointer" onclick="openModal('${article.id}')">
-                        <img src="${article.thumbnailImage}" alt="${article.title}" loading="lazy">
-                        <div class="article-content">
-                            <h4 class="article-title">${article.title}</h4>
-                        </div>
-                    </div>
-                `;
-            });
-            gameContent.innerHTML = html;
-        }
-
+    
+        // Game News Section with OTHER NEWS or gradient fill (NEW REQUIREMENT #5)
+        renderGameNewsWithFill();
+    
         // Anime Section
         const animeArticles = articlesData.filter(a => a.category === 'anime').slice(0, 3);
         const animeLeft = document.getElementById('animeLeftContent');
