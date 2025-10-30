@@ -66,9 +66,9 @@
         <div class="content-area">
             <!-- Hero Section - Two Columns: Left (Vertical Cards) | Right (Carousel) -->
             <section class="hero-section" id="heroSection" style="display: none;">
-                <!-- Left Column: Vertical Article Cards -->
+                <!-- Left Column: Vertical Article Cards (ONLY 2 CARDS) -->
                 <div class="hero-left-articles" id="heroLeftArticles">
-                    <!-- Will be populated with 2-3 small article cards -->
+                    <!-- Will be populated with EXACTLY 2 article cards -->
                 </div>
                 
                 <!-- Right Column: Carousel -->
@@ -83,6 +83,15 @@
                     </div>
                 </div>
             </section>
+
+            <!-- NEW REQUIREMENT #5 & #6: Tab Filtered View (shown when tab is clicked) -->
+            <div class="tab-filtered-view" id="tabFilteredView" style="display: none;">
+                <h2 class="tab-filtered-title" id="tabFilteredTitle"></h2>
+                <div class="tab-filtered-content">
+                    <div class="tab-filtered-left" id="tabFilteredLeft"></div>
+                    <div class="tab-filtered-right" id="tabFilteredRight"></div>
+                </div>
+            </div>
 
             <!-- First Grid Row: AI Tech | Featured | Game News -->
             <div class="grid-row-first" id="gridRowFirst">
@@ -122,7 +131,7 @@
             </div>
         </div>
 
-        <!-- Headlines Sidebar -->
+        <!-- Headlines Sidebar (NOW SCROLLS WITH BODY - Requirement #4) -->
         <aside class="headlines-sidebar">
             <h2 class="headlines-title">Headlines</h2>
             <div id="headlinesList">
@@ -394,6 +403,7 @@
         });
     }
 
+    // NEW REQUIREMENT #1: Hero section with ONLY 2 articles in left column
     function renderHeroSection() {
         const trendingArticles = articlesData.filter(a => a.isTrending);
         
@@ -404,9 +414,9 @@
         
         document.getElementById('heroSection').style.display = 'grid';
         
-        // Render left column - 2-3 vertical article cards
+        // Render left column - EXACTLY 2 vertical article cards (NEW REQUIREMENT #1)
         const heroLeftArticles = document.getElementById('heroLeftArticles');
-        const leftArticles = articlesData.filter(a => !a.isTrending).slice(0, 3);
+        const leftArticles = articlesData.filter(a => !a.isTrending).slice(0, 2); // ONLY 2 ARTICLES
         
         heroLeftArticles.innerHTML = '';
         leftArticles.forEach(article => {
@@ -438,7 +448,7 @@
             heroLeftArticles.appendChild(card);
         });
         
-        // Render right column - Carousel
+        // Render right column - Carousel (same as before)
         const slidesContainer = document.getElementById('carouselSlides');
         const dotsContainer = document.getElementById('carouselDots');
         
@@ -527,7 +537,7 @@
     }
 
     function renderSpecializedSections() {
-        // AI Technology Section
+        // AI Technology Section (NEW REQUIREMENT #2: Width reduced by 20%)
         const aiArticles = articlesData.filter(a => a.category === 'ai-technology-and-news').slice(0, 6);
         const aiContent = document.getElementById('aiTechContent');
         
@@ -599,7 +609,7 @@
             featuredContent.innerHTML = html;
         }
 
-        // Game News Section
+        // Game News Section (NEW REQUIREMENT #3: Images reduced by 30%)
         const gameArticles = articlesData.filter(a => 
             a.category === 'entertainment' || 
             a.title.toLowerCase().includes('game') || 
@@ -670,7 +680,7 @@
         // Get articles excluding those already shown in specialized sections
         const specializedIds = [
             ...articlesData.filter(a => a.isTrending).map(a => a.id),
-            ...articlesData.filter(a => !a.isTrending).slice(0, 3).map(a => a.id),
+            ...articlesData.filter(a => !a.isTrending).slice(0, 2).map(a => a.id), // Changed from 3 to 2
             ...articlesData.filter(a => a.category === 'ai-technology-and-news').slice(0, 6).map(a => a.id),
             ...articlesData.filter(a => a.category === 'entertainment').slice(0, 5).map(a => a.id),
             ...articlesData.filter(a => a.category === 'anime').slice(0, 3).map(a => a.id)
@@ -690,7 +700,6 @@
             const card = document.createElement('div');
             card.className = 'article-card';
             card.setAttribute('data-category', article.category);
-            
             let badges = '';
             if (article.isTrending) badges += '<span class="badge badge-trending">🔥 Trending</span>';
             if (article.isJob) badges += '<span class="badge badge-job">💼 Job</span>';
@@ -752,9 +761,14 @@
         });
     }
 
+    // NEW REQUIREMENT #5 & #6: Filter by category showing ANIME-style layout
     function filterByCategory(category) {
         currentFilter = category;
         
+        // Close modal if open (NEW REQUIREMENT #6)
+        closeModal();
+        
+        // Update active state on menu items
         document.querySelectorAll('.category-link, .mobile-menu-link').forEach(link => {
             link.classList.remove('active');
         });
@@ -765,9 +779,127 @@
             }
         });
         
-        renderHeroSection();
-        renderSpecializedSections();
-        renderArticles(category);
+        // NEW REQUIREMENT #5: When clicking a tab (not 'all'), show ONLY filtered articles in ANIME layout
+        if (category === 'all') {
+            // Show regular homepage layout
+            document.getElementById('heroSection').style.display = 'grid';
+            document.getElementById('gridRowFirst').style.display = 'grid';
+            document.getElementById('gridRowAnime').style.display = 'block';
+            document.getElementById('articleGrid').style.display = 'grid';
+            document.getElementById('tabFilteredView').style.display = 'none';
+            
+            renderHeroSection();
+            renderSpecializedSections();
+            renderArticles();
+        } else {
+            // Hide all default sections and show ONLY the filtered tab view
+            document.getElementById('heroSection').style.display = 'none';
+            document.getElementById('gridRowFirst').style.display = 'none';
+            document.getElementById('gridRowAnime').style.display = 'none';
+            document.getElementById('articleGrid').style.display = 'none';
+            document.getElementById('tabFilteredView').style.display = 'block';
+            
+            // Render filtered articles in ANIME-style layout
+            renderTabFilteredView(category);
+        }
+    }
+
+    // NEW REQUIREMENT #5: Render tab-filtered articles in ANIME section layout
+    function renderTabFilteredView(category) {
+        const categoryName = categoriesData.find(c => c.id === category)?.name || category.toUpperCase();
+        const filteredArticles = articlesData.filter(a => a.category === category);
+        
+        document.getElementById('tabFilteredTitle').textContent = categoryName;
+        
+        const leftContainer = document.getElementById('tabFilteredLeft');
+        const rightContainer = document.getElementById('tabFilteredRight');
+        
+        if (filteredArticles.length === 0) {
+            leftContainer.innerHTML = '<div class="loading">No articles found in this category.</div>';
+            rightContainer.innerHTML = '';
+            return;
+        }
+        
+        // Large article on left (60%)
+        const largeArticle = filteredArticles[0];
+        leftContainer.innerHTML = `
+            <div class="tab-filtered-large cursor-pointer" onclick="openModal('${largeArticle.id}')">
+                <img src="${largeArticle.bannerImage}" alt="${largeArticle.title}" loading="lazy">
+                <div class="overlay-title">${largeArticle.title}</div>
+            </div>
+        `;
+        
+        // Small articles on right (40%)
+        const smallArticles = filteredArticles.slice(1, 3);
+        let smallHtml = '';
+        
+        if (smallArticles.length > 0) {
+            smallArticles.forEach(article => {
+                smallHtml += `
+                    <div class="tab-filtered-small cursor-pointer" onclick="openModal('${article.id}')">
+                        <img src="${article.thumbnailImage}" alt="${article.title}" loading="lazy">
+                        <h4 class="article-title">${article.title}</h4>
+                    </div>
+                `;
+            });
+        } else {
+            smallHtml = '<div class="loading">Only one article available in this category.</div>';
+        }
+        
+        rightContainer.innerHTML = smallHtml;
+        
+        // If there are more articles, show them below in a grid
+        const remainingArticles = filteredArticles.slice(3);
+        if (remainingArticles.length > 0) {
+            const gridContainer = document.getElementById('articleGrid');
+            gridContainer.style.display = 'grid';
+            gridContainer.innerHTML = '';
+            
+            remainingArticles.forEach(article => {
+                const card = document.createElement('div');
+                card.className = 'article-card';
+                
+                let badges = '';
+                if (article.isTrending) badges += '<span class="badge badge-trending">🔥 Trending</span>';
+                if (article.isJob) badges += '<span class="badge badge-job">💼 Job</span>';
+                if (article.isVideo) badges += '<span class="badge badge-video">▶ Video</span>';
+                
+                let videoByline = '';
+                if (article.isVideo) {
+                    videoByline = `<div class="video-byline">
+                        <span class="play-icon">▶</span>
+                        ${article.readTime ? `<span class="video-duration">${article.readTime} min</span>` : ''}
+                    </div>`;
+                }
+                
+                const imageHtml = article.isVideo 
+                    ? `<div class="video-thumbnail">
+                         <img src="${article.thumbnailImage}" alt="${article.title}" class="article-image" loading="lazy">
+                         <div class="video-play-icon">▶</div>
+                       </div>`
+                    : `<img src="${article.thumbnailImage}" alt="${article.title}" class="article-image" loading="lazy">`;
+                
+                card.innerHTML = `
+                    <div class="article-image-container">
+                        ${imageHtml}
+                        <div class="article-badges">${badges}</div>
+                    </div>
+                    <div class="article-content">
+                        <span class="article-category">${article.category}</span>
+                        <h2 class="article-title">${article.title}</h2>
+                        <p class="article-excerpt">${article.excerpt}</p>
+                        ${videoByline}
+                        <div class="article-meta">
+                            <span>${article.author}</span>
+                            <span>${article.publishDate}</span>
+                        </div>
+                    </div>
+                `;
+                
+                card.onclick = () => openModal(article.id);
+                gridContainer.appendChild(card);
+            });
+        }
     }
 
     function closeModal() {
@@ -852,6 +984,7 @@
         });
     }
 
+    // Reload data functionality
     (function () {
       const btn = document.getElementById('reloadDataBtn');
       if (!btn) return;
@@ -886,11 +1019,21 @@
           makeWebhook = json.makeWebhook || '';
           authToken = json.authToken || '';
           
+          // Reset to homepage view
+          currentFilter = 'all';
+          
           renderCategories();
           renderHeroSection();
           renderSpecializedSections();
-          renderArticles(currentFilter);
+          renderArticles();
           renderHeadlines();
+          
+          // Hide tab filtered view
+          document.getElementById('tabFilteredView').style.display = 'none';
+          document.getElementById('heroSection').style.display = 'grid';
+          document.getElementById('gridRowFirst').style.display = 'grid';
+          document.getElementById('gridRowAnime').style.display = 'block';
+          document.getElementById('articleGrid').style.display = 'grid';
           
           console.log('✅ Data and styles reloaded successfully!');
           
