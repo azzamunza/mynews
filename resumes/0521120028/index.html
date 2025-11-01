@@ -119,6 +119,7 @@
       margin-top: 12px;
       flex-wrap: wrap;
       align-items: center;
+      justify-content: flex-start; /* ensure left alignment */
     }
     .actions .btn{
       appearance: none;
@@ -317,7 +318,7 @@
           <div class="job-title">Unreal C++ Software Engineers (Mid And Senior Levels)</div>
         </div>
 
-        <div style="display:flex; flex-direction:column; gap:10px; align-items:flex-end;">
+        <div style="display:flex; flex-direction:column; gap:10px; align-items:flex-start;">
           <address class="contact-info" aria-label="Contact information">
             <p>Email: <a href="mailto:azzamunza@gmail.com">azzamunza@gmail.com</a></p>
             <p>Phone: <a href="tel:0477742636">0477742636</a></p>
@@ -328,17 +329,17 @@
           <nav class="actions" role="navigation" aria-label="Export options">
             <button type="button" class="btn btn-primary" id="btn-print" aria-label="Print resume as PDF">Download as PDF</button>
 
-            <!-- DOCX and Cover Letter buttons: point to files in same directory and use download attribute -->
-            <a class="btn btn-alt" href="./resume.docx" download="Aaron-Munro-Resume.docx" role="button" aria-label="Download resume docx">Download Resume (DOCX)</a>
+            <!-- Updated to exact filenames provided earlier -->
+            <a class="btn btn-alt" href="./Resume_251002-0409_Better-Than-Reality.docx" download="Resume_251002-0409_Better-Than-Reality.docx" role="button" aria-label="Download resume docx">Download Resume (DOCX)</a>
 
-            <a class="btn btn-ghost" href="./cover-letter.docx" download="Aaron-Munro-Cover-Letter.docx" role="button" aria-label="Download cover letter">Download Cover Letter</a>
+            <a class="btn btn-ghost" href="./Cover-Letter_251002-0410_Better-Than-Reality.docx" download="Cover-Letter_251002-0410_Better-Than-Reality.docx" role="button" aria-label="Download cover letter">Download Cover Letter</a>
           </nav>
         </div>
       </div>
     </header>
 
     <main role="main" aria-label="Main content">
-      <!-- Summary removed as requested -->
+      <!-- Professional Summary removed as requested -->
 
       <section id="experience" aria-labelledby="experience-heading">
         <h2 id="experience-heading">Work Experience</h2>
@@ -464,10 +465,11 @@
       window.print();
     });
 
-    // No JavaScript required for DOCX/cover-letter downloads because
-    // the anchor tags use the href + download attributes and will work
-    // when the files (resume.docx and cover-letter.docx) are present
-    // in the same directory as this index.html file.
+    // DOCX and Cover Letter downloads use direct anchor links with download attributes.
+    // Ensure the files:
+    //   - Resume_251002-0409_Better-Than-Reality.docx
+    //   - Cover-Letter_251002-0410_Better-Than-Reality.docx
+    // are placed in the same directory as this index.html for the links to work.
   </script>
 </body>
 </html>
