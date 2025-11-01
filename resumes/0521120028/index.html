@@ -6,24 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     :root{
-      /* Core palette (theming) */
       --primary: #0055A4;
       --secondary: #FF6F61;
       --accent: #2ECC71;
       --text-main: #333333;
       --surface: #FFFFFF;
       --surface-muted: #F5F5F5;
-
-      /* Typography */
-      --font-heading: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      --font-body: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-
+      --font-heading: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, "Apple Color Emoji";
+      --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, "Apple Color Emoji";
       --fs-h1: 32px;
       --fs-h2: 22px;
       --fs-h3: 18px;
       --fs-body: 14px;
-
-      /* Layout */
       --line-height: 1.55;
       --section-gap: 28px;
       --block-gap: 14px;
@@ -31,8 +25,6 @@
       --content-max-width: 1080px;
       --column-gap: 36px;
       --card-radius: 10px;
-
-      /* Buttons */
       --btn-bg: var(--primary);
       --btn-fg: #FFFFFF;
       --btn-bg-alt: #E7EEF7;
@@ -70,12 +62,19 @@
       flex-direction: column;
       gap: 14px;
     }
+    /* Desktop layout: left = candidate info (+ actions), right = contact info */
     @media (min-width:720px){
       .header-main{
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
       }
+    }
+
+    .candidate-info{
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
     .candidate-info h1{
@@ -93,16 +92,19 @@
       font-weight: 600;
     }
 
+    /* Contact wrapper on the right (keeps right alignment on larger screens) */
+    .contact-wrapper{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      align-items: flex-end;
+      text-align: right;
+    }
     address.contact-info{
       font-style: normal;
       line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
     }
-    .contact-info p{
-      margin:0;
-    }
+    .contact-info p{ margin:0; }
     .contact-info a{
       color: var(--primary);
       text-decoration: none;
@@ -113,13 +115,14 @@
       text-decoration: underline;
     }
 
+    /* Actions moved under .candidate-info so they are left aligned below name/title */
     .actions{
       display:flex;
       gap:10px;
-      margin-top: 12px;
+      margin-top: 0;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: flex-start; /* ensure left alignment */
+      justify-content: flex-start; /* left align buttons */
     }
     .actions .btn{
       appearance: none;
@@ -155,14 +158,12 @@
       gap: var(--section-gap);
     }
 
-    /* Desktop two-column layout */
     @media (min-width: 769px){
       main[role="main"]{
         grid-template-columns: 2fr 1fr;
         column-gap: var(--column-gap);
         align-items: start;
       }
-      /* Keep DOM order but visually place selected sections in right column */
       #skills, #portfolio, #certifications, #special-projects{
         grid-column: 2;
       }
@@ -218,9 +219,7 @@
       margin: 0;
       padding-left: 20px;
     }
-    .job-duties li{
-      margin-bottom: 6px;
-    }
+    .job-duties li{ margin-bottom: 6px; }
 
     /* Lists */
     #skills-list, #core-competencies{
@@ -244,16 +243,9 @@
       font-weight: 900;
     }
 
-    #portfolio-list{
-      margin: 10px 0 0 0;
-      padding-left: 20px;
-    }
-    #portfolio-list li{
-      margin-bottom: 6px;
-    }
-    #portfolio-list a{
-      color: var(--primary);
-    }
+    #portfolio-list{ margin: 10px 0 0 0; padding-left: 20px; }
+    #portfolio-list li{ margin-bottom: 6px; }
+    #portfolio-list a{ color: var(--primary); }
 
     footer[role="contentinfo"]{
       margin-top: 22px;
@@ -277,35 +269,20 @@
       .actions{ gap:8px; }
       .actions .btn{ width: 100%; }
       #skills-list li, #core-competencies li{ width: 100%; }
+      .contact-wrapper{ align-items:flex-start; text-align:left; }
     }
 
     /* Print styles */
-    @page{
-      size: A4 portrait;
-      margin: 18mm 15mm;
-    }
+    @page{ size: A4 portrait; margin: 18mm 15mm; }
     @media print{
-      html, body{
-        background: #fff !important;
-      }
-      .resume-container{
-        max-width: 100%;
-        padding: 0;
-        box-shadow: none;
-      }
+      html, body{ background: #fff !important; }
+      .resume-container{ max-width: 100%; padding: 0; box-shadow: none; }
       header[role="banner"], section, footer[role="contentinfo"]{
-        box-shadow: none;
-        border-radius: 0;
-        border-left-width: 0;
-        page-break-inside: avoid;
+        box-shadow: none; border-radius: 0; border-left-width: 0; page-break-inside: avoid;
       }
       .actions{ display: none !important; }
-      main[role="main"]{
-        display: block;
-      }
-      #experience .job-entry{
-        page-break-inside: avoid;
-      }
+      main[role="main"]{ display: block; }
+      #experience .job-entry{ page-break-inside: avoid; }
     }
   </style>
 </head>
@@ -313,27 +290,28 @@
   <div class="resume-container">
     <header role="banner" aria-label="Candidate header">
       <div class="header-main">
-        <div class="candidate-info">
+        <!-- Left column: candidate info + actions (buttons appear under name/title) -->
+        <div class="candidate-info" aria-label="Candidate information">
           <h1>Aaron Munro</h1>
           <div class="job-title">Unreal C++ Software Engineers (Mid And Senior Levels)</div>
+
+          <nav class="actions" role="navigation" aria-label="Export options">
+            <button type="button" class="btn btn-primary" id="btn-print" aria-label="Print resume as PDF">Download as PDF</button>
+
+            <a class="btn btn-alt" href="./Resume_251002-0409_Better-Than-Reality.docx" download="Resume_251002-0409_Better-Than-Reality.docx" role="button" aria-label="Download resume docx">Download Resume (DOCX)</a>
+
+            <a class="btn btn-ghost" href="./Cover-Letter_251002-0410_Better-Than-Reality.docx" download="Cover-Letter_251002-0410_Better-Than-Reality.docx" role="button" aria-label="Download cover letter">Download Cover Letter</a>
+          </nav>
         </div>
 
-        <div style="display:flex; flex-direction:column; gap:10px; align-items:flex-start;">
+        <!-- Right column: contact info (keeps right alignment on larger screens) -->
+        <div class="contact-wrapper" aria-hidden="false">
           <address class="contact-info" aria-label="Contact information">
             <p>Email: <a href="mailto:azzamunza@gmail.com">azzamunza@gmail.com</a></p>
             <p>Phone: <a href="tel:0477742636">0477742636</a></p>
             <p>Location: Forrestfield, WA, Australia</p>
             <p>Website: <a href="https://www.vector6.com.au/resume" target="_blank" rel="noopener">www.vector6.com.au/resume</a></p>
           </address>
-
-          <nav class="actions" role="navigation" aria-label="Export options">
-            <button type="button" class="btn btn-primary" id="btn-print" aria-label="Print resume as PDF">Download as PDF</button>
-
-            <!-- Updated to exact filenames provided earlier -->
-            <a class="btn btn-alt" href="./Resume_251002-0409_Better-Than-Reality.docx" download="Resume_251002-0409_Better-Than-Reality.docx" role="button" aria-label="Download resume docx">Download Resume (DOCX)</a>
-
-            <a class="btn btn-ghost" href="./Cover-Letter_251002-0410_Better-Than-Reality.docx" download="Cover-Letter_251002-0410_Better-Than-Reality.docx" role="button" aria-label="Download cover letter">Download Cover Letter</a>
-          </nav>
         </div>
       </div>
     </header>
@@ -460,16 +438,10 @@
   </div>
 
   <script>
-    // Export actions
     document.getElementById('btn-print').addEventListener('click', function(){
       window.print();
     });
-
-    // DOCX and Cover Letter downloads use direct anchor links with download attributes.
-    // Ensure the files:
-    //   - Resume_251002-0409_Better-Than-Reality.docx
-    //   - Cover-Letter_251002-0410_Better-Than-Reality.docx
-    // are placed in the same directory as this index.html for the links to work.
+    // DOCX and cover letter anchors use download attribute; no JS required.
   </script>
 </body>
 </html>
