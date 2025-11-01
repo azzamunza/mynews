@@ -25,8 +25,8 @@
 
       /* Layout */
       --line-height: 1.55;
-      --section-gap: 32px;
-      --block-gap: 18px;
+      --section-gap: 28px;
+      --block-gap: 14px;
       --item-gap: 10px;
       --content-max-width: 1080px;
       --column-gap: 36px;
@@ -70,11 +70,11 @@
       flex-direction: column;
       gap: 14px;
     }
-    @media (min-width:600px){
+    @media (min-width:720px){
       .header-main{
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
       }
     }
 
@@ -96,6 +96,9 @@
     address.contact-info{
       font-style: normal;
       line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
     }
     .contact-info p{
       margin:0;
@@ -115,14 +118,20 @@
       gap:10px;
       margin-top: 12px;
       flex-wrap: wrap;
+      align-items: center;
     }
-    .actions button{
+    .actions .btn{
       appearance: none;
       border: none;
       cursor: pointer;
       padding: 10px 14px;
       border-radius: 8px;
       font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
     }
     .btn-primary{
       background: var(--btn-bg);
@@ -131,6 +140,12 @@
     .btn-alt{
       background: var(--btn-bg-alt);
       color: var(--btn-fg-alt);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .btn-ghost{
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid transparent;
     }
 
     main[role="main"]{
@@ -150,7 +165,7 @@
       #skills, #portfolio, #certifications, #special-projects{
         grid-column: 2;
       }
-      #summary, #experience{
+      #experience{
         grid-column: 1;
       }
     }
@@ -172,10 +187,6 @@
       font-weight: 800;
       border-left: 6px solid var(--accent);
       padding-left: 12px;
-    }
-
-    .summary{
-      margin-top: 6px;
     }
 
     /* Experience */
@@ -222,6 +233,7 @@
     #skills-list li, #core-competencies li{
       position: relative;
       padding-left: 14px;
+      width: calc(50% - 8px);
     }
     #skills-list li::before, #core-competencies li::before{
       content: "•";
@@ -253,6 +265,7 @@
     @media (min-width: 481px) and (max-width: 768px){
       .resume-container{ padding: 24px; }
       section{ padding: 16px; }
+      #skills-list li, #core-competencies li{ width: calc(50% - 8px); }
     }
 
     /* Mobile */
@@ -261,7 +274,8 @@
       .candidate-info h1{ font-size: 24px; }
       .candidate-info .job-title{ font-size: 16px; }
       .actions{ gap:8px; }
-      .actions button{ width: 100%; }
+      .actions .btn{ width: 100%; }
+      #skills-list li, #core-competencies li{ width: 100%; }
     }
 
     /* Print styles */
@@ -302,26 +316,29 @@
           <h1>Aaron Munro</h1>
           <div class="job-title">Unreal C++ Software Engineers (Mid And Senior Levels)</div>
         </div>
-        <address class="contact-info" aria-label="Contact information">
-          <p>Email: <a href="mailto:azzamunza@gmail.com">azzamunza@gmail.com</a></p>
-          <p>Phone: <a href="tel:0477742636">0477742636</a></p>
-          <p>Location: Forrestfield, WA, Australia</p>
-          <p>Website: <a href="https://www.vector6.com.au/resume" target="_blank" rel="noopener">www.vector6.com.au/resume</a></p>
-        </address>
+
+        <div style="display:flex; flex-direction:column; gap:10px; align-items:flex-end;">
+          <address class="contact-info" aria-label="Contact information">
+            <p>Email: <a href="mailto:azzamunza@gmail.com">azzamunza@gmail.com</a></p>
+            <p>Phone: <a href="tel:0477742636">0477742636</a></p>
+            <p>Location: Forrestfield, WA, Australia</p>
+            <p>Website: <a href="https://www.vector6.com.au/resume" target="_blank" rel="noopener">www.vector6.com.au/resume</a></p>
+          </address>
+
+          <nav class="actions" role="navigation" aria-label="Export options">
+            <button type="button" class="btn btn-primary" id="btn-print" aria-label="Print resume as PDF">Download as PDF</button>
+
+            <!-- DOCX and Cover Letter buttons: point to files in same directory and use download attribute -->
+            <a class="btn btn-alt" href="./resume.docx" download="Aaron-Munro-Resume.docx" role="button" aria-label="Download resume docx">Download Resume (DOCX)</a>
+
+            <a class="btn btn-ghost" href="./cover-letter.docx" download="Aaron-Munro-Cover-Letter.docx" role="button" aria-label="Download cover letter">Download Cover Letter</a>
+          </nav>
+        </div>
       </div>
-      <nav class="actions" role="navigation" aria-label="Export options">
-        <button type="button" class="btn-primary" id="btn-print">Download as PDF</button>
-        <button type="button" class="btn-alt" id="btn-docx">Download as DOCX</button>
-      </nav>
     </header>
 
     <main role="main" aria-label="Main content">
-      <section id="summary" aria-labelledby="summary-heading">
-        <h2 id="summary-heading">Professional Summary</h2>
-        <div class="summary">
-          I am writing to express my interest in the position of Unreal C++ Software Engineer at Better Than Reality. I have developed strong abilities in advanced real-time 3D graphics and Unreal Engine development, with professional experience building immersive VR and simulation projects. My background combines technical expertise in C++, real-time engines, VR content creation, and workflow automation, alongside collaborative work with multidisciplinary teams. My focus has been on delivering high-quality, optimised interactive experiences for sectors including mining and infrastructure.
-        </div>
-      </section>
+      <!-- Summary removed as requested -->
 
       <section id="experience" aria-labelledby="experience-heading">
         <h2 id="experience-heading">Work Experience</h2>
@@ -414,7 +431,7 @@
         <h2 id="portfolio-heading">Portfolio</h2>
         <ul id="portfolio-list">
           <li>
-            <strong>Projects and Dev over the last few years</strong>: Demonstrates Unity VR, real-time 3D environments, character rigging, and simulation workflows relevant to immersive simulation and VR development.
+            <strong>Projects and Dev over the last few years</strong>: Demonstrates Unity VR, real-time 3D environments, character rigging, and simulation workflows relevant to immersive simulation an[...]
             <br>
             <a href="https://www.youtube.com/watch?v=rvEkQWkZ8uw" target="_blank" rel="noopener">https://www.youtube.com/watch?v=rvEkQWkZ8uw</a>
           </li>
@@ -447,10 +464,10 @@
       window.print();
     });
 
-    document.getElementById('btn-docx').addEventListener('click', function(){
-      // TODO: Integrate DOCX export (e.g., via a client-side library or server endpoint)
-      alert('DOCX export is not yet implemented.');
-    });
+    // No JavaScript required for DOCX/cover-letter downloads because
+    // the anchor tags use the href + download attributes and will work
+    // when the files (resume.docx and cover-letter.docx) are present
+    // in the same directory as this index.html file.
   </script>
 </body>
 </html>
