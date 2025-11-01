@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aaron Munro | CG Artist/Generalist Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* CSS Variables (Theming) */
+    :root {
+      --primary: #00205B;
+      --secondary: #00B8E8;
+      --accent: #FFB81C;
+
+      --text-main: #222222;
+      --text-muted: #555555;
+      --text-light: #FFFFFF;
+
+      --bg-page: #F7F7FA;
+      --bg-card: #FFFFFF;
+      --rule: #E5E7EB;
+
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+      --h1-size: 40px;
+      --h1-weight: 800;
+      --h1-line: 1.15;
+
+      --h2-size: 22px;
+      --h2-weight: 700;
+      --h2-line: 1.3;
+
+      --h3-size: 18px;
+      --h3-weight: 700;
+      --h3-line: 1.35;
+
+      --body-size: 15px;
+      --body-weight: 400;
+      --body-line: 1.6;
+
+      --small-size: 13px;
+
+      --container-max: 980px;
+      --space-1: 6px;
+      --space-2: 10px;
+      --space-3: 14px;
+      --space-4: 18px;
+      --space-5: 24px;
+      --space-6: 32px;
+      --radius: 10px;
+      --shadow: 0 8px 28px rgba(16, 24, 40, 0.08);
+      --shadow-soft: 0 2px 10px rgba(16,24,40,0.05);
+    }
+
+    /* Base */
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-family);
+      color: var(--text-main);
+      background: var(--bg-page);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    a { color: var(--secondary); text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; }
+
+    .main-container {
+      max-width: var(--container-max);
+      width: 100%;
+      margin: var(--space-5) auto;
+      background: var(--bg-card);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    header[role="banner"] {
+      padding: var(--space-6);
+      border-bottom: 1px solid var(--rule);
+      background: linear-gradient(180deg, #ffffff 0%, #fafbff 100%);
+    }
+
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-3);
+      margin-bottom: var(--space-3);
+    }
+
+    .export-actions {
+      display: flex;
+      gap: var(--space-2);
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--rule);
+      background: #fff;
+      color: var(--primary);
+      font-size: var(--small-size);
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: var(--shadow-soft);
+      transition: all 0.2s ease;
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(16,24,40,0.12);
+    }
+    .btn.primary {
+      background: var(--primary);
+      color: var(--text-light);
+      border-color: transparent;
+    }
+    .btn.primary:hover {
+      background: #001a4d;
+    }
+    .btn:focus { 
+      outline: 2px solid var(--secondary); 
+      outline-offset: 2px; 
+    }
+
+    .name-title {
+      margin: 0;
+      font-size: var(--h1-size);
+      font-weight: var(--h1-weight);
+      line-height: var(--h1-line);
+      color: var(--primary);
+      letter-spacing: -0.5px;
+    }
+    .target-role {
+      font-size: var(--h3-size);
+      font-weight: 600;
+      color: var(--secondary);
+      margin-top: 6px;
+    }
+
+    .contact-details {
+      margin-top: var(--space-4);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      font-size: var(--small-size);
+      color: var(--text-muted);
+    }
+    .contact-details span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .contact-details a { 
+      color: var(--secondary);
+      font-weight: 500;
+    }
+
+    main[role="main"] {
+      padding: var(--space-6);
+      display: block;
+    }
+
+    section {
+      margin-bottom: var(--space-6);
+    }
+    section > h2 {
+      margin: 0 0 var(--space-4) 0;
+      font-size: var(--h2-size);
+      font-weight: var(--h2-weight);
+      line-height: var(--h2-line);
+      color: var(--primary);
+      letter-spacing: -0.3px;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: var(--space-2);
+    }
+
+    .summary {
+      font-size: var(--body-size);
+      line-height: var(--body-line);
+      color: var(--text-main);
+    }
+
+    /* Experience */
+    #experience .job-entry {
+      padding: var(--space-4) 0;
+      border-bottom: 1px solid var(--rule);
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    #experience .job-entry:last-child { border-bottom: none; }
+
+    .job-entry h3 {
+      margin: 0 0 6px 0;
+      font-size: var(--h3-size);
+      font-weight: var(--h3-weight);
+      color: var(--primary);
+      line-height: 1.3;
+    }
+    .job-meta {
+      margin: 0 0 var(--space-3) 0;
+      color: var(--secondary);
+      font-size: var(--small-size);
+      font-weight: 600;
+    }
+    .job-duties {
+      margin: 0;
+      padding-left: 20px;
+      font-size: var(--body-size);
+      line-height: var(--body-line);
+      color: var(--text-main);
+    }
+    .job-duties li { 
+      margin: 6px 0;
+      padding-left: 4px;
+    }
+
+    /* Skills */
+    #skills-list, #competency-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    #skills-list li, #competency-list li {
+      background: linear-gradient(135deg, #F3F6FB 0%, #E6ECF5 100%);
+      border: 1px solid #D1DDED;
+      padding: 7px 13px;
+      border-radius: 6px;
+      font-size: var(--small-size);
+      color: var(--primary);
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+    #skills-list li:hover, #competency-list li:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0,32,91,0.1);
+    }
+
+    /* Portfolio */
+    .portfolio-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .portfolio-list li {
+      margin-bottom: var(--space-4);
+      padding: var(--space-3);
+      background: #FAFBFF;
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      page-break-inside: avoid;
+      break-inside: avoid;
+      transition: all 0.2s ease;
+    }
+    .portfolio-list li:hover {
+      box-shadow: 0 4px 12px rgba(16,24,40,0.08);
+      border-color: var(--secondary);
+    }
+    .portfolio-list li:last-child { margin-bottom: 0; }
+    .portfolio-relevance {
+      display: block;
+      color: var(--text-muted);
+      font-size: var(--small-size);
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+    .portfolio-link {
+      font-size: var(--body-size);
+      font-weight: 600;
+      color: var(--secondary);
+    }
+    .portfolio-link:hover {
+      color: var(--primary);
+    }
+
+    /* Education/Certs */
+    .certifications-list {
+      margin: 0;
+      padding-left: 20px;
+      font-size: var(--body-size);
+      line-height: var(--body-line);
+    }
+    .certifications-list li { 
+      margin: 8px 0;
+      color: var(--text-main);
+    }
+    .specialized-project {
+      margin-top: var(--space-4);
+      padding: var(--space-3);
+      background: linear-gradient(135deg, #FFF9E6 0%, #FFF3D6 100%);
+      border-left: 4px solid var(--accent);
+      border-radius: 6px;
+      font-size: var(--body-size);
+      line-height: var(--body-line);
+      color: var(--text-main);
+    }
+
+    footer[role="contentinfo"] {
+      padding: var(--space-4) var(--space-6);
+      background: var(--primary);
+      color: var(--text-light);
+      font-size: var(--small-size);
+      text-align: center;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 480px) {
+      .main-container { border-radius: 0; margin: 0; }
+      header[role="banner"] { padding: var(--space-5); }
+      main[role="main"] { padding: var(--space-5); }
+      .name-title { font-size: 30px; }
+      .target-role { font-size: 16px; }
+      .contact-details { font-size: 12px; }
+      section > h2 { font-size: 18px; }
+      .btn { padding: 6px 10px; font-size: 12px; }
+    }
+
+    @media (min-width: 481px) and (max-width: 768px) {
+      .name-title { font-size: 34px; }
+      .target-role { font-size: 17px; }
+    }
+
+    @media (min-width: 769px) {
+      main[role="main"] {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: var(--space-6);
+      }
+      #summary { grid-column: 1; grid-row: 1; }
+      #skills { grid-column: 1; grid-row: 2; }
+      #experience { grid-column: 2; grid-row: 1 / 3; }
+      #education-certifications { grid-column: 1 / -1; }
+      #portfolio-videos { grid-column: 1 / -1; }
+    }
+
+    /* Print rules */
+    @media print {
+      body { background: #ffffff !important; color: #000000 !important; }
+      .main-container { box-shadow: none; border-radius: 0; margin: 0; }
+      header[role="banner"] { background: #fff; border-bottom: 2px solid #000; }
+      .export-actions { display: none !important; }
+      main[role="main"] { display: block; padding: 20px; }
+      section, .job-entry { page-break-inside: avoid; break-inside: avoid; }
+      section > h2 { border-bottom: 2px solid #000; }
+      a { color: #000 !important; text-decoration: underline; }
+      .portfolio-list li { border: 1px solid #ccc; background: #fff; }
+      .specialized-project { border: 1px solid #ccc; background: #fff; }
+    }
+    @page {
+      size: A4 portrait;
+      margin: 18mm 15mm;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <header role="banner">
+      <div class="topbar" aria-label="Export and actions">
+        <div class="export-actions">
+          <button class="btn primary" type="button" id="btnPrint" aria-label="Download as PDF">📄 Download as PDF</button>
+          <button class="btn" type="button" id="btnDocx" aria-label="Download as DOCX">📝 Download as DOCX</button>
+        </div>
+      </div>
+      <h1 class="name-title">Aaron Munro</h1>
+      <div class="target-role">CG Artist/Generalist</div>
+      <div class="contact-details" aria-label="Contact details">
+        <span>📍 Forrestfield, WA, Australia</span>
+        <span>✉️ <a href="mailto:azzamunza@gmail.com" aria-label="Email Aaron">azzamunza@gmail.com</a></span>
+        <span>📱 <a href="tel:+61477742636" aria-label="Call Aaron">0477 742 636</a></span>
+        <span>🌐 <a href="https://www.vector6.com.au/resume" target="_blank" rel="noopener" aria-label="Website">www.vector6.com.au/resume</a></span>
+      </div>
+    </header>
+
+    <main role="main" aria-label="Resume of Aaron Munro">
+      <section id="summary">
+        <h2>Summary</h2>
+        <div class="summary">I am writing to express my interest in the CG Artist/Generalist position at VRIFY. With more than 20 years of experience in 3D development and visualisation, I've developed strong abilities in Unity and Unreal Engine, creating and optimising complex 3D environments and interactive assets for real-time applications. My background includes end-to-end content production, shader development, and close collaboration with technical and design teams on high-profile visualisation and infrastructure projects. I bring a proven record in material and texture creation, pipeline management, and advanced storytelling through design, consistently aligning with the technical and creative demands of this role.</div>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+
+        <article class="job-entry">
+          <h3>Specialised in 3D Development</h3>
+          <p class="job-meta">Viewport XR | 2023 – 2024</p>
+          <ul class="job-duties">
+            <li>Advanced real-time 3D graphics using Unity and Unreal Engine for immersive experiences</li>
+            <li>Developed interactive objects and managed 3D asset workflows including shader and material development</li>
+            <li>Created dynamic animation assets and performed vehicle and character rigging</li>
+            <li>Executed fluid dynamics and particle simulations (Embergen, TYFlow, Unity, Unreal)</li>
+            <li>Produced video content and pipelines for MetaHumans and generative AI voiceover integration</li>
+          </ul>
+        </article>
+
+        <article class="job-entry">
+          <h3>Sole Trader, Freelance 3D Artist/Developer & Web Developer</h3>
+          <p class="job-meta">Vector 6 | 2016 – 2023</p>
+          <ul class="job-duties">
+            <li>Delivered 3D visualisation projects for real-time and VR applications using Unity and custom pipelines</li>
+            <li>Developed GUI systems and implemented FMETP streaming for Unity</li>
+            <li>Created and optimised 3D models and materials (3DS Max, Zbrush, Substance Suite, Octane Render)</li>
+            <li>Automated workflows and integrated APIs for project and asset management</li>
+            <li>Developed and maintained custom web tools for asset collaboration</li>
+          </ul>
+        </article>
+
+        <article class="job-entry">
+          <h3>Senior 3D Artist/Developer</h3>
+          <p class="job-meta">Minnovare | 2019</p>
+          <ul class="job-duties">
+            <li>Developed 3D simulations and animations to visualise underground mine core drilling and positioning systems</li>
+          </ul>
+        </article>
+
+        <article class="job-entry">
+          <h3>Senior 3D Artist/Developer</h3>
+          <p class="job-meta">Last Pixel | Oct 2006 – Mar 2016</p>
+          <ul class="job-duties">
+            <li>Managed end-to-end 3D visualisation projects from client brief to delivery</li>
+            <li>Created high-quality 3D models, PBR materials and advanced shaders (Substance Suite, Designer)</li>
+            <li>Produced animation, lighting, environment development, and complex asset integration</li>
+            <li>Oversaw rendering pipelines and optimised assets for performance</li>
+            <li>Led project teams and handled client communications and project management</li>
+          </ul>
+        </article>
+
+        <article class="job-entry">
+          <h3>3D Developer/Artist (Collaboration)</h3>
+          <p class="job-meta">Spacescan | Oct 2017 – Jan 2023</p>
+          <ul class="job-duties">
+            <li>Executed Matterport scanning and photogrammetry with Reality Capture</li>
+            <li>Developed and optimised 3D models for Unreal Engine applications</li>
+          </ul>
+        </article>
+
+        <article class="job-entry">
+          <h3>Unity VR Meta Quest Developer</h3>
+          <p class="job-meta">Vastness - Curtin University | Jan 2021 – Jul 2021</p>
+          <ul class="job-duties">
+            <li>Created fully baked interior scene using 3DS Max, Substance Suite, and Octane Render</li>
+            <li>Developed Unity GUI systems and real-time streaming</li>
+          </ul>
+        </article>
+
+        <article class="job-entry">
+          <h3>Unity Virtual Reality</h3>
+          <p class="job-meta">ABC Virtual Reality Mini Beasts | 2018</p>
+          <ul class="job-duties">
+            <li>Transformed high-poly photogrammetry models into optimised VR assets</li>
+            <li>Applied Substance materials and animated models in Unity</li>
+          </ul>
+        </article>
+
+        <article class="job-entry">
+          <h3>Unity Virtual Reality</h3>
+          <p class="job-meta">THALU: DREAMTIME IS NOW | 2019</p>
+          <ul class="job-duties">
+            <li>Conceptualised and developed evolving virtual landscapes and interactive assets</li>
+            <li>Created and animated world transformation elements for storytelling</li>
+          </ul>
+        </article>
+
+      </section>
+
+      <section id="skills">
+        <h2>Technical Skills</h2>
+        <ul id="skills-list">
+          <li>Unity</li>
+          <li>Unreal Engine</li>
+          <li>3DS Max</li>
+          <li>Zbrush</li>
+          <li>Substance Painter</li>
+          <li>Substance Suite</li>
+          <li>Substance Designer</li>
+          <li>Octane Render</li>
+          <li>V-Ray</li>
+          <li>Corona</li>
+          <li>Photoshop</li>
+          <li>After Effects</li>
+          <li>Premiere</li>
+          <li>DaVinci Resolve</li>
+          <li>Embergen</li>
+          <li>TYFlow</li>
+          <li>Railclone</li>
+          <li>Forest Pack Pro</li>
+          <li>CAT (Rigging/Animation)</li>
+          <li>Matterport</li>
+          <li>Reality Capture</li>
+          <li>Python</li>
+          <li>FMETP Streaming</li>
+          <li>MetaHuman Lipsync</li>
+          <li>Autodesk InfraWorks</li>
+        </ul>
+
+        <h2>Core Competencies</h2>
+        <ul id="competency-list">
+          <li>3D asset creation</li>
+          <li>Real-time rendering and optimisation</li>
+          <li>Material and shader development</li>
+          <li>Lighting for realistic and stylized results</li>
+          <li>Animation and rigging</li>
+          <li>Pipeline/workflow management</li>
+          <li>Interactive visualisation</li>
+          <li>Technical problem-solving</li>
+          <li>Collaboration in cross-functional teams</li>
+          <li>Storyboarding and storytelling</li>
+          <li>Project management</li>
+          <li>Client communication</li>
+        </ul>
+      </section>
+
+      <section id="education-certifications">
+        <h2>Certifications & Qualifications</h2>
+        <ul class="certifications-list">
+          <li><strong>AI Generalist Course</strong> – Core AI Methodologies, Workflow Automation, Generative Media Production (Aug 2025)</li>
+          <li><strong>Advanced Diploma of Information Technology</strong> – Interactive Multimedia (1998)</li>
+          <li><strong>Certificate IV of Information Technology</strong> – Interactive Multimedia (1997)</li>
+        </ul>
+        <div class="specialized-project"><strong>Major Projects:</strong> Contributions to infrastructure, mining, and urban development visualisation projects including Elizabeth Quay, Perth Underground Bus Port, Yagan Square, Fremantle Ports Outer Harbour, and Butler to Perth Rail Link; advanced pipeline automation for VR/AR development and generative AI integration.</div>
+      </section>
+
+      <section id="portfolio-videos">
+        <h2>Portfolio Videos</h2>
+        <ul class="portfolio-list">
+          <li>
+            <span class="portfolio-relevance">Demonstrates experience across Unity VR, real-time development, 3D arch-vis, character rigging, photogrammetry, and asset production relevant to interactive visuals and asset pipelines.</span>
+            <a class="portfolio-link" href="https://www.youtube.com/watch?v=rvEkQWkZ8uw" target="_blank" rel="noopener">Projects and Dev over the last few years →</a>
+          </li>
+          <li>
+            <span class="portfolio-relevance">Presents a 3D visualisation project produced during time at Viewport XR, showcasing skills in creating, optimising, and presenting complex infrastructure environments.</span>
+            <a class="portfolio-link" href="https://www.youtube.com/watch?v=QLEcGUWuTgE" target="_blank" rel="noopener">METRONET Yanchep Rail Extension Linewide Flythrough 1 →</a>
+          </li>
+          <li>
+            <span class="portfolio-relevance">Highlights a wide range of 3D asset creation, real-time rendering, animation, and visual storytelling work created at Last Pixel.</span>
+            <a class="portfolio-link" href="https://www.youtube.com/watch?v=9wuhG46Dmxc" target="_blank" rel="noopener">Showreel Aaron Munro 2016 →</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      © <span id="year"></span> Aaron Munro | Resume
+    </footer>
+  </div>
+
+  <script>
+    // Export actions
+    document.getElementById('btnPrint').addEventListener('click', function () {
+      window.print();
+    });
+
+    document.getElementById('btnDocx').addEventListener('click', function () {
+      alert('DOCX export requires additional integration. Use the PDF download for now, or copy the content to a word processor.');
+    });
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
