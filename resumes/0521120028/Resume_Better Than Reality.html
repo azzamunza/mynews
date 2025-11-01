@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aaron Munro – Unreal C++ Software Engineers (Mid And Senior Levels) Résumé</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root{
+      /* Core palette (theming) */
+      --primary: #0055A4;
+      --secondary: #FF6F61;
+      --accent: #2ECC71;
+      --text-main: #333333;
+      --surface: #FFFFFF;
+      --surface-muted: #F5F5F5;
+
+      /* Typography */
+      --font-heading: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      --font-body: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+
+      --fs-h1: 32px;
+      --fs-h2: 22px;
+      --fs-h3: 18px;
+      --fs-body: 14px;
+
+      /* Layout */
+      --line-height: 1.55;
+      --section-gap: 32px;
+      --block-gap: 18px;
+      --item-gap: 10px;
+      --content-max-width: 1080px;
+      --column-gap: 36px;
+      --card-radius: 10px;
+
+      /* Buttons */
+      --btn-bg: var(--primary);
+      --btn-fg: #FFFFFF;
+      --btn-bg-alt: #E7EEF7;
+      --btn-fg-alt: var(--primary);
+    }
+
+    html, body{
+      margin:0; padding:0;
+      background: var(--surface-muted);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-size: var(--fs-body);
+      line-height: var(--line-height);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .resume-container{
+      max-width: var(--content-max-width);
+      margin: 0 auto;
+      padding: 28px 20px 36px;
+    }
+
+    header[role="banner"]{
+      background: var(--surface);
+      border: 1px solid #e9e9e9;
+      border-left: 6px solid var(--primary);
+      padding: 18px 18px 14px;
+      border-radius: var(--card-radius);
+      box-shadow: 0 2px 24px rgba(0,0,0,0.06);
+    }
+
+    .header-main{
+      display:flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    @media (min-width:600px){
+      .header-main{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    }
+
+    .candidate-info h1{
+      margin:0 0 6px 0;
+      font-family: var(--font-heading);
+      font-size: var(--fs-h1);
+      line-height: 1.1;
+      color: var(--primary);
+      font-weight: 800;
+    }
+    .candidate-info .job-title{
+      margin:0;
+      font-size: 18px;
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    address.contact-info{
+      font-style: normal;
+      line-height: 1.6;
+    }
+    .contact-info p{
+      margin:0;
+    }
+    .contact-info a{
+      color: var(--primary);
+      text-decoration: none;
+      word-break: break-word;
+    }
+    .contact-info a:hover,
+    #portfolio-list a:hover{
+      text-decoration: underline;
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+    .actions button{
+      appearance: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    .btn-primary{
+      background: var(--btn-bg);
+      color: var(--btn-fg);
+    }
+    .btn-alt{
+      background: var(--btn-bg-alt);
+      color: var(--btn-fg-alt);
+    }
+
+    main[role="main"]{
+      margin-top: 22px;
+      display: grid;
+      gap: var(--section-gap);
+    }
+
+    /* Desktop two-column layout */
+    @media (min-width: 769px){
+      main[role="main"]{
+        grid-template-columns: 2fr 1fr;
+        column-gap: var(--column-gap);
+        align-items: start;
+      }
+      /* Keep DOM order but visually place selected sections in right column */
+      #skills, #portfolio, #certifications, #special-projects{
+        grid-column: 2;
+      }
+      #summary, #experience{
+        grid-column: 1;
+      }
+    }
+
+    section{
+      background: var(--surface);
+      border: 1px solid #e9e9e9;
+      border-radius: var(--card-radius);
+      padding: 18px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+    }
+
+    section > h2{
+      margin:0 0 10px 0;
+      font-family: var(--font-heading);
+      font-size: var(--fs-h2);
+      color: var(--primary);
+      line-height: 1.2;
+      font-weight: 800;
+      border-left: 6px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    .summary{
+      margin-top: 6px;
+    }
+
+    /* Experience */
+    #experience .job-entry{
+      margin-top: 14px;
+      padding-top: 8px;
+      border-top: 1px dashed #e6e6e6;
+      page-break-inside: avoid;
+    }
+    #experience .job-entry:first-of-type{
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+    .job-entry h3{
+      margin:0 0 4px 0;
+      font-size: var(--fs-h3);
+      color: var(--secondary);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .job-meta{
+      margin:0 0 8px 0;
+      font-style: italic;
+      color: #444;
+    }
+    .job-duties{
+      margin: 0;
+      padding-left: 20px;
+    }
+    .job-duties li{
+      margin-bottom: 6px;
+    }
+
+    /* Lists */
+    #skills-list, #core-competencies{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      padding: 0;
+      margin: 10px 0 0 0;
+      list-style: none;
+    }
+    #skills-list li, #core-competencies li{
+      position: relative;
+      padding-left: 14px;
+    }
+    #skills-list li::before, #core-competencies li::before{
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 900;
+    }
+
+    #portfolio-list{
+      margin: 10px 0 0 0;
+      padding-left: 20px;
+    }
+    #portfolio-list li{
+      margin-bottom: 6px;
+    }
+    #portfolio-list a{
+      color: var(--primary);
+    }
+
+    footer[role="contentinfo"]{
+      margin-top: 22px;
+      text-align: right;
+      color: #555;
+      font-size: 12px;
+    }
+
+    /* Tablet tweaks */
+    @media (min-width: 481px) and (max-width: 768px){
+      .resume-container{ padding: 24px; }
+      section{ padding: 16px; }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px){
+      .resume-container{ padding: 16px 12px 24px; }
+      .candidate-info h1{ font-size: 24px; }
+      .candidate-info .job-title{ font-size: 16px; }
+      .actions{ gap:8px; }
+      .actions button{ width: 100%; }
+    }
+
+    /* Print styles */
+    @page{
+      size: A4 portrait;
+      margin: 18mm 15mm;
+    }
+    @media print{
+      html, body{
+        background: #fff !important;
+      }
+      .resume-container{
+        max-width: 100%;
+        padding: 0;
+        box-shadow: none;
+      }
+      header[role="banner"], section, footer[role="contentinfo"]{
+        box-shadow: none;
+        border-radius: 0;
+        border-left-width: 0;
+        page-break-inside: avoid;
+      }
+      .actions{ display: none !important; }
+      main[role="main"]{
+        display: block;
+      }
+      #experience .job-entry{
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <header role="banner" aria-label="Candidate header">
+      <div class="header-main">
+        <div class="candidate-info">
+          <h1>Aaron Munro</h1>
+          <div class="job-title">Unreal C++ Software Engineers (Mid And Senior Levels)</div>
+        </div>
+        <address class="contact-info" aria-label="Contact information">
+          <p>Email: <a href="mailto:azzamunza@gmail.com">azzamunza@gmail.com</a></p>
+          <p>Phone: <a href="tel:0477742636">0477742636</a></p>
+          <p>Location: Forrestfield, WA, Australia</p>
+          <p>Website: <a href="https://www.vector6.com.au/resume" target="_blank" rel="noopener">www.vector6.com.au/resume</a></p>
+        </address>
+      </div>
+      <nav class="actions" role="navigation" aria-label="Export options">
+        <button type="button" class="btn-primary" id="btn-print">Download as PDF</button>
+        <button type="button" class="btn-alt" id="btn-docx">Download as DOCX</button>
+      </nav>
+    </header>
+
+    <main role="main" aria-label="Main content">
+      <section id="summary" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Professional Summary</h2>
+        <div class="summary">
+          I am writing to express my interest in the position of Unreal C++ Software Engineer at Better Than Reality. I have developed strong abilities in advanced real-time 3D graphics and Unreal Engine development, with professional experience building immersive VR and simulation projects. My background combines technical expertise in C++, real-time engines, VR content creation, and workflow automation, alongside collaborative work with multidisciplinary teams. My focus has been on delivering high-quality, optimised interactive experiences for sectors including mining and infrastructure.
+        </div>
+      </section>
+
+      <section id="experience" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Work Experience</h2>
+
+        <article class="job-entry">
+          <h3>Specialised in 3D Development</h3>
+          <p class="job-meta">Viewport XR | 2023 – 2024</p>
+          <ul class="job-duties">
+            <li>Specialised in Unreal Engine development for immersive experiences and real-time 3D graphics</li>
+            <li>Developed interactive objects and custom shaders with Unreal Engine and Unity</li>
+            <li>Produced pipelines for custom assets including MetaHumans and dynamic simulations</li>
+            <li>Executed fluid dynamics and particle sims using Embergen and TYFlow</li>
+            <li>Collaborated on the development of VR experiences for various clients</li>
+          </ul>
+        </article>
+
+        <article class="job-entry">
+          <h3>Sole Trader, Freelance 3D Artist/Developer &amp; Web Developer</h3>
+          <p class="job-meta">Vector 6 | 2016 – 2023</p>
+          <ul class="job-duties">
+            <li>Delivered 3D visualisation projects including interactive experiences and real-time engine content</li>
+            <li>Automated data workflows with Python and integrated third-party APIs for asset and media management</li>
+            <li>Developed internal tools to support content production and collaboration across teams</li>
+            <li>Worked on VR collaborations, including photogrammetry integration and optimised VR asset pipelines</li>
+          </ul>
+        </article>
+
+        <article class="job-entry">
+          <h3>Senior 3D Artist/Developer</h3>
+          <p class="job-meta">Minnovare | 2019</p>
+          <ul class="job-duties">
+            <li>Developed simulations and animations for underground mine drilling, showcasing advanced positioning system technology</li>
+            <li>Produced real-time visual content aligned with engineering and simulation objectives</li>
+          </ul>
+        </article>
+
+        <article class="job-entry">
+          <h3>Senior 3D Artist/Developer</h3>
+          <p class="job-meta">Last Pixel | Oct 2006 – Mar 2016</p>
+          <ul class="job-duties">
+            <li>Led project teams and managed deliverables in high-end visualisation and simulation projects</li>
+            <li>Developed 3D assets, PBR materials and dynamic content using Substance Suite and Unreal Engine</li>
+            <li>Created workflow automations and internal tools for improved production efficiency</li>
+          </ul>
+        </article>
+
+        <article class="job-entry">
+          <h3>3D Developer/Artist</h3>
+          <p class="job-meta">Spacescan Collaboration | Oct 2017 – Jan 2023</p>
+          <ul class="job-duties">
+            <li>Collaborated on 3D visualisation projects using Unreal Engine and photogrammetry (Matterport, Reality Capture)</li>
+            <li>Specialised in developing optimised 3D models and materials for real-time applications</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="skills" aria-labelledby="skills-heading">
+        <h2 id="skills-heading">Technical Skills</h2>
+        <ul id="skills-list">
+          <li>Unreal Engine (advanced real-time 3D graphics, interactive object development)</li>
+          <li>C++ (utilised for real-time and simulation projects)</li>
+          <li>Blueprint scripting</li>
+          <li>Unity</li>
+          <li>3DS Max</li>
+          <li>Zbrush</li>
+          <li>Substance Suite (Painter, Designer)</li>
+          <li>Embergen for fluid dynamics simulation</li>
+          <li>TYFlow for custom dynamic particle simulations</li>
+          <li>Version control with Git (used for cloning repositories)</li>
+          <li>Python (automation and workflow scripting)</li>
+          <li>FMETP streaming</li>
+          <li>MetaHuman pipeline and lipsync</li>
+          <li>Photogrammetry (Matterport, Reality Capture)</li>
+          <li>API integration (third-party, for workflow)</li>
+        </ul>
+
+        <h2>Core Competencies</h2>
+        <ul id="core-competencies">
+          <li>Immersive VR development</li>
+          <li>Workflow automation and efficiency optimisation</li>
+          <li>Project management and multi-team leadership</li>
+          <li>Technical problem-solving</li>
+          <li>Client and stakeholder liaison</li>
+          <li>Content production (video and multimedia)</li>
+          <li>Mentoring and supporting teammates</li>
+        </ul>
+      </section>
+
+      <section id="portfolio" aria-labelledby="portfolio-heading">
+        <h2 id="portfolio-heading">Portfolio</h2>
+        <ul id="portfolio-list">
+          <li>
+            <strong>Projects and Dev over the last few years</strong>: Demonstrates Unity VR, real-time 3D environments, character rigging, and simulation workflows relevant to immersive simulation and VR development.
+            <br>
+            <a href="https://www.youtube.com/watch?v=rvEkQWkZ8uw" target="_blank" rel="noopener">https://www.youtube.com/watch?v=rvEkQWkZ8uw</a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="certifications" aria-labelledby="certifications-heading">
+        <h2 id="certifications-heading">Certification</h2>
+        <div>
+          AI Generalist Course (Core AI Methodologies, Workflow Automation, Generative Media Production, Data-Driven Business Applications), expected completion Aug 2025
+        </div>
+      </section>
+
+      <section id="special-projects" aria-labelledby="special-projects-heading">
+        <h2 id="special-projects-heading">Specialised Project Experience</h2>
+        <div>
+          Developed custom dynamic assets and pipeline automation for immersive VR projects; integrated AI workflows for content production and implemented advanced asset pipelines for MetaHumans.
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo" aria-label="Footer">
+      <a href="https://www.vector6.com.au/resume" target="_blank" rel="noopener">www.vector6.com.au/resume</a>
+    </footer>
+  </div>
+
+  <script>
+    // Export actions
+    document.getElementById('btn-print').addEventListener('click', function(){
+      window.print();
+    });
+
+    document.getElementById('btn-docx').addEventListener('click', function(){
+      // TODO: Integrate DOCX export (e.g., via a client-side library or server endpoint)
+      alert('DOCX export is not yet implemented.');
+    });
+  </script>
+</body>
+</html>
