@@ -527,22 +527,22 @@
     min-height: 200px;
     background: 
         repeating-linear-gradient(
-            0deg,
+            334deg,
             #ff006e 0px,
             #ff006e 2px,
             #8338ec 2px,
-            #8338ec 4px,
-            #3a86ff 4px,
+            #8338ec 6px,
             #3a86ff 6px,
-            #06ffa5 6px,
-            #06ffa5 8px,
-            #ffbe0b 8px,
-            #ffbe0b 10px
+            #3a86ff 10px,
+            #06ffa5 12px,
+            #06ffa5 12px,
+            #ffbe0b 16px,
+            #ffbe0b 18px
         );
     border-radius: 8px;
     position: relative;
     overflow: hidden;
-    animation: rasterScroll 3s linear infinite;
+    animation: rasterScroll 12s linear infinite;
 }
 
 @keyframes rasterScroll {
