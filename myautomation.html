@@ -919,24 +919,19 @@
             submitBtn.textContent = 'Sending...';
             
             try {
-                // Trigger GitHub Actions workflow via repository_dispatch
-                const response = await fetch('https://api.github.com/repos/azzamunza/mynews/dispatches', {
+                // Create a GitHub issue which will trigger the workflow
+                const issueBody = `Job URL: ${jobUrl}\n\nSubmitted at: ${new Date().toISOString()}`;
+                
+                const response = await fetch('https://api.github.com/repos/azzamunza/mynews/issues', {
                     method: 'POST',
                     headers: {
                         'Accept': 'application/vnd.github.v3+json',
-                        'Content-Type': 'application/json',
-                        // Note: For security, you should use a GitHub App or Personal Access Token
-                        // This token needs 'repo' scope to trigger workflows
-                        // Store it in your GitHub Pages environment or use a backend proxy
-                        'Authorization': 'Bearer YOUR_GITHUB_TOKEN'
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        event_type: 'job-submission',
-                        client_payload: {
-                            job_url: jobUrl,
-                            timestamp: new Date().toISOString(),
-                            submitted_by: 'web-form'
-                        }
+                        title: `Job Submission: ${new Date().toLocaleString()}`,
+                        body: issueBody,
+                        labels: ['job-submission']
                     })
                 });
                 
