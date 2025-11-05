@@ -1,24 +1,61 @@
-name: Send Job URL to Webhook
+name: Process Job Submission
 
 on:
-  repository_dispatch:
-    types: [job-submission]
+  issues:
+    types: [opened]
 
 jobs:
   send-to-webhook:
+    if: contains(github.event.issue.labels.*.name, 'job-submission')
     runs-on: ubuntu-latest
     steps:
+      - name: Extract Job URL from Issue
+        id: extract
+        run: |
+          # Extract the job URL from the issue body
+          JOB_URL=$(echo "${{ github.event.issue.body }}" | grep -oP '(?<=Job URL: ).*' || echo "")
+          echo "job_url=$JOB_URL" >> $GITHUB_OUTPUT
+          echo "Extracted URL: $JOB_URL"
+      
       - name: Send to Webhook
+        if: steps.extract.outputs.job_url != ''
         run: |
           curl -X POST "${{ secrets.WEBHOOK_URL }}" \
             -H "Content-Type: application/json" \
             -d '{
-              "url": "${{ github.event.client_payload.job_url }}",
-              "timestamp": "${{ github.event.client_payload.timestamp }}",
-              "submitted_by": "${{ github.event.client_payload.submitted_by }}"
+              "url": "${{ steps.extract.outputs.job_url }}",
+              "timestamp": "${{ github.event.issue.created_at }}",
+              "issue_number": ${{ github.event.issue.number }},
+              "submitted_by": "${{ github.event.issue.user.login }}"
             }'
       
-      - name: Log submission
-        run: |
-          echo "Job URL submitted: ${{ github.event.client_payload.job_url }}"
-          echo "Timestamp: ${{ github.event.client_payload.timestamp }}"
+      - name: Close and Comment on Issue
+        if: steps.extract.outputs.job_url != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: '✅ Job application submitted successfully to webhook!\n\nURL: ${{ steps.extract.outputs.job_url }}'
+            });
+            
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed'
+            });
+      
+      - name: Handle Error
+        if: steps.extract.outputs.job_url == ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: '❌ Error: Could not extract job URL from the issue body.'
+            });
