@@ -1,0 +1,24 @@
+name: Send Job URL to Webhook
+
+on:
+  repository_dispatch:
+    types: [job-submission]
+
+jobs:
+  send-to-webhook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send to Webhook
+        run: |
+          curl -X POST "${{ secrets.WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "url": "${{ github.event.client_payload.job_url }}",
+              "timestamp": "${{ github.event.client_payload.timestamp }}",
+              "submitted_by": "${{ github.event.client_payload.submitted_by }}"
+            }'
+      
+      - name: Log submission
+        run: |
+          echo "Job URL submitted: ${{ github.event.client_payload.job_url }}"
+          echo "Timestamp: ${{ github.event.client_payload.timestamp }}"
