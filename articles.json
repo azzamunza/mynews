@@ -137,6 +137,23 @@
       "isJob": false
     },
     {
+      "id": "science-neuroscience-rhythms-20251114",
+      "title": "Time, space, memory and brain–body rhythms - NewsHub",
+      "filename": "Time  space  memory and brain body rhythms - NewsHub.html",
+      "category": "Science",
+      "author": "György Buzsáki",
+      "publishDate": "Nov 13, 2025",
+      "readTime": "1",
+      "excerpt": "Neuroscience challenges traditional views of time and space, suggesting they are not sensed directly but are constructs emerging from brain-body rhythms.",
+      "thumbnailImage": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%234f46e5;stop-opacity:1'/><stop offset='100%' style='stop-color:%23a855f7;stop-opacity:1'/></linearGradient></defs><rect width='1200' height='800' fill='url(%23g)'/><text x='50%' y='50%' font-family='Arial,sans-serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle' dy='.3em'>NEUROSCIENCE</text></svg>",
+      "bannerImage": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%234f46e5;stop-opacity:1'/><stop offset='100%' style='stop-color:%23a855f7;stop-opacity:1'/></linearGradient></defs><rect width='1200' height='800' fill='url(%23g)'/><text x='50%' y='50%' font-family='Arial,sans-serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle' dy='.3em'>NEUROSCIENCE</text></svg>",
+      "sourceUrl": "https://www.nature.com/articles/s41583-025-00987-2",
+      "isTrending": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false
+    },
+    {
       "id": "science-cellular-aging-20251114",
       "title": "Unveiling the secrets of cellular aging",
       "filename": "Unveiling the secrets of cellular aging - NewsHub.html",
