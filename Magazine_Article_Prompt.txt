@@ -24,16 +24,28 @@ Your job is to:
    - If URL fails or redirects incorrectly, return empty/error HTML
    - ❌ Never fabricate or modify URLs
 
-2. **Image Verification and Fallbacks**
-   - Verify each image URL from the bundle:
-     - Must return direct image file (JPG/PNG/WEBP) – not HTML or 404
-     - Banner image ≥ 1200×800 • Thumbnail ≥ 400×300 • Inline images ≥ 800×600
-   - If image missing or invalid, generate SVG fallback:
-   ```
-   data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:[COLOR1];stop-opacity:1'/><stop offset='100%' style='stop-color:[COLOR2];stop-opacity:1'/></linearGradient></defs><rect width='1200' height='800' fill='url(%23g)'/><text x='50%' y='50%' font-family='Arial,sans-serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle' dy='.3em'>[ARTICLE_TOPIC_KEYWORD]</text></svg>
-   ```
+2. **Image Extraction and Usage (PRIORITY)**
+   - **ALWAYS** extract and use images from the article bundle's `images` array FIRST
+   - Map bundle images to template placeholders in this order:
+     1. First image → Banner image (top of article)
+     2. Second image → First inline image
+     3. Third image → Second inline image
+     4. Fourth image → Sidebar image
+     5. Fifth image → Full-width bottom image
+   - If bundle has fewer than 5 images, reuse earlier images for remaining placeholders
+   - **ONLY** use SVG fallbacks when the bundle's images array is empty or all images fail verification
 
-3. **YouTube and Video Verification**
+3. **Image Verification and Fallbacks**
+   - For each image URL from the bundle's images array:
+     - Verify it returns a direct image file (JPG/PNG/WEBP/GIF) – not HTML or 404
+     - Banner image should be ≥ 1200×800 • Inline images ≥ 800×600 • Sidebar ≥ 400×300
+   - If an image URL is invalid or fails to load, generate SVG fallback:
+   ```
+   data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%232c3e50;stop-opacity:1'/><stop offset='100%' style='stop-color:%233498db;stop-opacity:1'/></linearGradient></defs><rect width='1200' height='800' fill='url(%23g)'/><text x='50%' y='50%' font-family='Arial,sans-serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle' dy='.3em'>[ARTICLE_TOPIC_KEYWORD]</text></svg>
+   ```
+   - Adjust viewBox dimensions for different image sizes (e.g., '0 0 800 600' for inline, '0 0 400 300' for sidebar)
+
+4. **YouTube and Video Verification**
    - For any video URL in bundle:
      - Confirm video ID is valid and playable
      - Extract ID from: https://www.youtube.com/watch?v=VIDEO_ID or https://youtu.be/VIDEO_ID
@@ -58,6 +70,36 @@ Your job is to:
      - Pull quote: Extract or create one impactful statement
      - Statistics: Identify 3-5 key numbers for sidebar (if available in content)
      - Context: Background information for sidebar box
+
+**IMAGE MAPPING FROM BUNDLE TO HTML**
+
+Before generating HTML, map images from the article bundle's `images` array to the template:
+
+1. **Banner Image** (`[BANNER_IMAGE_URL]` in template):
+   - Use first image from bundle's images array
+   - If images array is empty or invalid, use SVG fallback (1200×800)
+
+2. **First Inline Image** (`[INLINE_IMAGE_URL_1]` in template):
+   - Use second image from bundle's images array
+   - If not available, reuse first image
+   - If no images available, use SVG fallback (800×600)
+
+3. **Second Inline Image** (`[INLINE_IMAGE_URL_2]` in template):
+   - Use third image from bundle's images array
+   - If not available, reuse first or second image
+   - If no images available, use SVG fallback (800×600)
+
+4. **Sidebar Image** (`[SIDEBAR_IMAGE_URL]` in template):
+   - Use fourth image from bundle's images array
+   - If not available, reuse earlier images
+   - If no images available, use SVG fallback (400×300)
+
+5. **Full-Width Bottom Image** (`[FULL_WIDTH_IMAGE_URL]` in template):
+   - Use fifth image from bundle's images array
+   - If not available, reuse earlier images
+   - If no images available, use SVG fallback (1200×800)
+
+**CRITICAL:** Always prioritize using real images from the bundle over SVG fallbacks. Only use SVG fallbacks when the bundle contains no images or all images fail verification.
 
 **MAGAZINE ARTICLE HTML GENERATION**
 
@@ -321,7 +363,9 @@ Examples:
 
 Before returning HTML, verify:
 - ✅ sourceUrl verified and accessible
-- ✅ All images verified or valid SVG fallbacks generated
+- ✅ **Images extracted from bundle's images array and used in HTML**
+- ✅ **Real images prioritized over SVG fallbacks**
+- ✅ All images verified or valid SVG fallbacks generated (only when necessary)
 - ✅ All images have inline styles for responsiveness
 - ✅ Content extracted only from bundle data
 - ✅ Australian English spelling throughout
