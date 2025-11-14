@@ -8,6 +8,7 @@ npm-debug.log*
 
 # Reports
 url-validation-report.json
+html-validation-report.json
 
 # OS files
 .DS_Store
