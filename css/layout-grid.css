@@ -24,7 +24,6 @@ img {
     top: 0;
     z-index: 1001;
     transition: transform 0.3s ease;
-    background: var(--bg-color, #000);
 }
 
 #mainHeader.header-hidden .header-container {
