@@ -2,39 +2,66 @@
 /* This file provides specialized grid layouts without affecting theme or article styles */
 
 /* ============================================
+   GLOBAL IMAGE SIZING - Ensure all images respect container bounds
+   ============================================ */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ============================================
    HEADER SCROLL BEHAVIOR
    ============================================ */
 
 #mainHeader {
+    position: relative;
+    z-index: 1000;
+}
+
+.header-container {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 1001;
     transition: transform 0.3s ease;
+    background: var(--bg-color, #000);
 }
 
 #mainHeader.header-hidden .header-container {
     transform: translateY(-100%);
 }
 
-.header-container {
-    transition: transform 0.3s ease;
-}
-
 /* NEW REQUIREMENT #2: Header menu uses theme background color */
 #desktopNav {
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 1002;
     background: var(--card-bg, #000); /* Uses theme background */
     border-bottom: 2px solid var(--border-color, #333);
 }
 
 .nav-container {
     background: transparent; /* Let parent background show through */
+    overflow-x: hidden;
 }
 
 .category-menu {
     background: transparent;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    cursor: grab;
+    user-select: none;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.category-menu::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.category-menu:active {
+    cursor: grabbing;
 }
 
 /* ============================================
@@ -251,6 +278,79 @@
 
 .carousel-dot.active {
     background: var(--accent-color, #00d9ff);
+}
+
+/* ============================================
+   ARTICLE CARDS ROW - 4 Cards Below Hero
+   ============================================ */
+
+.article-cards-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.article-cards-row .article-card-simple {
+    background: var(--card-bg, #1a1a1a);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-cards-row .article-card-simple:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.article-cards-row .article-card-simple img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article-cards-row .article-card-simple .card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.article-cards-row .article-card-simple .card-category {
+    font-size: 0.75rem;
+    color: var(--accent-color, #00d9ff);
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.article-cards-row .article-card-simple .card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    flex: 1;
+}
+
+.article-cards-row .article-card-simple .card-excerpt {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-bottom: 0.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.article-cards-row .article-card-simple .card-meta {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    display: flex;
+    gap: 0.75rem;
 }
 
 /* ============================================
@@ -807,6 +907,16 @@
 .headline-time {
     font-size: 0.75rem;
     opacity: 0.7;
+}
+
+/* ============================================
+   FULL WIDTH SECTION - After Sidebar
+   ============================================ */
+
+.full-width-section {
+    max-width: 1600px;
+    margin: 2rem auto;
+    padding: 2rem;
 }
 
 /* ============================================

@@ -1,0 +1,53 @@
+name: Update Articles
+
+on:
+  push:
+    paths:
+      - 'articles/**/*.html'
+  workflow_dispatch:
+
+jobs:
+  update-articles:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Regenerate articles.json
+        run: |
+          node -e "
+          const { regenerateArticlesJSON } = require('./watch-articles.js');
+          regenerateArticlesJSON().then(() => {
+            console.log('Articles.json regenerated successfully');
+          }).catch(err => {
+            console.error('Error regenerating articles.json:', err);
+            process.exit(1);
+          });
+          "
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add articles.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update articles.json" && git push)
+      
+      - name: Send webhook notification
+        if: success()
+        run: |
+          if [ -n "${{ secrets.WEBHOOK_URL }}" ]; then
+            curl -X POST -H "Content-Type: application/json" \
+            -d '{"event":"articles_updated"}' \
+            ${{ secrets.WEBHOOK_URL }}
+          fi
