@@ -179,7 +179,7 @@
 .headlines-sidebar {
     grid-column: span 2;
     position: sticky;
-    top: 120px;
+    top: 0;
     height: fit-content;
     max-height: calc(100vh - 140px);
     overflow-y: auto;

@@ -1,0 +1,40 @@
+name: Expire Trending Articles
+
+on:
+  schedule:
+    # Run every day at midnight UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  expire-trending:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Run expire-trending script
+        run: node expire-trending.js
+      
+      - name: Regenerate articles.json
+        run: node watch-articles.js || node -e "require('./watch-articles.js').regenerateArticlesJSON()"
+      
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add articles/*.html articles.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-expire trending articles older than 3 days" && git push)

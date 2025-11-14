@@ -1,0 +1,4 @@
+{
+  "trendingTimeLimit": 3,
+  "description": "Configuration for the mynews website. trendingTimeLimit is in days."
+}

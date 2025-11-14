@@ -30,11 +30,14 @@ Include relevant keyword/topic text
 Proper aspect ratio for intended use
 3. YouTube and Video Verification
 For any video URL in bundle:
-Confirm the video ID is valid and playable
-Extract ID from: https://www.youtube.com/watch?v=VIDEO_ID or https://youtu.be/VIDEO_ID
-Store the full URL in the videoUrl field
-Set isVideo: true when a verified video exists
-Use thumbnail: https://img.youtube.com/vi/[VIDEO_ID]/maxresdefault.jpg
+✅ MANDATORY: Extract video ID from URL patterns:
+   - https://www.youtube.com/watch?v=VIDEO_ID
+   - https://youtu.be/VIDEO_ID
+   - https://www.youtube.com/embed/VIDEO_ID
+✅ MANDATORY: Store the FULL YouTube URL in the videoUrl field (not just the ID)
+✅ MANDATORY: Set isVideo: true when a verified video exists
+✅ MANDATORY: Use YouTube thumbnail: https://img.youtube.com/vi/[VIDEO_ID]/maxresdefault.jpg
+✅ MANDATORY: Embed videos using the exact format below (see Video embeds section)
 For MP4/WebM: confirm link serves a valid media file
 
 CONTENT WRITING REQUIREMENTS
@@ -100,11 +103,25 @@ All images must have inline styles:
  style="max-width: 100%; height: auto; display: block;"
 
 
-Video embeds must use a responsive wrapper:
+✅ MANDATORY: Video embeds MUST use this exact responsive wrapper format:
 
- <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/VIDEO_ID" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+<div class="magazine-image-block">
+  <div class="magazine-image-container" style="height: auto; background: #000;">
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID" 
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen 
+              title="[Descriptive Video Title]">
+      </iframe>
+    </div>
+  </div>
+  <div class="magazine-caption">[Video description and relevance to article]</div>
 </div>
+
+⚠️ CRITICAL: Replace VIDEO_ID with the actual YouTube video ID (e.g., dQw4w9WgXcQ)
+⚠️ CRITICAL: Always include the magazine-image-block wrapper for proper styling
 
 
 Use ONLY magazine- prefixed classes from template

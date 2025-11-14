@@ -9,7 +9,8 @@
     "validate": "node validate-urls.js",
     "validate-html": "node validate-html.js",
     "test": "node test-workflow.js",
-    "build": "npm run extract && npm run validate-html"
+    "build": "npm run extract && npm run validate-html",
+    "expire-trending": "node expire-trending.js"
   },
   "keywords": ["news", "articles", "html-generator"],
   "author": "",

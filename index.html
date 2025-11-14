@@ -84,6 +84,11 @@
                 </div>
             </section>
 
+            <!-- NEW: Row of 4 Article Cards Below Hero -->
+            <section class="article-cards-row" id="articleCardsRow" style="display: none;">
+                <!-- Will be populated with 4 article cards -->
+            </section>
+
             <!-- NEW REQUIREMENT #5 & #6: Tab Filtered View (shown when tab is clicked) -->
             <div class="tab-filtered-view" id="tabFilteredView" style="display: none;">
                 <h2 class="tab-filtered-title" id="tabFilteredTitle"></h2>
@@ -138,6 +143,11 @@
                 <div class="loading">Loading...</div>
             </div>
         </aside>
+    </div>
+
+    <!-- Full Width Section After Sidebar -->
+    <div class="full-width-section" id="fullWidthSection" style="display: none;">
+        <!-- Additional content can go here -->
     </div>
 
     <!-- Article Modal -->
@@ -246,18 +256,35 @@
         }
     }
 
-    function openModal(articleId) {
+    async function openModal(articleId) {
         const article = articlesData.find(a => a.id === articleId);
         if (!article) return;
 
-        // If article has a filename, open the HTML file directly
-        if (article.filename) {
-            window.open(`./articles/${article.filename}`, '_blank');
-            return;
-        }
-
         const modal = document.getElementById('articleModal');
         const modalContent = document.getElementById('modalContentArea');
+        
+        // If article has a filename, load it inline instead of opening in new tab
+        if (article.filename) {
+            try {
+                const response = await fetch(`./articles/${article.filename}`);
+                if (response.ok) {
+                    const html = await response.text();
+                    // Extract the article content from the fetched HTML
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = html;
+                    const articleContainer = tempDiv.querySelector('.article-container') || tempDiv.querySelector('.article-content');
+                    if (articleContainer) {
+                        modalContent.innerHTML = articleContainer.innerHTML;
+                    } else {
+                        modalContent.innerHTML = html;
+                    }
+                    modal.classList.add('active');
+                    return;
+                }
+            } catch (error) {
+                console.error('Error loading article:', error);
+            }
+        }
 
         let badges = '';
         if (article.isTrending) badges += '<span class="badge badge-trending">🔥 Trending</span>';
@@ -331,6 +358,55 @@
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeModal();
         });
+        
+        // Setup horizontal scrolling for menu
+        setupMenuScrolling();
+    }
+    
+    function setupMenuScrolling() {
+        const navContainer = document.querySelector('#desktopNav .nav-container');
+        const categoryMenu = document.getElementById('categoryMenu');
+        
+        if (!navContainer || !categoryMenu) return;
+        
+        // Middle mouse button scrolling
+        navContainer.addEventListener('wheel', function(e) {
+            if (e.deltaY !== 0) {
+                e.preventDefault();
+                categoryMenu.scrollLeft += e.deltaY;
+            }
+        }, { passive: false });
+        
+        // Click and drag scrolling
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        
+        categoryMenu.addEventListener('mousedown', function(e) {
+            isDown = true;
+            categoryMenu.style.cursor = 'grabbing';
+            categoryMenu.style.userSelect = 'none';
+            startX = e.pageX - categoryMenu.offsetLeft;
+            scrollLeft = categoryMenu.scrollLeft;
+        });
+        
+        categoryMenu.addEventListener('mouseleave', function() {
+            isDown = false;
+            categoryMenu.style.cursor = 'grab';
+        });
+        
+        categoryMenu.addEventListener('mouseup', function() {
+            isDown = false;
+            categoryMenu.style.cursor = 'grab';
+        });
+        
+        categoryMenu.addEventListener('mousemove', function(e) {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - categoryMenu.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll speed
+            categoryMenu.scrollLeft = scrollLeft - walk;
+        });
     }
 
     async function loadNewsData() {
@@ -377,8 +453,16 @@
                 console.log('Note: articles.json not loaded or error:', articlesError.message);
             }
             
+            // Sort articles by date (newest first)
+            articlesData.sort((a, b) => {
+                const dateA = new Date(a.publishDate || '1970-01-01');
+                const dateB = new Date(b.publishDate || '1970-01-01');
+                return dateB - dateA; // Descending order (newest first)
+            });
+            
             renderCategories();
             renderHeroSection();
+            renderArticleCardsRow();
             renderSpecializedSections();
             renderArticles();
             renderHeadlines();
@@ -526,6 +610,49 @@
         if (trendingArticles.length > 1) {
             startCarousel();
         }
+    }
+    
+    // NEW: Render 4 article cards below hero section
+    function renderArticleCardsRow() {
+        if (currentFilter !== 'all') {
+            document.getElementById('articleCardsRow').style.display = 'none';
+            return;
+        }
+        
+        document.getElementById('articleCardsRow').style.display = 'grid';
+        const cardsRow = document.getElementById('articleCardsRow');
+        cardsRow.innerHTML = '';
+        
+        // Get the next 4 articles after trending and hero left articles
+        const usedArticles = [
+            ...articlesData.filter(a => a.isTrending).map(a => a.id),
+            ...articlesData.filter(a => !a.isTrending).slice(0, 2).map(a => a.id)
+        ];
+        
+        const cardsToShow = articlesData
+            .filter(a => !usedArticles.includes(a.id))
+            .slice(0, 4);
+        
+        cardsToShow.forEach(article => {
+            const card = document.createElement('div');
+            card.className = 'article-card-simple';
+            card.onclick = () => openModal(article.id);
+            
+            card.innerHTML = `
+                <img src="${article.thumbnailImage}" alt="${article.title}" loading="lazy">
+                <div class="card-content">
+                    <div class="card-category">${article.category}</div>
+                    <h3 class="card-title">${article.title}</h3>
+                    <p class="card-excerpt">${article.excerpt || ''}</p>
+                    <div class="card-meta">
+                        <span>${article.author}</span>
+                        <span>${article.publishDate}</span>
+                    </div>
+                </div>
+            `;
+            
+            cardsRow.appendChild(card);
+        });
     }
 
     function changeSlide(direction) {
@@ -873,17 +1000,20 @@
         if (category === 'all') {
             // Show regular homepage layout
             document.getElementById('heroSection').style.display = 'grid';
+            document.getElementById('articleCardsRow').style.display = 'grid';
             document.getElementById('gridRowFirst').style.display = 'grid';
             document.getElementById('gridRowAnime').style.display = 'block';
             document.getElementById('articleGrid').style.display = 'grid';
             document.getElementById('tabFilteredView').style.display = 'none';
             
             renderHeroSection();
+            renderArticleCardsRow();
             renderSpecializedSections();
             renderArticles();
         } else {
             // Hide all default sections and show ONLY the filtered tab view
             document.getElementById('heroSection').style.display = 'none';
+            document.getElementById('articleCardsRow').style.display = 'none';
             document.getElementById('gridRowFirst').style.display = 'none';
             document.getElementById('gridRowAnime').style.display = 'none';
             document.getElementById('articleGrid').style.display = 'none';
@@ -1114,12 +1244,14 @@
           
           renderCategories();
           renderHeroSection();
+          renderArticleCardsRow();
           renderSpecializedSections();
           renderArticles();
           renderHeadlines();
           
           // Hide tab filtered view
           document.getElementById('tabFilteredView').style.display = 'none';
+          document.getElementById('articleCardsRow').style.display = 'grid';
           document.getElementById('heroSection').style.display = 'grid';
           document.getElementById('gridRowFirst').style.display = 'grid';
           document.getElementById('gridRowAnime').style.display = 'block';
