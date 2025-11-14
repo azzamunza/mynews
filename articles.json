@@ -52,6 +52,23 @@
       "isJob": false
     },
     {
+      "id": "headsets-tech-lynx-fov-20251114",
+      "title": "Lynx's New Headset Won't Run Android XR, But Will Have Widest Standalone FOV",
+      "filename": "Lynx s New Headset Won t Run Android XR  But Will Have Widest Standalone FOV - NewsHub.html",
+      "category": "Headsets & Tech",
+      "author": "David Heaney",
+      "publishDate": "Nov 14, 2025",
+      "readTime": "1",
+      "excerpt": "French startup Lynx has revealed its upcoming headset will not run Google’s Android XR operating system due to a terminated agreement. Instead, the devic",
+      "thumbnailImage": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%230052D4;stop-opacity:1'/><stop offset='100%' style='stop-color:%2365C7F7;stop-opacity:1'/></linearGradient></defs><rect width='1200' height='800' fill='url(%23g)'/><text x='50%' y='50%' font-family='Arial,sans-serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle' dy='.3em'>LYNX HEADSET</text></svg>",
+      "bannerImage": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%230052D4;stop-opacity:1'/><stop offset='100%' style='stop-color:%2365C7F7;stop-opacity:1'/></linearGradient></defs><rect width='1200' height='800' fill='url(%23g)'/><text x='50%' y='50%' font-family='Arial,sans-serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle' dy='.3em'>LYNX HEADSET</text></svg>",
+      "sourceUrl": "https://www.uploadvr.com/lynxs-new-headset-wont-run-android-xr-but-will-have-widest-standalone-fov/",
+      "isTrending": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false
+    },
+    {
       "id": "national-cyclone-risk-20251114",
       "title": "Australia's first tropical cyclone of the season could form next week",
       "filename": "Australia s first tropical cyclone of the season could form next week - NewsHub.html",
@@ -81,6 +98,23 @@
       "bannerImage": "https://duet-cdn.vox-cdn.com/thumbor/0x0:1020x680/1200x800/filters:focal(510x340:511x341):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/24222045/STK093_04.jpg",
       "sourceUrl": "https://www.theverge.com/2025/11/13/24222035/openai-custom-gpts-store-release-date",
       "isTrending": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false
+    },
+    {
+      "id": "games-dune-awakening-20251114",
+      "title": "Dune: Awakening sees player count drop below Funcom's 2017 survival game",
+      "filename": "Dune  Awakening sees player count drop below Funcom s 2017 survival game - NewsHub.html",
+      "category": "Games",
+      "author": "GamesRadar",
+      "publishDate": "Nov 10, 2025",
+      "readTime": "1",
+      "excerpt": "Just five months after its high-profile launch, the survival MMO Dune: Awakening is seeing its player count on Steam fall behind Funcom’s older title, Co",
+      "thumbnailImage": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%232c3e50;stop-opacity:1'/><stop offset='100%' style='stop-color:%233498db;stop-opacity:1'/></linearGradient></defs><rect width='1200' height='800' fill='url(%23g)'/><text x='50%' y='50%' font-family='Arial,sans-serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle' dy='.3em'>Dune: Awakening</text></svg>",
+      "bannerImage": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%232c3e50;stop-opacity:1'/><stop offset='100%' style='stop-color:%233498db;stop-opacity:1'/></linearGradient></defs><rect width='1200' height='800' fill='url(%23g)'/><text x='50%' y='50%' font-family='Arial,sans-serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle' dy='.3em'>Dune: Awakening</text></svg>",
+      "sourceUrl": "https://www.gamesradar.com/games/survival/just-5-months-after-launch-mmo-dune-awakening-sees-its-steam-player-count-drop-below-that-of-funcoms-2017-survival-game-as-it-struggles-with-mixed-reviews/",
+      "isTrending": false,
       "isVideo": false,
       "videoUrl": "",
       "isJob": false
