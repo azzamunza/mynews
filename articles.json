@@ -137,6 +137,23 @@
       "isJob": false
     },
     {
+      "id": "science-cellular-aging-20251114",
+      "title": "Unveiling the secrets of cellular aging",
+      "filename": "Unveiling the secrets of cellular aging - NewsHub.html",
+      "category": "Science",
+      "author": "John Doe",
+      "publishDate": "Nov 13, 2025",
+      "readTime": "1",
+      "excerpt": "Researchers have identified a critical molecular pathway that regulates the lifespan of cells, a discovery that could lead to new anti-ageing therapies.",
+      "thumbnailImage": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%234300A8;stop-opacity:1'/><stop offset='100%' style='stop-color:%236A0DAD;stop-opacity:1'/></linearGradient></defs><rect width='1200' height='800' fill='url(%23g)'/><text x='50%' y='50%' font-family='Arial,sans-serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle' dy='.3em'>Cellular Ageing</text></svg>",
+      "bannerImage": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%234300A8;stop-opacity:1'/><stop offset='100%' style='stop-color:%236A0DAD;stop-opacity:1'/></linearGradient></defs><rect width='1200' height='800' fill='url(%23g)'/><text x='50%' y='50%' font-family='Arial,sans-serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle' dy='.3em'>Cellular Ageing</text></svg>",
+      "sourceUrl": "https://www.sciencedaily.com/releases/2025/11/251113071604.htm",
+      "isTrending": true,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false
+    },
+    {
       "id": "wearables-smart-glasses-20251114",
       "title": "I wear smart glasses every day. These are the 4 models that have my attention",
       "filename": "I wear smart glasses every day. These are the 4 models that have my attention - NewsHub.html",
