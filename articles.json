@@ -120,6 +120,23 @@
       "isJob": false
     },
     {
+      "id": "health-awe-stress-20251114",
+      "title": "Awe-inspiring moments can make you feel less stressed and more connected",
+      "filename": "Awe-inspiring moments can make you feel less stressed and more connected - NewsHub.html",
+      "category": "Health",
+      "author": "University of California, Irvine",
+      "publishDate": "Nov 09, 2025",
+      "readTime": "2",
+      "excerpt": "A new study from the University of California, Irvine, reveals that experiencing moments of awe can have significant benefits for mental well-being.",
+      "thumbnailImage": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%2310B981;stop-opacity:1'/><stop offset='100%' style='stop-color:%23059669;stop-opacity:1'/></linearGradient></defs><rect width='1200' height='800' fill='url(%23g)'/><text x='50%' y='50%' font-family='Arial,sans-serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle' dy='.3em'>AWE</text></svg>",
+      "bannerImage": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%2310B981;stop-opacity:1'/><stop offset='100%' style='stop-color:%23059669;stop-opacity:1'/></linearGradient></defs><rect width='1200' height='800' fill='url(%23g)'/><text x='50%' y='50%' font-family='Arial,sans-serif' font-size='48' font-weight='bold' fill='white' text-anchor='middle' dy='.3em'>AWE</text></svg>",
+      "sourceUrl": "https://www.sciencedaily.com/releases/2025/11/251109013254.htm",
+      "isTrending": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false
+    },
+    {
       "id": "science-nasa-shutdown-20251103",
       "title": "NASA is sinking its flagship science center during the government shutdown",
       "filename": "nasa-is-sinking-its-flagship-science-center-during-the-government-shutdown.html",
