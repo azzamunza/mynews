@@ -1,0 +1,50 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Generation Error - NewsHub</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .error-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 5px solid #d9534f;
+            text-align: center;
+        }
+        h1 {
+            color: #d9534f;
+            font-size: 24px;
+        }
+        p {
+            font-size: 16px;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>Article Generation Failed</h1>
+        <p>The system could not generate the article because the input was invalid.</p>
+        <p><strong>Reason:</strong> The <code>newArticles</code> array in the provided data bundle was empty. No article object was available to process.</p>
+        <p>Please provide a valid article bundle to proceed.</p>
+    </div>
+</body>
+</html>
+```
