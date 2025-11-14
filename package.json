@@ -1,0 +1,22 @@
+{
+  "name": "mynews-article-extractor",
+  "version": "1.0.0",
+  "description": "Extract articles from news-data.json and generate HTML files",
+  "main": "extract-articles.js",
+  "scripts": {
+    "extract": "node extract-articles.js",
+    "watch": "node watch-articles.js",
+    "validate": "node validate-urls.js",
+    "validate-html": "node validate-html.js",
+    "test": "node test-workflow.js",
+    "build": "npm run extract && npm run validate-html"
+  },
+  "keywords": ["news", "articles", "html-generator"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "node-fetch": "^2.7.0",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}
