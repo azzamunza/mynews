@@ -250,6 +250,12 @@
         const article = articlesData.find(a => a.id === articleId);
         if (!article) return;
 
+        // If article has a filename, open the HTML file directly
+        if (article.filename) {
+            window.open(`./articles/${article.filename}`, '_blank');
+            return;
+        }
+
         const modal = document.getElementById('articleModal');
         const modalContent = document.getElementById('modalContentArea');
 
@@ -343,6 +349,33 @@
             videosData = data.videos || [];
             makeWebhook = data.makeWebhook || '';
             authToken = data.authToken || '';
+            
+            // Try to load and merge articles from articles.json
+            try {
+                const articlesResponse = await fetch('articles.json');
+                if (articlesResponse.ok) {
+                    const articlesJsonData = await articlesResponse.json();
+                    if (articlesJsonData.articles && Array.isArray(articlesJsonData.articles)) {
+                        // Merge articles, preferring articles.json entries (they have filename property)
+                        const articleMap = new Map();
+                        
+                        // Add articles from news-data.json
+                        articlesData.forEach(article => articleMap.set(article.id, article));
+                        
+                        // Override/add articles from articles.json
+                        articlesJsonData.articles.forEach(article => {
+                            if (article.id) {
+                                articleMap.set(article.id, { ...articleMap.get(article.id), ...article });
+                            }
+                        });
+                        
+                        articlesData = Array.from(articleMap.values());
+                        console.log(`✓ Merged ${articlesJsonData.articles.length} articles from articles.json`);
+                    }
+                }
+            } catch (articlesError) {
+                console.log('Note: articles.json not loaded or error:', articlesError.message);
+            }
             
             renderCategories();
             renderHeroSection();

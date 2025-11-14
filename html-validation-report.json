@@ -1,0 +1,746 @@
+{
+  "timestamp": "2025-11-14T03:44:53.455Z",
+  "summary": {
+    "totalArticles": 32,
+    "validArticles": 32,
+    "articlesWithIssues": 0
+  },
+  "details": [
+    {
+      "filename": "ai-agents-are-terrible-freelance-workers.html",
+      "valid": true,
+      "structure": {
+        "filename": "ai-agents-are-terrible-freelance-workers.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 4,
+          "links": 2,
+          "iframes": 1,
+          "videos": 1,
+          "inlineStyles": 9,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "ai-agents-are-terrible-freelance-workers.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "anti-social-cosmic-explosion-could-change-the-way-we-think-about-dying-stars.html",
+      "valid": true,
+      "structure": {
+        "filename": "anti-social-cosmic-explosion-could-change-the-way-we-think-about-dying-stars.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 5,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 7,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "anti-social-cosmic-explosion-could-change-the-way-we-think-about-dying-stars.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "black-holes-are-encircled-by-thin-rings-of-light-this-physicist-wants-to-see-one.html",
+      "valid": true,
+      "structure": {
+        "filename": "black-holes-are-encircled-by-thin-rings-of-light-this-physicist-wants-to-see-one.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 5,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 7,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "black-holes-are-encircled-by-thin-rings-of-light-this-physicist-wants-to-see-one.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "comet-3i-atlas-could-soon-shower-nasa-s-jupiter-probe-in-charged-particles.html",
+      "valid": true,
+      "structure": {
+        "filename": "comet-3i-atlas-could-soon-shower-nasa-s-jupiter-probe-in-charged-particles.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 3,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 2,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "comet-3i-atlas-could-soon-shower-nasa-s-jupiter-probe-in-charged-particles.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": false
+      }
+    },
+    {
+      "filename": "composite-bow-revealed-as-deadliest-weapon-of-the-bronze-age.html",
+      "valid": true,
+      "structure": {
+        "filename": "composite-bow-revealed-as-deadliest-weapon-of-the-bronze-age.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 5,
+          "links": 2,
+          "iframes": 1,
+          "videos": 1,
+          "inlineStyles": 10,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "composite-bow-revealed-as-deadliest-weapon-of-the-bronze-age.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "four-aussies-score-a-life-changing-slice-of-the-saturday-lotto-draw.html",
+      "valid": true,
+      "structure": {
+        "filename": "four-aussies-score-a-life-changing-slice-of-the-saturday-lotto-draw.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 2,
+          "links": 3,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 9,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "four-aussies-score-a-life-changing-slice-of-the-saturday-lotto-draw.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": false
+      }
+    },
+    {
+      "filename": "how-ai-can-improve-storm-surge-forecasts-to-help-save-lives.html",
+      "valid": true,
+      "structure": {
+        "filename": "how-ai-can-improve-storm-surge-forecasts-to-help-save-lives.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 3,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 2,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "how-ai-can-improve-storm-surge-forecasts-to-help-save-lives.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": false
+      }
+    },
+    {
+      "filename": "how-compact-can-a-neutron-star-get-before-collapsing-into-a-black-hole.html",
+      "valid": true,
+      "structure": {
+        "filename": "how-compact-can-a-neutron-star-get-before-collapsing-into-a-black-hole.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 3,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 2,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "how-compact-can-a-neutron-star-get-before-collapsing-into-a-black-hole.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": false
+      }
+    },
+    {
+      "filename": "how-nvidia-is-bringing-physical-ai-to-its-industrial-customers.html",
+      "valid": true,
+      "structure": {
+        "filename": "how-nvidia-is-bringing-physical-ai-to-its-industrial-customers.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 5,
+          "links": 2,
+          "iframes": 1,
+          "videos": 1,
+          "inlineStyles": 10,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "how-nvidia-is-bringing-physical-ai-to-its-industrial-customers.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "maya-queen-who-ruled-cob-identified-as-ix-ch-ak-ch-een.html",
+      "valid": true,
+      "structure": {
+        "filename": "maya-queen-who-ruled-cob-identified-as-ix-ch-ak-ch-een.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 3,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 4,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "maya-queen-who-ruled-cob-identified-as-ix-ch-ak-ch-een.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": false
+      }
+    },
+    {
+      "filename": "meta-google-and-microsoft-triple-down-on-ai-spending.html",
+      "valid": true,
+      "structure": {
+        "filename": "meta-google-and-microsoft-triple-down-on-ai-spending.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 4,
+          "links": 2,
+          "iframes": 1,
+          "videos": 1,
+          "inlineStyles": 8,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "meta-google-and-microsoft-triple-down-on-ai-spending.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "mystery-of-the-green-mummy-solved-after-four-decades.html",
+      "valid": true,
+      "structure": {
+        "filename": "mystery-of-the-green-mummy-solved-after-four-decades.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 5,
+          "links": 2,
+          "iframes": 1,
+          "videos": 1,
+          "inlineStyles": 10,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "mystery-of-the-green-mummy-solved-after-four-decades.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "nasa-is-sinking-its-flagship-science-center-during-the-government-shutdown.html",
+      "valid": true,
+      "structure": {
+        "filename": "nasa-is-sinking-its-flagship-science-center-during-the-government-shutdown.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 5,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 7,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "nasa-is-sinking-its-flagship-science-center-during-the-government-shutdown.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "new-laser-drill-could-help-scientists-explore-ice-covered-worlds-like-europa.html",
+      "valid": true,
+      "structure": {
+        "filename": "new-laser-drill-could-help-scientists-explore-ice-covered-worlds-like-europa.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 5,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 7,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "new-laser-drill-could-help-scientists-explore-ice-covered-worlds-like-europa.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "no-spacecraft-would-survive-europe-simulates-catastrophic-solar-storm.html",
+      "valid": true,
+      "structure": {
+        "filename": "no-spacecraft-would-survive-europe-simulates-catastrophic-solar-storm.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 3,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 2,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "no-spacecraft-would-survive-europe-simulates-catastrophic-solar-storm.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": false
+      }
+    },
+    {
+      "filename": "northern-lights-may-be-visible-in-10-us-states-oct-29.html",
+      "valid": true,
+      "structure": {
+        "filename": "northern-lights-may-be-visible-in-10-us-states-oct-29.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 5,
+          "links": 2,
+          "iframes": 1,
+          "videos": 1,
+          "inlineStyles": 10,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "northern-lights-may-be-visible-in-10-us-states-oct-29.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "nvidia-becomes-first-public-company-worth-5-trillion.html",
+      "valid": true,
+      "structure": {
+        "filename": "nvidia-becomes-first-public-company-worth-5-trillion.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 5,
+          "links": 2,
+          "iframes": 1,
+          "videos": 1,
+          "inlineStyles": 10,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "nvidia-becomes-first-public-company-worth-5-trillion.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "nvidia-expands-ai-ties-with-hyundai-samsung-sk-naver.html",
+      "valid": true,
+      "structure": {
+        "filename": "nvidia-expands-ai-ties-with-hyundai-samsung-sk-naver.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 4,
+          "links": 2,
+          "iframes": 1,
+          "videos": 1,
+          "inlineStyles": 9,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "nvidia-expands-ai-ties-with-hyundai-samsung-sk-naver.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "on-this-day-in-space-oct-22-1992-gene-roddenberry-s-ashes-in-space.html",
+      "valid": true,
+      "structure": {
+        "filename": "on-this-day-in-space-oct-22-1992-gene-roddenberry-s-ashes-in-space.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 3,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 4,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "on-this-day-in-space-oct-22-1992-gene-roddenberry-s-ashes-in-space.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": false
+      }
+    },
+    {
+      "filename": "openai-signs-38-billion-deal-with-amazon.html",
+      "valid": true,
+      "structure": {
+        "filename": "openai-signs-38-billion-deal-with-amazon.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 5,
+          "links": 2,
+          "iframes": 1,
+          "videos": 1,
+          "inlineStyles": 10,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "openai-signs-38-billion-deal-with-amazon.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "quantum-echoes-reveal-google-s-quantum-computer-potential.html",
+      "valid": true,
+      "structure": {
+        "filename": "quantum-echoes-reveal-google-s-quantum-computer-potential.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 2,
+          "links": 3,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 9,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "quantum-echoes-reveal-google-s-quantum-computer-potential.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": false
+      }
+    },
+    {
+      "filename": "radical-rethink-on-poverty-point-claims-it-was-a-ritual-gathering-site.html",
+      "valid": true,
+      "structure": {
+        "filename": "radical-rethink-on-poverty-point-claims-it-was-a-ritual-gathering-site.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 4,
+          "links": 2,
+          "iframes": 1,
+          "videos": 1,
+          "inlineStyles": 9,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "radical-rethink-on-poverty-point-claims-it-was-a-ritual-gathering-site.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "real-estate-is-entering-its-ai-slop-era.html",
+      "valid": true,
+      "structure": {
+        "filename": "real-estate-is-entering-its-ai-slop-era.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 3,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 2,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "real-estate-is-entering-its-ai-slop-era.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": false
+      }
+    },
+    {
+      "filename": "revolutionary-steel-pod-could-enable-ocean-floor-living.html",
+      "valid": true,
+      "structure": {
+        "filename": "revolutionary-steel-pod-could-enable-ocean-floor-living.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 5,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 7,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "revolutionary-steel-pod-could-enable-ocean-floor-living.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "space-radiation-can-produce-some-organic-molecules-on-icy-moons.html",
+      "valid": true,
+      "structure": {
+        "filename": "space-radiation-can-produce-some-organic-molecules-on-icy-moons.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 2,
+          "links": 3,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 9,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "space-radiation-can-produce-some-organic-molecules-on-icy-moons.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": false
+      }
+    },
+    {
+      "filename": "starlink-satellites-facts-tracking-and-impact-on-astronomy.html",
+      "valid": true,
+      "structure": {
+        "filename": "starlink-satellites-facts-tracking-and-impact-on-astronomy.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 5,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 7,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "starlink-satellites-facts-tracking-and-impact-on-astronomy.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "the-10-martini-proof-connects-quantum-mechanics-with-infinitely-intricate-mathematical-structures.html",
+      "valid": true,
+      "structure": {
+        "filename": "the-10-martini-proof-connects-quantum-mechanics-with-infinitely-intricate-mathematical-structures.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 5,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 7,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "the-10-martini-proof-connects-quantum-mechanics-with-infinitely-intricate-mathematical-structures.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "the-glaring-security-risks-with-ai-browser-agents.html",
+      "valid": true,
+      "structure": {
+        "filename": "the-glaring-security-risks-with-ai-browser-agents.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 3,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 4,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "the-glaring-security-risks-with-ai-browser-agents.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": false
+      }
+    },
+    {
+      "filename": "tutankhamun-s-tomb-faces-collapse-risk-experts-warn.html",
+      "valid": true,
+      "structure": {
+        "filename": "tutankhamun-s-tomb-faces-collapse-risk-experts-warn.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 3,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 4,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "tutankhamun-s-tomb-faces-collapse-risk-experts-warn.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": false
+      }
+    },
+    {
+      "filename": "vention-announces-full-stack-ai-and-automation-platform-expansions.html",
+      "valid": true,
+      "structure": {
+        "filename": "vention-announces-full-stack-ai-and-automation-platform-expansions.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 5,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 7,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "vention-announces-full-stack-ai-and-automation-platform-expansions.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": true
+      }
+    },
+    {
+      "filename": "virtual-particles-how-physicists-clever-bookkeeping-trick-could-underlie-reality.html",
+      "valid": true,
+      "structure": {
+        "filename": "virtual-particles-how-physicists-clever-bookkeeping-trick-could-underlie-reality.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 3,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 4,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "virtual-particles-how-physicists-clever-bookkeeping-trick-could-underlie-reality.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": false
+      }
+    },
+    {
+      "filename": "watch-comets-lemmon-and-swan-make-their-closest-approach-to-earth.html",
+      "valid": true,
+      "structure": {
+        "filename": "watch-comets-lemmon-and-swan-make-their-closest-approach-to-earth.html",
+        "valid": true,
+        "issues": [],
+        "stats": {
+          "images": 3,
+          "links": 2,
+          "iframes": 0,
+          "videos": 0,
+          "inlineStyles": 2,
+          "tableCount": 0
+        }
+      },
+      "compatibility": {
+        "filename": "watch-comets-lemmon-and-swan-make-their-closest-approach-to-earth.html",
+        "compatible": true,
+        "issues": [],
+        "hasMagazineLayout": false
+      }
+    }
+  ]
+}

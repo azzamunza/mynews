@@ -6,7 +6,9 @@
   "scripts": {
     "extract": "node extract-articles.js",
     "watch": "node watch-articles.js",
-    "validate": "node validate-urls.js"
+    "validate": "node validate-urls.js",
+    "validate-html": "node validate-html.js",
+    "test": "npm run extract && npm run validate-html"
   },
   "keywords": ["news", "articles", "html-generator"],
   "author": "",
