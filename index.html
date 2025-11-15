@@ -1284,9 +1284,28 @@
     // Bionic Reader functionality
     async function loadBionicConfig() {
         try {
-            const response = await fetch('config.json');
-            if (response.ok) {
-                const config = await response.json();
+            let config;
+            
+            // First check localStorage for pending config changes
+            const localConfig = localStorage.getItem('mynews_config_pending');
+            if (localConfig) {
+                try {
+                    config = JSON.parse(localConfig);
+                    console.log('Using config from localStorage (pending GitHub update)');
+                } catch (e) {
+                    console.warn('Invalid local config, falling back to server');
+                }
+            }
+            
+            // If no local config, fetch from server
+            if (!config) {
+                const response = await fetch('config.json?t=' + Date.now());
+                if (response.ok) {
+                    config = await response.json();
+                }
+            }
+            
+            if (config) {
                 bionicConfig = config.bionicReader || {
                     enabled: false,
                     fixationStrength: 50,

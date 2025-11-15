@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Config Integration Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .test-section h2 {
+            margin-top: 0;
+        }
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .error {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Config Integration Test</h1>
+    <p>This page tests the localStorage config functionality.</p>
+
+    <div class="test-section">
+        <h2>Test 1: Check localStorage Config</h2>
+        <button onclick="testLocalStorage()">Test LocalStorage</button>
+        <div id="localStorage-result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 2: Load Config (with localStorage priority)</h2>
+        <button onclick="testLoadConfig()">Load Config</button>
+        <div id="load-result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 3: Save Mock Config to localStorage</h2>
+        <button onclick="saveMockConfig()">Save Mock Config</button>
+        <button onclick="clearMockConfig()">Clear Mock Config</button>
+        <div id="mock-result"></div>
+    </div>
+
+    <div class="test-section">
+        <h2>Test 4: Verify Config Priority</h2>
+        <p>This test verifies that localStorage config takes priority over server config.</p>
+        <button onclick="testConfigPriority()">Test Priority</button>
+        <div id="priority-result"></div>
+    </div>
+
+    <script>
+        function testLocalStorage() {
+            const result = document.getElementById('localStorage-result');
+            const localConfig = localStorage.getItem('mynews_config_pending');
+            
+            if (localConfig) {
+                try {
+                    const config = JSON.parse(localConfig);
+                    result.innerHTML = `<p class="success">✓ Found config in localStorage:</p><pre>${JSON.stringify(config, null, 2)}</pre>`;
+                } catch (e) {
+                    result.innerHTML = `<p class="error">✗ Found config but invalid JSON: ${e.message}</p>`;
+                }
+            } else {
+                result.innerHTML = `<p>No config found in localStorage. This is normal if you haven't saved any changes yet.</p>`;
+            }
+        }
+
+        async function testLoadConfig() {
+            const result = document.getElementById('load-result');
+            result.innerHTML = '<p>Loading...</p>';
+            
+            try {
+                let config;
+                const localConfig = localStorage.getItem('mynews_config_pending');
+                
+                if (localConfig) {
+                    config = JSON.parse(localConfig);
+                    result.innerHTML = `<p class="success">✓ Loaded from localStorage:</p><pre>${JSON.stringify(config, null, 2)}</pre>`;
+                } else {
+                    const response = await fetch('config.json?t=' + Date.now());
+                    if (response.ok) {
+                        config = await response.json();
+                        result.innerHTML = `<p class="success">✓ Loaded from server:</p><pre>${JSON.stringify(config, null, 2)}</pre>`;
+                    } else {
+                        throw new Error('Failed to load config.json');
+                    }
+                }
+            } catch (error) {
+                result.innerHTML = `<p class="error">✗ Error: ${error.message}</p>`;
+            }
+        }
+
+        function saveMockConfig() {
+            const result = document.getElementById('mock-result');
+            const mockConfig = {
+                trendingTimeLimit: 5,
+                description: "Mock configuration for testing localStorage priority",
+                bionicReader: {
+                    enabled: true,
+                    fixationStrength: 60,
+                    boldFont: "inherit",
+                    boldColor: "#ff0000",
+                    boldWeight: "700",
+                    regularFont: "inherit",
+                    regularColor: "#999999",
+                    regularOpacity: 80,
+                    fontSize: "1.1em",
+                    lineHeight: "1.8"
+                }
+            };
+            
+            localStorage.setItem('mynews_config_pending', JSON.stringify(mockConfig, null, 2));
+            result.innerHTML = `<p class="success">✓ Mock config saved to localStorage!</p><pre>${JSON.stringify(mockConfig, null, 2)}</pre>`;
+        }
+
+        function clearMockConfig() {
+            const result = document.getElementById('mock-result');
+            localStorage.removeItem('mynews_config_pending');
+            result.innerHTML = `<p class="success">✓ Mock config cleared from localStorage!</p>`;
+        }
+
+        async function testConfigPriority() {
+            const result = document.getElementById('priority-result');
+            result.innerHTML = '<p>Testing...</p>';
+            
+            try {
+                // First, get server config
+                const serverResponse = await fetch('config.json?t=' + Date.now());
+                const serverConfig = await serverResponse.json();
+                
+                // Check localStorage
+                const localConfig = localStorage.getItem('mynews_config_pending');
+                
+                if (localConfig) {
+                    const parsedLocalConfig = JSON.parse(localConfig);
+                    
+                    // Compare trendingTimeLimit
+                    const serverLimit = serverConfig.trendingTimeLimit;
+                    const localLimit = parsedLocalConfig.trendingTimeLimit;
+                    
+                    result.innerHTML = `
+                        <p class="success">✓ Priority test complete:</p>
+                        <p><strong>Server config trendingTimeLimit:</strong> ${serverLimit}</p>
+                        <p><strong>LocalStorage config trendingTimeLimit:</strong> ${localLimit}</p>
+                        <p><strong>Priority:</strong> localStorage should take precedence!</p>
+                        <p>When you visit index.html or config.html, the value ${localLimit} should be used.</p>
+                    `;
+                } else {
+                    result.innerHTML = `
+                        <p>No localStorage config found. Using server config:</p>
+                        <pre>${JSON.stringify(serverConfig, null, 2)}</pre>
+                        <p>Click "Save Mock Config" above and run this test again to see priority in action.</p>
+                    `;
+                }
+            } catch (error) {
+                result.innerHTML = `<p class="error">✗ Error: ${error.message}</p>`;
+            }
+        }
+
+        // Auto-run first test on load
+        window.addEventListener('DOMContentLoaded', testLocalStorage);
+    </script>
+</body>
+</html>
