@@ -10,7 +10,8 @@
     "validate-html": "node validate-html.js",
     "test": "node test-workflow.js",
     "build": "npm run extract && npm run validate-html",
-    "expire-trending": "node expire-trending.js"
+    "expire-trending": "node expire-trending.js",
+    "enhance-images": "node enhance-article-images.js"
   },
   "keywords": ["news", "articles", "html-generator"],
   "author": "",
