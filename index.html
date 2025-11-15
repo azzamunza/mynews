@@ -31,6 +31,14 @@
                 ⟳ Reload
             </button>
             
+            <button id="bionicReaderBtn" class="btn btn-secondary" title="Toggle Bionic Reader" style="display:inline-flex; align-items:center;">
+                📖 Bionic Reader
+            </button>
+            
+            <a href="config.html" class="btn btn-secondary" title="Configuration" style="display:inline-flex; align-items:center; text-decoration: none;">
+                ⚙️ Config
+            </a>
+            
             <div id="g_id_onload"
                  data-client_id="752307788655-djf0dae2j8h10q040g1ombshla687l0j.apps.googleusercontent.com"
                  data-login_uri="https://azzamunza.github.io/mynews/oauth2callback.html"
@@ -165,12 +173,15 @@
     let currentFilter = 'all', currentCarouselIndex = 0;
     let carouselInterval, makeWebhook = '', authToken = '';
     let lastScrollTop = 0;
+    let bionicReaderEnabled = false;
+    let bionicConfig = {};
     
     document.addEventListener('DOMContentLoaded', function() {
         loadAvailableStyles();
         loadNewsData();
         setupEventListeners();
         setupScrollBehavior();
+        loadBionicConfig();
     });
 
     // Header scroll behavior
@@ -1269,6 +1280,164 @@
     
       btn.addEventListener('click', reloadNewsData);
     })();
+    
+    // Bionic Reader functionality
+    async function loadBionicConfig() {
+        try {
+            const response = await fetch('config.json');
+            if (response.ok) {
+                const config = await response.json();
+                bionicConfig = config.bionicReader || {
+                    enabled: false,
+                    fixationStrength: 50,
+                    boldFont: 'inherit',
+                    boldColor: '#000000',
+                    boldWeight: '700',
+                    regularFont: 'inherit',
+                    regularColor: '#666666',
+                    regularOpacity: 70,
+                    fontSize: '1em',
+                    lineHeight: '1.6'
+                };
+                
+                bionicReaderEnabled = bionicConfig.enabled;
+                
+                // Setup button handler
+                const bionicBtn = document.getElementById('bionicReaderBtn');
+                if (bionicBtn) {
+                    bionicBtn.addEventListener('click', toggleBionicReader);
+                    updateBionicButtonState();
+                }
+                
+                // Apply if enabled by default
+                if (bionicReaderEnabled) {
+                    applyBionicReader();
+                }
+            }
+        } catch (error) {
+            console.error('Error loading bionic config:', error);
+        }
+    }
+    
+    function toggleBionicReader() {
+        bionicReaderEnabled = !bionicReaderEnabled;
+        
+        if (bionicReaderEnabled) {
+            applyBionicReader();
+        } else {
+            removeBionicReader();
+        }
+        
+        updateBionicButtonState();
+    }
+    
+    function updateBionicButtonState() {
+        const bionicBtn = document.getElementById('bionicReaderBtn');
+        if (bionicBtn) {
+            if (bionicReaderEnabled) {
+                bionicBtn.style.background = 'var(--accent-color)';
+                bionicBtn.style.color = 'white';
+                bionicBtn.title = 'Disable Bionic Reader';
+            } else {
+                bionicBtn.style.background = '';
+                bionicBtn.style.color = '';
+                bionicBtn.title = 'Enable Bionic Reader';
+            }
+        }
+    }
+    
+    function applyBionicReader() {
+        // Apply to all text content in articles and cards
+        const textElements = document.querySelectorAll('.article-title, .article-excerpt, .article-content, .modal-article-content, .carousel-title, .carousel-excerpt, p, h1, h2, h3, h4, h5, h6');
+        
+        textElements.forEach(element => {
+            if (element.dataset.originalText) return; // Already processed
+            
+            const originalText = element.textContent;
+            element.dataset.originalText = originalText;
+            
+            const bionicHTML = convertToBionic(originalText);
+            element.innerHTML = bionicHTML;
+        });
+        
+        // Apply custom styles
+        applyBionicStyles();
+    }
+    
+    function removeBionicReader() {
+        const textElements = document.querySelectorAll('[data-original-text]');
+        
+        textElements.forEach(element => {
+            const originalText = element.dataset.originalText;
+            element.textContent = originalText;
+            delete element.dataset.originalText;
+        });
+        
+        // Remove custom styles
+        const styleElement = document.getElementById('bionic-reader-styles');
+        if (styleElement) {
+            styleElement.remove();
+        }
+    }
+    
+    function convertToBionic(text) {
+        // Split text into words
+        const words = text.split(/(\s+)/); // Preserve whitespace
+        
+        return words.map(word => {
+            // Skip whitespace and short words
+            if (/^\s*$/.test(word) || word.length <= 1) {
+                return word;
+            }
+            
+            // Calculate how many characters to bold based on fixation strength
+            const fixationStrength = bionicConfig.fixationStrength || 50;
+            const boldLength = Math.max(1, Math.ceil(word.length * (fixationStrength / 100)));
+            
+            const boldPart = word.substring(0, boldLength);
+            const regularPart = word.substring(boldLength);
+            
+            return `<span class="bionic-bold">${boldPart}</span><span class="bionic-regular">${regularPart}</span>`;
+        }).join('');
+    }
+    
+    function applyBionicStyles() {
+        // Remove existing styles if any
+        let styleElement = document.getElementById('bionic-reader-styles');
+        if (!styleElement) {
+            styleElement = document.createElement('style');
+            styleElement.id = 'bionic-reader-styles';
+            document.head.appendChild(styleElement);
+        }
+        
+        const boldColor = bionicConfig.boldColor || '#000000';
+        const boldFont = bionicConfig.boldFont || 'inherit';
+        const boldWeight = bionicConfig.boldWeight || '700';
+        const regularColor = bionicConfig.regularColor || '#666666';
+        const regularFont = bionicConfig.regularFont || 'inherit';
+        const regularOpacity = (bionicConfig.regularOpacity || 70) / 100;
+        const fontSize = bionicConfig.fontSize || '1em';
+        const lineHeight = bionicConfig.lineHeight || '1.6';
+        
+        styleElement.textContent = `
+            .bionic-bold {
+                color: ${boldColor};
+                font-family: ${boldFont};
+                font-weight: ${boldWeight};
+            }
+            
+            .bionic-regular {
+                color: ${regularColor};
+                font-family: ${regularFont};
+                opacity: ${regularOpacity};
+            }
+            
+            [data-original-text] {
+                font-size: ${fontSize} !important;
+                line-height: ${lineHeight} !important;
+            }
+        `;
+    }
     </script>
 </body>
 </html>
