@@ -1,10 +1,10 @@
 {
-  "timestamp": "2025-11-15T04:32:11.402Z",
+  "timestamp": "2025-11-15T04:33:47.343Z",
   "summary": {
     "total": 46,
     "withIssues": 12,
-    "withWarnings": 19,
-    "perfect": 18,
+    "withWarnings": 16,
+    "perfect": 21,
     "issues": {
       "svgPlaceholders": 10,
       "missingVideos": 0,
@@ -439,12 +439,10 @@
       "hasVideoMeta": false,
       "videoUrl": "",
       "issues": [],
-      "warnings": [
-        "Image overlay text too long (>6 words): \"Stellar nurseries are where massive stars are born before they eventually die in supernova explosions.\""
-      ],
+      "warnings": [],
       "success": [
         "All images are real (no SVG placeholders)",
-        "Substantial content: 4677 characters",
+        "Substantial content: 4592 characters",
         "Proper magazine structure"
       ]
     },
@@ -619,12 +617,10 @@
       "hasVideoMeta": false,
       "videoUrl": "",
       "issues": [],
-      "warnings": [
-        "Image overlay text too long (>6 words): \"NASA's Goddard Space Flight Center is at the heart of the controversy.\""
-      ],
+      "warnings": [],
       "success": [
         "All images are real (no SVG placeholders)",
-        "Substantial content: 4168 characters",
+        "Substantial content: 4097 characters",
         "Proper magazine structure"
       ]
     },
@@ -844,12 +840,10 @@
       "hasVideoMeta": false,
       "videoUrl": "",
       "issues": [],
-      "warnings": [
-        "Image overlay text too long (>6 words): \"Starlink's growing presence raises questions about the future of ground-based astronomy.\""
-      ],
+      "warnings": [],
       "success": [
         "All images are real (no SVG placeholders)",
-        "Substantial content: 4744 characters",
+        "Substantial content: 4632 characters",
         "Proper magazine structure"
       ]
     },
