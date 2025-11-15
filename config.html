@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsHub - Configuration Editor</title>
+    <link rel="stylesheet" href="./css/article-magazine.css">
+    <link rel="stylesheet" href="./css/layout-grid.css">
+    <link id="themeStylesheet" rel="stylesheet" href="./css/newsStyles/cnn.css">
+    <style>
+        body {
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .config-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .config-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .config-header h1 {
+            margin: 0 0 10px 0;
+            color: var(--text-primary);
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: opacity 0.3s;
+        }
+        
+        .back-link:hover {
+            opacity: 0.8;
+        }
+        
+        .config-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+        }
+        
+        .config-tab {
+            padding: 10px 20px;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            font-size: 16px;
+            color: var(--text-primary);
+            transition: all 0.3s;
+        }
+        
+        .config-tab.active {
+            border-bottom-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+        
+        .config-tab:hover {
+            background: var(--hover-bg);
+        }
+        
+        .config-panel {
+            display: none;
+        }
+        
+        .config-panel.active {
+            display: block;
+        }
+        
+        .config-section {
+            background: var(--card-bg);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .config-section h2 {
+            margin-top: 0;
+            color: var(--text-primary);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+        
+        .config-field {
+            margin-bottom: 15px;
+        }
+        
+        .config-field label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .config-field input,
+        .config-field select,
+        .config-field textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--input-bg);
+            color: var(--text-primary);
+            font-size: 14px;
+        }
+        
+        .config-field textarea {
+            min-height: 100px;
+            font-family: monospace;
+        }
+        
+        .config-field input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        
+        .config-field input[type="color"] {
+            width: 60px;
+            height: 40px;
+            padding: 2px;
+            cursor: pointer;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: opacity 0.3s;
+            margin-right: 10px;
+        }
+        
+        .btn:hover {
+            opacity: 0.8;
+        }
+        
+        .btn-primary {
+            background: var(--accent-color);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+        
+        .btn-success {
+            background: #28a745;
+            color: white;
+        }
+        
+        .config-actions {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .json-preview {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+        
+        .css-editor-container {
+            position: relative;
+        }
+        
+        .css-editor-banner {
+            background: #cc0000;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .css-editor-controls {
+            background: var(--card-bg);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .css-editor-controls input {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .css-editor-controls select {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            background: var(--input-bg);
+            color: var(--text-primary);
+        }
+        
+        .css-editor-preview {
+            border: 2px dashed var(--border-color);
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        .css-editor-preview.editor-active * {
+            cursor: pointer !important;
+            transition: outline 0.2s;
+        }
+        
+        .css-editor-preview.editor-active *:hover {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+        
+        .css-property-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--card-bg);
+            border: 2px solid var(--accent-color);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            z-index: 10000;
+            display: none;
+        }
+        
+        .css-property-popup.active {
+            display: block;
+        }
+        
+        .css-popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .css-popup-close {
+            background: #dc3545;
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 1;
+        }
+        
+        .css-popup-close:hover {
+            opacity: 0.8;
+        }
+        
+        .css-property-group {
+            margin-bottom: 15px;
+        }
+        
+        .css-property-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            display: none;
+        }
+        
+        .popup-overlay.active {
+            display: block;
+        }
+        
+        .bionic-settings {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .setting-group {
+            background: var(--input-bg);
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .setting-group h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+            font-size: 16px;
+        }
+        
+        .alert {
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <div class="config-container">
+        <a href="index.html" class="back-link">← Back to NewsHub</a>
+        
+        <div class="config-header">
+            <h1>NewsHub Configuration Editor</h1>
+            <p>Manage site settings, Bionic Reader preferences, and create custom CSS themes.</p>
+        </div>
+        
+        <div id="alertContainer"></div>
+        
+        <div class="config-tabs">
+            <button class="config-tab active" data-tab="general">General Settings</button>
+            <button class="config-tab" data-tab="bionic">Bionic Reader</button>
+            <button class="config-tab" data-tab="css-editor">CSS Theme Editor</button>
+            <button class="config-tab" data-tab="json">JSON View</button>
+        </div>
+        
+        <!-- General Settings Panel -->
+        <div class="config-panel active" id="panel-general">
+            <div class="config-section">
+                <h2>Site Configuration</h2>
+                <div class="config-field">
+                    <label for="trendingTimeLimit">Trending Time Limit (days):</label>
+                    <input type="number" id="trendingTimeLimit" min="1" max="30" value="3">
+                    <small style="color: var(--text-secondary);">Articles older than this will no longer be marked as trending.</small>
+                </div>
+                <div class="config-field">
+                    <label for="configDescription">Description:</label>
+                    <textarea id="configDescription">Configuration for the mynews website. trendingTimeLimit is in days.</textarea>
+                </div>
+            </div>
+            
+            <div class="config-actions">
+                <button class="btn btn-primary" onclick="saveGeneralConfig()">Save General Settings</button>
+                <button class="btn btn-secondary" onclick="loadConfig()">Reload Config</button>
+            </div>
+        </div>
+        
+        <!-- Bionic Reader Panel -->
+        <div class="config-panel" id="panel-bionic">
+            <div class="config-section">
+                <h2>Bionic Reader Settings</h2>
+                <p>Customize how Bionic Reader enhances your reading experience by bolding parts of words.</p>
+                
+                <div class="bionic-settings">
+                    <div class="setting-group">
+                        <h3>Reading Style</h3>
+                        <div class="config-field">
+                            <label for="bionicFixationStrength">Fixation Strength (% of word to bold):</label>
+                            <input type="range" id="bionicFixationStrength" min="20" max="80" value="50" oninput="document.getElementById('fixationValue').textContent = this.value + '%'">
+                            <div style="text-align: right; margin-top: 5px;">
+                                <span id="fixationValue">50%</span>
+                            </div>
+                        </div>
+                        <div class="config-field">
+                            <label for="bionicEnabled">Enable Bionic Reader by default:</label>
+                            <input type="checkbox" id="bionicEnabled">
+                        </div>
+                    </div>
+                    
+                    <div class="setting-group">
+                        <h3>Bold Text Style</h3>
+                        <div class="config-field">
+                            <label for="bionicBoldFont">Bold Font:</label>
+                            <select id="bionicBoldFont">
+                                <option value="inherit">Inherit from Page</option>
+                                <option value="Arial, sans-serif">Arial</option>
+                                <option value="'Times New Roman', serif">Times New Roman</option>
+                                <option value="Georgia, serif">Georgia</option>
+                                <option value="'Courier New', monospace">Courier New</option>
+                                <option value="Verdana, sans-serif">Verdana</option>
+                                <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+                            </select>
+                        </div>
+                        <div class="config-field">
+                            <label for="bionicBoldColor">Bold Text Color:</label>
+                            <input type="color" id="bionicBoldColor" value="#000000">
+                        </div>
+                        <div class="config-field">
+                            <label for="bionicBoldWeight">Bold Font Weight:</label>
+                            <select id="bionicBoldWeight">
+                                <option value="600">Semi-Bold (600)</option>
+                                <option value="700" selected>Bold (700)</option>
+                                <option value="800">Extra Bold (800)</option>
+                                <option value="900">Black (900)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="setting-group">
+                        <h3>Regular Text Style</h3>
+                        <div class="config-field">
+                            <label for="bionicRegularFont">Regular Font:</label>
+                            <select id="bionicRegularFont">
+                                <option value="inherit">Inherit from Page</option>
+                                <option value="Arial, sans-serif">Arial</option>
+                                <option value="'Times New Roman', serif">Times New Roman</option>
+                                <option value="Georgia, serif">Georgia</option>
+                                <option value="'Courier New', monospace">Courier New</option>
+                                <option value="Verdana, sans-serif">Verdana</option>
+                                <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+                            </select>
+                        </div>
+                        <div class="config-field">
+                            <label for="bionicRegularColor">Regular Text Color:</label>
+                            <input type="color" id="bionicRegularColor" value="#666666">
+                        </div>
+                        <div class="config-field">
+                            <label for="bionicRegularOpacity">Regular Text Opacity:</label>
+                            <input type="range" id="bionicRegularOpacity" min="30" max="100" value="70" oninput="document.getElementById('opacityValue').textContent = this.value + '%'">
+                            <div style="text-align: right; margin-top: 5px;">
+                                <span id="opacityValue">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="setting-group">
+                        <h3>Text Size</h3>
+                        <div class="config-field">
+                            <label for="bionicFontSize">Font Size Adjustment:</label>
+                            <select id="bionicFontSize">
+                                <option value="0.9em">Smaller (90%)</option>
+                                <option value="1em" selected>Normal (100%)</option>
+                                <option value="1.1em">Larger (110%)</option>
+                                <option value="1.2em">Much Larger (120%)</option>
+                            </select>
+                        </div>
+                        <div class="config-field">
+                            <label for="bionicLineHeight">Line Height:</label>
+                            <select id="bionicLineHeight">
+                                <option value="1.4">Compact (1.4)</option>
+                                <option value="1.6" selected>Normal (1.6)</option>
+                                <option value="1.8">Comfortable (1.8)</option>
+                                <option value="2.0">Spacious (2.0)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="config-actions">
+                <button class="btn btn-primary" onclick="saveBionicConfig()">Save Bionic Reader Settings</button>
+                <button class="btn btn-secondary" onclick="loadConfig()">Reset to Saved</button>
+            </div>
+        </div>
+        
+        <!-- CSS Editor Panel -->
+        <div class="config-panel" id="panel-css-editor">
+            <div class="css-editor-banner">CSS STYLE EDITOR</div>
+            
+            <div class="css-editor-controls">
+                <label style="font-weight: 600;">Theme Name:</label>
+                <input type="text" id="cssThemeName" placeholder="Enter theme name">
+                
+                <label style="font-weight: 600;">Load Existing:</label>
+                <select id="cssThemeSelect" onchange="loadCSSTheme(this.value)">
+                    <option value="">-- Select a theme to edit --</option>
+                </select>
+                
+                <button class="btn btn-success" onclick="saveCSSTheme()">Save Theme</button>
+                <button class="btn btn-secondary" onclick="clearCSSEditor()">Clear</button>
+            </div>
+            
+            <div class="config-section">
+                <h2>Interactive CSS Editor</h2>
+                <p><strong>Instructions:</strong> Click on any element in the preview below to edit its CSS properties. Changes are saved temporarily until you click "Save Theme" above.</p>
+                
+                <div id="cssEditorPreview" class="css-editor-preview editor-active">
+                    <!-- Preview content will be loaded here -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- JSON View Panel -->
+        <div class="config-panel" id="panel-json">
+            <div class="config-section">
+                <h2>Raw JSON Configuration</h2>
+                <p>View and edit the raw JSON configuration file. <strong>Advanced users only!</strong></p>
+                
+                <div class="config-field">
+                    <label for="jsonEditor">config.json Content:</label>
+                    <textarea id="jsonEditor" style="min-height: 400px; font-family: monospace;"></textarea>
+                </div>
+                
+                <div class="config-actions">
+                    <button class="btn btn-primary" onclick="saveRawJSON()">Save JSON</button>
+                    <button class="btn btn-secondary" onclick="loadConfig()">Reload from File</button>
+                    <button class="btn btn-secondary" onclick="validateJSON()">Validate JSON</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CSS Property Editor Popup -->
+    <div class="popup-overlay" id="popupOverlay" onclick="closeCSSPopup()"></div>
+    <div class="css-property-popup" id="cssPropertyPopup">
+        <div class="css-popup-header">
+            <h3 style="margin: 0;">Edit CSS Properties</h3>
+            <button class="css-popup-close" onclick="closeCSSPopup()">×</button>
+        </div>
+        <div id="cssPropertyFields">
+            <!-- CSS property fields will be dynamically generated here -->
+        </div>
+        <div style="margin-top: 20px; text-align: right;">
+            <button class="btn btn-primary" onclick="applyCSSChanges()">Apply Changes</button>
+            <button class="btn btn-secondary" onclick="closeCSSPopup()">Cancel</button>
+        </div>
+    </div>
+    
+    <script>
+        let configData = {};
+        let currentCSSEdits = {};
+        let currentEditElement = null;
+        
+        // Load configuration on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadConfig();
+            setupTabs();
+            loadAvailableCSSThemes();
+            loadHomePagePreview();
+        });
+        
+        // Tab switching
+        function setupTabs() {
+            const tabs = document.querySelectorAll('.config-tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const targetTab = this.dataset.tab;
+                    
+                    // Update tab active state
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Update panel active state
+                    document.querySelectorAll('.config-panel').forEach(panel => {
+                        panel.classList.remove('active');
+                    });
+                    document.getElementById(`panel-${targetTab}`).classList.add('active');
+                });
+            });
+        }
+        
+        // Load config.json
+        async function loadConfig() {
+            try {
+                const response = await fetch('config.json');
+                if (!response.ok) {
+                    throw new Error('Failed to load config.json');
+                }
+                configData = await response.json();
+                populateConfigFields();
+                updateJSONView();
+                showAlert('Configuration loaded successfully', 'success');
+            } catch (error) {
+                console.error('Error loading config:', error);
+                showAlert('Error loading configuration: ' + error.message, 'error');
+            }
+        }
+        
+        // Populate form fields with config data
+        function populateConfigFields() {
+            // General settings
+            document.getElementById('trendingTimeLimit').value = configData.trendingTimeLimit || 3;
+            document.getElementById('configDescription').value = configData.description || '';
+            
+            // Bionic Reader settings
+            const bionic = configData.bionicReader || {};
+            document.getElementById('bionicFixationStrength').value = bionic.fixationStrength || 50;
+            document.getElementById('fixationValue').textContent = (bionic.fixationStrength || 50) + '%';
+            document.getElementById('bionicEnabled').checked = bionic.enabled || false;
+            document.getElementById('bionicBoldFont').value = bionic.boldFont || 'inherit';
+            document.getElementById('bionicBoldColor').value = bionic.boldColor || '#000000';
+            document.getElementById('bionicBoldWeight').value = bionic.boldWeight || '700';
+            document.getElementById('bionicRegularFont').value = bionic.regularFont || 'inherit';
+            document.getElementById('bionicRegularColor').value = bionic.regularColor || '#666666';
+            document.getElementById('bionicRegularOpacity').value = bionic.regularOpacity || 70;
+            document.getElementById('opacityValue').textContent = (bionic.regularOpacity || 70) + '%';
+            document.getElementById('bionicFontSize').value = bionic.fontSize || '1em';
+            document.getElementById('bionicLineHeight').value = bionic.lineHeight || '1.6';
+        }
+        
+        // Update JSON view
+        function updateJSONView() {
+            document.getElementById('jsonEditor').value = JSON.stringify(configData, null, 2);
+        }
+        
+        // Save general config
+        function saveGeneralConfig() {
+            configData.trendingTimeLimit = parseInt(document.getElementById('trendingTimeLimit').value);
+            configData.description = document.getElementById('configDescription').value;
+            
+            updateJSONView();
+            downloadConfig();
+            showAlert('General settings saved! Download the config.json file and replace the existing one.', 'success');
+        }
+        
+        // Save Bionic Reader config
+        function saveBionicConfig() {
+            if (!configData.bionicReader) {
+                configData.bionicReader = {};
+            }
+            
+            configData.bionicReader = {
+                enabled: document.getElementById('bionicEnabled').checked,
+                fixationStrength: parseInt(document.getElementById('bionicFixationStrength').value),
+                boldFont: document.getElementById('bionicBoldFont').value,
+                boldColor: document.getElementById('bionicBoldColor').value,
+                boldWeight: document.getElementById('bionicBoldWeight').value,
+                regularFont: document.getElementById('bionicRegularFont').value,
+                regularColor: document.getElementById('bionicRegularColor').value,
+                regularOpacity: parseInt(document.getElementById('bionicRegularOpacity').value),
+                fontSize: document.getElementById('bionicFontSize').value,
+                lineHeight: document.getElementById('bionicLineHeight').value
+            };
+            
+            updateJSONView();
+            downloadConfig();
+            showAlert('Bionic Reader settings saved! Download the config.json file and replace the existing one.', 'success');
+        }
+        
+        // Save raw JSON
+        function saveRawJSON() {
+            try {
+                const jsonText = document.getElementById('jsonEditor').value;
+                configData = JSON.parse(jsonText);
+                populateConfigFields();
+                downloadConfig();
+                showAlert('JSON configuration saved! Download the config.json file and replace the existing one.', 'success');
+            } catch (error) {
+                showAlert('Invalid JSON: ' + error.message, 'error');
+            }
+        }
+        
+        // Validate JSON
+        function validateJSON() {
+            try {
+                const jsonText = document.getElementById('jsonEditor').value;
+                JSON.parse(jsonText);
+                showAlert('JSON is valid!', 'success');
+            } catch (error) {
+                showAlert('Invalid JSON: ' + error.message, 'error');
+            }
+        }
+        
+        // Download config as file
+        function downloadConfig() {
+            const dataStr = JSON.stringify(configData, null, 2);
+            const dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+            
+            const exportFileDefaultName = 'config.json';
+            
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileDefaultName);
+            linkElement.click();
+        }
+        
+        // Show alert message
+        function showAlert(message, type) {
+            const alertContainer = document.getElementById('alertContainer');
+            const alert = document.createElement('div');
+            alert.className = `alert alert-${type}`;
+            alert.textContent = message;
+            alertContainer.appendChild(alert);
+            
+            setTimeout(() => {
+                alert.remove();
+            }, 5000);
+        }
+        
+        // Load available CSS themes
+        async function loadAvailableCSSThemes() {
+            try {
+                const response = await fetch('./css/styles.json');
+                if (response.ok) {
+                    const stylesData = await response.json();
+                    const select = document.getElementById('cssThemeSelect');
+                    select.innerHTML = '<option value="">-- Select a theme to edit --</option>';
+                    
+                    stylesData.styles.forEach(style => {
+                        const option = document.createElement('option');
+                        option.value = style.file;
+                        option.textContent = style.name;
+                        select.appendChild(option);
+                    });
+                }
+            } catch (error) {
+                console.error('Error loading CSS themes:', error);
+            }
+        }
+        
+        // Load CSS theme for editing
+        async function loadCSSTheme(filename) {
+            if (!filename) return;
+            
+            try {
+                const response = await fetch(`./css/newsStyles/${filename}`);
+                if (response.ok) {
+                    const cssText = await response.text();
+                    // Parse CSS and populate editor
+                    document.getElementById('cssThemeName').value = filename.replace('.css', '');
+                    showAlert(`Loaded theme: ${filename}`, 'success');
+                    
+                    // Apply theme to preview
+                    const themeLink = document.getElementById('themeStylesheet');
+                    themeLink.href = `./css/newsStyles/${filename}`;
+                }
+            } catch (error) {
+                showAlert('Error loading theme: ' + error.message, 'error');
+            }
+        }
+        
+        // Load home page preview
+        async function loadHomePagePreview() {
+            const preview = document.getElementById('cssEditorPreview');
+            preview.innerHTML = `
+                <header style="background: var(--header-bg); padding: 20px; margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h1 style="color: var(--text-primary); margin: 0;">NewsHub</h1>
+                        <button style="background: var(--accent-color); color: white; padding: 10px 20px; border: none; border-radius: 4px;">Bionic Reader</button>
+                    </div>
+                </header>
+                
+                <nav style="background: var(--nav-bg); padding: 15px; margin-bottom: 20px;">
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 20px;">
+                        <li><a href="#" style="color: var(--accent-color); text-decoration: none;">All</a></li>
+                        <li><a href="#" style="color: var(--text-primary); text-decoration: none;">Technology</a></li>
+                        <li><a href="#" style="color: var(--text-primary); text-decoration: none;">Science</a></li>
+                    </ul>
+                </nav>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                    <div style="background: var(--card-bg); padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <img src="https://via.placeholder.com/400x200" alt="Article" style="width: 100%; border-radius: 4px; margin-bottom: 10px;">
+                        <h3 style="color: var(--text-primary); margin: 10px 0;">Sample Article Title</h3>
+                        <p style="color: var(--text-secondary);">This is a sample article excerpt to demonstrate the theme.</p>
+                    </div>
+                    
+                    <div style="background: var(--card-bg); padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                        <img src="https://via.placeholder.com/400x200" alt="Article" style="width: 100%; border-radius: 4px; margin-bottom: 10px;">
+                        <h3 style="color: var(--text-primary); margin: 10px 0;">Another Article</h3>
+                        <p style="color: var(--text-secondary);">Another sample article to show how cards look.</p>
+                    </div>
+                </div>
+            `;
+            
+            // Add click handlers for CSS editing
+            setupCSSEditorHandlers();
+        }
+        
+        // Setup CSS editor click handlers
+        function setupCSSEditorHandlers() {
+            const preview = document.getElementById('cssEditorPreview');
+            const allElements = preview.querySelectorAll('*');
+            
+            allElements.forEach(element => {
+                element.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    openCSSPropertyEditor(this);
+                });
+            });
+        }
+        
+        // Open CSS property editor popup
+        function openCSSPropertyEditor(element) {
+            currentEditElement = element;
+            const computedStyle = window.getComputedStyle(element);
+            
+            const popup = document.getElementById('cssPropertyPopup');
+            const overlay = document.getElementById('popupOverlay');
+            const fieldsContainer = document.getElementById('cssPropertyFields');
+            
+            // Generate property fields
+            fieldsContainer.innerHTML = `
+                <div class="css-property-group">
+                    <label>Background Color:</label>
+                    <input type="color" id="prop-bg-color" value="${rgbToHex(computedStyle.backgroundColor)}">
+                </div>
+                <div class="css-property-group">
+                    <label>Text Color:</label>
+                    <input type="color" id="prop-text-color" value="${rgbToHex(computedStyle.color)}">
+                </div>
+                <div class="css-property-group">
+                    <label>Font Family:</label>
+                    <select id="prop-font-family">
+                        <option value="inherit">Inherit</option>
+                        <option value="Arial, sans-serif">Arial</option>
+                        <option value="'Times New Roman', serif">Times New Roman</option>
+                        <option value="Georgia, serif">Georgia</option>
+                        <option value="Verdana, sans-serif">Verdana</option>
+                    </select>
+                </div>
+                <div class="css-property-group">
+                    <label>Font Size:</label>
+                    <input type="text" id="prop-font-size" value="${computedStyle.fontSize}">
+                </div>
+                <div class="css-property-group">
+                    <label>Font Weight:</label>
+                    <select id="prop-font-weight">
+                        <option value="normal">Normal</option>
+                        <option value="600">Semi-Bold</option>
+                        <option value="bold">Bold</option>
+                        <option value="800">Extra Bold</option>
+                    </select>
+                </div>
+                <div class="css-property-group">
+                    <label>Padding:</label>
+                    <input type="text" id="prop-padding" value="${computedStyle.padding}">
+                </div>
+                <div class="css-property-group">
+                    <label>Margin:</label>
+                    <input type="text" id="prop-margin" value="${computedStyle.margin}">
+                </div>
+                <div class="css-property-group">
+                    <label>Border Radius:</label>
+                    <input type="text" id="prop-border-radius" value="${computedStyle.borderRadius}">
+                </div>
+            `;
+            
+            popup.classList.add('active');
+            overlay.classList.add('active');
+        }
+        
+        // Close CSS property popup
+        function closeCSSPopup() {
+            document.getElementById('cssPropertyPopup').classList.remove('active');
+            document.getElementById('popupOverlay').classList.remove('active');
+            currentEditElement = null;
+        }
+        
+        // Apply CSS changes
+        function applyCSSChanges() {
+            if (!currentEditElement) return;
+            
+            const styles = {
+                backgroundColor: document.getElementById('prop-bg-color').value,
+                color: document.getElementById('prop-text-color').value,
+                fontFamily: document.getElementById('prop-font-family').value,
+                fontSize: document.getElementById('prop-font-size').value,
+                fontWeight: document.getElementById('prop-font-weight').value,
+                padding: document.getElementById('prop-padding').value,
+                margin: document.getElementById('prop-margin').value,
+                borderRadius: document.getElementById('prop-border-radius').value
+            };
+            
+            // Apply styles to element
+            Object.assign(currentEditElement.style, styles);
+            
+            // Store changes
+            const elementPath = getElementPath(currentEditElement);
+            currentCSSEdits[elementPath] = styles;
+            
+            closeCSSPopup();
+            showAlert('CSS changes applied to element', 'success');
+        }
+        
+        // Get element CSS path
+        function getElementPath(element) {
+            const path = [];
+            let current = element;
+            
+            while (current && current !== document.body) {
+                let selector = current.tagName.toLowerCase();
+                if (current.id) {
+                    selector += '#' + current.id;
+                } else if (current.className) {
+                    selector += '.' + current.className.split(' ').join('.');
+                }
+                path.unshift(selector);
+                current = current.parentElement;
+            }
+            
+            return path.join(' > ');
+        }
+        
+        // Save CSS theme
+        async function saveCSSTheme() {
+            const themeName = document.getElementById('cssThemeName').value.trim();
+            
+            if (!themeName) {
+                showAlert('Please enter a theme name', 'error');
+                return;
+            }
+            
+            // Check if theme exists
+            const existingTheme = await checkThemeExists(themeName + '.css');
+            
+            if (existingTheme) {
+                const overwrite = confirm('Do you wish to overwrite the original Theme?');
+                
+                if (overwrite) {
+                    // Create backup
+                    await backupTheme(themeName + '.css');
+                    showAlert('Original theme backed up. Downloading new theme...', 'success');
+                } else {
+                    return;
+                }
+            }
+            
+            // Generate CSS from edits
+            const cssContent = generateCSS();
+            
+            // Download CSS file
+            downloadCSS(themeName + '.css', cssContent);
+        }
+        
+        // Check if theme exists
+        async function checkThemeExists(filename) {
+            try {
+                const response = await fetch(`./css/newsStyles/${filename}`);
+                return response.ok;
+            } catch (error) {
+                return false;
+            }
+        }
+        
+        // Backup theme (this would need server-side implementation)
+        async function backupTheme(filename) {
+            // In a real implementation, this would call a server endpoint
+            // For now, we'll just download a backup copy
+            try {
+                const response = await fetch(`./css/newsStyles/${filename}`);
+                if (response.ok) {
+                    const cssText = await response.text();
+                    const date = new Date().toISOString().split('T')[0];
+                    downloadCSS(`${filename.replace('.css', '')}_backup_${date}.css`, cssText);
+                }
+            } catch (error) {
+                console.error('Error backing up theme:', error);
+            }
+        }
+        
+        // Generate CSS from edits
+        function generateCSS() {
+            let css = '/* Custom NewsHub Theme - Generated by Config Editor */\n\n';
+            css += ':root {\n';
+            css += '  --header-bg: #ffffff;\n';
+            css += '  --nav-bg: #f8f9fa;\n';
+            css += '  --card-bg: #ffffff;\n';
+            css += '  --text-primary: #212529;\n';
+            css += '  --text-secondary: #6c757d;\n';
+            css += '  --accent-color: #007bff;\n';
+            css += '  --border-color: #dee2e6;\n';
+            css += '  --input-bg: #ffffff;\n';
+            css += '  --hover-bg: #e9ecef;\n';
+            css += '}\n\n';
+            
+            // Add custom edits
+            for (const [selector, styles] of Object.entries(currentCSSEdits)) {
+                css += `${selector} {\n`;
+                for (const [prop, value] of Object.entries(styles)) {
+                    const cssProp = prop.replace(/([A-Z])/g, '-$1').toLowerCase();
+                    css += `  ${cssProp}: ${value};\n`;
+                }
+                css += '}\n\n';
+            }
+            
+            return css;
+        }
+        
+        // Download CSS file
+        function downloadCSS(filename, content) {
+            const blob = new Blob([content], { type: 'text/css' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+            link.click();
+            URL.revokeObjectURL(url);
+        }
+        
+        // Clear CSS editor
+        function clearCSSEditor() {
+            if (confirm('Clear all CSS edits?')) {
+                currentCSSEdits = {};
+                document.getElementById('cssThemeName').value = '';
+                document.getElementById('cssThemeSelect').value = '';
+                loadHomePagePreview();
+                showAlert('CSS editor cleared', 'success');
+            }
+        }
+        
+        // Helper: Convert RGB to Hex
+        function rgbToHex(rgb) {
+            if (!rgb || rgb === 'transparent' || rgb === 'rgba(0, 0, 0, 0)') {
+                return '#ffffff';
+            }
+            
+            const match = rgb.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+            if (!match) return '#ffffff';
+            
+            const r = parseInt(match[1]);
+            const g = parseInt(match[2]);
+            const b = parseInt(match[3]);
+            
+            return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+        }
+    </script>
+</body>
+</html>

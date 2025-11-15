@@ -1,4 +1,16 @@
 {
   "trendingTimeLimit": 3,
-  "description": "Configuration for the mynews website. trendingTimeLimit is in days."
+  "description": "Configuration for the mynews website. trendingTimeLimit is in days.",
+  "bionicReader": {
+    "enabled": false,
+    "fixationStrength": 50,
+    "boldFont": "inherit",
+    "boldColor": "#000000",
+    "boldWeight": "700",
+    "regularFont": "inherit",
+    "regularColor": "#666666",
+    "regularOpacity": 70,
+    "fontSize": "1em",
+    "lineHeight": "1.6"
+  }
 }
