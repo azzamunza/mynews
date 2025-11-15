@@ -368,6 +368,7 @@
             <button class="config-tab" data-tab="bionic">Bionic Reader</button>
             <button class="config-tab" data-tab="css-editor">CSS Theme Editor</button>
             <button class="config-tab" data-tab="json">JSON View</button>
+            <button class="config-tab" data-tab="github">GitHub Settings</button>
         </div>
         
         <!-- General Settings Panel -->
@@ -544,6 +545,53 @@
                 </div>
             </div>
         </div>
+        
+        <!-- GitHub Settings Panel -->
+        <div class="config-panel" id="panel-github">
+            <div class="config-section">
+                <h2>GitHub Integration Settings</h2>
+                <p>Configure automatic uploading of config.json to your GitHub repository.</p>
+                
+                <div class="alert alert-success" style="margin-bottom: 20px;">
+                    <strong>Note:</strong> When you save configuration changes, they will be:
+                    <ol style="margin: 10px 0 0 20px;">
+                        <li>Applied immediately to your browser (via localStorage)</li>
+                        <li>Committed and pushed to your GitHub repository automatically</li>
+                    </ol>
+                    This means changes take effect right away, and GitHub Pages updates when the commit is processed.
+                </div>
+                
+                <div class="config-field">
+                    <label for="githubToken">GitHub Personal Access Token:</label>
+                    <input type="password" id="githubToken" placeholder="ghp_xxxxxxxxxxxx">
+                    <small style="color: var(--text-secondary);">
+                        Create a token at <a href="https://github.com/settings/tokens" target="_blank">GitHub Settings → Developer settings → Personal access tokens</a> 
+                        with <strong>repo</strong> scope.
+                    </small>
+                </div>
+                
+                <div class="config-field">
+                    <label for="githubOwner">Repository Owner:</label>
+                    <input type="text" id="githubOwner" placeholder="username or organization">
+                </div>
+                
+                <div class="config-field">
+                    <label for="githubRepo">Repository Name:</label>
+                    <input type="text" id="githubRepo" placeholder="repository-name">
+                </div>
+                
+                <div class="config-field">
+                    <label for="githubBranch">Branch:</label>
+                    <input type="text" id="githubBranch" value="main" placeholder="main">
+                </div>
+                
+                <div class="config-actions">
+                    <button class="btn btn-primary" onclick="saveGitHubSettings()">Save GitHub Settings</button>
+                    <button class="btn btn-secondary" onclick="testGitHubConnection()">Test Connection</button>
+                    <button class="btn btn-danger" onclick="clearGitHubSettings()">Clear Settings</button>
+                </div>
+            </div>
+        </div>
     </div>
     
     <!-- CSS Property Editor Popup -->
@@ -566,10 +614,12 @@
         let configData = {};
         let currentCSSEdits = {};
         let currentEditElement = null;
+        let githubSettings = {};
         
         // Load configuration on page load
         document.addEventListener('DOMContentLoaded', function() {
             loadConfig();
+            loadGitHubSettings();
             setupTabs();
             loadAvailableCSSThemes();
             loadHomePagePreview();
@@ -595,10 +645,25 @@
             });
         }
         
-        // Load config.json
+        // Load config.json - check localStorage first, then remote
         async function loadConfig() {
             try {
-                const response = await fetch('config.json');
+                // First, check localStorage for pending changes
+                const localConfig = localStorage.getItem('mynews_config_pending');
+                if (localConfig) {
+                    try {
+                        configData = JSON.parse(localConfig);
+                        populateConfigFields();
+                        updateJSONView();
+                        showAlert('Configuration loaded from local storage (pending GitHub update)', 'success');
+                        return;
+                    } catch (e) {
+                        console.warn('Invalid local config, loading from server');
+                    }
+                }
+                
+                // Otherwise, load from server
+                const response = await fetch('config.json?t=' + Date.now());
                 if (!response.ok) {
                     throw new Error('Failed to load config.json');
                 }
@@ -640,17 +705,16 @@
         }
         
         // Save general config
-        function saveGeneralConfig() {
+        async function saveGeneralConfig() {
             configData.trendingTimeLimit = parseInt(document.getElementById('trendingTimeLimit').value);
             configData.description = document.getElementById('configDescription').value;
             
             updateJSONView();
-            downloadConfig();
-            showAlert('General settings saved! Download the config.json file and replace the existing one.', 'success');
+            await saveConfigToGitHub('Update general settings');
         }
         
         // Save Bionic Reader config
-        function saveBionicConfig() {
+        async function saveBionicConfig() {
             if (!configData.bionicReader) {
                 configData.bionicReader = {};
             }
@@ -669,18 +733,16 @@
             };
             
             updateJSONView();
-            downloadConfig();
-            showAlert('Bionic Reader settings saved! Download the config.json file and replace the existing one.', 'success');
+            await saveConfigToGitHub('Update Bionic Reader settings');
         }
         
         // Save raw JSON
-        function saveRawJSON() {
+        async function saveRawJSON() {
             try {
                 const jsonText = document.getElementById('jsonEditor').value;
                 configData = JSON.parse(jsonText);
                 populateConfigFields();
-                downloadConfig();
-                showAlert('JSON configuration saved! Download the config.json file and replace the existing one.', 'success');
+                await saveConfigToGitHub('Update config.json');
             } catch (error) {
                 showAlert('Invalid JSON: ' + error.message, 'error');
             }
@@ -697,7 +759,142 @@
             }
         }
         
-        // Download config as file
+        // Save config to GitHub and localStorage
+        async function saveConfigToGitHub(commitMessage = 'Update config.json') {
+            // First, save to localStorage for immediate effect
+            const configStr = JSON.stringify(configData, null, 2);
+            localStorage.setItem('mynews_config_pending', configStr);
+            showAlert('Configuration applied locally! Changes are live on this browser.', 'success');
+            
+            // Check if GitHub is configured
+            if (!githubSettings.token || !githubSettings.owner || !githubSettings.repo) {
+                showAlert('GitHub not configured. Config saved locally only. Visit GitHub Settings tab to enable auto-upload.', 'error');
+                return;
+            }
+            
+            try {
+                // Get current file SHA
+                const getFileUrl = `https://api.github.com/repos/${githubSettings.owner}/${githubSettings.repo}/contents/config.json`;
+                const getResponse = await fetch(getFileUrl, {
+                    headers: {
+                        'Authorization': `token ${githubSettings.token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+                
+                if (!getResponse.ok) {
+                    throw new Error('Failed to get current config.json from GitHub');
+                }
+                
+                const fileData = await getResponse.json();
+                const currentSHA = fileData.sha;
+                
+                // Update file on GitHub
+                const updateUrl = getFileUrl;
+                const updateResponse = await fetch(updateUrl, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${githubSettings.token}`,
+                        'Accept': 'application/vnd.github.v3+json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: commitMessage,
+                        content: btoa(configStr), // Base64 encode
+                        sha: currentSHA,
+                        branch: githubSettings.branch || 'main'
+                    })
+                });
+                
+                if (!updateResponse.ok) {
+                    const errorData = await updateResponse.json();
+                    throw new Error(errorData.message || 'Failed to update config.json on GitHub');
+                }
+                
+                // Clear localStorage pending flag since it's now on GitHub
+                localStorage.removeItem('mynews_config_pending');
+                showAlert('Configuration saved to GitHub successfully! Changes will be live on the website shortly.', 'success');
+                
+            } catch (error) {
+                console.error('Error uploading to GitHub:', error);
+                showAlert('GitHub upload failed: ' + error.message + '. Config saved locally only.', 'error');
+            }
+        }
+        
+        // Load GitHub settings from localStorage
+        function loadGitHubSettings() {
+            const saved = localStorage.getItem('mynews_github_settings');
+            if (saved) {
+                try {
+                    githubSettings = JSON.parse(saved);
+                    document.getElementById('githubToken').value = githubSettings.token || '';
+                    document.getElementById('githubOwner').value = githubSettings.owner || '';
+                    document.getElementById('githubRepo').value = githubSettings.repo || '';
+                    document.getElementById('githubBranch').value = githubSettings.branch || 'main';
+                } catch (e) {
+                    console.error('Error loading GitHub settings:', e);
+                }
+            }
+        }
+        
+        // Save GitHub settings
+        function saveGitHubSettings() {
+            githubSettings = {
+                token: document.getElementById('githubToken').value.trim(),
+                owner: document.getElementById('githubOwner').value.trim(),
+                repo: document.getElementById('githubRepo').value.trim(),
+                branch: document.getElementById('githubBranch').value.trim() || 'main'
+            };
+            
+            localStorage.setItem('mynews_github_settings', JSON.stringify(githubSettings));
+            showAlert('GitHub settings saved successfully!', 'success');
+        }
+        
+        // Test GitHub connection
+        async function testGitHubConnection() {
+            const token = document.getElementById('githubToken').value.trim();
+            const owner = document.getElementById('githubOwner').value.trim();
+            const repo = document.getElementById('githubRepo').value.trim();
+            
+            if (!token || !owner || !repo) {
+                showAlert('Please fill in all GitHub settings first', 'error');
+                return;
+            }
+            
+            try {
+                const url = `https://api.github.com/repos/${owner}/${repo}`;
+                const response = await fetch(url, {
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+                
+                if (response.ok) {
+                    const repoData = await response.json();
+                    showAlert(`✓ Connected to ${repoData.full_name}!`, 'success');
+                } else {
+                    throw new Error('Failed to connect to repository');
+                }
+            } catch (error) {
+                showAlert('Connection failed: ' + error.message, 'error');
+            }
+        }
+        
+        // Clear GitHub settings
+        function clearGitHubSettings() {
+            if (confirm('Are you sure you want to clear GitHub settings?')) {
+                localStorage.removeItem('mynews_github_settings');
+                githubSettings = {};
+                document.getElementById('githubToken').value = '';
+                document.getElementById('githubOwner').value = '';
+                document.getElementById('githubRepo').value = '';
+                document.getElementById('githubBranch').value = 'main';
+                showAlert('GitHub settings cleared', 'success');
+            }
+        }
+        
+        // Download config as file (backup option)
         function downloadConfig() {
             const dataStr = JSON.stringify(configData, null, 2);
             const dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
