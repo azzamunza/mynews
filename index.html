@@ -182,22 +182,43 @@
         setupEventListeners();
         setupScrollBehavior();
         loadBionicConfig();
+        
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', function(event) {
+            if (event.state && event.state.articleId) {
+                openModal(event.state.articleId);
+            } else {
+                closeModal();
+            }
+        });
     });
 
     // Header scroll behavior
     function setupScrollBehavior() {
-        let header = document.getElementById('mainHeader');
-        let scrollThreshold = 100;
+        let headerContainer = document.querySelector('.header-container');
+        let desktopNav = document.getElementById('desktopNav');
+        let scrollThreshold = 50;
 
         window.addEventListener('scroll', function() {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             
-            if (scrollTop > scrollThreshold && scrollTop > lastScrollTop) {
-                // Scrolling down
-                header.classList.add('header-hidden');
-            } else if (scrollTop < lastScrollTop) {
-                // Scrolling up
-                header.classList.remove('header-hidden');
+            if (scrollTop > scrollThreshold) {
+                // Hide header-container but keep nav sticky
+                headerContainer.style.transform = 'translateY(-100%)';
+                // Ensure nav stays at top
+                desktopNav.style.position = 'fixed';
+                desktopNav.style.top = '0';
+                desktopNav.style.left = '0';
+                desktopNav.style.right = '0';
+                desktopNav.style.width = '100%';
+            } else {
+                // Show header-container
+                headerContainer.style.transform = 'translateY(0)';
+                // Nav back to sticky
+                desktopNav.style.position = 'sticky';
+                desktopNav.style.left = '';
+                desktopNav.style.right = '';
+                desktopNav.style.width = '';
             }
             
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
@@ -273,6 +294,9 @@
 
         const modal = document.getElementById('articleModal');
         const modalContent = document.getElementById('modalContentArea');
+        
+        // Add history state for back button navigation
+        history.pushState({ articleId: articleId }, '', `#article-${articleId}`);
         
         // If article has a filename, load it inline instead of opening in new tab
         if (article.filename) {
@@ -598,7 +622,6 @@
             slide.innerHTML = `
                 <img src="${article.bannerImage}" alt="${article.title}" loading="lazy">
                 <div class="carousel-content">
-                    <span class="trending-badge">🔥 Trending</span>
                     <h2 class="carousel-title">${article.title}</h2>
                     <p class="carousel-excerpt">${article.excerpt}</p>
                     ${videoByline}
@@ -1136,6 +1159,10 @@
     function closeModal() {
         const modal = document.getElementById('articleModal');
         modal.classList.remove('active');
+        // Update URL to remove hash if present
+        if (window.location.hash) {
+            history.pushState('', document.title, window.location.pathname);
+        }
     }
 
     function toggleMobileMenu() {
