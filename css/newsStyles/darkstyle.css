@@ -554,7 +554,6 @@ nav {
     border-radius: 12px;
     padding: 1.5rem;
     height: fit-content;
-    top: 100px;
     box-shadow: var(--shadow);
 }
 
