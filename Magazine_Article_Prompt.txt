@@ -49,6 +49,28 @@ Your job is to:
    - For any video URL in bundle:
      - Confirm video ID is valid and playable
      - Extract ID from: https://www.youtube.com/watch?v=VIDEO_ID or https://youtu.be/VIDEO_ID
+   - **CRITICAL: If the article bundle has isVideo=true and videoUrl is provided**:
+     - **MUST** embed the YouTube video in the article using the proper iframe structure
+     - Insert video embed within the `magazine-main-content` section, typically near the end before closing
+     - Use this exact structure:
+     ```html
+     <!-- YouTube Video Embed -->
+     <div class="magazine-image-block">
+         <div class="magazine-image-container" style="height: auto; background: #000;">
+             <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+                 <iframe src="https://www.youtube.com/embed/[VIDEO_ID]" 
+                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+                         frameborder="0" 
+                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                         allowfullscreen 
+                         title="[DESCRIPTIVE_VIDEO_TITLE]"></iframe>
+             </div>
+         </div>
+         <div class="magazine-caption">[DESCRIPTIVE_VIDEO_CAPTION]</div>
+     </div>
+     ```
+   - The 56.25% padding creates a 16:9 aspect ratio for responsive video display
+   - Caption should describe what viewers will see in the video
 
 **CONTENT WRITING REQUIREMENTS**
 
@@ -320,6 +342,37 @@ Include after read-time meta in the article-meta section:
 - If `isTrending` is true: `<span><strong>🔥 Trending</strong></span>`
 - If `isVideo` is true: `<span><strong>🎬 Video</strong></span>`
 - If `isJob` is true: `<span><strong>💼 Job Listing</strong></span>`
+
+**IMAGE OVERLAY TEXT REQUIREMENTS**
+
+Image overlay text is the bold, white text that appears on top of images using the `.magazine-image-text` class. This text should:
+
+1. **Be Concise and Impactful**
+   - Maximum 2-4 words for inline images
+   - Maximum 1-2 words for sidebar images
+   - Maximum 4-6 words for full-width images (larger font)
+   
+2. **Content Guidelines**
+   - Should be a key concept, theme, or catchphrase related to the image
+   - Should NOT be a full sentence or description (that's what captions are for)
+   - Should complement, not duplicate, the caption text
+   - Examples: "Breaking Ground", "Future Vision", "Key Discovery", "Global Impact"
+   
+3. **Style Requirements**
+   - Use Title Case (Capitalize First Letter Of Each Major Word)
+   - NO punctuation (no periods, commas, question marks)
+   - NO quotes unless part of a brand name
+   - Should feel like a magazine headline or section marker
+   
+4. **Technical Implementation**
+   - Overlay text is positioned absolutely over the image with a semi-transparent gradient background
+   - Text color is always white with text-shadow for readability
+   - The gradient class (e.g., `magazine-image-gradient-blue`) provides the colored gradient backdrop
+   - Font size is responsive: 24px for inline, 20px for sidebar, 32px for full-width
+   
+5. **Examples of Good vs Bad Overlay Text**
+   - ✅ Good: "Revolutionary Tech", "Climate Change", "Space Exploration", "AI Breakthrough"
+   - ❌ Bad: "This is a picture of technology.", "The climate is changing rapidly.", "Scientists explore space"
 
 **IMAGE GRADIENT COLOR SELECTION**
 

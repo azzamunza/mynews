@@ -1,0 +1,943 @@
+{
+  "timestamp": "2025-11-15T04:33:47.343Z",
+  "summary": {
+    "total": 46,
+    "withIssues": 12,
+    "withWarnings": 16,
+    "perfect": 21,
+    "issues": {
+      "svgPlaceholders": 10,
+      "missingVideos": 0,
+      "insufficientContent": 2
+    }
+  },
+  "articles": [
+    {
+      "filename": " Non-Gravitational Acceleration  Of Interstellar Object 3I ATLAS Explained - NewsHub.html",
+      "title": "\"Non-Gravitational Acceleration\" Of Interstellar Object 3I/ATLAS Explained",
+      "sourceUrl": "https://www.iflscience.com/non-gravitational-acceleration-of-interstellar-object-3iatlas-explained-in-new-study-81545",
+      "hasVideoMeta": true,
+      "videoUrl": "https://www.youtube.com/watch?v=18ToJi0-kks",
+      "issues": [
+        {
+          "type": "SVG_PLACEHOLDERS",
+          "count": 5,
+          "details": [
+            {
+              "position": 1,
+              "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201..."
+            },
+            {
+              "position": 2,
+              "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%208..."
+            },
+            {
+              "position": 3,
+              "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%208..."
+            },
+            {
+              "position": 4,
+              "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%204..."
+            },
+            {
+              "position": 5,
+              "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%201..."
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "success": [
+        "YouTube video embedded: 18ToJi0-kks",
+        "Substantial content: 5620 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "ANSTO Achieves Breakthrough with First Australian Production of Cancer-Fighting Isotope - NewsHub.html",
+      "title": "ANSTO Achieves Breakthrough with First Australian Production of Cancer-Fighting Isotope",
+      "sourceUrl": "https://www.miragenews.com/ansto-delivers-new-medical-radioisotope-1121359/",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 6269 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "Article Generation Error - NewsHub.html",
+      "title": "Article Generation Error - NewsHub",
+      "hasVideoMeta": false,
+      "issues": [
+        {
+          "type": "INSUFFICIENT_CONTENT",
+          "length": 0
+        }
+      ],
+      "warnings": [
+        "Missing magazine article structure",
+        "Missing sidebar"
+      ],
+      "success": [
+        "All images are real (no SVG placeholders)"
+      ]
+    },
+    {
+      "filename": "Australia s first tropical cyclone of the season could form next week - NewsHub.html",
+      "title": "Australia's first tropical cyclone of the season could form next week",
+      "sourceUrl": "https://www.9news.com.au/national/tropical-cyclone-risk-warm-water-north-west-of-australia-increase-possibility-storm/c0b9a52d-0fc8-4916-9f63-3d01efae9673",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 4752 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "Awe-inspiring moments can make you feel less stressed and more connected - NewsHub.html",
+      "title": "Awe-inspiring moments can make you feel less stressed and more connected",
+      "sourceUrl": "https://www.sciencedaily.com/releases/2025/11/251109013254.htm",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [
+        {
+          "type": "SVG_PLACEHOLDERS",
+          "count": 5,
+          "details": [
+            {
+              "position": 1,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linear..."
+            },
+            {
+              "position": 2,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearG..."
+            },
+            {
+              "position": 3,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearG..."
+            },
+            {
+              "position": 4,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><defs><linearG..."
+            },
+            {
+              "position": 5,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600'><defs><linear..."
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "success": [
+        "Substantial content: 5941 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "Dune  Awakening sees player count drop below Funcom s 2017 survival game - NewsHub.html",
+      "title": "Dune: Awakening sees player count drop below Funcom's 2017 survival game",
+      "sourceUrl": "https://www.gamesradar.com/games/survival/just-5-months-after-launch-mmo-dune-awakening-sees-its-steam-player-count-drop-below-that-of-funcoms-2017-survival-game-as-it-struggles-with-mixed-reviews/",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [
+        {
+          "type": "SVG_PLACEHOLDERS",
+          "count": 5,
+          "details": [
+            {
+              "position": 1,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linear..."
+            },
+            {
+              "position": 2,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearG..."
+            },
+            {
+              "position": 3,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearG..."
+            },
+            {
+              "position": 4,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><defs><linearG..."
+            },
+            {
+              "position": 5,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linear..."
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "success": [
+        "Substantial content: 5946 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "How much is that Steam Machine in the window  - NewsHub.html",
+      "title": "How much is that Steam Machine in the window?",
+      "sourceUrl": "https://www.pcgamer.com/hardware/gaming-pcs/how-much-is-that-steam-machine-in-the-window-lets-talk-potential-pricing-for-valves-new-living-room-gaming-box/",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [
+        {
+          "type": "SVG_PLACEHOLDERS",
+          "count": 5,
+          "details": [
+            {
+              "position": 1,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linear..."
+            },
+            {
+              "position": 2,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearG..."
+            },
+            {
+              "position": 3,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearG..."
+            },
+            {
+              "position": 4,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'><defs><linearG..."
+            },
+            {
+              "position": 5,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600'><defs><linear..."
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "success": [
+        "Substantial content: 5379 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "I wear smart glasses every day. These are the 4 models that have my attention - NewsHub.html",
+      "title": "I wear smart glasses every day. These are the 4 models that have my attention",
+      "sourceUrl": "https://www.digitaltrends.com/wearables/these-are-the-smart-glasses-which-have-caught-my-attention/",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 6193 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "It s Official  Scientists Confirmed What Is Inside Our Moon - NewsHub.html",
+      "title": "It's Official: Scientists Confirmed What Is Inside Our Moon",
+      "sourceUrl": "https://www.sciencealert.com/its-official-scientists-confirmed-what-is-inside-our-moon",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [
+        {
+          "type": "SVG_PLACEHOLDERS",
+          "count": 5,
+          "details": [
+            {
+              "position": 1,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linear..."
+            },
+            {
+              "position": 2,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearG..."
+            },
+            {
+              "position": 3,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearG..."
+            },
+            {
+              "position": 4,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'><defs><linearG..."
+            },
+            {
+              "position": 5,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linear..."
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "success": [
+        "Substantial content: 6023 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "Lynx s New Headset Won t Run Android XR  But Will Have Widest Standalone FOV - NewsHub.html",
+      "title": "Lynx's New Headset Won't Run Android XR, But Will Have Widest Standalone FOV",
+      "sourceUrl": "https://www.uploadvr.com/lynxs-new-headset-wont-run-android-xr-but-will-have-widest-standalone-fov/",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [
+        {
+          "type": "SVG_PLACEHOLDERS",
+          "count": 5,
+          "details": [
+            {
+              "position": 1,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linear..."
+            },
+            {
+              "position": 2,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearG..."
+            },
+            {
+              "position": 3,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearG..."
+            },
+            {
+              "position": 4,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><defs><linearG..."
+            },
+            {
+              "position": 5,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linear..."
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "success": [
+        "Substantial content: 5495 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "New gaming gear on the way with Steam Frame VR  Machine PC - NewsHub.html",
+      "title": "New gaming gear on the way with Steam Frame VR, Machine PC",
+      "sourceUrl": "https://www.pickr.com.au/news/2025/new-gaming-gear-on-the-way-with-steam-frame-vr-machine-pc/",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 5782 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "OpenAI s custom GPTs are coming to the public later this month - NewsHub.html",
+      "title": "OpenAI’s custom GPTs are coming to the public later this month",
+      "sourceUrl": "https://www.theverge.com/2025/11/13/24222035/openai-custom-gpts-store-release-date",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 6214 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "Time  space  memory and brain body rhythms - NewsHub.html",
+      "title": "Time, space, memory and brain–body rhythms - NewsHub",
+      "sourceUrl": "https://www.nature.com/articles/s41583-025-00987-2",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [
+        {
+          "type": "SVG_PLACEHOLDERS",
+          "count": 5,
+          "details": [
+            {
+              "position": 1,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linear..."
+            },
+            {
+              "position": 2,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearG..."
+            },
+            {
+              "position": 3,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearG..."
+            },
+            {
+              "position": 4,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><defs><linearG..."
+            },
+            {
+              "position": 5,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600'><defs><linear..."
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "success": [
+        "Substantial content: 6182 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "Unveiling the secrets of cellular aging - NewsHub.html",
+      "title": "Unveiling the secrets of cellular aging",
+      "sourceUrl": "https://www.sciencedaily.com/releases/2025/11/251113071604.htm",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [
+        {
+          "type": "SVG_PLACEHOLDERS",
+          "count": 4,
+          "details": [
+            {
+              "position": 1,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linear..."
+            },
+            {
+              "position": 2,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearG..."
+            },
+            {
+              "position": 3,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearG..."
+            },
+            {
+              "position": 5,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linear..."
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "success": [
+        "Substantial content: 5721 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "ai-agents-are-terrible-freelance-workers.html",
+      "title": "AI Agents Are Terrible Freelance Workers",
+      "sourceUrl": "https://www.wired.com/story/ai-agents-are-terrible-freelance-workers/",
+      "hasVideoMeta": true,
+      "videoUrl": "https://www.youtube.com/watch?v=Zz5wx5Fhc8U",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "YouTube video embedded: Zz5wx5Fhc8U",
+        "Substantial content: 3291 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "anti-social-cosmic-explosion-could-change-the-way-we-think-about-dying-stars.html",
+      "title": "'Anti-social' cosmic explosion could change the way we think about dying stars",
+      "sourceUrl": "https://www.space.com/astronomy/anti-social-cosmic-explosion-could-change-the-way-we-think-about-dying-stars-and-supernovas",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 4592 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "black-holes-are-encircled-by-thin-rings-of-light-this-physicist-wants-to-see-one.html",
+      "title": "Black holes are encircled by thin rings of light. This physicist wants to see one",
+      "sourceUrl": "https://www.sciencenews.org/article/alex-lupsasca-black-hole-photon-ring",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 3830 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "comet-3i-atlas-could-soon-shower-nasa-s-jupiter-probe-in-charged-particles.html",
+      "title": "Comet 3I/ATLAS could soon shower NASA's Jupiter probe in charged particles",
+      "sourceUrl": "https://www.space.com/astronomy/comets/comet-3i-atlas-could-soon-shower-nasas-jupiter-probe-in-charged-particles-will-it-reveal-more-about-the-interstellar-invader",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [
+        "Missing magazine article structure",
+        "Missing sidebar"
+      ],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 1234 characters"
+      ]
+    },
+    {
+      "filename": "composite-bow-revealed-as-deadliest-weapon-of-the-bronze-age.html",
+      "title": "Composite Bow Revealed as Deadliest Weapon of the Bronze Age",
+      "sourceUrl": "https://www.ancient-origins.net/news-history-archaeology/composite-bow-development-00102261",
+      "hasVideoMeta": true,
+      "videoUrl": "https://www.youtube.com/watch?v=96yD0bWf4qQ",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "YouTube video embedded: 96yD0bWf4qQ",
+        "Substantial content: 3474 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "four-aussies-score-a-life-changing-slice-of-the-saturday-lotto-draw.html",
+      "title": "Four Aussies score a life-changing slice of the Saturday Lotto draw",
+      "sourceUrl": "https://www.perthnow.com.au/lifestyle/lotto/saturday-lotto-four-aussies-score-a-life-changing-slice-of-the-draw-c-20468698",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [
+        "Missing magazine article structure",
+        "Missing sidebar"
+      ],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 570 characters"
+      ]
+    },
+    {
+      "filename": "how-ai-can-improve-storm-surge-forecasts-to-help-save-lives.html",
+      "title": "How AI can improve storm surge forecasts to help save lives",
+      "sourceUrl": "https://www.space.com/science/climate-change/how-ai-can-improve-storm-surge-forecasts-to-help-save-lives",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [
+        "Missing magazine article structure",
+        "Missing sidebar"
+      ],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 1395 characters"
+      ]
+    },
+    {
+      "filename": "how-compact-can-a-neutron-star-get-before-collapsing-into-a-black-hole.html",
+      "title": "How compact can a neutron star get before collapsing into a black hole?",
+      "sourceUrl": "https://www.space.com/astronomy/stars/how-compact-can-a-neutron-star-get-before-collapsing-into-a-black-hole",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [
+        "Missing magazine article structure",
+        "Missing sidebar"
+      ],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 1325 characters"
+      ]
+    },
+    {
+      "filename": "how-nvidia-is-bringing-physical-ai-to-its-industrial-customers.html",
+      "title": "How NVIDIA is bringing physical AI to its industrial customers",
+      "sourceUrl": "https://www.therobotreport.com/how-nvidia-bringing-physical-ai-industrial-customers/",
+      "hasVideoMeta": true,
+      "videoUrl": "https://www.youtube.com/watch?v=E30-9b-1aVY",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "YouTube video embedded: E30-9b-1aVY",
+        "Substantial content: 3678 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "maya-queen-who-ruled-cob-identified-as-ix-ch-ak-ch-een.html",
+      "title": "Maya Queen Who Ruled Cobá Identified As Ix Ch'ak Ch'een",
+      "sourceUrl": "https://www.ancient-origins.net/news-history-archaeology/maya-queen-coba-00102248",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [
+        {
+          "type": "SVG_PLACEHOLDERS",
+          "count": 1,
+          "details": [
+            {
+              "position": 1,
+              "src": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20width%3D'1200'%20height%3D..."
+            }
+          ]
+        }
+      ],
+      "warnings": [
+        "Missing magazine article structure",
+        "Missing sidebar"
+      ],
+      "success": [
+        "Substantial content: 2009 characters"
+      ]
+    },
+    {
+      "filename": "meta-google-and-microsoft-triple-down-on-ai-spending.html",
+      "title": "Meta, Google, and Microsoft Triple Down on AI Spending",
+      "sourceUrl": "https://www.wired.com/story/microsoft-google-meta-2025-earnings/",
+      "hasVideoMeta": true,
+      "videoUrl": "https://www.youtube.com/watch?v=zYjVfVn71Rw",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "YouTube video embedded: zYjVfVn71Rw",
+        "Substantial content: 2986 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "mystery-of-the-green-mummy-solved-after-four-decades.html",
+      "title": "Mystery of the Green Mummy Solved After Four Decades",
+      "sourceUrl": "https://www.ancient-origins.net/news-history-archaeology/green-mummy-italy-00102266",
+      "hasVideoMeta": true,
+      "videoUrl": "https://www.youtube.com/watch?v=XmC_J08tWyw",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "YouTube video embedded: XmC_J08tWyw",
+        "Substantial content: 4233 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "nasa-is-sinking-its-flagship-science-center-during-the-government-shutdown.html",
+      "title": "NASA is sinking its flagship science center during the government shutdown",
+      "sourceUrl": "https://www.space.com/space-exploration/nasa-is-sinking-its-flagship-science-center-during-the-government-shutdown-and-may-be-breaking-the-law-in-the-process",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 4097 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "new-laser-drill-could-help-scientists-explore-ice-covered-worlds-like-europa.html",
+      "title": "New laser drill could help scientists explore ice-covered worlds like Europa",
+      "sourceUrl": "https://www.space.com/space-exploration/new-laser-drill-could-help-scientists-explore-ice-covered-worlds-like-jupiters-ocean-moon-europa",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 4250 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "no-spacecraft-would-survive-europe-simulates-catastrophic-solar-storm.html",
+      "title": "'No spacecraft would survive': Europe simulates catastrophic solar storm",
+      "sourceUrl": "https://www.space.com/astronomy/no-spacecraft-would-survive-europe-simulates-catastrophic-solar-storm-to-warn-of-real-risks",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [
+        "Missing magazine article structure",
+        "Missing sidebar"
+      ],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 1312 characters"
+      ]
+    },
+    {
+      "filename": "northern-lights-may-be-visible-in-10-us-states-oct-29.html",
+      "title": "Northern lights may be visible in 10 US states Oct. 29",
+      "sourceUrl": "https://www.space.com/stargazing/auroras/northern-lights-may-be-visible-in-14-us-states-oct-27-29-2025",
+      "hasVideoMeta": true,
+      "videoUrl": "https://www.youtube.com/watch?v=9jMKy-f-bCA",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "YouTube video embedded: 9jMKy-f-bCA",
+        "Substantial content: 2983 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "nvidia-becomes-first-public-company-worth-5-trillion.html",
+      "title": "Nvidia becomes first public company worth $5 trillion",
+      "sourceUrl": "https://techcrunch.com/2025/10/29/nvidia-becomes-first-public-company-worth-5-trillion/",
+      "hasVideoMeta": true,
+      "videoUrl": "https://www.youtube.com/watch?v=qjfpjQypz_o",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "YouTube video embedded: qjfpjQypz_o",
+        "Substantial content: 3541 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "nvidia-expands-ai-ties-with-hyundai-samsung-sk-naver.html",
+      "title": "Nvidia expands AI ties with Hyundai, Samsung, SK, Naver",
+      "sourceUrl": "https://techcrunch.com/2025/10/31/nvidia-expands-ai-ties-with-hyundai-samsung-sk-naver/",
+      "hasVideoMeta": true,
+      "videoUrl": "https://www.youtube.com/watch?v=Zz5wx5Fhc8U",
+      "issues": [
+        {
+          "type": "SVG_PLACEHOLDERS",
+          "count": 4,
+          "details": [
+            {
+              "position": 1,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linear..."
+            },
+            {
+              "position": 2,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'><defs><linearG..."
+            },
+            {
+              "position": 3,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><defs><linearG..."
+            },
+            {
+              "position": 4,
+              "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 800'><defs><linear..."
+            }
+          ]
+        }
+      ],
+      "warnings": [],
+      "success": [
+        "YouTube video embedded: Zz5wx5Fhc8U",
+        "Substantial content: 2770 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "on-this-day-in-space-oct-22-1992-gene-roddenberry-s-ashes-in-space.html",
+      "title": "On this day in space: Oct. 22, 1992: Gene Roddenberry's ashes in space",
+      "sourceUrl": "https://www.space.com/39251-on-this-day-in-space.html",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [
+        "Missing magazine article structure",
+        "Missing sidebar"
+      ],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 3520 characters"
+      ]
+    },
+    {
+      "filename": "openai-signs-38-billion-deal-with-amazon.html",
+      "title": "OpenAI Signs $38 Billion Deal With Amazon",
+      "sourceUrl": "https://www.wired.com/story/openai-amazon-multi-billion-dollar-deal/",
+      "hasVideoMeta": true,
+      "videoUrl": "https://www.youtube.com/watch?v=W9ai4vJoTI8",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "YouTube video embedded: W9ai4vJoTI8",
+        "Substantial content: 3855 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "quantum-echoes-reveal-google-s-quantum-computer-potential.html",
+      "title": "Quantum 'echoes' reveal Google's quantum computer potential",
+      "sourceUrl": "https://www.sciencenews.org/article/quantum-echoes-google-computer",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [
+        "Missing magazine article structure",
+        "Missing sidebar"
+      ],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 1009 characters"
+      ]
+    },
+    {
+      "filename": "radical-rethink-on-poverty-point-claims-it-was-a-ritual-gathering-site.html",
+      "title": "Radical Rethink on Poverty Point Claims it was a Ritual Gathering Site",
+      "sourceUrl": "https://www.ancient-origins.net/news-history-archaeology/poverty-point-purpose-00102259",
+      "hasVideoMeta": true,
+      "videoUrl": "https://www.youtube.com/watch?v=S8W8bZYsFpc",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "YouTube video embedded: S8W8bZYsFpc",
+        "Substantial content: 3999 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "real-estate-is-entering-its-ai-slop-era.html",
+      "title": "",
+      "hasVideoMeta": false,
+      "issues": [
+        {
+          "type": "INSUFFICIENT_CONTENT",
+          "length": 0
+        }
+      ],
+      "warnings": [
+        "Missing magazine article structure",
+        "Missing sidebar"
+      ],
+      "success": [
+        "All images are real (no SVG placeholders)"
+      ]
+    },
+    {
+      "filename": "revolutionary-steel-pod-could-enable-ocean-floor-living.html",
+      "title": "Revolutionary Steel Pod Could Enable Ocean Floor Living",
+      "sourceUrl": "https://www.ancient-origins.net/news-science-space/vanguard-underwater-habitat-00102271",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [
+        "Image overlay text too long (>6 words): \"A Permanent Presence in the Marine Realm\""
+      ],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 4109 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "space-radiation-can-produce-some-organic-molecules-on-icy-moons.html",
+      "title": "Space radiation can produce some organic molecules on icy moons",
+      "sourceUrl": "https://www.space.com/space-exploration/search-for-life/space-radiation-can-produce-some-organic-molecules-detected-on-icy-moons",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [
+        "Missing magazine article structure",
+        "Missing sidebar"
+      ],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 1025 characters"
+      ]
+    },
+    {
+      "filename": "starlink-satellites-facts-tracking-and-impact-on-astronomy.html",
+      "title": "Starlink satellites: Facts, tracking and impact on astronomy",
+      "sourceUrl": "https://www.space.com/spacex-starlink-satellites.html",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 4632 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "the-10-martini-proof-connects-quantum-mechanics-with-infinitely-intricate-mathematical-structures.html",
+      "title": "The '10 Martini' Proof Connects Quantum Mechanics With Infinitely Intricate Mathematical Structures",
+      "sourceUrl": "https://www.wired.com/story/the-10-martini-proof-connects-quantum-mechanics-with-infinitely-intricate-mathematical-structures/",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 4398 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "the-glaring-security-risks-with-ai-browser-agents.html",
+      "title": "The glaring security risks with AI browser agents",
+      "sourceUrl": "https://techcrunch.com/2025/10/25/the-glaring-security-risks-with-ai-browser-agents/",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [
+        "Missing magazine article structure",
+        "Missing sidebar"
+      ],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 1964 characters"
+      ]
+    },
+    {
+      "filename": "tutankhamun-s-tomb-faces-collapse-risk-experts-warn.html",
+      "title": "Tutankhamun's Tomb Faces Collapse Risk, Experts Warn",
+      "sourceUrl": "https://www.independent.co.uk/news/science/archaeology/tutankhamun-tomb-collapse-risk-b2844225.html",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [
+        "Missing magazine article structure",
+        "Missing sidebar"
+      ],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 4817 characters"
+      ]
+    },
+    {
+      "filename": "vention-announces-full-stack-ai-and-automation-platform-expansions.html",
+      "title": "Vention announces full-stack AI and automation platform expansions",
+      "sourceUrl": "https://www.therobotreport.com/vention-announces-full-stack-ai-automation-platform-expansions/",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 3590 characters",
+        "Proper magazine structure"
+      ]
+    },
+    {
+      "filename": "virtual-particles-how-physicists-clever-bookkeeping-trick-could-underlie-reality.html",
+      "title": "Virtual particles: How physicists' clever bookkeeping trick could underlie reality",
+      "sourceUrl": "https://www.space.com/science/particle-physics/virtual-particles-how-physicists-clever-bookkeeping-trick-could-underlie-reality",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [
+        "Missing magazine article structure",
+        "Missing sidebar"
+      ],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 5085 characters"
+      ]
+    },
+    {
+      "filename": "watch-comets-lemmon-and-swan-make-their-closest-approach-to-earth.html",
+      "title": "Watch comets Lemmon and SWAN make their closest approach to Earth",
+      "sourceUrl": "https://www.space.com/astronomy/comets/watch-comets-lemmon-and-swan-make-their-closest-approach-to-earth-live-online-on-oct-20",
+      "hasVideoMeta": false,
+      "videoUrl": "",
+      "issues": [],
+      "warnings": [
+        "Missing magazine article structure",
+        "Missing sidebar"
+      ],
+      "success": [
+        "All images are real (no SVG placeholders)",
+        "Substantial content: 1278 characters"
+      ]
+    }
+  ]
+}
