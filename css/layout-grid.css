@@ -199,18 +199,38 @@ img {
     padding: 2rem;
     background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
     color: white;
+    max-height: 60%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .carousel-title {
     font-size: 1.8rem;
     margin: 0.5rem 0;
     font-weight: 700;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .carousel-excerpt {
     font-size: 1rem;
     margin: 0.5rem 0;
     opacity: 0.9;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .carousel-meta {
@@ -725,6 +745,14 @@ img {
     color: white;
     font-size: 1.5rem;
     font-weight: 700;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .anime-section-right {

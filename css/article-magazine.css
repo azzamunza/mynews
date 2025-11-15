@@ -134,6 +134,9 @@
     text-align: center;
     padding: 30px;
     text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .magazine-caption {
@@ -201,6 +204,9 @@
     text-align: center;
     padding: 20px;
     text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 /* Sidebar Content Boxes */
