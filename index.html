@@ -314,6 +314,11 @@
                         modalContent.innerHTML = html;
                     }
                     modal.classList.add('active');
+                    
+                    // Apply Bionic Reader if enabled
+                    if (bionicReaderEnabled) {
+                        setTimeout(() => applyBionicReader(), 100);
+                    }
                     return;
                 }
             } catch (error) {
@@ -378,6 +383,11 @@
         `;
 
         modal.classList.add('active');
+        
+        // Apply Bionic Reader if enabled
+        if (bionicReaderEnabled) {
+            setTimeout(() => applyBionicReader(), 100);
+        }
     }
 
     function setupEventListeners() {
