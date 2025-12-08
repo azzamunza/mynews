@@ -764,6 +764,23 @@
       "isVideo": false,
       "videoUrl": "",
       "isJob": false
+    },
+    {
+      "id": "technology-nvidia-blackwell-20251208",
+      "title": "NVIDIA’s Blackwell GPU: A Quantum Leap in AI and Computing Power - NewsHub",
+      "filename": "NVIDIA s Blackwell GPU  A Quantum Leap in AI and Computing Power - NewsHub.html",
+      "category": "Technology",
+      "author": "DhiWise",
+      "publishDate": "May 26, 2025",
+      "readTime": "3",
+      "excerpt": "NVIDIA's new Blackwell GPU architecture is set to redefine the landscape of artificial intelligence and high-performance computing. Featuring a groundbreakin",
+      "thumbnailImage": "https://i.ytimg.com/vi/Y25Lg2g_T1E/maxresdefault.jpg",
+      "bannerImage": "https://i.ytimg.com/vi/Y25Lg2g_T1E/maxresdefault.jpg",
+      "sourceUrl": "https://www.dhiwise.com/post/nvidia-blackwell-gpu-defining-future-graphics-performance",
+      "isTrending": false,
+      "isVideo": false,
+      "videoUrl": "",
+      "isJob": false
     }
   ]
 }
