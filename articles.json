@@ -1,6 +1,23 @@
 {
   "articles": [
     {
+      "id": "technology-quantum-processor-20251208",
+      "title": "Sydney Startup &quot;Quantum Leap&quot; Unveils Breakthrough Quantum Processor",
+      "filename": "Sydney Startup  Quantum Leap  Unveils Breakthrough Quantum Processor - NewsHub.html",
+      "category": "Technology",
+      "author": "Jennifer Chen",
+      "publishDate": "Dec 8, 2025",
+      "readTime": "3",
+      "excerpt": "A Sydney-based startup has revealed a new quantum computing chip that promises to revolutionise data processing and artificial intelligence development.",
+      "thumbnailImage": "https://images.unsplash.com/photo-1617854818583-09e7f077a156?q=80&w=1200",
+      "bannerImage": "https://images.unsplash.com/photo-1617854818583-09e7f077a156?q=80&w=1200",
+      "sourceUrl": "https://www.gizmodo.com.au/2025/12/sydney-startup-unveils-quantum-processor/",
+      "isTrending": true,
+      "isVideo": true,
+      "videoUrl": "https://www.youtube.com/watch?v=zNzzGgr2mhk",
+      "isJob": false
+    },
+    {
       "id": "science-medical-isotope-20251114",
       "title": "ANSTO Achieves Breakthrough with First Australian Production of Cancer-Fighting Isotope",
       "filename": "ANSTO Achieves Breakthrough with First Australian Production of Cancer-Fighting Isotope - NewsHub.html",
