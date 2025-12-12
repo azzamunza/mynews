@@ -318,6 +318,8 @@
       const ctx = document.getElementById('radialChart').getContext('2d');
       if (chart) chart.destroy();
 
+      const maxValue = values.length ? Math.max(...values) : 1;
+
       chart = new Chart(ctx, {
         type: 'radar',
         data: {
@@ -358,7 +360,7 @@
               grid: { color: 'rgba(0,0,0,0.08)' },
               angleLines: { color: 'rgba(0,0,0,0.08)' },
               ticks: { display: false },
-              suggestedMax: Math.max(...values) + 0.8,
+              suggestedMax: maxValue + 0.8,
               pointLabels: {
                 color: '#1c274c',
                 font: { size: 12, weight: '600' }
@@ -395,7 +397,8 @@
     function friendlyDate(dateString = '') {
       const parsed = Date.parse(dateString);
       if (Number.isNaN(parsed)) return dateString;
-      return new Intl.DateTimeFormat('en-AU', {
+      const locale = navigator.language || 'en-AU';
+      return new Intl.DateTimeFormat(locale, {
         weekday: 'short',
         month: 'short',
         day: 'numeric',
