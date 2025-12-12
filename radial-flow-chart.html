@@ -139,83 +139,20 @@
 
   <script>
     const configUrl = './chart-data/sources.json';
-    const fallbackDatasets = [
-      {
-        sourceUrl: 'fallback-1',
-        label: 'Day 1',
-        date: '2025-12-12',
-        location: 'Swanbourne Beach',
-        series: [
-          { time: '7am', value: 1.2, detail: 'Calm early conditions' },
-          { time: '8am', value: 1.6 },
-          { time: '9am', value: 2.0 },
-          { time: '10am', value: 2.5 },
-          { time: '11am', value: 3.1 },
-          { time: '12pm', value: 3.6 },
-          { time: '1pm', value: 3.9 },
-          { time: '2pm', value: 3.5 },
-          { time: '3pm', value: 3.0 },
-          { time: '4pm', value: 2.7 },
-          { time: '5pm', value: 2.2 },
-          { time: '6pm', value: 1.8 },
-          { time: '7pm', value: 1.4 }
-        ]
-      },
-      {
-        sourceUrl: 'fallback-2',
-        label: 'Day 2',
-        date: '2025-12-13',
-        location: 'Swanbourne Beach',
-        series: [
-          { time: '7am', value: 1.4 },
-          { time: '8am', value: 1.9 },
-          { time: '9am', value: 2.3 },
-          { time: '10am', value: 2.9 },
-          { time: '11am', value: 3.4 },
-          { time: '12pm', value: 3.7 },
-          { time: '1pm', value: 3.5 },
-          { time: '2pm', value: 3.2 },
-          { time: '3pm', value: 3.0 },
-          { time: '4pm', value: 2.6 },
-          { time: '5pm', value: 2.1 },
-          { time: '6pm', value: 1.7 },
-          { time: '7pm', value: 1.3 }
-        ]
-      },
-      {
-        sourceUrl: 'fallback-3',
-        label: 'Day 3',
-        date: '2025-12-14',
-        location: 'Swanbourne Beach',
-        series: [
-          { time: '7am', value: 1.1 },
-          { time: '8am', value: 1.5 },
-          { time: '9am', value: 2.1 },
-          { time: '10am', value: 2.8 },
-          { time: '11am', value: 3.2 },
-          { time: '12pm', value: 3.6 },
-          { time: '1pm', value: 3.9 },
-          { time: '2pm', value: 3.7 },
-          { time: '3pm', value: 3.3 },
-          { time: '4pm', value: 2.9 },
-          { time: '5pm', value: 2.5 },
-          { time: '6pm', value: 2.0 },
-          { time: '7pm', value: 1.6 }
-        ]
-      }
-    ];
-
     let datasets = [];
     let chart;
 
     document.addEventListener('DOMContentLoaded', () => { init(); });
 
     async function init() {
+      setStatus('Loading chart data…');
       datasets = await loadDatasets();
       if (!datasets.length) {
-        datasets = fallbackDatasets.map(normalizeDataset);
-        setStatus('Using bundled data because source URLs were unavailable.');
+        setStatus('No data available from configured sources.');
+        document.getElementById('chartSubtitle').textContent = 'No data available';
+        return;
       }
+      setStatus('');
       renderButtons(datasets);
       if (datasets.length) selectDataset(0);
     }
@@ -237,11 +174,15 @@
             });
           }
         }
-        setStatus('');
+        if (!collected.length) {
+          setStatus('No data available from configured sources.');
+        } else {
+          setStatus('');
+        }
         return collected;
       } catch (error) {
         console.error('Failed loading datasets', error);
-        setStatus('Could not load remote data, showing fallback.');
+        setStatus('Could not load remote chart data.');
         return [];
       }
     }
@@ -294,7 +235,10 @@
 
     function selectDataset(index) {
       const active = datasets[index];
-      if (!active) return;
+      if (!active) {
+        setStatus('No data available from configured sources.');
+        return;
+      }
 
       document.querySelectorAll('.chip').forEach((btn, idx) => {
         btn.classList.toggle('active', idx === index);
@@ -311,6 +255,17 @@
     }
 
     function drawChart(dataset) {
+      if (!dataset.series.length) {
+        setStatus('No data to display for the selected day.');
+        if (chart) {
+          chart.destroy();
+          chart = null;
+        }
+        return;
+      }
+
+      setStatus('');
+
       const labels = dataset.series.map(item => formatTimeLabel(item.time));
       const values = dataset.series.map(item => item.value);
       const details = dataset.series.map(item => item.detail || '');
