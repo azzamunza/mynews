@@ -1,0 +1,7 @@
+{
+  "sources": [
+    { "label": "Day 1", "url": "./chart-data/day1.json" },
+    { "label": "Day 2", "url": "./chart-data/day2.json" },
+    { "label": "Day 3", "url": "./chart-data/day3.json" }
+  ]
+}

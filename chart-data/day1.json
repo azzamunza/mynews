@@ -1,0 +1,20 @@
+{
+  "location": "Swanbourne Beach",
+  "label": "Day 1",
+  "date": "2025-12-12",
+  "series": [
+    { "time": "7am", "value": 1.2, "detail": "Calm early conditions" },
+    { "time": "8am", "value": 1.6 },
+    { "time": "9am", "value": 2.0 },
+    { "time": "10am", "value": 2.5 },
+    { "time": "11am", "value": 3.1 },
+    { "time": "12pm", "value": 3.6 },
+    { "time": "1pm", "value": 3.9 },
+    { "time": "2pm", "value": 3.5 },
+    { "time": "3pm", "value": 3.0 },
+    { "time": "4pm", "value": 2.7 },
+    { "time": "5pm", "value": 2.2 },
+    { "time": "6pm", "value": 1.8 },
+    { "time": "7pm", "value": 1.4 }
+  ]
+}

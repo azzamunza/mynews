@@ -1,0 +1,20 @@
+{
+  "location": "Swanbourne Beach",
+  "label": "Day 2",
+  "date": "2025-12-13",
+  "series": [
+    { "time": "7am", "value": 1.4 },
+    { "time": "8am", "value": 1.9 },
+    { "time": "9am", "value": 2.3 },
+    { "time": "10am", "value": 2.9 },
+    { "time": "11am", "value": 3.4 },
+    { "time": "12pm", "value": 3.7 },
+    { "time": "1pm", "value": 3.5 },
+    { "time": "2pm", "value": 3.2 },
+    { "time": "3pm", "value": 3.0 },
+    { "time": "4pm", "value": 2.6 },
+    { "time": "5pm", "value": 2.1 },
+    { "time": "6pm", "value": 1.7 },
+    { "time": "7pm", "value": 1.3 }
+  ]
+}

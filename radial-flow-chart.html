@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swanbourne Beach Conditions</title>
+  <script src="./js/chart.umd.js"></script>
+  <style>
+    :root {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #0a1f44;
+      --muted: #5c6a86;
+      --accent: #1b6cf2;
+      --accent-soft: rgba(27, 108, 242, 0.14);
+      --border: #e4e8f0;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 20% 20%, rgba(27, 108, 242, 0.08), transparent 25%),
+                  radial-gradient(circle at 80% 0%, rgba(9, 132, 227, 0.07), transparent 20%),
+                  var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .eyebrow {
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 0.85rem;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .title {
+      margin: 6px 0 4px;
+      font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 14px 60px rgba(14, 42, 90, 0.08);
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+      justify-content: center;
+    }
+
+    .chip {
+      border: 1px solid var(--border);
+      background: #f4f6fb;
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.18s ease;
+    }
+
+    .chip:hover { border-color: var(--accent); }
+    .chip.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      box-shadow: 0 10px 30px rgba(27, 108, 242, 0.25);
+    }
+
+    .chart-shell {
+      width: 100%;
+      height: min(70vh, 760px);
+      min-height: 420px;
+      position: relative;
+    }
+
+    canvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .status {
+      margin-top: 10px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 18px; }
+      .chart-shell { min-height: 360px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <p class="eyebrow">Surf & Weather</p>
+      <h1 class="title" id="chartTitle">Swanbourne Beach</h1>
+      <p class="subtitle" id="chartSubtitle">Loading latest date…</p>
+    </header>
+
+    <section class="card">
+      <div class="button-row" id="datasetButtons"></div>
+      <div class="chart-shell">
+        <canvas id="radialChart" aria-label="Hourly conditions chart"></canvas>
+      </div>
+      <p class="status" id="chartStatus"></p>
+    </section>
+  </main>
+
+  <script>
+    const configUrl = './chart-data/sources.json';
+    const fallbackDatasets = [
+      {
+        sourceUrl: 'fallback-1',
+        label: 'Day 1',
+        date: '2025-12-12',
+        location: 'Swanbourne Beach',
+        series: [
+          { time: '7am', value: 1.2, detail: 'Calm early conditions' },
+          { time: '8am', value: 1.6 },
+          { time: '9am', value: 2.0 },
+          { time: '10am', value: 2.5 },
+          { time: '11am', value: 3.1 },
+          { time: '12pm', value: 3.6 },
+          { time: '1pm', value: 3.9 },
+          { time: '2pm', value: 3.5 },
+          { time: '3pm', value: 3.0 },
+          { time: '4pm', value: 2.7 },
+          { time: '5pm', value: 2.2 },
+          { time: '6pm', value: 1.8 },
+          { time: '7pm', value: 1.4 }
+        ]
+      },
+      {
+        sourceUrl: 'fallback-2',
+        label: 'Day 2',
+        date: '2025-12-13',
+        location: 'Swanbourne Beach',
+        series: [
+          { time: '7am', value: 1.4 },
+          { time: '8am', value: 1.9 },
+          { time: '9am', value: 2.3 },
+          { time: '10am', value: 2.9 },
+          { time: '11am', value: 3.4 },
+          { time: '12pm', value: 3.7 },
+          { time: '1pm', value: 3.5 },
+          { time: '2pm', value: 3.2 },
+          { time: '3pm', value: 3.0 },
+          { time: '4pm', value: 2.6 },
+          { time: '5pm', value: 2.1 },
+          { time: '6pm', value: 1.7 },
+          { time: '7pm', value: 1.3 }
+        ]
+      },
+      {
+        sourceUrl: 'fallback-3',
+        label: 'Day 3',
+        date: '2025-12-14',
+        location: 'Swanbourne Beach',
+        series: [
+          { time: '7am', value: 1.1 },
+          { time: '8am', value: 1.5 },
+          { time: '9am', value: 2.1 },
+          { time: '10am', value: 2.8 },
+          { time: '11am', value: 3.2 },
+          { time: '12pm', value: 3.6 },
+          { time: '1pm', value: 3.9 },
+          { time: '2pm', value: 3.7 },
+          { time: '3pm', value: 3.3 },
+          { time: '4pm', value: 2.9 },
+          { time: '5pm', value: 2.5 },
+          { time: '6pm', value: 2.0 },
+          { time: '7pm', value: 1.6 }
+        ]
+      }
+    ];
+
+    let datasets = [];
+    let chart;
+
+    document.addEventListener('DOMContentLoaded', () => { init(); });
+
+    async function init() {
+      datasets = await loadDatasets();
+      if (!datasets.length) {
+        datasets = fallbackDatasets.map(normalizeDataset);
+        setStatus('Using bundled data because source URLs were unavailable.');
+      }
+      renderButtons(datasets);
+      if (datasets.length) selectDataset(0);
+    }
+
+    async function loadDatasets() {
+      try {
+        const res = await fetch(configUrl, { cache: 'no-store' });
+        if (!res.ok) throw new Error('Config not reachable');
+        const { sources = [] } = await res.json();
+        const collected = [];
+        for (let i = 0; i < sources.length; i++) {
+          const entry = sources[i];
+          const data = await fetchDataset(entry.url);
+          if (data) {
+            collected.push({
+              ...data,
+              buttonLabel: entry.label || data.label || friendlyDate(data.date) || `Day ${i + 1}`,
+              sourceUrl: entry.url
+            });
+          }
+        }
+        setStatus('');
+        return collected;
+      } catch (error) {
+        console.error('Failed loading datasets', error);
+        setStatus('Could not load remote data, showing fallback.');
+        return [];
+      }
+    }
+
+    async function fetchDataset(url) {
+      try {
+        const res = await fetch(url, { cache: 'no-store' });
+        if (!res.ok) throw new Error('Bad response');
+        const json = await res.json();
+        return normalizeDataset(json, url);
+      } catch (error) {
+        console.error('Dataset fetch failed', url, error);
+        return null;
+      }
+    }
+
+    function normalizeDataset(raw = {}, sourceUrl = '') {
+      const series = Array.isArray(raw.series || raw.data || raw.points) ? (raw.series || raw.data || raw.points) : [];
+      const normalizedSeries = series
+        .map(item => ({
+          time: item.time || item.label || '',
+          value: typeof item.value === 'number' ? item.value : Number(item.value),
+          detail: item.detail || item.description || ''
+        }))
+        .filter(item => item.time && !Number.isNaN(item.value))
+        .sort((a, b) => parseTimeToMinutes(a.time) - parseTimeToMinutes(b.time));
+
+      return {
+        sourceUrl,
+        label: raw.label || raw.name || '',
+        date: raw.date || raw.day || '',
+        location: raw.location || raw.title || 'Swanbourne Beach',
+        series: normalizedSeries,
+        buttonLabel: raw.buttonLabel || raw.label || raw.day || ''
+      };
+    }
+
+    function renderButtons(list) {
+      const container = document.getElementById('datasetButtons');
+      container.innerHTML = '';
+      list.forEach((dataset, index) => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'chip';
+        btn.textContent = dataset.buttonLabel || friendlyDate(dataset.date) || dataset.label || `Day ${index + 1}`;
+        btn.addEventListener('click', () => selectDataset(index));
+        container.appendChild(btn);
+      });
+    }
+
+    function selectDataset(index) {
+      const active = datasets[index];
+      if (!active) return;
+
+      document.querySelectorAll('.chip').forEach((btn, idx) => {
+        btn.classList.toggle('active', idx === index);
+      });
+
+      updateHeading(active);
+      drawChart(active);
+    }
+
+    function updateHeading(dataset) {
+      document.getElementById('chartTitle').textContent = dataset.location || 'Swanbourne Beach';
+      const subtitle = friendlyDate(dataset.date) || dataset.label || 'Latest conditions';
+      document.getElementById('chartSubtitle').textContent = subtitle;
+    }
+
+    function drawChart(dataset) {
+      const labels = dataset.series.map(item => formatTimeLabel(item.time));
+      const values = dataset.series.map(item => item.value);
+      const details = dataset.series.map(item => item.detail || '');
+
+      const ctx = document.getElementById('radialChart').getContext('2d');
+      if (chart) chart.destroy();
+
+      chart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels,
+          datasets: [{
+            label: dataset.location,
+            data: values,
+            fill: true,
+            backgroundColor: 'rgba(27, 108, 242, 0.16)',
+            borderColor: 'rgba(27, 108, 242, 0.9)',
+            borderWidth: 2,
+            pointBackgroundColor: '#ffffff',
+            pointBorderColor: 'rgba(27, 108, 242, 0.9)',
+            pointHoverBackgroundColor: 'rgba(27, 108, 242, 0.9)',
+            pointRadius: 4,
+            tension: 0.25
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: (ctx) => {
+                  const idx = ctx.dataIndex;
+                  const base = `${labels[idx]}: ${ctx.parsed.r.toFixed(1)}`;
+                  return details[idx] ? `${base} (${details[idx]})` : base;
+                }
+              }
+            }
+          },
+          scales: {
+            r: {
+              beginAtZero: true,
+              startAngle: -Math.PI / 2,
+              grid: { color: 'rgba(0,0,0,0.08)' },
+              angleLines: { color: 'rgba(0,0,0,0.08)' },
+              ticks: { display: false },
+              suggestedMax: Math.max(...values) + 0.8,
+              pointLabels: {
+                color: '#1c274c',
+                font: { size: 12, weight: '600' }
+              }
+            }
+          }
+        }
+      });
+    }
+
+    function parseTimeToMinutes(timeString = '') {
+      const match = timeString.toLowerCase().trim().match(/(\d{1,2})(?::(\d{2}))?\s*(am|pm)?/);
+      if (!match) return Number.MAX_SAFE_INTEGER;
+      let hour = Number(match[1]);
+      const minutes = Number(match[2] || 0);
+      const meridiem = match[3];
+
+      if (meridiem === 'pm' && hour !== 12) hour += 12;
+      if (meridiem === 'am' && hour === 12) hour = 0;
+
+      return hour * 60 + minutes;
+    }
+
+    function formatTimeLabel(timeString = '') {
+      const minutes = parseTimeToMinutes(timeString);
+      if (minutes === Number.MAX_SAFE_INTEGER) return timeString;
+      const hour24 = Math.floor(minutes / 60);
+      const mins = minutes % 60;
+      const suffix = hour24 >= 12 ? 'pm' : 'am';
+      const hour12 = hour24 % 12 === 0 ? 12 : hour24 % 12;
+      return `${hour12}${mins ? ':' + String(mins).padStart(2, '0') : ''}${suffix}`;
+    }
+
+    function friendlyDate(dateString = '') {
+      const parsed = Date.parse(dateString);
+      if (Number.isNaN(parsed)) return dateString;
+      return new Intl.DateTimeFormat('en-AU', {
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric'
+      }).format(new Date(parsed));
+    }
+
+    function setStatus(message) {
+      document.getElementById('chartStatus').textContent = message || '';
+    }
+  </script>
+</body>
+</html>
