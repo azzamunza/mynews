@@ -1484,9 +1484,6 @@
             const card = document.createElement('div');
             card.className = 'repo-card';
             
-            // Construct GitHub Pages URL using configured username
-            const pagesUrl = `https://${GITHUB_USERNAME}.github.io/${repo.name}/`;
-            
             // Check if repo has GitHub Pages enabled (has_pages property)
             const hasPages = repo.has_pages;
             
@@ -1525,6 +1522,9 @@
             
             // Add click handler to open GitHub Pages URL
             card.addEventListener('click', () => {
+                // Construct GitHub Pages URL only when needed
+                const pagesUrl = `https://${GITHUB_USERNAME}.github.io/${repo.name}/`;
+                
                 // Validate URLs are from trusted GitHub domains before opening
                 const urlToOpen = hasPages ? pagesUrl : repo.html_url;
                 
