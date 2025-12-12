@@ -938,6 +938,9 @@
     </div>
 
     <script>
+        // Configuration
+        const GITHUB_USERNAME = 'azzamunza';
+        
         // State management
         let newsData = null;
         let currentPage = 'job-app';
@@ -1437,10 +1440,20 @@
             
             try {
                 // Fetch repositories from GitHub API
-                const response = await fetch('https://api.github.com/users/azzamunza/repos?sort=updated&per_page=100');
+                const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`);
                 
                 if (!response.ok) {
-                    throw new Error('Failed to fetch repositories');
+                    // Handle rate limiting specifically
+                    if (response.status === 403) {
+                        const rateLimitRemaining = response.headers.get('X-RateLimit-Remaining');
+                        const rateLimitReset = response.headers.get('X-RateLimit-Reset');
+                        
+                        if (rateLimitRemaining === '0') {
+                            const resetDate = new Date(rateLimitReset * 1000);
+                            throw new Error(`GitHub API rate limit exceeded. Try again after ${resetDate.toLocaleTimeString()}`);
+                        }
+                    }
+                    throw new Error(`Failed to fetch repositories: ${response.status} ${response.statusText}`);
                 }
                 
                 repositories = await response.json();
@@ -1471,8 +1484,8 @@
             const card = document.createElement('div');
             card.className = 'repo-card';
             
-            // Construct GitHub Pages URL
-            const pagesUrl = `https://azzamunza.github.io/${repo.name}/`;
+            // Construct GitHub Pages URL using configured username
+            const pagesUrl = `https://${GITHUB_USERNAME}.github.io/${repo.name}/`;
             
             // Check if repo has GitHub Pages enabled (has_pages property)
             const hasPages = repo.has_pages;
@@ -1512,11 +1525,23 @@
             
             // Add click handler to open GitHub Pages URL
             card.addEventListener('click', () => {
-                if (hasPages) {
-                    window.open(pagesUrl, '_blank');
-                } else {
-                    // If no GitHub Pages, open the repo itself
-                    window.open(repo.html_url, '_blank');
+                // Validate URLs are from trusted GitHub domains before opening
+                const urlToOpen = hasPages ? pagesUrl : repo.html_url;
+                
+                try {
+                    const url = new URL(urlToOpen);
+                    const trustedDomains = ['github.io', 'github.com'];
+                    const isTrusted = trustedDomains.some(domain => 
+                        url.hostname === domain || url.hostname.endsWith('.' + domain)
+                    );
+                    
+                    if (isTrusted) {
+                        window.open(urlToOpen, '_blank', 'noopener,noreferrer');
+                    } else {
+                        console.error('Untrusted domain:', url.hostname);
+                    }
+                } catch (e) {
+                    console.error('Invalid URL:', urlToOpen, e);
                 }
             });
             
